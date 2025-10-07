@@ -4,7 +4,6 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "postinstall": "npm install --prefix dsfr-chart",
     "start": "vite",
     "serve": "serve -s dist",
     "dev": "vite",
