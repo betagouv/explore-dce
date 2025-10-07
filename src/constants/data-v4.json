@@ -203,6 +203,7 @@
             "unitTooltipArea": "milliards d'€",
             "unitTooltipLine": "milliards d'€",
             "singleAxis": true,
+            "pointRadius": 0,
             "highlightStart": "2019-Q4",
             "highlightEnd": "2020-Q4",
             "highlightLabel": "COVID-19",
@@ -430,6 +431,7 @@
             "linesColors": ["#68a532", "#e4794a"],
             "areasColors": ["#cecece"],
             "singleAxis": true,
+            "pointRadius": 0,
             "unitTooltipArea": "milliards d'€",
             "unitTooltipLine": "milliards d'€"
         },
