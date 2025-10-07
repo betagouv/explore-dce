@@ -16837,7 +16837,7 @@ function jx({
   areasColors: r,
   linesColors: o
 }) {
-  const l = Kt(i, r), a = Kt(i, o), c = [...l].map((b) => J(b).alpha(0.4).css()), h = [...l], d = c.map((b) => J(b).darken(0.8).hex()), u = [...a], f = u.map((b) => J(b).darken(0.8).hex()), m = e.map((b, v) => n[v] || Ie()), p = t.map((b, v) => s[v] || Ie());
+  const l = Kt(i, r), a = Kt(i, o), c = [...l].map((b) => J(b).alpha(0.3).css()), h = [...l], d = c.map((b) => J(b).darken(0.8).hex()), u = [...a], f = u.map((b) => J(b).darken(0.8).hex()), m = e.map((b, v) => n[v] || Ie()), p = t.map((b, v) => s[v] || Ie());
   return {
     colorAreaParse: c,
     colorAreaLineParse: h,
