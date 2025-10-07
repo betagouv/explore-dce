@@ -1,3 +1,7 @@
+# Ce script est renommé en .old afin que github ne le prenne plus en compte
+# Tant qu'aucune licence n'est renseignée dans les secrets github, cette action
+# n'a pas lieu d'être
+
 name: gitleaks
 on:
   pull_request:
