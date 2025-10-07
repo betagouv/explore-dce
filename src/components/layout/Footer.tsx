@@ -25,9 +25,9 @@ export const Footer = () => {
             contentDescription={descr}
             brandTop={getBrandTop}
             operatorLogo={{
-                    alt: "Logo Explore",
-                    imgUrl: isDarkMode ? "/explore-dark.svg" : "/explore-light.svg",
-                    orientation: "horizontal",
+                alt: "Logo Explore",
+                imgUrl: isDarkMode ? "explore-dark.svg" : "explore-light.svg",
+                orientation: "horizontal",
             }}
         />
     );

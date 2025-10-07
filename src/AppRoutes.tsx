@@ -7,6 +7,14 @@ import {
     createBrowserRouter,
 } from "react-router";
 
+const getBasename = () => {
+    const p = window.location.pathname || '';
+    if (p === '/commerce-exterieur' || p.startsWith('/commerce-exterieur/')) {
+        return '/commerce-exterieur';
+    }
+    return undefined; // behave normally at /
+};
+
 export const AppRoutes = () => {
 
     // Build the private routes.
@@ -37,7 +45,7 @@ export const AppRoutes = () => {
             ),
             children: routes,
         },
-    ]);
+    ], { basename: getBasename() });
 
     return <RouterProvider router={router} />;
 };

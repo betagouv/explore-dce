@@ -12,10 +12,11 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "test": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "dsfr-chart:build": "npm run build --prefix dsfr-chart && rm -rf src/components/DSFRChart && cp -r dsfr-chart/dist/* src/components/DSFRChart/",
+    "pre-commit": "npm run dsfr-chart:build",
     "preview": "vite preview",
-    "prestart": "react-dsfr update-icons; npm run dsfr-chart:build",
+    "prestart": "react-dsfr update-icons",
     "predev": "react-dsfr update-icons; npm run dsfr-chart:build",
-    "prebuild": "react-dsfr update-icons; npm run dsfr-chart:build"
+    "prebuild": "react-dsfr update-icons"
   },
   "dependencies": {
     "@codegouvfr/react-dsfr": "^1.27.0",

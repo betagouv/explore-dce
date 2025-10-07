@@ -55,7 +55,7 @@ export const NavBar: FunctionComponent = () => {
                 }
                 operatorLogo={{
                     alt: "Logo Explore",
-                    imgUrl: isDarkMode ? "/explore-dark.svg" : "/explore-light.svg",
+                    imgUrl: isDarkMode ? "explore-dark.svg" : "explore-light.svg",
                     orientation: "horizontal",
                 }}
             />
