@@ -1,0 +1,26 @@
+# Fichiers de journaux et de débogage
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Fichiers d'installation et de build
+node_modules
+build
+dist
+dist-ssr
+*.local
+
+# Fichiers d'éditeurs IDE
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

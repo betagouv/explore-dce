@@ -1,0 +1,19 @@
+svg.carte-departement g.fr-link {
+    & > path {
+        fill: var(--background-action-low-blue-france);
+    }
+
+    @media(hover: hover) {
+        & > path.hovered {
+            cursor: pointer;
+            fill: var(--background-action-low-blue-france-hover);
+            stroke: var(--background-action-low-blue-france);
+            stroke-width: .1rem;
+        }
+    }
+
+    & > path {
+        stroke: var(--grey-1000-50);
+        stroke-width: .01rem;
+    }
+}

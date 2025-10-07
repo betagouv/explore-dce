@@ -1,0 +1,5 @@
+@use '@src/styles/Carte' as c;
+
+.region-container {
+    @include c.carte-base(2px, .01rem);
+}

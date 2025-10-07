@@ -1,0 +1,25 @@
+:root {
+    --meta-tooltip-background: #363a3c;
+    --meta-tooltip-color: #ffffff;
+    --meta-tooltip-secondary: #b6bdcd;
+}
+
+.meta-graph {
+    .meta-tooltip {
+        background-color: var(--meta-tooltip-background) !important;
+        color: var(--meta-tooltip-color) !important;
+        font-weight: 600;
+
+        .meta-tooltip-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            gap: 12px;
+        }
+
+        .secondary {
+            color: var(--meta-tooltip-secondary) !important;
+        }
+    }
+}

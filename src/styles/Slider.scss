@@ -1,0 +1,23 @@
+.slider-arrow {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+
+    .arrow-btn {
+      pointer-events: auto;
+
+      &.prev {
+        position: absolute;
+        left: -30px;
+      }
+
+      &.next {
+        position: absolute;
+        right: -30px;
+      }
+    }
+  }

@@ -1,0 +1,531 @@
+{
+    "colors" : {
+        "dark-green-bourgeon" : {
+            "name": "--green-bourgeon-main-640",
+            "hex":"#68a532"
+        },
+        "light-green-bourgeon" : {
+            "name": "--green-bourgeon-925-125-hover",
+            "hex": "#8ed654"
+        },
+        "dark-green-menthe" : {
+            "name":"--green-menthe-sun-373-moon-652-active",
+            "hex": "#62a9a2"
+        },
+        "middle-green-menthe" : {
+            "name": "--green-menthe-925-125-active",
+            "hex": "#62bfb1"
+        },
+        "dark-orange": {
+            "name": "--orange-terre-battue-main-645",
+            "hex": "#e4794a"
+        },
+        "light-orange" : {
+            "name":"--orange-terre-battue-925-125-active",
+            "hex":"#faa184"
+        },
+        "dark-pink" : {
+            "name":"--pink-macaron-sun-406-moon-833-hover",
+            "hex":"#ca795c"
+        },
+        "middle-pink" : {
+            "name":"--pink-tuile-sun-425-moon-750-hover",
+            "hex":"#d5706f"
+        },
+        "light-pink" : {
+            "name":"--pink-macaron-850-200",
+            "hex":"#fcc0b4"
+        },
+        "dark-grey" : {
+            "name":"--grey-625-425",
+            "hex":"#666666"
+        },
+        "light-grey" : {
+            "name":"--grey-200-850",
+            "hex":"#cecece"
+        },
+        "dark-blue" : {
+            "name":"--blue-cumulus-sun-368-moon-732-active",
+            "hex":"#7996e6"
+        },
+        "light-blue" : {
+            "name":"--blue-cumulus-925-125-active",
+            "hex": "#8ab8f9"
+        },
+        "purple" : {
+            "name":"--purple-glycine-main-494",
+            "hex": "#a558a0"
+        }
+    },
+    "section1": {
+        "barline-10-premiers-pays-exportateurs": {
+            "x": [["1 - Chine", "2 - États-Unis", "3 - Allemagne", "4 - Royaume-Uni", "5 - France", "6 - Pays-Bas", "7 - Singapour", "8 - Irlande", "9 - Inde", "10 - Italie"]],
+            "yBars": [
+                [3753.1, 3180.2, 1961.8, 1116.4, 1051.2, 1032.8, 978.6, 852.1, 828.6, 776.7],
+                [-3219.3, -4083.3, -1782.2, -1157.6, -1074.4, -884.3, -786.0, -608.5, -919.2, -722.3]
+            ],
+            "yLines": [
+                [2.8, -3.1, 3.9, -1.1, -0.7, 12.1, 35.2, 42.2, -2.3, 2.3]
+            ],
+            "nameBars": ["Exports", "Imports"],
+            "nameLines": ["Solde / PIB"],
+            "barsColors": ["#68a532", "#e4794a"],
+            "linesColors": ["#666666"],
+            "unitTooltipBar": "milliards USD",
+            "unitTooltipLine": "%",
+            "hideLines": true,
+            "horizontal": true,
+            "stacked": true
+            },
+        "barchart-solde-biens-services-pib": {
+            "x": [["UNION EUROPÉENNE", "Espagne", "Allemagne", "Italie", "MONDE", "PAYS OCDE", "Belgique", "France", "Royaume-Uni"]],
+            "y": [[4.4, 4.3, 3.9, 2.3, 0.9, 0.1, 0.0, -0.7, -1.1]],
+            "name": ["Solde en % du PIB (2024)"],
+            "horizontal": true,
+            "colors": ["#68a532", "#68a532", "#68a532", "#68a532", "#68a532", "#68a532", "#68a532", "#e4794a", "#e4794a"],
+            "highlightIndex": [7],
+            "unitTooltip": "%"
+        }
+    },
+    "section2": {
+        "barchart-solde-echanges-exterieurs-principal": {
+            "x": [[2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]],
+            "y": [[-15.4, -2.6, -7.7, -17.7, -22.8, -15.8, -40.0, -30.4, -72.5, -48.4, -9.6]],
+            "name": ["Solde extérieur"],
+            "colors": ["#666666"],
+            "unitTooltip": "milliards d'€"            
+        },
+        "barchart-solde-echanges-exterieurs-dont-energie": {
+            "x": [[2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]],
+            "y": [[-48.9, -34.8, -28.5, -35.4, -40.4, -41.6, -23.7, -41.5, -99.9, -66.6, -55.0]],
+            "name": ["dont énergie"],
+            "colors": ["#7996e6"],
+            "unitTooltip": "milliards d'€"
+            
+        },
+        "barchart-solde-echanges-exterieurs-dont-biens-hors-energie": {
+            "x": [[2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]],
+            "y": [[10.2, 10.6, 1.3, -4.8, -1.7, 1.9, -26.1, -25.1, -31.8, -12.4, -0.3]],
+            "name": ["dont biens hors énergie"],
+            "colors": ["#62bfb1"],
+            "unitTooltip": "milliards d'€"            
+        },
+        "barchart-solde-echanges-exterieurs-dont-services": {
+            "x": [[2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]],
+            "y": [[10.8, 8.9, 10.6, 11.6, 8.2, 15.4, 8.9, 34.1, 46.8, 16.5, 29.3]],
+            "name": ["dont services"],
+            "colors": ["#faa184"],
+            "unitTooltip": "milliards d'€"            
+        },
+        "arealinechart-echange-biens-trimestre": {
+            "x": [[
+                "2009-Q1", "2009-Q2", "2009-Q3", "2009-Q4",
+                "2010-Q1", "2010-Q2", "2010-Q3", "2010-Q4",
+                "2011-Q1", "2011-Q2", "2011-Q3", "2011-Q4",
+                "2012-Q1", "2012-Q2", "2012-Q3", "2012-Q4",
+                "2013-Q1", "2013-Q2", "2013-Q3", "2013-Q4",
+                "2014-Q1", "2014-Q2", "2014-Q3", "2014-Q4",
+                "2015-Q1", "2015-Q2", "2015-Q3", "2015-Q4",
+                "2016-Q1", "2016-Q2", "2016-Q3", "2016-Q4",
+                "2017-Q1", "2017-Q2", "2017-Q3", "2017-Q4",
+                "2018-Q1", "2018-Q2", "2018-Q3", "2018-Q4",
+                "2019-Q1", "2019-Q2", "2019-Q3", "2019-Q4",
+                "2020-Q1", "2020-Q2", "2020-Q3", "2020-Q4",
+                "2021-Q1", "2021-Q2", "2021-Q3", "2021-Q4",
+                "2022-Q1", "2022-Q2", "2022-Q3", "2022-Q4",
+                "2023-Q1", "2023-Q2", "2023-Q3", "2023-Q4",
+                "2024-Q1", "2024-Q2", "2024-Q3", "2024-Q4",
+                "2025-Q1", "2025-Q2"
+            ]],
+            "yAreas": [[
+                -12.3, -10.4, -8.3, -13.9,
+                -11.7, -12.7, -13.3, -15.0,
+                -20.4, -18.9, -18.9, -16.8,
+                -18.7, -17.8, -15.7, -15.7,
+                -16.2, -14.5, -15.7, -15.8,
+                -13.9, -14.9, -15.8, -11.8,
+                -10.6, -9.9, -10.7, -11.7,
+                -10.9, -9.0, -13.0, -12.8,
+                -17.4, -13.0, -14.2, -14.0,
+                -16.3, -18.3, -14.9, -14.1,
+                -14.6, -14.3, -14.6, -13.9,
+                -12.2, -18.9, -19.5, -12.8,
+                -16.8, -19.0, -20.7, -29.1,
+                -33.4, -41.1, -46.7, -40.5,
+                -29.6, -24.4, -24.4, -20.1,
+                -18.4, -21.9, -21.2, -17.4,
+                -20.1, -22.9
+            ]],
+            "yLines": [
+                [
+                85.8, 85.8, 87.8, 88.1,
+                92.9, 98.1, 100.8, 101.4,
+                105.8, 106.5, 107.4, 108.9,
+                109.9, 110.7, 112.2, 109.9,
+                108.7, 110.9, 108.9, 109.4,
+                109.6, 108.4, 109.4, 111.2,
+                112.8, 116.3, 113.1, 113.9,
+                112.3, 111.7, 112.3, 115.5,
+                114.9, 118.3, 119.7, 121.8,
+                120.0, 122.1, 125.2, 125.8,
+                128.6, 129.7, 127.7, 126.0,
+                118.8, 85.9, 108.8, 116.5,
+                118.7, 122.4, 125.7, 133.1,
+                141.9, 145.7, 156.1, 155.4,
+                153.0, 154.7, 152.8, 150.7,
+                150.2, 151.5, 147.6, 151.4,
+                152.3, 148.8
+                ],
+                [
+                98.1, 96.2, 96.1, 102.0,
+                104.6, 110.8, 114.1, 116.4,
+                126.2, 125.4, 126.3, 125.7,
+                128.6, 128.5, 128.0, 125.5,
+                124.9, 125.4, 124.6, 125.2,
+                123.5, 123.3, 125.2, 123.0,
+                123.3, 126.2, 123.7, 125.6,
+                123.2, 120.8, 125.3, 128.3,
+                132.3, 131.3, 133.9, 135.8,
+                136.3, 140.4, 140.1, 139.9,
+                143.1, 144.0, 142.2, 139.9,
+                131.0, 104.8, 128.3, 129.2,
+                135.4, 141.4, 146.4, 162.1,
+                175.2, 186.8, 202.9, 195.9,
+                182.6, 179.2, 177.2, 170.8,
+                168.6, 173.4, 168.8, 168.7,
+                172.4, 171.7
+                ]
+            ],
+            "nameAreas": ["Solde"],
+            "nameLines": ["Exportations", "Importations"],
+            "areasColors": ["#cecece"],
+            "linesColors": ["#68a532", "#e4794a"],
+            "unitTooltipArea": "milliards d'€",
+            "unitTooltipLine": "milliards d'€",
+            "stacked": false
+            },
+        "linechart-echange-biens-zones-monde-afrique": {
+            "x": [[2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]],
+            "y": [[3.3, 2.7, 1.4, -0.6, 0.5, 1.4, 5.5, 5.5, 2.7, -1.6, -0.2, 3.2, -2.2, -10.6, -9.2, -6.2]],
+            "name": ["Afrique"],
+            "colors": ["#7996e6"],
+            "unitTooltip": "milliards d'€",
+            "yMin": -130,
+            "yMax": 20            
+        },
+        "linechart-echange-biens-zones-monde-amerique": {
+            "x": [[2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]],
+            "y": [[-4.7, -2.6, -4.9, -4.5, -1.9, -1.3, 1.8, 0.1, 1.1, 4.8, 7.5, 3.1, 3.4, -12.2, -5.4, -1.7]],
+            "name": ["Amérique"],
+            "colors": ["#7996e6"],
+            "unitTooltip": "milliards d'€",
+            "yMin": -130,
+            "yMax": 20
+        },
+        "linechart-echange-biens-zones-monde-asie": {
+            "x": [[2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]],
+            "y": [[-24.9, -28.5, -30.4, -24.8, -23.2, -24.9, -29.9, -31.6, -29.3, -32.0, -34.9, -43.3, -47.7, -71.9, -59.1, -53.1]],
+            "name": ["Asie"],
+            "colors": ["#7996e6"],
+            "unitTooltip": "milliards d'€",
+            "yMin": -130,
+            "yMax": 20            
+        },
+        "linechart-echange-biens-zones-monde-europe-hors-ue": {
+            "x": [[2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]],
+            "y": [[-4.0, -5.5, -10.4, -2.6, -2.8, 1.0, 4.5, 7.3, 2.3, 2.0, 5.8, 8.2, 2.7, -12.0, 10.7, 9.9]],
+            "name": ["Europe hors UE"],
+            "colors": ["#7996e6"],
+            "unitTooltip": "milliards d'€",
+            "yMin": -130,
+            "yMax": 20            
+        },
+        "linechart-echange-biens-zones-monde-pays-tiers": {
+            "x": [[2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]],
+            "y": [[-27.2, -32.3, -47.2, -35.6, -32.7, -30.6, -19.4, -21.4, -26.9, -34.5, -33.0, -34.5, -53.0, -126.8, -76.8, -63.6]],
+            "name": ["Pays tiers (Monde hors UE)"],
+            "colors": ["#7996e6"],
+            "unitTooltip": "milliards d'€",
+            "yMin": -130,
+            "yMax": 20            
+        },
+        "linechart-echange-biens-zones-monde-proche-moyen-orient": {
+            "x": [[2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]],
+            "y": [[7.0, 6.8, 2.9, 2.8, 2.1, 1.4, 6.1, 5.2, 4.8, 2.4, 2.8, 5.4, 3.3, -3.8, 0.8, 3.1]],
+            "name": ["Proche et Moyen-Orient"],
+            "colors": ["#7996e6"],
+            "unitTooltip": "milliards d'€",
+            "yMin": -130,
+            "yMax": 20            
+        },
+        "linechart-echange-biens-zones-monde-ue": {
+            "x": [[2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]],
+            "y": [[-32.9, -37.2, -44.9, -49.2, -46.8, -43.6, -41.4, -41.9, -49.6, -47.7, -44.5, -45.0, -54.6, -61.0, -45.5, -34.6]],
+            "name": ["Union européenne"],
+            "colors": ["#7996e6"],
+            "unitTooltip": "milliards d'€",
+            "yMin": -130,
+            "yMax": 20            
+        },
+        "linechart-part-marche-pays-monde": {
+            "x": [[2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]],
+            "y": [
+            [8.6, 9.2, 9.5, 9.9, 9.9, 9.2, 9.1, 9.4, 8.9, 8.9, 8.2, 8.0, 7.6, 7.6, 7.9, 8.0, 8.3, 8.2, 8.0, 7.8, 7.8, 7.3, 6.7, 7.1, 6.9],
+            [3.9, 4.3, 5.0, 5.8, 6.4, 7.2, 8.0, 8.7, 8.8, 9.5, 10.3, 10.4, 11.1, 11.6, 12.3, 13.7, 13.1, 12.8, 12.7, 13.1, 14.7, 14.9, 14.2, 14.1, 14.6],
+            [12.1, 11.8, 10.7, 9.6, 8.8, 8.6, 8.4, 8.2, 8.0, 8.4, 8.4, 8.1, 8.3, 8.3, 8.5, 9.1, 9.0, 8.7, 8.5, 8.6, 8.1, 7.9, 8.3, 8.4, 8.5],
+            [5.1, 5.2, 5.1, 5.2, 4.9, 4.4, 4.1, 4.0, 3.8, 3.9, 3.4, 3.3, 3.1, 3.1, 3.1, 3.1, 3.1, 3.0, 3.0, 3.0, 2.8, 2.6, 2.5, 2.7, 2.6],
+            [3.7, 3.9, 3.9, 3.9, 3.8, 3.5, 3.4, 3.6, 3.4, 3.2, 2.9, 2.9, 2.7, 2.7, 2.8, 2.8, 2.9, 2.9, 2.8, 2.8, 2.8, 2.8, 2.6, 2.8, 2.8],
+            [7.4, 6.5, 6.4, 6.2, 6.1, 5.7, 5.3, 5.1, 4.8, 4.6, 5.0, 4.5, 4.3, 3.8, 3.6, 3.8, 4.0, 3.9, 3.8, 3.7, 3.6, 3.4, 3.0, 3.0, 2.9],
+            [4.4, 4.4, 4.3, 4.1, 3.8, 3.7, 3.7, 3.2, 2.9, 2.8, 2.7, 2.8, 2.6, 2.9, 2.7, 2.8, 2.6, 2.5, 2.5, 2.4, 2.3, 2.1, 2.2, 2.2, 2.1]
+            ],
+            "name": ["Allemagne", "Chine", "États-Unis", "France", "Italie", "Japon", "Royaume-Uni"],
+            "colors": [
+            "#666666",
+            "#7996e6", 
+            "#8ed654",
+            "#ca795c",
+            "#62a9a2"
+            ],
+            "unitTooltip": "%",
+            "yMin": 0,
+            "yMax": 15            
+        }
+    },
+    "section3": {
+        "treemapchart-exportations": {
+            "tree": [159, 113, 111, 96, 92, 71, 70, 65, 61, 55],
+            "names": [
+            "1-Produits de la construction aéronautique et spatiale",
+            "2-Produits pharmaceutiques",
+            "3-Produits de la construction automobile",
+            "4-Produits chimiques de base, produits azotés, matières plastiques et caoutchouc synthétique",
+            "5-Machines et équipements d'usage général",
+            "6-Matériel électrique",
+            "7-Parfums, cosmétiques et produits d’entretien",
+            "8-Produits chimiques divers",
+            "9-Boissons",
+            "10-Produits de la culture et de l’élevage"
+            ],
+            "aspectRatio": 2,
+            "colors": [
+            "#7996e6",
+            "#ca795c",
+            "#8ed654",
+            "#faa184",
+            "#8ab8f9",
+            "#62a9a2",
+            "#d5706f",
+            "#62bfb1",
+            "#e4794a",
+            "#fcc0b4"
+            ],
+            "unitTooltip": "milliards d'€",
+            "borderWidth": 2,
+            "borderColor": "#ffffff"
+        },
+        "treemapchart-importations": {
+            "tree": [208, 160, 110, 106, 99, 96, 87, 76, 76, 60],
+            "names": [
+            "1-Hydrocarbures naturels",
+            "2-Produits de la construction automobile",
+            "3-Machines et équipements d'usage général",
+            "4-Produits pharmaceutiques",
+            "5-Produits chimiques de base, produits azotés, matières plastiques et caoutchouc synthétique",
+            "6-Produits pétroliers raffinés et coke",
+            "7-Matériel électrique",
+            "8-Produits de la construction aéronautique et spatiale",
+            "9-Articles d'habillement",
+            "10-Équipements pour automobiles"
+            ],
+            "aspectRatio": 2,
+            "colors": [
+            "#666666",
+            "#8ed654",
+            "#8ab8f9",
+            "#ca795c",
+            "#faa184",
+            "#62a9a2",
+            "#d5706f",
+            "#7996e6",
+            "#e4794a",
+            "#fcc0b4"
+            ],
+            "unitTooltip": "milliards d'€",
+            "borderWidth": 2,
+            "borderColor": "#ffffff"
+        },
+        "barchart-10-principaux-deficits-commerciaux" : {
+            "x": [["Hydrocarbures naturels", "Produits pétroliers raffinés et coke", "Produits de la construction automobile", "Articles d'habillement", "Téléphones et équipements de communication", "Ordinateurs et équipements périphériques", "Meubles", "Machines et équipements d'usage général", "Matériel électrique", "Métaux non ferreux"]],
+            "y": [[-60.1, -21.2, -16.3, -10.3, -9.8, -9.2, -6.2, -5.8, -5.5, -5.4]],
+            "name": ["Les 10 principaux déficits commerciaux, Moyenne 2022-2024, en milliards d'€"],
+            "colors": ["#e4794a"],
+            "unitTooltip": "milliards d'€",
+            "horizontal": true
+        },
+        "barchart-10-principaux-execdents-commerciaux" : {
+            "x": [["Produits de la construction aéronautique et spatiale", "Parfums, cosmétiques et produits d’entretien", "Boissons", "Déchets industriels", "Cuir, bagages et chaussures", "Produits de la culture et de l’élevage", "Produits laitiers et glaces", "Produits pharmaceutiques", "Composants et cartes électroniques", "Produits chimiques divers"]],
+            "y": [[27.7, 16.3, 15.3, 4.4, 3.8, 3.2, 2.5, 2.4, 2.4, 2.2]],
+            "name": ["Les 10 principaux excédents commerciaux, Moyenne 2022-2024, en milliards d'€"],
+            "colors": ["#68a532"],
+            "unitTooltip": "milliards d'€",
+            "horizontal": true
+        },
+        "linechart-solde-commercial-principaux-secteurs-excedentaires" : {
+            "x": [[2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]],
+            "y": [
+                    [7.4, 7.5, 8.6, 8.9, 8.8, 7.2, 8.6, 9.6, 10.7, 10.7, 10.5, 11.4, 11.5, 12.3, 12.3, 13.2, 11.3, 14.6, 16.0, 15.2, 14.8],
+                    [-1.7, -1.7, -1.6, -1.9, -1.7, -1.6, -1.7, -1.4, -1.3, -1.3, -1.8, -1.7, -1.4, -1.3, -0.7, 0.0, 1.0, 2.4, 2.7, 4.1, 4.5],
+                    [5.9, 6.3, 6.7, 7.4, 7.8, 6.9, 7.7, 8.6, 8.5, 8.6, 9.0, 9.2, 9.3, 10.5, 11.3, 12.5, 10.6, 13.0, 15.3, 16.3, 17.2],
+                    [9.9, 10.1, 12.8, 10.4, 14.6, 12.5, 18.1, 17.2, 20.2, 22.0, 22.9, 25.4, 22.9, 23.9, 27.2, 30.7, 17.2, 20.0, 24.6, 30.1, 28.3],
+                    [3.3, 3.8, 4.8, 4.1, 4.6, 3.9, 4.1, 1.9, 3.0, 4.6, 1.8, 3.5, 3.9, 3.3, 4.4, 6.2, 5.0, 2.5, 2.9, 0.4, 4.0]
+            ],
+            "colors": ["#5D9FC8", "#A8622A", "#E29238", "#9147B4", "#67B9A1"],
+            "name": ["Boissons", "Cuir, bagages et chaussures", "Parfums, cosmétiques et produits d’entretien", "Produits de la construction aéronautique et spatiale", "Produits pharmaceutiques"],
+            "unitTooltip": "milliards d'€"
+        },
+        "linechart-solde-commercial-agriculture-agroalimentaire" : {
+            "x": [[2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]],
+            "y": [
+                    [0.8, 1.1, 0.5, 4.2, 1.5, 2.7, 3.2, 1.4, 1.8, 3.3, 1.7, 1.7, 0.0, 4.5, 3.7, 2.0, 4.7, 0.7, 1.6, 1.6, 2.3],
+                    [14.6, 15.2, 14.8, 10.7, 11.3, 10.5, 11.4, 12.3, 13.2, 8.8, 7.4, 8.6, 12.3, 9.6, 10.7, 8.9, 16.0, 11.5, 7.5, 7.2, 8.6],
+                    [9.4, 7.5, 5.9, 12.5, 7.4, 10.3, 10.5, 8.0, 9.0, 9.6, 9.0, 10.0, 6.9, 12.7, 12.8, 10.3, 11.1, 7.4, 8.9, 6.1, 9.1],
+                    [-6.0, -8.9, -9.4, -2.5, -5.4, -2.9, -4.0, -5.8, -6.0, -2.4, -0.1, -0.4, -5.3, -1.4, -1.6, -0.7, -9.6, -4.8, -0.2, -2.6, -1.8]
+            ],
+            "colors": ["#67B9A1", "#9147B4", "#cecece", "#E29238"],
+            "name": ["Agriculture", "Boissons", "Ensemble agri-agro", "IAA hors boissons"],
+            "unitTooltip": "milliards d'€"
+        },
+        "arealinechart-electricite-echanges-de-biens-france" : {
+            "x": [[2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]],
+            "yAreas": [
+                [2.3, 3.2, 2.6, 1.7, 2.7, 0.7, 1.1, 2.6, 1.7, 1.7, 2.1, 2.3, 1.1, 1.3, 2.8, 2.0, 1.1, 2.6, -7.4, 4.0, 5.1]
+            ],
+            "yLines": [
+                        [3.0, 3.5, 3.1, 2.3, 3.5, 1.7, 2.1, 3.1, 2.5, 2.3, 2.4, 2.7, 1.9, 2.5, 3.6, 2.7, 1.9, 6.0, 8.6, 6.8, 5.9],
+                        [0.7, 0.3, 0.5, 0.6, 0.8, 1.0, 1.1, 0.5, 0.7, 0.6, 0.3, 0.4, 0.9, 1.2, 0.8, 0.7, 0.7, 3.4, 15.9, 2.8, 0.8]
+            ],
+            "nameAreas": ["Solde"],
+            "nameLines": ["Exports", "Imports"],
+            "linesColors": ["#68a532", "#e4794a"],
+            "areasColors": ["#cecece"],
+            "unitTooltipArea": "milliards d'€",
+            "unitTooltipLine": "milliards d'€"
+        },
+        "arealinechart-export-import-solde": {
+            "x": [[2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]],
+            "yAreas": [
+            [13.1, 9.6, 6.4, 2.0, -2.5, -4.8, -3.9, -5.3, -3.2, -4.4, -4.7, -6.6, -9.8, -10.0, -12.3, -15.9, -15.8, -18.4, -19.5, -22.8, -21.4]
+            ],
+            "yLines": [
+            [53.3, 52.0, 50.7, 51.0, 45.9, 33.8, 39.4, 42.0, 39.9, 38.4, 39.1, 42.4, 44.0, 48.2, 50.3, 49.7, 40.3, 44.2, 48.0, 56.1, 51.7],
+            [40.2, 42.4, 44.3, 48.9, 48.4, 38.7, 43.3, 47.3, 43.0, 42.8, 43.8, 49.0, 53.8, 58.2, 62.7, 65.6, 56.2, 62.6, 67.6, 78.9, 73.0]
+            ],
+            "nameAreas": ["Solde"],
+            "nameLines": ["Exportations", "Importations"],
+            "areasColors": ["#cecece"],
+            "linesColors": ["#68a532", "#e4794a"],
+            "unitTooltipArea": "milliards d'€",
+            "unitTooltipLine": "milliards d'€",
+            "stacked": false            
+        },
+    "arealinechart-importations-voitures": {
+        "x": [[2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]],
+        "yAreas": [
+        [20.6, 21.5, 22.7, 25.4, 25.2, 22.2, 23.8, 25.8, 23.0, 22.1, 23.1, 25.9, 28.2, 31.2, 32.7, 35.0, 32.6, 34.8, 35.9, 43.0, 41.3]
+        ],
+        "yLines": [
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, 0.3, 0.5, 1.0, 2.1, 3.7, 5.3, 9.4, 7.6],
+        [14.6, 15.0, 15.7, 18.8, 19.2, 15.7, 16.7, 18.2, 16.4, 15.4, 15.4, 15.8, 16.1, 16.2, 14.8, 13.3, 10.5, 8.0, 6.8, 5.6, 5.0],
+        [6.0, 6.5, 7.0, 6.6, 6.0, 6.6, 7.1, 7.5, 6.5, 6.7, 7.6, 10.0, 12.1, 13.6, 16.0, 18.5, 16.4, 17.7, 17.4, 18.2, 15.6],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, 0.5, 0.8, 1.5, 2.8, 4.5, 5.6, 9.2, 12.4]
+        ],
+        "nameAreas": ["Total"],
+        "nameLines": ["100 % électriques", "Diesel", "Essence", "Hybrides"],
+        "areasColors": ["#cecece"],
+        "linesColors": ["#68a532", "#e4794a", "#7996e6", "#62bfb1"],
+        "unitTooltipArea": "milliards d'€",
+        "unitTooltipLine": "milliards d'€",
+        "stacked": false       
+        },
+    "arealinechart-exportations-voitures": {
+        "x": [[2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]],
+        "yAreas": [
+        [28.7, 27.4, 24.6, 22.6, 18.9, 14.5, 16.0, 16.7, 15.7, 13.8, 14.2, 15.6, 16.3, 19.8, 21.5, 21.3, 16.4, 17.8, 19.9, 23.0, 21.2]
+        ],
+        "yLines": [
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, 0.5, 0.8, 1.0, 1.6, 1.8, 2.4, 2.8, 2.6],
+        [14.2, 14.3, 12.9, 11.7, 9.7, 7.0, 9.0, 10.3, 9.2, 8.1, 8.2, 8.9, 8.6, 9.7, 9.5, 8.8, 6.3, 5.9, 5.9, 6.4, 5.4],
+        [14.5, 13.1, 11.7, 10.9, 9.2, 7.4, 6.9, 6.4, 6.4, 5.7, 6.0, 6.7, 7.6, 8.3, 9.6, 9.9, 6.6, 7.6, 8.0, 9.5, 7.5],
+        [null, null, null, null, null, null, null, null, null, null, null, null, null, 1.0, 1.3, 1.3, 1.6, 2.2, 3.2, 3.8, 5.2]
+        ],
+        "nameAreas": ["Total"],
+        "nameLines": ["100 % électriques", "Diesel", "Essence", "Hybrides"],
+        "areasColors": ["#cecece"],
+        "linesColors": ["#68a532", "#e4794a", "#7996e6", "#62bfb1"],
+        "unitTooltipArea": "milliards d'€",
+        "unitTooltipLine": "milliards d'€",
+        "stacked": false        
+        },
+        "barchart-exportations-vehicules-electriques-pays": {
+            "x": [["Allemagne", "Chine", "Corée du Sud", "Belgique", "États-Unis", "Japon", "Mexique", "Espagne", "Pays-Bas", "Tchéquie", "Royaume-Uni", "France"]],
+            "y": [[40.4, 32.4, 13.6, 10.7, 7.5, 6.6, 5.6, 5.2, 4.9, 4.4, 3.4, 3.2]],
+            "name": ["Exports (en milliards $)"],
+            "colors": ["#e4794a"],
+            "unitTooltip": "milliards d'€",
+            "barSize": "flex",
+            "maxBarSize": 32            
+        }
+    },
+    "section4": {
+        "arealinechart-solde-recettes-depenses": {
+            "x": [[2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]],
+            "yAreas": [[28.5, 21.1, 15.7, 15.3, 19.6, 18.2, 22.8, 10.8, 40.0, 68.1, 39.5, 56.6]],
+            "yLines": [
+            [201.9, 214.5, 228.6, 234.1, 243.4, 255.7, 267.1, 219.0, 267.5, 345.7, 346.4, 372.0],
+            [173.4, 193.5, 212.9, 218.8, 223.8, 237.5, 244.3, 208.2, 227.5, 277.6, 306.9, 315.5]
+            ],
+            "nameAreas": ["Solde"],
+            "nameLines": ["Recettes", "Dépenses"],
+            "areasColors": ["#cecece"],
+            "linesColors": ["#68a532", "#e4794a"],
+            "unitTooltipArea": "milliards d'€",
+            "unitTooltipLine": "milliards d'€"
+        },
+        "areachart-autres-services": {
+            "x": [[2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]],
+            "yAreas": [[6.1, 5.1, 2.0, 3.0, 4.5, 5.9, 7.5, 6.6, 12.2, 10.5, 2.8, 8.6]],
+            "yLines": [[]],
+            "nameAreas": ["Autres services aux entreprises"],
+            "areasColors": ["#62bfb1"],
+            "linesColors": ["#62bfb1"],
+            "unitTooltipArea": "milliards d'€"
+        },
+        "areachart-services-financiers": {
+            "x": [[2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]],
+            "yAreas": [[6.1, 5.5, 4.7, 5.8, 5.6, 4.7, 6.0, 6.3, 8.4, 11.9, 15.4, 12.6]],
+            "yLines": [[]],
+            "nameAreas": ["Services financiers"],
+            "areasColors": ["#a558a0"],
+            "linesColors": ["#a558a0"],
+            "unitTooltipArea": "milliards d'€"
+        },
+        "areachart-transport": {
+            "x": [[2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]],
+            "yAreas": [[-4.0, -3.6, -3.2, -5.2, -3.3, -7.3, -5.2, -1.8, 16.3, 32.5, 2.8, 4.7]],
+            "yLines": [[]],
+            "nameAreas": ["Transport"],
+            "areasColors": ["#8ab8f9"],
+            "linesColors": ["#8ab8f9"],
+            "unitTooltipArea": "milliards d'€"
+        },
+        "areachart-voyages": {
+            "x": [[2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]],
+            "yAreas": [[16.7, 12.5, 12.6, 8.9, 10.9, 11.2, 8.5, 1.0, 2.1, 12.5, 14.1, 15.9]],
+            "yLines": [[]],
+            "nameAreas": ["Voyages"],
+            "areasColors": ["#e4794a"],
+            "linesColors": ["#e4794a"],
+            "unitTooltipArea": "milliards d'€"
+        }
+    }
+}

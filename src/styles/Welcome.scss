@@ -1,0 +1,26 @@
+.increase-effect-container {
+    display: inline-block;
+    height: 1em;
+    overflow: hidden;
+    position: relative;
+}
+
+.increase-effect-slider {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.increase-digit {
+    line-height: 1em;
+    width: 100%;
+    text-align: center;
+}
+
+@keyframes increase-effect {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(calc(-100% + 1em));
+    }
+}

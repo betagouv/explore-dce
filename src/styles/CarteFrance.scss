@@ -1,0 +1,15 @@
+@use '@src/styles/Carte' as c;
+
+.france-container {
+    @include c.carte-base(small, .2rem);
+
+    svg {
+        & > text.label-xs {
+            font-size: x-small;
+        }
+    }
+}
+
+.maplibregl-popup, .maplibregl-popup-content {
+    pointer-events: none !important;
+}

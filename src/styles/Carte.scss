@@ -1,0 +1,238 @@
+.france-container,
+.region-container,
+.departement-container {
+    padding: 20px 10px;
+    width: 100%;
+
+    svg {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.france-container,
+.region-container {
+
+    svg {
+        g.fr-link {
+    
+            & > path {
+                fill: var(--background-action-low-blue-france);
+            }
+
+            @media(hover: hover) {
+                &:hover > path {
+                    cursor: pointer;
+                    fill: var(--background-action-low-blue-france-hover);
+                    stroke: var(--background-action-low-blue-france);
+                }
+            }
+        }
+        g.fr-link.selected-region, g.fr-link.selected-department {
+            & > path {
+                fill: var(--background-action-low-blue-france-hover) !important;
+            }
+        }
+        g.fr-deps {
+            stroke: #fff;
+        }
+    }
+}
+
+.france-container {
+    // overflow: hidden;
+    
+    &.inline-card {
+        min-height: 0; // equivalent to overflow: hidden but without hiding the content
+        position: relative;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        container-type: inline-size;
+        padding: 50px 30px;
+
+        svg, img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            touch-action: none;
+            position: relative;
+        }
+
+        .carte-france {
+            cursor: pointer;
+        }
+    }
+
+    svg {
+        g.fr-link {
+            @media(hover: hover) {
+                &:hover > path {
+                    stroke-width: .1rem;
+                }
+            }
+            & > text {
+                visibility: hidden !important;
+            }
+        }
+    }
+
+    .france-summary {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        z-index: 10;
+
+        .france-summary-content {
+            display: flex;
+            align-items: center;
+        }
+
+        @container (max-width: 750px) {
+            bottom: 0;
+            top: unset;
+            left: 10px;
+            right: 10px;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+    }
+
+    .france-tooltip {
+        position: absolute;
+        pointer-events: none;
+        width: max-content;
+
+        .france-tooltip-container {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            min-width: 50px;
+
+            background-color: var(--meta-tooltip-background);
+            table-layout: auto;
+            width: auto;
+            display: table;
+
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 0.9em;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -20px;
+                left: 50%;
+                z-index: 1;
+                transform: translateX(-50%);
+                border-width: 10px;
+                border-style: solid;
+                border-color: var(--meta-tooltip-background) transparent transparent transparent;
+            }
+        }
+
+        .france-tooltip-row {
+            display: table-row;
+
+            .france-tooltip-cell {
+                text-align: left;
+                display: table-cell;
+                padding: 0 5px;
+                white-space: nowrap;
+                color: var(--meta-tooltip-color);
+                font-weight: bold;
+
+                &.primary {
+                    color: var(--meta-tooltip-secondary);
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
+
+.region-container {
+    svg {
+        g.fr-link {
+            @media(hover: hover) {
+                &:hover > path {
+                    stroke-width: .01rem;
+                }
+            }
+        }
+    }
+}
+
+@mixin carte-base($font_size, $stroke_width) {
+    svg {
+        @media (prefers-color-scheme: dark) {
+            & > text {
+                fill: var(--text-title-grey);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            & > text {
+                fill: var(--text-action-high-blue-france);
+            }
+        }
+        g.fr-link {
+    
+            & > text {
+                font-size: $font_size;
+            }
+
+            @media (prefers-color-scheme: dark) {
+                & > text {
+                    fill: var(--text-title-grey);
+                }
+            }
+
+            @media (prefers-color-scheme: light) {
+                & > text {
+                    fill: var(--text-action-high-blue-france);
+                }
+            }
+
+            & > text.label-xs {
+                font-size: x-small;
+            }
+
+            @media(hover: hover) {
+                &:hover > text {
+                    cursor: pointer;
+                    visibility: visible;
+                }
+        
+                &:not(:hover) > text {
+                    visibility: hidden;
+                }
+        
+            }
+
+            @media(hover: none) {
+                & > text {
+                    visibility: hidden;
+                }
+            }
+
+            & > path:first-child {
+                stroke: var(--grey-1000-50);
+                stroke-width: $stroke_width;
+            }
+        }
+        g.fr-link.selected-department > text, g.fr-link.selected-region > text {
+            visibility: visible !important;
+        }
+    }
+}

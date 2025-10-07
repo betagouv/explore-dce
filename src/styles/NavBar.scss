@@ -1,0 +1,87 @@
+/*
+DCE - Front
+==================================
+Styles SCSS pour le composant NavBar
+*/
+
+.navbar-icon {
+    width: 30px;
+    height: auto;
+}
+
+
+.fr-logo:has(.elysee)::before,
+.fr-logo:has(.elysee)::after {
+    content: none;
+}
+
+
+.fr-logo:has(.elysee) {
+    mask-image: url("/logoPR.svg");
+    mask-size: contain; /* Ensure the image scales to fit */
+    aspect-ratio: 1/1; /* Ensure the element maintains a 1:1 aspect ratio */
+    min-height: 100px;
+    background-color: light-dark(#28285a, white);
+    display: inline-block; /* Ensure the element behaves as a block for width/height */
+}
+
+.fr-header {
+    text-align: left;
+}
+
+.fr-nav__list {
+    display: flex; /* Use flexbox for alignment */
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.fr-mega-menu {
+    .fr-mega-menu__category .fr-nav__link {
+        font-size: 1.0rem !important;
+        // font-size: 1.15rem !important;
+    }
+
+    .fr-mega-menu__list .fr-nav__link {
+        padding: 0.25rem 1rem !important;
+        // font-size: 1rem !important;
+    }
+    .fr-categorie-active {
+        color: var(--text-action-high-blue-france) !important;
+        font-weight: bolder;
+        text-decoration: underline !important;
+    }
+    .fr-categorie-inactive {
+        cursor: default !important;
+        pointer-events: none !important;
+    }
+    .fr-moderable-desactivee {
+        text-decoration: line-through !important;
+    }
+    .rubrique-title {
+        font-weight: lighter !important;
+    }
+    .rubrique-link-active {
+        font-size: 1.5rem !important;
+    }
+    .rubrique-link-inactive {
+        font-size: 1.5rem !important;
+        color: var(--text-title-grey) !important;
+        background-image: unset !important;
+        &:hover {
+            background-color: var(--hover-tint);;
+            --hover-tint: var(--hover);
+            --active-tint: var(--active);
+        }
+    }
+}
+
+.navbar-dynamic {
+    order: 0; /* Dynamic links appear first */
+    margin-left: 0 !important;
+}
+
+.navbar-static {
+    order: 1; /* Static links appear last */
+    margin-left: auto; /* Push static links to the right */
+}

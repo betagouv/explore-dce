@@ -1,0 +1,34 @@
+.map-container {
+
+    .leaflet-top {
+        z-index: 400;
+    }
+
+    .leaflet-control-attribution {
+        display: none;
+    }
+
+    .leaflet-control-zoom-in, .leaflet-control-zoom-out {
+        &[href] {
+            background-image: none !important;
+        }
+        &[href]:active {
+            --underline-hover-width: unset !important;
+            background-color: unset !important;
+        }
+        &[href]:hover {
+            background-color: #f4f4f4 !important;
+        }
+    }
+
+    path.leaflet-interactive:focus {
+        outline: none;
+    }
+
+    .map-fullscreen-icon {
+        background-color: white;
+        &:hover {
+            background-color: #f4f4f4 !important;
+        }
+    }
+}

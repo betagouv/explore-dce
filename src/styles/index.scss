@@ -1,0 +1,25 @@
+/*
+DCE - Front
+==================================
+Styles SCSS de très haut niveau pour l'index, hors React (intégralité du site)
+*/
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+    --flag-blue: #000091;
+    --flag-white: #FFFFFF;
+    --flag-red: #E1000F;
+}
