@@ -8,8 +8,10 @@ const Graph1 = () => {
     return <Box my={4}>
         {createElement("data-box", toKebabCaseProps({
             ...dataBox.common,
+            ...dataBox.section2["databox-solde-echanges-exterieurs"],
             id: 'section2-graph1',
             title: 'Solde des échanges extérieurs de la France, par année, en Md€',
+            disposition: 'grid2'
         }))}
 
         {createElement("bar-chart", {
@@ -18,6 +20,27 @@ const Graph1 = () => {
             "databox-type": "chart",
             "databox-source": "barchart-solde-echanges-exterieurs-principal",
         })}
+
+        {createElement("bar-chart", {
+            ...toKebabCaseProps(chartData.section2["barchart-solde-echanges-exterieurs-dont-energie"]),
+            "databox-id": "section2-graph1",
+            "databox-type": "chart",
+            "databox-source": "barchart-solde-echanges-exterieurs-dont-energie",
+        })}
+
+        {createElement("bar-chart", {
+            ...toKebabCaseProps(chartData.section2["barchart-solde-echanges-exterieurs-dont-biens-hors-energie"]),
+            "databox-id": "section2-graph1",
+            "databox-type": "chart",
+            "databox-source": "barchart-solde-echanges-exterieurs-dont-biens-hors-energie",
+        })}
+
+        {createElement("bar-chart", {
+            ...toKebabCaseProps(chartData.section2["barchart-solde-echanges-exterieurs-dont-services"]),
+            "databox-id": "section2-graph1",
+            "databox-type": "chart",
+            "databox-source": "barchart-solde-echanges-exterieurs-dont-services",
+        })}
     </Box>
 }
 
@@ -25,6 +48,7 @@ const Graph2 = () => {
     return <Box my={4}>
         {createElement("data-box", toKebabCaseProps({
             ...dataBox.common,
+            ...dataBox.section2["databox-echanges-biens-trimestriels"],
             id: 'section2-graph2',
             title: 'Échanges de biens de la France par trimestre, en Md€',
         }))}
@@ -42,15 +66,77 @@ const Graph3 = () => {
     return <Box my={4}>
         {createElement("data-box", toKebabCaseProps({
             ...dataBox.common,
+            ...dataBox.section2["databox-echanges-biens-zones-monde"],
             id: 'section2-graph3',
             title: 'Échange de biens de la France avec divers zones du monde, par année, en Md€',
+            disposition: 'grid3'
         }))}
+
+        {createElement("line-chart", {
+            ...toKebabCaseProps(chartData.section2["linechart-echange-biens-zones-monde-europe-hors-ue"]),
+            "databox-id": "section2-graph3",
+            "databox-type": "chart",
+            "databox-source": "linechart-echange-biens-zones-monde-europe-hors-ue",
+        })}
+
+        {createElement("line-chart", {
+            ...toKebabCaseProps(chartData.section2["linechart-echange-biens-zones-monde-proche-moyen-orient"]),
+            "databox-id": "section2-graph3",
+            "databox-type": "chart",
+            "databox-source": "linechart-echange-biens-zones-monde-proche-moyen-orient",
+        })}
+
+        {createElement("line-chart", {
+            ...toKebabCaseProps(chartData.section2["linechart-echange-biens-zones-monde-amerique"]),
+            "databox-id": "section2-graph3",
+            "databox-type": "chart",
+            "databox-source": "linechart-echange-biens-zones-monde-amerique",
+        })}
 
         {createElement("line-chart", {
             ...toKebabCaseProps(chartData.section2["linechart-echange-biens-zones-monde-afrique"]),
             "databox-id": "section2-graph3",
             "databox-type": "chart",
             "databox-source": "linechart-echange-biens-zones-monde-afrique",
+        })}
+
+        {createElement("line-chart", {
+            ...toKebabCaseProps(chartData.section2["linechart-echange-biens-zones-monde-ue"]),
+            "databox-id": "section2-graph3",
+            "databox-type": "chart",
+            "databox-source": "linechart-echange-biens-zones-monde-ue",
+        })}
+
+        {createElement("line-chart", {
+            ...toKebabCaseProps(chartData.section2["linechart-echange-biens-zones-monde-asie"]),
+            "databox-id": "section2-graph3",
+            "databox-type": "chart",
+            "databox-source": "linechart-echange-biens-zones-monde-asie",
+        })}
+
+        {createElement("line-chart", {
+            ...toKebabCaseProps(chartData.section2["linechart-echange-biens-zones-monde-pays-tiers"]),
+            "databox-id": "section2-graph3",
+            "databox-type": "chart",
+            "databox-source": "linechart-echange-biens-zones-monde-pays-tiers",
+        })}
+    </Box>
+}
+
+const Graph4 = () => {
+    return <Box my={4}>
+        {createElement("data-box", toKebabCaseProps({
+            ...dataBox.common,
+            ...dataBox.section2["databox-part-marche-pays-monde"],
+            id: 'section2-graph4',
+            title: 'Part de marché dans les exportations de marchandises des quelques pays du monde',
+        }))}
+
+        {createElement("line-chart", {
+            ...toKebabCaseProps(chartData.section2["linechart-part-marche-pays-monde"]),
+            "databox-id": "section2-graph4",
+            "databox-type": "chart",
+            "databox-source": "linechart-part-marche-pays-monde",
         })}
     </Box>
 }
@@ -122,6 +208,8 @@ export const Section2 = () => {
                     <br/>
                     Parallèlement, la France a vu sa part de marché décliner lentement, perdant 2,5 points de % depuis 2000, moins rapidement que le Japon, au même rythme que le Royaume-Uni, et un peu plus vite que l'Italie, qui vient de lui souffler la 5e place mondiale.
                 </Typography>
+
+                <Graph4 />
             </Box>
         </Box>
     );

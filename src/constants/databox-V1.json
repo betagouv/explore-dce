@@ -1,0 +1,124 @@
+{
+  "section1": {
+    "databox-top-echanges-mondiaux": {
+      "source": "Banque mondiale",
+      "date": "Juillet 2025",
+      "tooltipTitle": "Top 5 échanges mondiaux",
+      "tooltipContent": "Classement des 5 premiers exportateurs et importateurs de biens en 2024, avec le solde commercial rapporté au PIB (Produit Intérieur Brut)."
+    },
+    "databox-solde-biens-services-pib": {
+      "source": "Banque mondiale",
+      "date": "Juillet 2025",
+      "tooltipTitle": "Solde des échanges de biens et services en % du PIB",
+      "tooltipContent": "Solde des échanges de biens et services exprimé en pourcentage du PIB pour la France, l’Union européenne et plusieurs zones économiques en 2024."
+    }
+  },
+  "section2": {
+    "databox-solde-echanges-exterieurs": {
+      "source": "INSEE - Les comptes de la Nation en 2024",
+      "date": "Mai 2025",
+      "tooltipTitle": "Solde des échanges extérieurs",
+      "tooltipContent": "Évolution annuelle du solde extérieur global de la France entre 2014 et 2024, ainsi que ses déclinaisons : énergie, biens hors énergie et services, selon les comptes nationaux."
+    },
+    "databox-echanges-biens-trimestriels": {
+      "source": "DSECE",
+      "date": "Août 2025",
+      "tooltipTitle": "Solde trimestriel des échanges de biens",
+      "tooltipContent": "Évolution trimestrielle des exportations, des importations et du solde des échanges de biens entre 2009 et 2025. Données CAF/FAB, CVS-CJO, y compris matériel militaire et données sous le seuil déclaratif"
+    },
+    "databox-echanges-biens-zones-monde": {
+      "source": "DSECE",
+      "date": "Août 2025",
+      "tooltipTitle": "Solde des échanges de biens par zone géographique",
+      "tooltipContent": "Solde annuel des échanges de biens de la France avec les grandes zones géographiques (Afrique, Amérique, Asie, Europe hors UE (Union européenne), Proche et Moyen-Orient, Union européenne, Monde hors UE) de 2009 à 2024.  Données CAF/FAB, CVS-CJO"
+    },
+    "databox-part-marche-pays-monde": {
+      "source": "INSEE (OMC)",
+      "date": "Mai 2025",
+      "tooltipTitle": "Parts de marché dans les exportations de marchandises de quelques pays du monde",
+      "tooltipContent": "Évolution des parts de marché mondiales à l’exportation de la France, de l’Allemagne, de la Chine, des États-Unis et d’autres grands exportateurs entre 2000 et 2024."
+    }
+  },
+  "section3": {
+    "databox-top-produits-exportes": {
+      "source": "Douanes - DSECE",
+      "date": "Août 2025",
+      "tooltipTitle": "Top 10 des produits exportés",
+      "tooltipContent": "Principales catégories de produits exportés par la France en 2024, en milliards d’euros, selon les données douanières. Données CAF/FAB"
+    },
+    "databox-top-produits-importes": {
+      "source": "Douanes - DSECE",
+      "date": "Août 2025",
+      "tooltipTitle": "Top 10 des produits importés",
+      "tooltipContent": "Principales catégories de produits importés par la France en 2024, en milliards d’euros, selon les données douanières. Données CAF/FAB"
+    },
+    "databox-top-deficits-commerciaux": {
+      "source": "Douanes - DSECE",
+      "date": "Août 2025",
+      "tooltipTitle": "Les 10 principaux déficits commerciaux",
+      "tooltipContent": "Produits présentant les déficits commerciaux les plus importants en moyenne sur la période 2022-2024. Données CAF/FAB"
+    },
+    "databox-top-excedents-commerciaux": {
+      "source": "Douanes - DSECE",
+      "date": "Août 2025",
+      "tooltipTitle": "Les 10 principaux excédents commerciaux",
+      "tooltipContent": "Produits présentant les excédents commerciaux les plus importants en moyenne sur la période 2022-2024. Données CAF/FAB"
+    },
+    "databox-secteurs-excedentaires": {
+      "source": "Douanes - DSECE",
+      "date": "Août 2025",
+      "tooltipTitle": "Solde commercial des principaux secteurs excédentaires",
+      "tooltipContent": "Évolution annuelle des soldes commerciaux de quelques grands secteurs excédentaires de la France en milliards d'€ sur la période 2004-2024. Données CAF/FAB"
+    },
+    "databox-solde-agriculture-agroalimentaire": {
+      "source": "Douanes - DSECE",
+      "date": "Août 2025",
+      "tooltipTitle": "Solde commercial agricole et agroalimentaire",
+      "tooltipContent": "Évolution annuelle du solde commercial des produits agricoles et agroalimentaires français en milliards d'€ sur la période 2004-2024. Données CAF/FAB"
+    },
+    "databox-echanges-electricite": {
+      "source": "Douanes - DSECE",
+      "date": "Août 2025",
+      "tooltipTitle": "Échanges d'électricité",
+      "tooltipContent": "Exportations, importations et solde des échanges d’électricité de la France en milliards d'€ sur la période 2004-2024. Poste D35A de la nomenclature A129. Données CAF/FAB"
+    },
+    "databox-secteur-automobile": {
+      "source": "Douanes - DSECE",
+      "date": "Août 2025",
+      "tooltipTitle": "Automobile (construction et équipements): échanges de biens de la France",
+      "tooltipContent": "Solde commercial, importations et exportations dans le secteur automobile entre 2004 et 2024. Poste C29A et C29B de la nomenclature A129. Données CAF/FAB"
+    },
+    "databox-importations-voitures": {
+      "source": "Douanes - DSECE",
+      "date": "Août 2025",
+      "tooltipTitle": "Importations de voitures de tourisme et autres véhicules automobiles (moins de 10 personnes)",
+      "tooltipContent": "Importations annuelles de voitures de tourisme et autres véhicules automobiles (moins de 10 personnes) en milliards d'€, décomposées par type de motorisation (électriques, diesel, essence, hybrides) entre 2004 et 2024. Données CAF/FAB"
+    },
+    "databox-exportations-voitures": {
+      "source": "Douanes - DSECE",
+      "date": "Août 2025",
+      "tooltipTitle": "Exportations de voitures de tourisme et autres véhicules automobiles (moins de 10 personnes)",
+      "tooltipContent": "Exportations annuelles de voitures de tourisme et autres véhicules automobiles (moins de 10 personnes) en milliards d'€, décomposées par type de motorisation (électriques, diesel, essence, hybrides) entre 2004 et 2024. Données CAF/FAB"
+    },
+    "databox-exportations-vehicules-electriques": {
+      "source": "BACI - CEPII",
+      "date": "Janvier 2025",
+      "tooltipTitle": "12 premiers pays exportateurs de véhicules 100% életriques en 2023",
+      "tooltipContent": "Classement des principaux pays exportateurs de véhicules électriques en 2024, en milliards de dollars. Code 8703.80 de la nomenclature HS22. Données CAF/FAB"
+    }
+  },
+  "section4": {
+    "databox-balance-services": {
+      "source": "Banque de France",
+      "date": "Octobre 2025",
+      "tooltipTitle": "Balance des services",
+      "tooltipContent": "Évolution annuelle du solde, des recettes et des dépenses de la balance des services entre 2013 et 2024."
+    },
+    "databox-solde-echanges-services": {
+      "source": "Banque de France",
+      "date": "Octobre 2025",
+      "tooltipTitle": "Solde des échanges de services pour 4 secteurs excédentaires en 2024",
+      "tooltipContent": "Évolution annuelle du solde de 4 secteurs excédentaires : les services de voyages, financiers, du transport et des autres services aux entreprises, par année en milliards d'€ entre 2013 et 2024."
+    }
+  }
+}

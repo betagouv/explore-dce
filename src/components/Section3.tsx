@@ -2,70 +2,203 @@ import { createElement } from "react";
 import { Typography, Box } from "@mui/material";
 import { toKebabCaseProps } from "@src/utils/camelToKebabCase";
 import { PTitle } from "@src/components/generic/PTitle";
+import { chartData, dataBox } from "@src/constants/data";
 
 const Graph1 = () => {
     return <Box my={4}>
-        {createElement("data-box", toKebabCaseProps({}))}
+        {createElement("data-box", toKebabCaseProps({
+            ...dataBox.common,
+            ...dataBox.section3["databox-top-produits-exportes"],
+            id: 'section3-graph1',
+            title: 'Moyenne annuelle 2022-2024 en Md€',
+        }))}
+
+        {createElement("treemap-chart", {
+            ...toKebabCaseProps(chartData.section3["treemapchart-exportations"]),
+            "databox-id": "section3-graph1",
+            "databox-type": "chart",
+            "databox-source": "treemapchart-exportations",
+        })}
     </Box>
 }
 
 const Graph2 = () => {
     return <Box my={4}>
-        {createElement("data-box", toKebabCaseProps({}))}
+        {createElement("data-box", toKebabCaseProps({
+            ...dataBox.common,
+            ...dataBox.section3["databox-top-produits-importes"],
+            id: 'section3-graph2',
+            title: 'Moyenne annuelle 2022-2024 en Md€',
+        }))}
+
+        {createElement("treemap-chart", {
+            ...toKebabCaseProps(chartData.section3["treemapchart-importations"]),
+            "databox-id": "section3-graph2",
+            "databox-type": "chart",
+            "databox-source": "treemapchart-importations",
+        })}
     </Box>
 }
 
 const Graph3 = () => {
     return <Box my={4}>
-        {createElement("data-box", toKebabCaseProps({}))}
+        {createElement("data-box", toKebabCaseProps({
+            ...dataBox.common,
+            ...dataBox.section3["databox-top-deficits-commerciaux"],
+            id: 'section3-graph3',
+            title: 'Les 10 principaux déficits commerciaux, moyenne 2022-2024, en Md€',
+        }))}
+
+        {createElement("bar-chart", {
+            ...toKebabCaseProps(chartData.section3["barchart-10-principaux-deficits-commerciaux"]),
+            "databox-id": "section3-graph3",
+            "databox-type": "chart",
+            "databox-source": "barchart-10-principaux-deficits-commerciaux",
+        })}
     </Box>
 }
 
 const Graph4 = () => {
     return <Box my={4}>
-        {createElement("data-box", toKebabCaseProps({}))}
+        {createElement("data-box", toKebabCaseProps({
+            ...dataBox.common,
+            ...dataBox.section3["databox-top-excedents-commerciaux"],
+            id: 'section3-graph4',
+            title: 'Les 10 principaux excédents commerciaux, moyenne 2022-2024, en Md€',
+        }))}
+
+        {createElement("bar-chart", {
+            ...toKebabCaseProps(chartData.section3["barchart-10-principaux-execdents-commerciaux"]),
+            "databox-id": "section3-graph4",
+            "databox-type": "chart",
+            "databox-source": "barchart-10-principaux-execdents-commerciaux",
+        })}
     </Box>
 }
 
 const Graph5 = () => {
     return <Box my={4}>
-        {createElement("data-box", toKebabCaseProps({}))}
+        {createElement("data-box", toKebabCaseProps({
+            ...dataBox.common,
+            ...dataBox.section3["databox-secteurs-excedentaires"],
+            id: 'section3-graph5',
+            title: 'Solde commercial des principaux secteurs excédentaires, par année, en Md€',
+        }))}
+
+        {createElement("line-chart", {
+            ...toKebabCaseProps(chartData.section3["linechart-solde-commercial-principaux-secteurs-excedentaires"]),
+            "databox-id": "section3-graph5",
+            "databox-type": "chart",
+            "databox-source": "linechart-solde-commercial-principaux-secteurs-excedentaires",
+        })}
     </Box>
 }
 
 const Graph6 = () => {
     return <Box my={4}>
-        {createElement("data-box", toKebabCaseProps({}))}
+        {createElement("data-box", toKebabCaseProps({
+            ...dataBox.common,
+            ...dataBox.section3["databox-solde-agriculture-agroalimentaire"],
+            id: 'section3-graph6',
+            title: 'Solde commercial agriculture et agroalimentaire, par année, en Md€',
+        }))}
+
+        {createElement("line-chart", {
+            ...toKebabCaseProps(chartData.section3["linechart-solde-commercial-agriculture-agroalimentaire"]),
+            "databox-id": "section3-graph6",
+            "databox-type": "chart",
+            "databox-source": "linechart-solde-commercial-agriculture-agroalimentaire",
+        })}
     </Box>
 }
 
 const Graph7 = () => {
     return <Box my={4}>
-        {createElement("data-box", toKebabCaseProps({}))}
+        {createElement("data-box", toKebabCaseProps({
+            ...dataBox.common,
+            ...dataBox.section3["databox-echanges-electricite"],
+            id: 'section3-graph7',
+            title: 'Élétricité : échanges de biens de la France, par année, en Md€',
+        }))}
+
+        {createElement("area-line-chart", {
+            ...toKebabCaseProps(chartData.section3["arealinechart-electricite-echanges-de-biens-france"]),
+            "databox-id": "section3-graph7",
+            "databox-type": "chart",
+            "databox-source": "arealinechart-electricite-echanges-de-biens-france",
+        })}
     </Box>
 }
 
 const Graph8 = () => {
     return <Box my={4}>
-        {createElement("data-box", toKebabCaseProps({}))}
+        {createElement("data-box", toKebabCaseProps({
+            ...dataBox.common,
+            ...dataBox.section3["databox-secteur-automobile"],
+            id: 'section3-graph8',
+            title: 'Automobile (construction et équipements) : Échanges de biens de la France, par année, en Md€',
+        }))}
+
+        {createElement("area-line-chart", {
+            ...toKebabCaseProps(chartData.section3["arealinechart-export-import-solde"]),
+            "databox-id": "section3-graph8",
+            "databox-type": "chart",
+            "databox-source": "arealinechart-export-import-solde",
+        })}
     </Box>
 }
 
 const Graph9 = () => {
     return <Box my={4}>
-        {createElement("data-box", toKebabCaseProps({}))}
+        {createElement("data-box", toKebabCaseProps({
+            ...dataBox.common,
+            ...dataBox.section3["databox-importations-voitures"],
+            id: 'section3-graph9',
+            title: 'Importations de voitures de tourisme et autres véhicules automobiles (moins de 10 personnes), par année, en Md€',
+        }))}
+
+        {createElement("area-line-chart", {
+            ...toKebabCaseProps(chartData.section3["arealinechart-importations-voitures"]),
+            "databox-id": "section3-graph9",
+            "databox-type": "chart",
+            "databox-source": "arealinechart-importations-voitures",
+        })}
     </Box>
 }
 
 const Graph10 = () => {
     return <Box my={4}>
-        {createElement("data-box", toKebabCaseProps({}))}
+        {createElement("data-box", toKebabCaseProps({
+            ...dataBox.common,
+            ...dataBox.section3["databox-exportations-voitures"],
+            id: 'section3-graph10',
+            title: 'Exportations de voitures de tourisme et autres véhicules automobiles (moins de 10 personnes), par année, en Md€',
+        }))}
+
+        {createElement("area-line-chart", {
+            ...toKebabCaseProps(chartData.section3["arealinechart-exportations-voitures"]),
+            "databox-id": "section3-graph10",
+            "databox-type": "chart",
+            "databox-source": "arealinechart-exportations-voitures",
+        })}
     </Box>
 }
 
 const Graph11 = () => {
     return <Box my={4}>
-        {createElement("data-box", toKebabCaseProps({}))}
+        {createElement("data-box", toKebabCaseProps({
+            ...dataBox.common,
+            ...dataBox.section3["databox-exportations-vehicules-electriques"],
+            id: 'section3-graph11',
+            title: '12 premiers pays exportateurs de véhicules 100 % électriques, en 2023, en millions d\'€',
+        }))}
+
+        {createElement("bar-chart", {
+            ...toKebabCaseProps(chartData.section3["barchart-exportations-vehicules-electriques-pays"]),
+            "databox-id": "section3-graph11",
+            "databox-type": "chart",
+            "databox-source": "barchart-exportations-vehicules-electriques-pays",
+        })}
     </Box>
 }
 

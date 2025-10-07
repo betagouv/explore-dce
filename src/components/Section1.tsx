@@ -7,6 +7,7 @@ const Graph1 = () => {
     return <Box my={4}>
         {createElement("data-box", toKebabCaseProps({
             ...dataBox.common,
+            ...dataBox.section1["databox-top-echanges-mondiaux"],
             id: 'section1-graph1',
             title: 'Exports et imports de biens et services : les 10 premiers pays exportateurs en 2024 en Md$',
         }))}
@@ -24,6 +25,7 @@ const Graph2 = () => {
     return <Box my={4}>
         {createElement("data-box", toKebabCaseProps({
             ...dataBox.common,
+            ...dataBox.section1["databox-solde-biens-services-pib"],
             id: 'section1-graph2',
             title: 'Exports et imports de biens et services : les 10 premiers pays exportateurs en 2024 en Md$',
         }))}

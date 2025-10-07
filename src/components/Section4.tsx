@@ -1,16 +1,63 @@
 import { createElement } from "react";
 import { Typography, Box } from "@mui/material";
 import { toKebabCaseProps } from "@src/utils/camelToKebabCase";
+import { chartData, dataBox } from "@src/constants/data";
 
 const Graph1 = () => {
     return <Box my={4}>
-        {createElement("data-box", toKebabCaseProps({}))}
+        {createElement("data-box", toKebabCaseProps({
+            ...dataBox.common,
+            ...dataBox.section4["databox-balance-services"],
+            id: 'section4-graph1',
+            title: 'Balance des services, par année en Md€',
+        }))}
+
+        {createElement("area-line-chart", {
+            ...toKebabCaseProps(chartData.section4["arealinechart-solde-recettes-depenses"]),
+            "databox-id": "section4-graph1",
+            "databox-type": "chart",
+            "databox-source": "arealinechart-solde-recettes-depenses",
+        })}
     </Box>
 }
 
 const Graph2 = () => {
     return <Box my={4}>
-        {createElement("data-box", toKebabCaseProps({}))}
+        {createElement("data-box", toKebabCaseProps({
+            ...dataBox.common,
+            ...dataBox.section4["databox-solde-echanges-services"],
+            id: 'section4-graph2',
+            title: 'Solde des échanges de services pour 4 secteurs excédentaires en 2024, par année en Md€',
+            disposition: "grid2",
+        }))}
+
+        {createElement("area-line-chart", {
+            ...toKebabCaseProps(chartData.section4["areachart-autres-services"]),
+            "databox-id": "section4-graph2",
+            "databox-type": "chart",
+            "databox-source": "areachart-autres-services",
+        })}
+
+        {createElement("area-line-chart", {
+            ...toKebabCaseProps(chartData.section4["areachart-services-financiers"]),
+            "databox-id": "section4-graph2",
+            "databox-type": "chart",
+            "databox-source": "areachart-services-financiers",
+        })}
+
+        {createElement("area-line-chart", {
+            ...toKebabCaseProps(chartData.section4["areachart-transport"]),
+            "databox-id": "section4-graph2",
+            "databox-type": "chart",
+            "databox-source": "areachart-transport",
+        })}
+
+        {createElement("area-line-chart", {
+            ...toKebabCaseProps(chartData.section4["areachart-voyages"]),
+            "databox-id": "section4-graph2",
+            "databox-type": "chart",
+            "databox-source": "areachart-voyages",
+        })}
     </Box>
 }
 
