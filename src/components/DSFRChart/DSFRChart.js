@@ -15126,7 +15126,7 @@ const Dy = (e) => e.charAt(0).toUpperCase() + e.slice(1), Ay = (e) => e.normaliz
       ])
     ], 8, Uy));
   }
-}, F5 = /* @__PURE__ */ It(L5, [["__scopeId", "data-v-42e58959"]]), { min: I5, max: V5 } = Math, ds = (e, t = 0, n = 1) => I5(V5(t, e), n), hc = (e) => {
+}, F5 = /* @__PURE__ */ It(L5, [["__scopeId", "data-v-42115c72"]]), { min: I5, max: V5 } = Math, ds = (e, t = 0, n = 1) => I5(V5(t, e), n), hc = (e) => {
   e._clipped = !1, e._unclipped = e.slice(0);
   for (let t = 0; t <= 3; t++)
     t < 3 ? ((e[t] < 0 || e[t] > 255) && (e._clipped = !0), e[t] = ds(e[t], 0, 255)) : t === 3 && (e[t] = ds(e[t], 0, 1));
@@ -17472,7 +17472,7 @@ const fw = {
     },
     highlightIndex: {
       type: Array,
-      default: () => [3, 4]
+      default: () => []
     },
     unitTooltip: {
       type: String,
@@ -18592,11 +18592,6 @@ const ik = {
     choosePalette() {
       return Kt(this.selectedPalette, this.colors);
     },
-    changeColors(e) {
-      this.loadColors(), this.chart.data.datasets.forEach((t, n) => {
-        t.borderColor = this.colorParse[n], t.backgroundColor = this.colorParse[n], t.pointBorderColor = this.colorParse[n], t.pointBackgroundColor = this.colorParse[n], t.hoverBorderColor = this.colorHover[n], t.hoverBackgroundColor = this.colorHover[n], t.pointHoverBorderColor = this.colorHover[n], t.pointHoverBackgroundColor = this.colorHover[n];
-      }), this.chart.options.scales.x.ticks.color = e === "dark" ? "#cecece" : lt.defaults.color, this.chart.options.scales.y.ticks.color = e === "dark" ? "#cecece" : lt.defaults.color, this.chart.update("none");
-    },
     createChart() {
       this.chart && this.chart.destroy(), this.getData();
       const e = this.$refs[this.chartId].getContext("2d"), t = Array.isArray(this.showLabels) ? !0 : this.showLabels != null, n = this.datasets.map((s) => {
@@ -18750,6 +18745,11 @@ const ik = {
           }
         }
       });
+    },
+    changeColors(e) {
+      this.loadColors(), this.chart.data.datasets.forEach((t, n) => {
+        t.borderColor = this.colorParse[n], t.backgroundColor = this.colorParse[n], t.pointBorderColor = this.colorParse[n], t.pointBackgroundColor = this.colorParse[n], t.hoverBorderColor = this.colorHover[n], t.hoverBackgroundColor = this.colorHover[n], t.pointHoverBorderColor = this.colorHover[n], t.pointHoverBackgroundColor = this.colorHover[n];
+      }), this.chart.options.scales.x.ticks.color = e === "dark" ? "#cecece" : lt.defaults.color, this.chart.options.scales.y.ticks.color = e === "dark" ? "#cecece" : lt.defaults.color, this.chart.update("none");
     }
   }
 }, ok = { class: "fr-col-12" }, rk = { class: "chart" }, lk = { class: "tooltip" }, ak = { class: "tooltip_body" }, ck = { class: "tooltip_value" }, hk = { class: "tooltip_value-content" }, dk = { class: "tooltip_place" }, uk = { class: "chart_legend fr-mb-0 fr-mt-4v" }, fk = { class: "fr-text--sm fr-text--bold fr-ml-1w fr-mb-0" }, pk = { class: "fr-text--sm fr-text--bold fr-ml-1w fr-mb-0" }, gk = { class: "fr-text--sm fr-text--bold fr-ml-1w fr-mb-0" }, mk = {
@@ -23182,7 +23182,7 @@ const X8 = {
     },
     highlightIndex: {
       type: Array,
-      default: () => [3, 4]
+      default: () => []
     },
     unitTooltip: {
       type: String,
@@ -23266,9 +23266,6 @@ const X8 = {
         borderWidth: this.borderWidth
       }];
     },
-    choosePalette() {
-      return Kt(this.selectedPalette, this.colors);
-    },
     loadColors() {
       this.dataParse.map((n) => n[this.value] || n.value);
       const { colorParse: e, colorHover: t } = qx({
@@ -23278,6 +23275,9 @@ const X8 = {
         colors: this.colors
       });
       this.colorParse = e, this.colorHover = t;
+    },
+    choosePalette() {
+      return Kt(this.selectedPalette, this.colors);
     },
     createChart() {
       this.chart && this.chart.destroy(), this.getData();
@@ -23320,9 +23320,7 @@ const X8 = {
                   d.innerHTML = "";
                   const u = s.querySelector(".tooltip_value");
                   u.innerHTML = "", i.dataPoints.forEach((f) => {
-                    const m = f.datasetIndex, p = f.dataIndex;
-                    console.log("tooltip dataPoint:", this.colorParse);
-                    const b = this.colorParse[p % this.colorParse[m].length], x = `${this.formatNumber(this.datasets[m].data[p]).v}${this.unitTooltip ? " " + this.unitTooltip : ""}`;
+                    const m = f.datasetIndex, p = f.dataIndex, b = this.colorParse[p % this.colorParse[m].length], x = `${this.formatNumber(this.datasets[m].data[p]).v}${this.unitTooltip ? " " + this.unitTooltip : ""}`;
                     u.innerHTML += `
                     <div class="tooltip_value-content">
                       <span class="tooltip_dot" style="background-color:${b};"></span>
@@ -23341,7 +23339,7 @@ const X8 = {
       });
     },
     changeColors() {
-      this.loadColors(), this.chart && this.chart.data.datasets[0] && (console.log("change colors:", this.colorParse), this.chart.data.datasets[0].backgroundColor = (e) => {
+      this.loadColors(), this.chart && this.chart.data.datasets[0] && (this.chart.data.datasets[0].backgroundColor = (e) => {
         const t = e.dataIndex;
         return this.colorParse[t % this.colorParse.length];
       }, this.chart.data.datasets[0].hoverBackgroundColor = (e) => {
@@ -23355,9 +23353,8 @@ const X8 = {
   class: "flex fr-mt-1w"
 }, Q8 = { class: "fr-text--xs" };
 function tM(e, t, n, s, i, r) {
-  var o;
   return O(), me(ke, {
-    disabled: !((o = e.$el) != null && o.ownerDocument.getElementById(n.databoxId)) || !n.databoxId && !n.databoxType && n.databoxSource === "default",
+    disabled: !1,
     to: "#" + n.databoxId + "-" + n.databoxType + "-" + n.databoxSource
   }, [
     g("div", {
@@ -23379,7 +23376,7 @@ function tM(e, t, n, s, i, r) {
         ])
       ])
     ], 512)
-  ], 8, ["disabled", "to"]);
+  ], 8, ["to"]);
 }
 const eM = /* @__PURE__ */ It(X8, [["render", tM]]);
 customElements.define("data-box", /* @__PURE__ */ _e(F5, { shadowRoot: !1 }));
