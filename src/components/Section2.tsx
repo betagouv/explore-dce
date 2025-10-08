@@ -3,6 +3,7 @@ import { Typography, Box } from "@mui/material";
 import { toKebabCaseProps } from "@src/utils/camelToKebabCase";
 import { PTitle } from "@src/components/generic/PTitle";
 import { chartData, dataBox } from "@src/constants/data";
+import { convertArealineToTable, convertBarToTable, convertLineToTable } from "@src/utils/convert";
 
 const Graph1 = () => {
     return <Box my={4}>
@@ -41,6 +42,19 @@ const Graph1 = () => {
             "databox-type": "chart",
             "databox-source": "barchart-solde-echanges-exterieurs-dont-services",
         })}
+
+        {createElement("table-chart", {
+            ...convertBarToTable(
+                chartData.section2["barchart-solde-echanges-exterieurs-principal"],
+                chartData.section2["barchart-solde-echanges-exterieurs-dont-energie"],
+                chartData.section2["barchart-solde-echanges-exterieurs-dont-biens-hors-energie"],
+                chartData.section2["barchart-solde-echanges-exterieurs-dont-services"]
+            ),
+            "table-name": "Année",
+            "databox-id": "section2-graph1",
+            "databox-type": "table",
+            "databox-source": "barchart-solde-echanges-exterieurs-principal",
+        })}
     </Box>
 }
 
@@ -57,6 +71,14 @@ const Graph2 = () => {
             ...toKebabCaseProps(chartData.section2["arealinechart-echange-biens-trimestre"]),
             "databox-id": "section2-graph2",
             "databox-type": "chart",
+            "databox-source": "arealinechart-echange-biens-trimestre",
+        })}
+
+        {createElement("table-chart", {
+            ...convertArealineToTable(chartData.section2["arealinechart-echange-biens-trimestre"]),
+            "table-name": "Trimestre",
+            "databox-id": "section2-graph2",
+            "databox-type": "table",
             "databox-source": "arealinechart-echange-biens-trimestre",
         })}
     </Box>
@@ -120,6 +142,22 @@ const Graph3 = () => {
             "databox-type": "chart",
             "databox-source": "linechart-echange-biens-zones-monde-pays-tiers",
         })}
+
+        {createElement("table-chart", {
+            ...convertBarToTable(
+                chartData.section2["linechart-echange-biens-zones-monde-europe-hors-ue"],
+                chartData.section2["linechart-echange-biens-zones-monde-proche-moyen-orient"],
+                chartData.section2["linechart-echange-biens-zones-monde-amerique"],
+                chartData.section2["linechart-echange-biens-zones-monde-afrique"],
+                chartData.section2["linechart-echange-biens-zones-monde-ue"],
+                chartData.section2["linechart-echange-biens-zones-monde-asie"],
+                chartData.section2["linechart-echange-biens-zones-monde-pays-tiers"]
+            ),
+            "table-name": "Année",
+            "databox-id": "section2-graph3",
+            "databox-type": "table",
+            "databox-source": "linechart-echange-biens-zones-monde-europe-hors-ue",
+        })}
     </Box>
 }
 
@@ -136,6 +174,14 @@ const Graph4 = () => {
             ...toKebabCaseProps(chartData.section2["linechart-part-marche-pays-monde"]),
             "databox-id": "section2-graph4",
             "databox-type": "chart",
+            "databox-source": "linechart-part-marche-pays-monde",
+        })}
+
+        {createElement("table-chart", {
+            ...convertLineToTable(chartData.section2["linechart-part-marche-pays-monde"]),
+            "table-name": "Année",
+            "databox-id": "section2-graph4",
+            "databox-type": "table",
             "databox-source": "linechart-part-marche-pays-monde",
         })}
     </Box>

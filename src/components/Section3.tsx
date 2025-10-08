@@ -3,6 +3,7 @@ import { Typography, Box } from "@mui/material";
 import { toKebabCaseProps } from "@src/utils/camelToKebabCase";
 import { PTitle } from "@src/components/generic/PTitle";
 import { chartData, dataBox } from "@src/constants/data";
+import { convertArealineToTable, convertBarToTable, convertLineToTable, convertTreeToTable } from "@src/utils/convert";
 
 const Graph1 = () => {
     return <Box my={4}>
@@ -17,6 +18,14 @@ const Graph1 = () => {
             ...toKebabCaseProps(chartData.section3["treemapchart-exportations"]),
             "databox-id": "section3-graph1",
             "databox-type": "chart",
+            "databox-source": "treemapchart-exportations",
+        })}
+
+        {createElement("table-chart", {
+            ...convertTreeToTable(chartData.section3["treemapchart-exportations"]),
+            "table-name": "Secteur",
+            "databox-id": "section3-graph1",
+            "databox-type": "table",
             "databox-source": "treemapchart-exportations",
         })}
     </Box>
@@ -37,6 +46,14 @@ const Graph2 = () => {
             "databox-type": "chart",
             "databox-source": "treemapchart-importations",
         })}
+
+        {createElement("table-chart", {
+            ...convertTreeToTable(chartData.section3["treemapchart-importations"]),
+            "table-name": "Secteur",
+            "databox-id": "section3-graph2",
+            "databox-type": "table",
+            "databox-source": "treemapchart-importations",
+        })}
     </Box>
 }
 
@@ -53,6 +70,14 @@ const Graph3 = () => {
             ...toKebabCaseProps(chartData.section3["barchart-10-principaux-deficits-commerciaux"]),
             "databox-id": "section3-graph3",
             "databox-type": "chart",
+            "databox-source": "barchart-10-principaux-deficits-commerciaux",
+        })}
+
+        {createElement("table-chart", {
+            ...convertBarToTable(chartData.section3["barchart-10-principaux-deficits-commerciaux"]),
+            "table-name": "Secteur",
+            "databox-id": "section3-graph3",
+            "databox-type": "table",
             "databox-source": "barchart-10-principaux-deficits-commerciaux",
         })}
     </Box>
@@ -73,6 +98,14 @@ const Graph4 = () => {
             "databox-type": "chart",
             "databox-source": "barchart-10-principaux-execdents-commerciaux",
         })}
+
+        {createElement("table-chart", {
+            ...convertBarToTable(chartData.section3["barchart-10-principaux-execdents-commerciaux"]),
+            "table-name": "Secteur",
+            "databox-id": "section3-graph4",
+            "databox-type": "table",
+            "databox-source": "barchart-10-principaux-execdents-commerciaux",
+        })}
     </Box>
 }
 
@@ -89,6 +122,14 @@ const Graph5 = () => {
             ...toKebabCaseProps(chartData.section3["linechart-solde-commercial-principaux-secteurs-excedentaires"]),
             "databox-id": "section3-graph5",
             "databox-type": "chart",
+            "databox-source": "linechart-solde-commercial-principaux-secteurs-excedentaires",
+        })}
+
+        {createElement("table-chart", {
+            ...convertLineToTable(chartData.section3["linechart-solde-commercial-principaux-secteurs-excedentaires"]),
+            "table-name": "Année",
+            "databox-id": "section3-graph5",
+            "databox-type": "table",
             "databox-source": "linechart-solde-commercial-principaux-secteurs-excedentaires",
         })}
     </Box>
@@ -109,6 +150,14 @@ const Graph6 = () => {
             "databox-type": "chart",
             "databox-source": "linechart-solde-commercial-agriculture-agroalimentaire",
         })}
+
+        {createElement("table-chart", {
+            ...convertLineToTable(chartData.section3["linechart-solde-commercial-agriculture-agroalimentaire"]),
+            "table-name": "Année",
+            "databox-id": "section3-graph6",
+            "databox-type": "table",
+            "databox-source": "linechart-solde-commercial-agriculture-agroalimentaire",
+        })}
     </Box>
 }
 
@@ -125,6 +174,14 @@ const Graph7 = () => {
             ...toKebabCaseProps(chartData.section3["arealinechart-electricite-echanges-de-biens-france"]),
             "databox-id": "section3-graph7",
             "databox-type": "chart",
+            "databox-source": "arealinechart-electricite-echanges-de-biens-france",
+        })}
+
+        {createElement("table-chart", {
+            ...convertArealineToTable(chartData.section3["arealinechart-electricite-echanges-de-biens-france"]),
+            "table-name": "Année",
+            "databox-id": "section3-graph7",
+            "databox-type": "table",
             "databox-source": "arealinechart-electricite-echanges-de-biens-france",
         })}
     </Box>
@@ -145,6 +202,14 @@ const Graph8 = () => {
             "databox-type": "chart",
             "databox-source": "arealinechart-export-import-solde",
         })}
+
+        {createElement("table-chart", {
+            ...convertArealineToTable(chartData.section3["arealinechart-export-import-solde"]),
+            "table-name": "Année",
+            "databox-id": "section3-graph8",
+            "databox-type": "table",
+            "databox-source": "arealinechart-export-import-solde",
+        })}
     </Box>
 }
 
@@ -161,6 +226,14 @@ const Graph9 = () => {
             ...toKebabCaseProps(chartData.section3["arealinechart-importations-voitures"]),
             "databox-id": "section3-graph9",
             "databox-type": "chart",
+            "databox-source": "arealinechart-importations-voitures",
+        })}
+
+        {createElement("table-chart", {
+            ...convertArealineToTable(chartData.section3["arealinechart-importations-voitures"]),
+            "table-name": "Véhicules",
+            "databox-id": "section3-graph9",
+            "databox-type": "table",
             "databox-source": "arealinechart-importations-voitures",
         })}
     </Box>
@@ -181,6 +254,14 @@ const Graph10 = () => {
             "databox-type": "chart",
             "databox-source": "arealinechart-exportations-voitures",
         })}
+
+        {createElement("table-chart", {
+            ...convertArealineToTable(chartData.section3["arealinechart-exportations-voitures"]),
+            "table-name": "Véhicules",
+            "databox-id": "section3-graph10",
+            "databox-type": "table",
+            "databox-source": "arealinechart-exportations-voitures",
+        })}
     </Box>
 }
 
@@ -197,6 +278,14 @@ const Graph11 = () => {
             ...toKebabCaseProps(chartData.section3["barchart-exportations-vehicules-electriques-pays"]),
             "databox-id": "section3-graph11",
             "databox-type": "chart",
+            "databox-source": "barchart-exportations-vehicules-electriques-pays",
+        })}
+
+        {createElement("table-chart", {
+            ...convertBarToTable(chartData.section3["barchart-exportations-vehicules-electriques-pays"]),
+            "table-name": "Pays",
+            "databox-id": "section3-graph11",
+            "databox-type": "table",
             "databox-source": "barchart-exportations-vehicules-electriques-pays",
         })}
     </Box>

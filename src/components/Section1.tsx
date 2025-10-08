@@ -2,6 +2,7 @@ import { createElement } from "react";
 import { Typography, Box } from "@mui/material";
 import { toKebabCaseProps } from "@src/utils/camelToKebabCase";
 import { chartData, dataBox } from "@src/constants/data";
+import { convertBarlineToTable, convertBarToTable } from "@src/utils/convert";
 
 const Graph1 = () => {
     return <Box my={4}>
@@ -16,6 +17,14 @@ const Graph1 = () => {
             ...toKebabCaseProps(chartData.section1["barline-10-premiers-pays-exportateurs"]),
             "databox-id": "section1-graph1",
             "databox-type": "chart",
+            "databox-source": "barline-10-premiers-pays-exportateurs",
+        })}
+
+        {createElement("table-chart", {
+            ...convertBarlineToTable(chartData.section1["barline-10-premiers-pays-exportateurs"]),
+            "table-name": "Pays",
+            "databox-id": "section1-graph1",
+            "databox-type": "table",
             "databox-source": "barline-10-premiers-pays-exportateurs",
         })}
     </Box>
@@ -34,6 +43,14 @@ const Graph2 = () => {
             ...toKebabCaseProps(chartData.section1["barchart-solde-biens-services-pib"]),
             "databox-id": "section1-graph2",
             "databox-type": "chart",
+            "databox-source": "barchart-solde-biens-services-pib",
+        })}
+
+        {createElement("table-chart", {
+            ...convertBarToTable(chartData.section1["barchart-solde-biens-services-pib"]),
+            "table-name": "Zone/Pays",
+            "databox-id": "section1-graph2",
+            "databox-type": "table",
             "databox-source": "barchart-solde-biens-services-pib",
         })}
     </Box>

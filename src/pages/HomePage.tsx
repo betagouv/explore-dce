@@ -16,6 +16,7 @@ import { Section3 } from "@src/components/Section3";
 import { Section4 } from "@src/components/Section4";
 import { useScroll } from "@src/hooks/useScroll";
 import { SectionTitle } from "@src/components/generic/SectionTitle";
+import { Stack } from "@mui/system";
 
 const items = [
     {
@@ -63,16 +64,7 @@ export const HomePage = () => {
                 Portée par les équipes de la Direction Interministérielle du Numérique, cette initiative vise à simplifier l'accès, l'appropriation, la réutilisation et la circulation des données publiques du commerce extérieur par <strong>toutes et tous</strong>, afin d'enrichir le débat public.
             </Typography>
 
-            <Box
-                sx={{
-                    display: "flex",
-                    mt: 4,
-                    flexDirection: {
-                        xs: "column",
-                        md: "row"
-                    }, // stack on mobile
-                }}
-            >
+            <Stack direction={{ xs: "column", md: "row" }} mt={4}>
                 <Box
                 sx={{
                     position: {
@@ -121,12 +113,9 @@ export const HomePage = () => {
 
                 <Box
                 sx={{
-                    flexGrow: 1,
-                    ml: { xs: 0, md: 4 },
-                    // p: 3,
-                    // border: "1px dashed grey",
-                    // borderRadius: 2,
+                    px: 1,
                     minHeight: "300px",
+                    overflowX: "hidden",
                 }}
                 >
                     {items.map((item, index) => (
@@ -142,7 +131,7 @@ export const HomePage = () => {
                         </Box>
                     ))}
                 </Box>
-            </Box>
+            </Stack>
         </Container>
     );
 };

@@ -2,6 +2,7 @@ import { createElement } from "react";
 import { Typography, Box } from "@mui/material";
 import { toKebabCaseProps } from "@src/utils/camelToKebabCase";
 import { chartData, dataBox } from "@src/constants/data";
+import { convertArealineToTable } from "@src/utils/convert";
 
 const Graph1 = () => {
     return <Box my={4}>
@@ -16,6 +17,14 @@ const Graph1 = () => {
             ...toKebabCaseProps(chartData.section4["arealinechart-solde-recettes-depenses"]),
             "databox-id": "section4-graph1",
             "databox-type": "chart",
+            "databox-source": "arealinechart-solde-recettes-depenses",
+        })}
+
+        {createElement("table-chart", {
+            ...convertArealineToTable(chartData.section4["arealinechart-solde-recettes-depenses"]),
+            "table-name": "Pays",
+            "databox-id": "section4-graph1",
+            "databox-type": "table",
             "databox-source": "arealinechart-solde-recettes-depenses",
         })}
     </Box>
@@ -57,6 +66,19 @@ const Graph2 = () => {
             "databox-id": "section4-graph2",
             "databox-type": "chart",
             "databox-source": "areachart-voyages",
+        })}
+
+        {createElement("table-chart", {
+            ...convertArealineToTable(
+                chartData.section4["areachart-autres-services"],
+                chartData.section4["areachart-services-financiers"],
+                chartData.section4["areachart-transport"],
+                chartData.section4["areachart-voyages"]
+            ),
+            "table-name": "Année",
+            "databox-id": "section4-graph2",
+            "databox-type": "table",
+            "databox-source": "areachart-autres-services",
         })}
     </Box>
 }
