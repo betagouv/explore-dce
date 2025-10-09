@@ -1,0 +1,124 @@
+{
+  "section1": {
+    "databox-top-echanges-mondiaux": {
+      "source": "Banque mondiale (WDI)",
+      "date": "Juillet 2025",
+      "tooltipTitle": "Top 5 échanges mondiaux",
+      "tooltipContent": "Classement des 5 premiers exportateurs et importateurs de biens en 2024, avec le solde commercial rapporté au PIB (Produit Intérieur Brut)."
+    },
+    "databox-solde-biens-services-pib": {
+      "source": "Banque mondiale (WDI)",
+      "date": "Juillet 2025",
+      "tooltipTitle": "Solde des échanges de biens et services en % du PIB",
+      "tooltipContent": "Solde des échanges de biens et services exprimé en pourcentage du PIB pour la France, l’Union européenne et plusieurs zones économiques en 2024."
+    }
+  },
+  "section2": {
+    "databox-solde-echanges-exterieurs": {
+      "source": "Insee (Les comptes de la Nation en 2024)",
+      "date": "Mai 2025",
+      "tooltipTitle": "Solde des échanges extérieurs",
+      "tooltipContent": "Évolution annuelle du solde extérieur global de la France entre 2014 et 2024, ainsi que ses déclinaisons : énergie, biens hors énergie et services, selon les comptes nationaux. Données de la feuille 'Figure 3' du fichier IP2053.xlxs."
+    },
+    "databox-echanges-biens-trimestriels": {
+      "source": "DGDDI/DSECE (Données trimestrielles)",
+      "date": "Août 2025",
+      "tooltipTitle": "Solde trimestriel des échanges de biens",
+      "tooltipContent": "Évolution trimestrielle des exportations, des importations et du solde des échanges de biens entre 2009 et 2025. Données FAB/FAB, CVS-CJO, y compris matériel militaire et données sous le seuil déclaratif. Données de la feuille 'GA' lignes 3,4 et 5 du fichier Data_Analyse_trim_2T2025.XLS"
+    },
+    "databox-echanges-biens-zones-monde": {
+      "source": "DGDDI/DSECE (Données trimestrielles)",
+      "date": "Août 2025",
+      "tooltipTitle": "Solde des échanges de biens par zone géographique",
+      "tooltipContent": "Solde annuel des échanges de biens de la France avec les grandes zones géographiques (Afrique, Amérique, Asie, Europe hors UE (Union européenne), Proche et Moyen-Orient, Union européenne, Monde hors UE) de 2009 à 2024.  Données CAF/FAB, CVS-CJO, hors matériel militaire et hors données sous le seuil déclaratif. Données de la feuille 'GA' lignes 77, 80, 83, 86, 89, 92 et 95 du fichier Data_Analyse_trim_2T2025.XLS"
+    },
+    "databox-part-marche-pays-monde": {
+      "source": "OMC - Insee",
+      "date": "Mai 2025",
+      "tooltipTitle": "Parts de marché dans les exportations de marchandises de quelques pays du monde",
+      "tooltipContent": "Évolution des parts de marché mondiales à l’exportation de la France, de l’Allemagne, de la Chine, des États-Unis et d’autres grands exportateurs entre 2000 et 2024."
+    }
+  },
+  "section3": {
+    "databox-top-produits-exportes": {
+      "source": "DSECE (Données brutes)",
+      "date": "Août 2025",
+      "tooltipTitle": "Top 10 des produits exportés",
+      "tooltipContent": "Principales catégories de produits exportés par la France en 2024, en milliards d’euros, selon les données douanières. Données CAF/FAB. Nomenclature A129 utilisée."
+    },
+    "databox-top-produits-importes": {
+      "source": "DSECE (Données brutes)",
+      "date": "Août 2025",
+      "tooltipTitle": "Top 10 des produits importés",
+      "tooltipContent": "Principales catégories de produits importés par la France en 2024, en milliards d’euros, selon les données douanières. Données CAF/FAB. Nomenclature A129 utilisée."
+    },
+    "databox-top-deficits-commerciaux": {
+      "source": "DSECE (Données brutes)",
+      "date": "Août 2025",
+      "tooltipTitle": "Les 10 principaux déficits commerciaux",
+      "tooltipContent": "Produits présentant les déficits commerciaux les plus importants en moyenne sur la période 2022-2024. Données CAF/FAB. Nomenclature A129 utilisée."
+    },
+    "databox-top-excedents-commerciaux": {
+      "source": "DSECE (Données brutes)",
+      "date": "Août 2025",
+      "tooltipTitle": "Les 10 principaux excédents commerciaux",
+      "tooltipContent": "Produits présentant les excédents commerciaux les plus importants en moyenne sur la période 2022-2024. Données CAF/FAB. Nomenclature A129 utilisée."
+    },
+    "databox-secteurs-excedentaires": {
+      "source": "DSECE (Données brutes)",
+      "date": "Août 2025",
+      "tooltipTitle": "Solde commercial des principaux secteurs excédentaires",
+      "tooltipContent": "Évolution annuelle des soldes commerciaux de quelques grands secteurs excédentaires de la France en milliards d'€ sur la période 2004-2024. Données CAF/FAB. Codes utilisés 'C20B', 'C21Z', 'C15Z', 'C30C' et 'C11Z' de la nomenclature A129."
+    },
+    "databox-solde-agriculture-agroalimentaire": {
+      "source": "DSECE (Données brutes)",
+      "date": "Août 2025",
+      "tooltipTitle": "Solde commercial agricole et agroalimentaire",
+      "tooltipContent": "Évolution annuelle du solde commercial des produits agricoles et agroalimentaires français en milliards d'€ sur la période 2004-2024. Données CAF/FAB. Codes utilisés commençants par 'A' pour agriculture, 'C10' pour IAA hors boissons (hors tabacs) et 'C11' pour boissons de la nomenclature A129."
+    },
+    "databox-echanges-electricite": {
+      "source": "DSECE (Données brutes)",
+      "date": "Août 2025",
+      "tooltipTitle": "Échanges d'électricité",
+      "tooltipContent": "Exportations, importations et solde des échanges d’électricité de la France en milliards d'€ sur la période 2004-2024. Code 'D35A' de la nomenclature A129. Données CAF/FAB."
+    },
+    "databox-secteur-automobile": {
+      "source": "DSECE (Données brutes)",
+      "date": "Août 2025",
+      "tooltipTitle": "Automobile (construction et équipements): échanges de biens de la France",
+      "tooltipContent": "Solde commercial, importations et exportations dans le secteur automobile entre 2004 et 2024. Codes 'C29A' et 'C29B' de la nomenclature A129. Données CAF/FAB"
+    },
+    "databox-importations-voitures": {
+      "source": "DSECE (Données brutes)",
+      "date": "Août 2025",
+      "tooltipTitle": "Importations de voitures de tourisme et autres véhicules automobiles (moins de 10 personnes)",
+      "tooltipContent": "Importations annuelles de voitures de tourisme et autres véhicules automobiles (moins de 10 personnes) en milliards d'€, décomposées par type de motorisation (électriques, diesel, essence, hybrides) entre 2004 et 2024. Données CAF/FAB. Codes NC8 commençant par '870321' et '870324' pour essence, par '870331' et '870333' pour diesel, '870340' et '870370' pour hybrides et '870380' pour 100 % électriques."
+    },
+    "databox-exportations-voitures": {
+      "source": "DSECE (Données brutes)",
+      "date": "Août 2025",
+      "tooltipTitle": "Exportations de voitures de tourisme et autres véhicules automobiles (moins de 10 personnes)",
+      "tooltipContent": "Exportations annuelles de voitures de tourisme et autres véhicules automobiles (moins de 10 personnes) en milliards d'€, décomposées par type de motorisation (électriques, diesel, essence, hybrides) entre 2004 et 2024. Données CAF/FAB. Codes NC8 commençant par '870321' et '870324' pour essence, par '870331' et '870333' pour diesel, '870340' et '870370' pour hybrides et '870380' pour 100 % électriques."
+    },
+    "databox-exportations-vehicules-electriques": {
+      "source": "CEPII (BACI - HS22)",
+      "date": "Janvier 2025",
+      "tooltipTitle": "12 premiers pays exportateurs de véhicules 100% életriques en 2023",
+      "tooltipContent": "Classement des principaux pays exportateurs de véhicules électriques en 2024, en milliards de dollars. Code '8703.80' de la nomenclature HS22. Données FAB/FAB"
+    }
+  },
+  "section4": {
+    "databox-balance-services": {
+      "source": "Banque de France (Balance des paiements)",
+      "date": "Octobre 2025",
+      "tooltipTitle": "Balance des services",
+      "tooltipContent": "Évolution annuelle du solde, des recettes et des dépenses de la balance des services entre 2013 et 2024."
+    },
+    "databox-solde-echanges-services": {
+      "source": "Banque de France (Balance des paiements)",
+      "date": "Octobre 2025",
+      "tooltipTitle": "Solde des échanges de services pour 4 secteurs excédentaires en 2024",
+      "tooltipContent": "Évolution annuelle du solde de 4 secteurs excédentaires : les services de voyages, financiers, du transport et des autres services aux entreprises, par année en milliards d'€ entre 2013 et 2024."
+    }
+  }
+}
