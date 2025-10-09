@@ -206,6 +206,10 @@
 - `x` (Array, requis) : Données de l'axe X
 - `yAreas` (Array, requis) : Données pour les zones
 - `yLines` (Array, requis) : Données pour les lignes
+- `yAreaMin` (Number) : Valeur minimale de l'axe Y pour les zones
+- `yAreaMax` (Number) : Valeur maximale de l'axe Y pour les zones
+- `yLineMin` (Number) : Valeur minimale de l'axe Y pour les lignes
+- `yLineMax` (Number) : Valeur maximale de l'axe Y pour les lignes
 - `nameAreas` (Array) : Noms des séries de zones
 - `nameLines` (Array) : Noms des séries de lignes
 - `unitTooltipArea` (String) : Unité pour les zones

@@ -549,7 +549,9 @@
             "areasColors": ["#a558a0"],
             "linesColors": ["#a558a0"],
             "unitTooltipArea": "milliards d'€",
-            "showAreasLabels": ["all"]
+            "showAreasLabels": ["all"],
+            "yAreaMin": -20,
+            "yAreaMax": 40
         },
         "areachart-transport": {
             "x": [["2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"]],
