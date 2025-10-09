@@ -527,7 +527,8 @@
             "singleAxis": true,
             "pointRadius": 0,
             "unitTooltipArea": "milliards d'€",
-            "unitTooltipLine": "milliards d'€"
+            "unitTooltipLine": "milliards d'€",
+            "showAreasLabels": ["minmax", [8]]
         },
         "areachart-autres-services": {
             "x": [["2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"]],
@@ -536,7 +537,8 @@
             "nameAreas": ["Autres services aux entreprises"],
             "areasColors": ["#62bfb1"],
             "linesColors": ["#62bfb1"],
-            "unitTooltipArea": "milliards d'€"
+            "unitTooltipArea": "milliards d'€",
+            "showAreasLabels": ["all"]
         },
         "areachart-services-financiers": {
             "x": [["2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"]],
@@ -545,7 +547,8 @@
             "nameAreas": ["Services financiers"],
             "areasColors": ["#a558a0"],
             "linesColors": ["#a558a0"],
-            "unitTooltipArea": "milliards d'€"
+            "unitTooltipArea": "milliards d'€",
+            "showAreasLabels": ["all"]
         },
         "areachart-transport": {
             "x": [["2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"]],
@@ -554,7 +557,8 @@
             "nameAreas": ["Transport"],
             "areasColors": ["#8ab8f9"],
             "linesColors": ["#8ab8f9"],
-            "unitTooltipArea": "milliards d'€"
+            "unitTooltipArea": "milliards d'€",
+            "showAreasLabels": ["all"]
         },
         "areachart-voyages": {
             "x": [["2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"]],
@@ -563,7 +567,8 @@
             "nameAreas": ["Voyages"],
             "areasColors": ["#e4794a"],
             "linesColors": ["#e4794a"],
-            "unitTooltipArea": "milliards d'€"
+            "unitTooltipArea": "milliards d'€",
+            "showAreasLabels": ["all"]
         }
     }
 }

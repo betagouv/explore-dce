@@ -41,7 +41,8 @@
     "highlightLabel": "Période clé",
     "highlightLabelColor": "rgba(100, 100, 100, 1)",
     "highlightLabelSize": 14,
-    "highlightLabelPosition": "top"
+    "highlightLabelPosition": "top",
+    "showLabels": [[2, 3]], // Affiche les étiquettes pour la 2ème et 3ème valeur
 }
 ```
 
@@ -212,6 +213,8 @@
 - `areasColors` (Array) : Couleurs des zones
 - `linesColors` (Array) : Couleurs des lignes
 - `stacked` (Boolean) : Empilement des zones
+- `showAreasLabels` (Array) : Affichage des étiquettes sur les points sur les aires ('all', 'edges', 'minmax', null ou liste d'indices)
+- `showLinesLabels` (Array) : Affichage des étiquettes sur les points sur les lignes ('all', 'edges', 'minmax', null ou liste d'indices)
 
 **Exemple :**
 ```json
@@ -224,7 +227,9 @@
   "areasColors": ["#007bff", "#28a745"],
   "linesColors": ["#6c757d"],
   "unitTooltipArea": "millions",
-  "unitTooltipLine": "millions"
+  "unitTooltipLine": "millions",
+  "showAreasLabels": ["all"],
+  "showLinesLabels": [[2, 4], "minmax"] // Affiche les étiquettes pour la 2ème et 4ème valeur de la première ligne et les valeurs min/max de la deuxième ligne
 }
 ```
 
