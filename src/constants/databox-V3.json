@@ -18,7 +18,7 @@
       "source": "Insee (Les comptes de la Nation en 2024)",
       "date": "Mai 2025",
       "tooltipTitle": "Solde des échanges extérieurs",
-      "tooltipContent": "Évolution annuelle du solde extérieur global de la France entre 2014 et 2024, ainsi que ses déclinaisons : énergie, biens hors énergie et services, selon les comptes nationaux. Données de la feuille 'Figure 3' du fichier IP2053.xlxs."
+      "tooltipContent": "Évolution annuelle du solde extérieur global de la France entre 2014 et 2024, ainsi que ses déclinaisons : énergie, biens hors énergie et services, selon les comptes nationaux. Données de la feuille 'Figure 3' du fichier IP2053.xlxs. Base 2020."
     },
     "databox-echanges-biens-trimestriels": {
       "source": "DGDDI/DSECE (Données trimestrielles)",
