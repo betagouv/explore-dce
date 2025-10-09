@@ -13,19 +13,19 @@ const Graph1 = () => {
             title: 'Exports et imports de biens et services : les 10 premiers pays exportateurs en 2024 en Md$',
         }))}
 
-        {createElement("bar-line-chart", {
-            ...toKebabCaseProps(chartData.section1["barline-10-premiers-pays-exportateurs"]),
+        {createElement("bar-chart", {
+            ...toKebabCaseProps(chartData.section1["bar-10-premiers-pays-exportateurs"]),
             "databox-id": "section1-graph1",
             "databox-type": "chart",
-            "databox-source": "barline-10-premiers-pays-exportateurs",
+            "databox-source": "bar-10-premiers-pays-exportateurs",
         })}
 
         {createElement("table-chart", {
-            ...convertBarlineToTable(chartData.section1["barline-10-premiers-pays-exportateurs"]),
+            ...convertBarlineToTable(chartData.section1["bar-10-premiers-pays-exportateurs"]),
             "table-name": "Pays",
             "databox-id": "section1-graph1",
             "databox-type": "table",
-            "databox-source": "barline-10-premiers-pays-exportateurs",
+            "databox-source": "bar-10-premiers-pays-exportateurs",
         })}
     </Box>
 }

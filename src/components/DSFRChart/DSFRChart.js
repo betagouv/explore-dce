@@ -1072,7 +1072,7 @@ function A2(e, t, n = wt) {
       "A watch source can only be a getter/effect function, a ref, a reactive object, or an array of these types."
     );
   }, h = (w) => i ? w : ae(w) || i === !1 || i === 0 ? xn(w, 1) : xn(w);
-  let d, u, f, m, p = !1, b = !1;
+  let d, u, f, g, p = !1, b = !1;
   if ($t(e) ? (u = () => e.value, p = ae(e)) : os(e) ? (u = () => h(e), p = !0) : Z(e) ? (b = !0, p = e.some((w) => os(w) || ae(w)), u = () => e.map((w) => {
     if ($t(w))
       return w.value;
@@ -1093,7 +1093,7 @@ function A2(e, t, n = wt) {
     const w = Jn;
     Jn = d;
     try {
-      return a ? a(e, 3, [m]) : e(m);
+      return a ? a(e, 3, [g]) : e(g);
     } finally {
       Jn = w;
     }
@@ -1124,7 +1124,7 @@ function A2(e, t, n = wt) {
               E,
               // pass undefined as the old value when it's changed for the first time
               M === so ? void 0 : b && M[0] === so ? [] : M,
-              m
+              g
             ];
             M = E, a ? a(t, 3, D) : (
               // @ts-expect-error
@@ -1137,7 +1137,7 @@ function A2(e, t, n = wt) {
       } else
         d.run();
   };
-  return l && l(S), d = new Lu(u), d.scheduler = o ? () => o(S, !1) : S, m = (w) => D2(w, !1, d), f = d.onStop = () => {
+  return l && l(S), d = new Lu(u), d.scheduler = o ? () => o(S, !1) : S, g = (w) => D2(w, !1, d), f = d.onStop = () => {
     const w = Go.get(d);
     if (w) {
       if (a)
@@ -1652,7 +1652,7 @@ const df = Symbol("_vte"), Z2 = (e) => e.__isTeleport, ls = (e) => e && (e.disab
       mc: h,
       pc: d,
       pbc: u,
-      o: { insert: f, querySelector: m, createText: p, createComment: b }
+      o: { insert: f, querySelector: g, createText: p, createComment: b }
     } = c, v = ls(t.props);
     let { shapeFlag: x, children: M, dynamicChildren: S } = t;
     if (C.NODE_ENV !== "production" && Te && (a = !1, S = null), e == null) {
@@ -1670,7 +1670,7 @@ const df = Symbol("_vte"), Z2 = (e) => e.__isTeleport, ls = (e) => e && (e.disab
           a
         );
       }, D = () => {
-        const N = t.target = ql(t.props, m), F = ff(N, t, p, f);
+        const N = t.target = ql(t.props, g), F = ff(N, t, p, f);
         N ? (o !== "svg" && Bc(N) ? o = "svg" : o !== "mathml" && $c(N) && (o = "mathml"), i && i.isCE && (i.ce._teleportTargets || (i.ce._teleportTargets = /* @__PURE__ */ new Set())).add(N), v || (_(N, F), Oo(t, !1))) : C.NODE_ENV !== "production" && !v && H(
           "Invalid Teleport target on mount:",
           N,
@@ -1729,7 +1729,7 @@ const df = Symbol("_vte"), Z2 = (e) => e.__isTeleport, ls = (e) => e && (e.disab
       else if ((t.props && t.props.to) !== (e.props && e.props.to)) {
         const R = t.target = ql(
           t.props,
-          m
+          g
         );
         R ? io(
           t,
@@ -1764,8 +1764,8 @@ const df = Symbol("_vte"), Z2 = (e) => e.__isTeleport, ls = (e) => e && (e.disab
     } = e;
     if (d && (i(c), i(h)), r && i(a), o & 16) {
       const f = r || !ls(u);
-      for (let m = 0; m < l.length; m++) {
-        const p = l[m];
+      for (let g = 0; g < l.length; g++) {
+        const p = l[g];
         s(
           p,
           t,
@@ -1809,11 +1809,11 @@ function Q2(e, t, n, s, i, r, {
   const f = t.target = ql(
     t.props,
     a
-  ), m = ls(t.props);
+  ), g = ls(t.props);
   if (f) {
     const p = f._lpa || f.firstChild;
     if (t.shapeFlag & 16)
-      if (m)
+      if (g)
         u(
           e,
           t,
@@ -1844,8 +1844,8 @@ function Q2(e, t, n, s, i, r, {
           r
         );
       }
-    Oo(t, m);
-  } else m && t.shapeFlag & 16 && u(e, t, e, o(e));
+    Oo(t, g);
+  } else g && t.shapeFlag & 16 && u(e, t, e, o(e));
   return t.anchor && o(t.anchor);
 }
 const ke = uf;
@@ -1904,12 +1904,12 @@ function yi(e, t, n, s, i = !1) {
   }
   const c = t && t.r, h = l.refs === wt ? l.refs = {} : l.refs, d = l.setupState, u = ct(d), f = d === wt ? Du : (p) => C.NODE_ENV !== "production" && (gt(u, p) && !$t(u[p]) && H(
     `Template ref "${p}" used on a non-ref value. It will not work in the production build.`
-  ), Hc.has(u[p])) ? !1 : gt(u, p), m = (p) => C.NODE_ENV === "production" || !Hc.has(p);
+  ), Hc.has(u[p])) ? !1 : gt(u, p), g = (p) => C.NODE_ENV === "production" || !Hc.has(p);
   if (c != null && c !== a) {
     if (zc(t), At(c))
       h[c] = null, f(c) && (d[c] = null);
     else if ($t(c)) {
-      m(c) && (c.value = null);
+      g(c) && (c.value = null);
       const p = t;
       p.k && (h[p.k] = null);
     }
@@ -1921,7 +1921,7 @@ function yi(e, t, n, s, i = !1) {
     if (p || b) {
       const v = () => {
         if (e.f) {
-          const x = p ? f(a) ? d[a] : h[a] : m(a) || !e.k ? a.value : h[e.k];
+          const x = p ? f(a) ? d[a] : h[a] : g(a) || !e.k ? a.value : h[e.k];
           if (i)
             Z(x) && _a(x, r);
           else if (Z(x))
@@ -1930,9 +1930,9 @@ function yi(e, t, n, s, i = !1) {
             h[a] = [r], f(a) && (d[a] = h[a]);
           else {
             const M = [r];
-            m(a) && (a.value = M), e.k && (h[e.k] = M);
+            g(a) && (a.value = M), e.k && (h[e.k] = M);
           }
-        } else p ? (h[a] = o, f(a) && (d[a] = o)) : b ? (m(a) && (a.value = o), e.k && (h[e.k] = o)) : C.NODE_ENV !== "production" && H("Invalid template ref type:", a, `(${typeof a})`);
+        } else p ? (h[a] = o, f(a) && (d[a] = o)) : b ? (g(a) && (a.value = o), e.k && (h[e.k] = o)) : C.NODE_ENV !== "production" && H("Invalid template ref type:", a, `(${typeof a})`);
       };
       if (o) {
         const x = () => {
@@ -2269,7 +2269,7 @@ function wg(e) {
     beforeMount: d,
     mounted: u,
     beforeUpdate: f,
-    updated: m,
+    updated: g,
     activated: p,
     deactivated: b,
     beforeDestroy: v,
@@ -2357,7 +2357,7 @@ function wg(e) {
   function nt(G, Q) {
     Z(Q) ? Q.forEach((ht) => G(ht.bind(n))) : Q && G(Q.bind(n));
   }
-  if (nt(og, d), nt(rg, u), nt(lg, f), nt(ag, m), nt(ng, p), nt(sg, b), nt(fg, D), nt(ug, E), nt(dg, _), nt(cg, x), nt(mf, S), nt(hg, N), Z(F))
+  if (nt(og, d), nt(rg, u), nt(lg, f), nt(ag, g), nt(ng, p), nt(sg, b), nt(fg, D), nt(ug, E), nt(dg, _), nt(cg, x), nt(mf, S), nt(hg, N), Z(F))
     if (F.length) {
       const G = e.exposed || (e.exposed = {});
       F.forEach((Q) => {
@@ -2579,8 +2579,8 @@ function Sg(e, t) {
           );
           const f = c._ceVNode || Tt(s, i);
           return f.appContext = r, u === !0 ? u = "svg" : u === !1 && (u = void 0), C.NODE_ENV !== "production" && (r.reload = () => {
-            const m = Fn(f);
-            m.el = null, e(m, h, u);
+            const g = Fn(f);
+            g.el = null, e(g, h, u);
           }), e(f, h, u), a = !0, c._container = h, h.__vue_app__ = c, C.NODE_ENV !== "production" && (c._instance = f.component, z2(c, oh)), Br(f.component);
         }
       },
@@ -2675,11 +2675,11 @@ function Ng(e, t, n, s) {
           if (gt(r, u))
             f !== r[u] && (r[u] = f, c = !0);
           else {
-            const m = Yt(u);
-            i[m] = Xl(
+            const g = Yt(u);
+            i[g] = Xl(
               a,
               l,
-              m,
+              g,
               f,
               e,
               !1
@@ -2798,18 +2798,18 @@ function Cf(e, t, n = !1) {
     for (const h in r) {
       const d = Yt(h);
       if (Gc(d)) {
-        const u = r[h], f = o[d] = Z(u) || st(u) ? { type: u } : Ot({}, u), m = f.type;
+        const u = r[h], f = o[d] = Z(u) || st(u) ? { type: u } : Ot({}, u), g = f.type;
         let p = !1, b = !0;
-        if (Z(m))
-          for (let v = 0; v < m.length; ++v) {
-            const x = m[v], M = st(x) && x.name;
+        if (Z(g))
+          for (let v = 0; v < g.length; ++v) {
+            const x = g[v], M = st(x) && x.name;
             if (M === "Boolean") {
               p = !0;
               break;
             } else M === "String" && (b = !1);
           }
         else
-          p = st(m) && m.name === "Boolean";
+          p = st(g) && g.name === "Boolean";
         f[
           0
           /* shouldCast */
@@ -2853,8 +2853,8 @@ function Tg(e, t, n, s, i) {
       let c = !1;
       const h = Z(r) ? r : [r], d = [];
       for (let u = 0; u < h.length && !c; u++) {
-        const { valid: f, expectedType: m } = Fg(t, h[u]);
-        d.push(m || ""), c = f;
+        const { valid: f, expectedType: g } = Fg(t, h[u]);
+        d.push(g || ""), c = f;
       }
       if (!c) {
         H(Ig(e, t, d));
@@ -2990,7 +2990,7 @@ function Wg(e, t) {
     parentNode: d,
     nextSibling: u,
     setScopeId: f = zt,
-    insertStaticContent: m
+    insertStaticContent: g
   } = e, p = (y, k, A, V = null, T = null, L = null, q = void 0, j = null, z = C.NODE_ENV !== "production" && Te ? !1 : !!k.dynamicChildren) => {
     if (y === k)
       return;
@@ -3072,7 +3072,7 @@ function Wg(e, t) {
       V
     ) : k.el = y.el;
   }, x = (y, k, A, V) => {
-    [y.el, y.anchor] = m(
+    [y.el, y.anchor] = g(
       y.children,
       k,
       A,
@@ -3083,7 +3083,7 @@ function Wg(e, t) {
   }, M = (y, k, A, V) => {
     if (k.children !== y.children) {
       const T = u(y.anchor);
-      w(y), [k.el, k.anchor] = m(
+      w(y), [k.el, k.anchor] = g(
         k.children,
         A,
         T,
@@ -3887,12 +3887,12 @@ function Af(e, t, n = wt) {
     }
   }
   const h = qt;
-  l.call = (f, m, p) => an(f, h, m, p);
+  l.call = (f, g, p) => an(f, h, g, p);
   let d = !1;
   r === "post" ? l.scheduler = (f) => {
     re(f, h && h.suspense);
-  } : r !== "sync" && (d = !0, l.scheduler = (f, m) => {
-    m ? f() : Lr(f);
+  } : r !== "sync" && (d = !0, l.scheduler = (f, g) => {
+    g ? f() : Lr(f);
   }), l.augmentJob = (f) => {
     t && (f.flags |= 4), d && (f.flags |= 2, h && (f.id = h.uid, f.i = h));
   };
@@ -4009,7 +4009,7 @@ function Zc(e) {
     props: d,
     data: u,
     setupState: f,
-    ctx: m,
+    ctx: g,
     inheritAttrs: p
   } = e, b = Jo(e);
   let v, x;
@@ -4033,7 +4033,7 @@ function Zc(e) {
           C.NODE_ENV !== "production" ? Ze(d) : d,
           f,
           u,
-          m
+          g
         )
       ), x = l;
     } else {
@@ -4186,7 +4186,7 @@ function Lf(e) {
 }
 function I(e, t, n, s, i, r) {
   return Lf(
-    g(
+    m(
       e,
       t,
       n,
@@ -4227,7 +4227,7 @@ const om = (...e) => If(
   ref_key: t,
   ref_for: n
 }) => (typeof e == "number" && (e = "" + e), e != null ? At(e) || $t(e) || st(e) ? { i: Qt, r: e, k: t, f: !!n } : e : null);
-function g(e, t = null, n = null, s = 0, i = null, r = e === dt ? 0 : 1, o = !1, l = !1) {
+function m(e, t = null, n = null, s = 0, i = null, r = e === dt ? 0 : 1, o = !1, l = !1) {
   const a = {
     __v_isVNode: !0,
     __v_skip: !0,
@@ -4289,7 +4289,7 @@ function If(e, t = null, n = null, s = 0, i = null, r = !1) {
     `
 Component that was made reactive: `,
     e
-  )), g(
+  )), m(
     e,
     t,
     n,
@@ -4772,8 +4772,8 @@ function ym() {
     d.type.props && d.props && u.push(o("props", ct(d.props))), d.setupState !== wt && u.push(o("setup", d.setupState)), d.data !== wt && u.push(o("data", ct(d.data)));
     const f = a(d, "computed");
     f && u.push(o("computed", f));
-    const m = a(d, "inject");
-    return m && u.push(o("injected", m)), u.push([
+    const g = a(d, "inject");
+    return g && u.push(o("injected", g)), u.push([
       "div",
       {},
       [
@@ -4818,14 +4818,14 @@ function ym() {
     const f = d.type;
     if (st(f))
       return;
-    const m = {};
+    const g = {};
     for (const p in d.ctx)
-      c(f, p, u) && (m[p] = d.ctx[p]);
-    return m;
+      c(f, p, u) && (g[p] = d.ctx[p]);
+    return g;
   }
   function c(d, u, f) {
-    const m = d[f];
-    if (Z(m) && m.includes(u) || vt(m) && u in m || d.extends && c(d.extends, u, f) || d.mixins && d.mixins.some((p) => c(p, u, f)))
+    const g = d[f];
+    if (Z(g) && g.includes(u) || vt(g) && u in g || d.extends && c(d.extends, u, f) || d.mixins && d.mixins.some((p) => c(p, u, f)))
       return !0;
   }
   function h(d) {
@@ -6668,7 +6668,7 @@ function f1(e, t, n) {
   const s = t.length;
   let i = 0, r = s;
   if (e._sorted) {
-    const { iScale: o, vScale: l, _parsed: a } = e, c = e.dataset && e.dataset.options ? e.dataset.options.spanGaps : null, h = o.axis, { min: d, max: u, minDefined: f, maxDefined: m } = o.getUserBounds();
+    const { iScale: o, vScale: l, _parsed: a } = e, c = e.dataset && e.dataset.options ? e.dataset.options.spanGaps : null, h = o.axis, { min: d, max: u, minDefined: f, maxDefined: g } = o.getUserBounds();
     if (f) {
       if (i = Math.min(
         // @ts-expect-error Need to type _parsed
@@ -6681,7 +6681,7 @@ function f1(e, t, n) {
       }
       i = te(i, 0, s - 1);
     }
-    if (m) {
+    if (g) {
       let p = Math.max(
         // @ts-expect-error Need to type _parsed
         es(a, o.axis, u, !0).hi + 1,
@@ -7080,8 +7080,8 @@ function ra(e, t, n, s) {
 }
 function z0(e, t, n, s, i) {
   let r, o, l, a, c, h, d, u;
-  const f = t.pointStyle, m = t.rotation, p = t.radius;
-  let b = (m || 0) * y0;
+  const f = t.pointStyle, g = t.rotation, p = t.radius;
+  let b = (g || 0) * y0;
   if (f && typeof f == "object" && (r = f.toString(), r === "[object HTMLImageElement]" || r === "[object HTMLCanvasElement]")) {
     e.save(), e.translate(n, s), e.rotate(b), e.drawImage(f, -f.width / 2, -f.height / 2, f.width, f.height), e.restore();
     return;
@@ -7099,7 +7099,7 @@ function z0(e, t, n, s, i) {
         c = p * 0.516, a = p - c, o = Math.cos(b + Un) * a, d = Math.cos(b + Un) * a, l = Math.sin(b + Un) * a, u = Math.sin(b + Un) * a, e.arc(n - d, s - l, c, b - Pt, b - Lt), e.arc(n + u, s - o, c, b - Lt, b), e.arc(n + d, s + l, c, b, b + Lt), e.arc(n - u, s + o, c, b + Lt, b + Pt), e.closePath();
         break;
       case "rect":
-        if (!m) {
+        if (!g) {
           a = Math.SQRT1_2 * p, h = a, e.rect(n - h, s - a, 2 * h, 2 * a);
           break;
         }
@@ -7618,10 +7618,10 @@ function Zn(e, t) {
   if ("native" in e)
     return e;
   const { canvas: n, currentDevicePixelRatio: s } = t, i = Wr(n), r = i.boxSizing === "border-box", o = hs(i, "padding"), l = hs(i, "border", "width"), { x: a, y: c, box: h } = yb(e, n), d = o.left + (h && l.left), u = o.top + (h && l.top);
-  let { width: f, height: m } = t;
-  return r && (f -= o.width + l.width, m -= o.height + l.height), {
+  let { width: f, height: g } = t;
+  return r && (f -= o.width + l.width, g -= o.height + l.height), {
     x: Math.round((a - d) / f * n.width / s),
-    y: Math.round((c - u) / m * n.height / s)
+    y: Math.round((c - u) / g * n.height / s)
   };
 }
 function xb(e, t, n) {
@@ -7788,24 +7788,24 @@ function w1(e, t, n) {
     return [
       e
     ];
-  const { property: s, start: i, end: r } = n, o = t.length, { compare: l, between: a, normalize: c } = x1(s), { start: h, end: d, loop: u, style: f } = Db(e, t, n), m = [];
+  const { property: s, start: i, end: r } = n, o = t.length, { compare: l, between: a, normalize: c } = x1(s), { start: h, end: d, loop: u, style: f } = Db(e, t, n), g = [];
   let p = !1, b = null, v, x, M;
   const S = () => a(i, M, v) && l(i, M) !== 0, w = () => l(r, v) === 0 || a(r, M, v), E = () => p || S(), _ = () => !p || w();
   for (let D = h, N = h; D <= d; ++D)
-    x = t[D % o], !x.skip && (v = c(x[s]), v !== M && (p = a(v, i, r), b === null && E() && (b = l(v, i) === 0 ? D : N), b !== null && _() && (m.push(Kh({
+    x = t[D % o], !x.skip && (v = c(x[s]), v !== M && (p = a(v, i, r), b === null && E() && (b = l(v, i) === 0 ? D : N), b !== null && _() && (g.push(Kh({
       start: b,
       end: D,
       loop: u,
       count: o,
       style: f
     })), b = null), N = D, M = v));
-  return b !== null && m.push(Kh({
+  return b !== null && g.push(Kh({
     start: b,
     end: d,
     loop: u,
     count: o,
     style: f
-  })), m;
+  })), g;
 }
 function k1(e, t) {
   const n = [], s = e.segments;
@@ -7868,25 +7868,25 @@ function Jh(e, t, n, s) {
 function Rb(e, t, n, s) {
   const i = e._chart.getContext(), r = Zh(e.options), { _datasetIndex: o, options: { spanGaps: l } } = e, a = n.length, c = [];
   let h = r, d = t[0].start, u = d;
-  function f(m, p, b, v) {
+  function f(g, p, b, v) {
     const x = l ? -1 : 1;
-    if (m !== p) {
-      for (m += a; n[m % a].skip; )
-        m -= x;
+    if (g !== p) {
+      for (g += a; n[g % a].skip; )
+        g -= x;
       for (; n[p % a].skip; )
         p += x;
-      m % a !== p % a && (c.push({
-        start: m % a,
+      g % a !== p % a && (c.push({
+        start: g % a,
         end: p % a,
         loop: b,
         style: v
       }), h = v, d = p % a);
     }
   }
-  for (const m of t) {
-    d = l ? d : m.start;
+  for (const g of t) {
+    d = l ? d : g.start;
     let p = n[d % a], b;
-    for (u = d + 1; u <= m.end; u++) {
+    for (u = d + 1; u <= g.end; u++) {
       const v = n[u % a];
       b = Zh(s.setContext(Bn(i, {
         type: "segment",
@@ -7895,9 +7895,9 @@ function Rb(e, t, n, s) {
         p0DataIndex: (u - 1) % a,
         p1DataIndex: u % a,
         datasetIndex: o
-      }))), Tb(b, h) && f(d, u - 1, m.loop, h), p = v, h = b;
+      }))), Tb(b, h) && f(d, u - 1, g.loop, h), p = v, h = b;
     }
-    d < u - 1 && f(d, u - 1, m.loop, h);
+    d < u - 1 && f(d, u - 1, g.loop, h);
   }
   return c;
 }
@@ -8287,7 +8287,7 @@ function sd(e, t) {
   const { chart: n, _cachedMeta: s } = e, i = n._stacks || (n._stacks = {}), { iScale: r, vScale: o, index: l } = s, a = r.axis, c = o.axis, h = Wb(r, o, s), d = t.length;
   let u;
   for (let f = 0; f < d; ++f) {
-    const m = t[f], { [a]: p, [c]: b } = m, v = m._stacks || (m._stacks = {});
+    const g = t[f], { [a]: p, [c]: b } = g, v = g._stacks || (g._stacks = {});
     u = v[c] = Yb(i, h, p), u[l] = b, u._top = nd(u, o, !0, s.type), u._bottom = nd(u, o, !1, s.type);
     const x = u._visualValues || (u._visualValues = {});
     x[l] = b;
@@ -8347,7 +8347,7 @@ class nn {
     this.index !== t && si(this._cachedMeta), this.index = t;
   }
   linkScales() {
-    const t = this.chart, n = this._cachedMeta, s = this.getDataset(), i = (d, u, f, m) => d === "x" ? u : d === "r" ? m : f, r = n.xAxisID = pt(s.xAxisID, gl(t, "x")), o = n.yAxisID = pt(s.yAxisID, gl(t, "y")), l = n.rAxisID = pt(s.rAxisID, gl(t, "r")), a = n.indexAxis, c = n.iAxisID = i(a, r, o, l), h = n.vAxisID = i(a, o, r, l);
+    const t = this.chart, n = this._cachedMeta, s = this.getDataset(), i = (d, u, f, g) => d === "x" ? u : d === "r" ? g : f, r = n.xAxisID = pt(s.xAxisID, gl(t, "x")), o = n.yAxisID = pt(s.yAxisID, gl(t, "y")), l = n.rAxisID = pt(s.rAxisID, gl(t, "r")), a = n.indexAxis, c = n.iAxisID = i(a, r, o, l), h = n.vAxisID = i(a, o, r, l);
     n.xScale = this.getScaleForId(r), n.yScale = this.getScaleForId(o), n.rScale = this.getScaleForId(l), n.iScale = this.getScaleForId(c), n.vScale = this.getScaleForId(h);
   }
   getDataset() {
@@ -8415,11 +8415,11 @@ class nn {
   }
   parsePrimitiveData(t, n, s, i) {
     const { iScale: r, vScale: o } = t, l = r.axis, a = o.axis, c = r.getLabels(), h = r === o, d = new Array(i);
-    let u, f, m;
+    let u, f, g;
     for (u = 0, f = i; u < f; ++u)
-      m = u + s, d[u] = {
-        [l]: h || r.parse(c[m], m),
-        [a]: o.parse(n[m], m)
+      g = u + s, d[u] = {
+        [l]: h || r.parse(c[g], g),
+        [a]: o.parse(n[g], g)
       };
     return d;
   }
@@ -8470,16 +8470,16 @@ class nn {
       max: Number.NEGATIVE_INFINITY
     }, { min: h, max: d } = qb(l);
     let u, f;
-    function m() {
+    function g() {
       f = i[u];
       const p = f[l.axis];
       return !Ut(f[t.axis]) || h > p || d < p;
     }
-    for (u = 0; u < o && !(!m() && (this.updateRangeFromParsed(c, t, f, a), r)); ++u)
+    for (u = 0; u < o && !(!g() && (this.updateRangeFromParsed(c, t, f, a), r)); ++u)
       ;
     if (r) {
       for (u = o - 1; u >= 0; --u)
-        if (!m()) {
+        if (!g()) {
           this.updateRangeFromParsed(c, t, f, a);
           break;
         }
@@ -8551,7 +8551,7 @@ class nn {
     ] : [
       t,
       ""
-    ], u = c.getOptionScopes(this.getDataset(), h), f = Object.keys(Ft.elements[t]), m = () => this.getContext(s, i, n), p = c.resolveNamedOptions(u, f, m, d);
+    ], u = c.getOptionScopes(this.getDataset(), h), f = Object.keys(Ft.elements[t]), g = () => this.getContext(s, i, n), p = c.resolveNamedOptions(u, f, g, d);
     return p.$shared && (p.$shared = a, r[o] = Object.freeze(id(p, a))), p;
   }
   _resolveAnimations(t, n, s) {
@@ -8813,9 +8813,9 @@ class Io extends nn {
   }
   parseObjectData(t, n, s, i) {
     const { iScale: r, vScale: o } = t, { xAxisKey: l = "x", yAxisKey: a = "y" } = this._parsing, c = r.axis === "x" ? l : a, h = o.axis === "x" ? l : a, d = [];
-    let u, f, m, p;
+    let u, f, g, p;
     for (u = s, f = s + i; u < f; ++u)
-      p = n[u], m = {}, m[r.axis] = r.parse(In(p, c), u), d.push(P1(In(p, h), m, o, u));
+      p = n[u], g = {}, g[r.axis] = r.parse(In(p, c), u), d.push(P1(In(p, h), g, o, u));
     return d;
   }
   updateRangeFromParsed(t, n, s, i) {
@@ -8845,13 +8845,13 @@ class Io extends nn {
   updateElements(t, n, s, i) {
     const r = i === "reset", { index: o, _cachedMeta: { vScale: l } } = this, a = l.getBasePixel(), c = l.isHorizontal(), h = this._getRuler(), { sharedOptions: d, includeOptions: u } = this._getSharedOptions(n, i);
     for (let f = n; f < n + s; f++) {
-      const m = this.getParsed(f), p = r || bt(m[l.axis]) ? {
+      const g = this.getParsed(f), p = r || bt(g[l.axis]) ? {
         base: a,
         head: a
-      } : this._calculateBarValuePixels(f), b = this._calculateBarIndexPixels(f, h), v = (m._stacks || {})[l.axis], x = {
+      } : this._calculateBarValuePixels(f), b = this._calculateBarIndexPixels(f, h), v = (g._stacks || {})[l.axis], x = {
         horizontal: c,
         base: p.base,
-        enableBorderRadius: !v || bl(m._custom) || o === v._top || o === v._bottom,
+        enableBorderRadius: !v || bl(g._custom) || o === v._top || o === v._bottom,
         x: c ? p.head : b.center,
         y: c ? b.center : p.head,
         height: c ? b.size : Math.abs(p.size),
@@ -8912,14 +8912,14 @@ class Io extends nn {
   }
   _calculateBarValuePixels(t) {
     const { _cachedMeta: { vScale: n, _stacked: s, index: i }, options: { base: r, minBarLength: o } } = this, l = r || 0, a = this.getParsed(t), c = a._custom, h = bl(c);
-    let d = a[n.axis], u = 0, f = s ? this.applyStack(n, a, s) : d, m, p;
+    let d = a[n.axis], u = 0, f = s ? this.applyStack(n, a, s) : d, g, p;
     f !== d && (u = f - d, f = d), h && (d = c.barStart, f = c.barEnd - c.barStart, d !== 0 && en(d) !== en(c.barEnd) && (u = 0), u += d);
     const b = !bt(r) && !h ? r : u;
     let v = n.getPixelForValue(b);
-    if (this.chart.getDataVisibility(t) ? m = n.getPixelForValue(u + f) : m = v, p = m - v, Math.abs(p) < o) {
+    if (this.chart.getDataVisibility(t) ? g = n.getPixelForValue(u + f) : g = v, p = g - v, Math.abs(p) < o) {
       p = ev(p, n, l) * o, d === l && (v -= p / 2);
       const x = n.getPixelForDecimal(0), M = n.getPixelForDecimal(1), S = Math.min(x, M), w = Math.max(x, M);
-      v = Math.max(Math.min(v, w), S), m = v + p, s && !h && (a._stacks[n.axis]._visualValues[i] = n.getValueForPixel(m) - n.getValueForPixel(v));
+      v = Math.max(Math.min(v, w), S), g = v + p, s && !h && (a._stacks[n.axis]._visualValues[i] = n.getValueForPixel(g) - n.getValueForPixel(v));
     }
     if (v === n.getPixelForValue(l)) {
       const x = en(p) * n.getLineWidthForValue(l) / 2;
@@ -8928,8 +8928,8 @@ class Io extends nn {
     return {
       size: p,
       base: v,
-      head: m,
-      center: m + p / 2
+      head: g,
+      center: g + p / 2
     };
   }
   _calculateBarIndexPixels(t, n) {
@@ -8937,8 +8937,8 @@ class Io extends nn {
     let l, a;
     const c = this._getAxisCount();
     if (n.grouped) {
-      const h = r ? this._getStackCount(t) : n.stackCount, d = i.barThickness === "flex" ? Qb(t, n, i, h * c) : Zb(t, n, i, h * c), u = this.chart.options.indexAxis === "x" ? this.getDataset().xAxisID : this.getDataset().yAxisID, f = this._getAxis().indexOf(pt(u, this.getFirstScaleIdForIndexAxis())), m = this._getStackIndex(this.index, this._cachedMeta.stack, r ? t : void 0) + f;
-      l = d.start + d.chunk * m + d.chunk / 2, a = Math.min(o, d.chunk * d.ratio);
+      const h = r ? this._getStackCount(t) : n.stackCount, d = i.barThickness === "flex" ? Qb(t, n, i, h * c) : Zb(t, n, i, h * c), u = this.chart.options.indexAxis === "x" ? this.getDataset().xAxisID : this.getDataset().yAxisID, f = this._getAxis().indexOf(pt(u, this.getFirstScaleIdForIndexAxis())), g = this._getStackIndex(this.index, this._cachedMeta.stack, r ? t : void 0) + f;
+      l = d.start + d.chunk * g + d.chunk / 2, a = Math.min(o, d.chunk * d.ratio);
     } else
       l = s.getPixelForValue(this.getParsed(t)[s.axis], t), a = Math.min(o, n.min * n.ratio);
     return {
@@ -8991,7 +8991,7 @@ U(Io, "id", "bar"), U(Io, "defaults", {
 function rv(e, t, n) {
   let s = 1, i = 1, r = 0, o = 0;
   if (t < Nt) {
-    const l = e, a = l + t, c = Math.cos(l), h = Math.sin(l), d = Math.cos(a), u = Math.sin(a), f = (M, S, w) => Ti(M, l, a, !0) ? 1 : Math.max(S, S * n, w, w * n), m = (M, S, w) => Ti(M, l, a, !0) ? -1 : Math.min(S, S * n, w, w * n), p = f(0, c, d), b = f(Lt, h, u), v = m(Pt, c, d), x = m(Pt + Lt, h, u);
+    const l = e, a = l + t, c = Math.cos(l), h = Math.sin(l), d = Math.cos(a), u = Math.sin(a), f = (M, S, w) => Ti(M, l, a, !0) ? 1 : Math.max(S, S * n, w, w * n), g = (M, S, w) => Ti(M, l, a, !0) ? -1 : Math.min(S, S * n, w, w * n), p = f(0, c, d), b = f(Lt, h, u), v = g(Pt, c, d), x = g(Pt + Lt, h, u);
     s = (p - v) / 2, i = (b - x) / 2, r = -(p + v) / 2, o = -(b + x) / 2;
   }
   return {
@@ -9041,15 +9041,15 @@ class Os extends nn {
     };
   }
   update(t) {
-    const n = this.chart, { chartArea: s } = n, i = this._cachedMeta, r = i.data, o = this.getMaxBorderWidth() + this.getMaxOffset(r) + this.options.spacing, l = Math.max((Math.min(s.width, s.height) - o) / 2, 0), a = Math.min(u0(this.options.cutout, l), 1), c = this._getRingWeight(this.index), { circumference: h, rotation: d } = this._getRotationExtents(), { ratioX: u, ratioY: f, offsetX: m, offsetY: p } = rv(d, h, a), b = (s.width - o) / u, v = (s.height - o) / f, x = Math.max(Math.min(b, v) / 2, 0), M = o1(this.options.radius, x), S = Math.max(M * a, 0), w = (M - S) / this._getVisibleDatasetWeightTotal();
-    this.offsetX = m * M, this.offsetY = p * M, i.total = this.calculateTotal(), this.outerRadius = M - w * this._getRingWeightOffset(this.index), this.innerRadius = Math.max(this.outerRadius - w * c, 0), this.updateElements(r, 0, r.length, t);
+    const n = this.chart, { chartArea: s } = n, i = this._cachedMeta, r = i.data, o = this.getMaxBorderWidth() + this.getMaxOffset(r) + this.options.spacing, l = Math.max((Math.min(s.width, s.height) - o) / 2, 0), a = Math.min(u0(this.options.cutout, l), 1), c = this._getRingWeight(this.index), { circumference: h, rotation: d } = this._getRotationExtents(), { ratioX: u, ratioY: f, offsetX: g, offsetY: p } = rv(d, h, a), b = (s.width - o) / u, v = (s.height - o) / f, x = Math.max(Math.min(b, v) / 2, 0), M = o1(this.options.radius, x), S = Math.max(M * a, 0), w = (M - S) / this._getVisibleDatasetWeightTotal();
+    this.offsetX = g * M, this.offsetY = p * M, i.total = this.calculateTotal(), this.outerRadius = M - w * this._getRingWeightOffset(this.index), this.innerRadius = Math.max(this.outerRadius - w * c, 0), this.updateElements(r, 0, r.length, t);
   }
   _circumference(t, n) {
     const s = this.options, i = this._cachedMeta, r = this._getCircumference();
     return n && s.animation.animateRotate || !this.chart.getDataVisibility(t) || i._parsed[t] === null || i.data[t].hidden ? 0 : this.calculateCircumference(i._parsed[t] * r / Nt);
   }
   updateElements(t, n, s, i) {
-    const r = i === "reset", o = this.chart, l = o.chartArea, c = o.options.animation, h = (l.left + l.right) / 2, d = (l.top + l.bottom) / 2, u = r && c.animateScale, f = u ? 0 : this.innerRadius, m = u ? 0 : this.outerRadius, { sharedOptions: p, includeOptions: b } = this._getSharedOptions(n, i);
+    const r = i === "reset", o = this.chart, l = o.chartArea, c = o.options.animation, h = (l.left + l.right) / 2, d = (l.top + l.bottom) / 2, u = r && c.animateScale, f = u ? 0 : this.innerRadius, g = u ? 0 : this.outerRadius, { sharedOptions: p, includeOptions: b } = this._getSharedOptions(n, i);
     let v = this._getRotation(), x;
     for (x = 0; x < n; ++x)
       v += this._circumference(x, r);
@@ -9060,7 +9060,7 @@ class Os extends nn {
         startAngle: v,
         endAngle: v + M,
         circumference: M,
-        outerRadius: m,
+        outerRadius: g,
         innerRadius: f
       };
       b && (w.options = p || this.resolveDataElementOptions(x, S.active ? "active" : i)), v += M, this.updateElement(S, x, w, i);
@@ -9204,7 +9204,7 @@ class Is extends nn {
     }, t), this.updateElements(i, l, a, t);
   }
   updateElements(t, n, s, i) {
-    const r = i === "reset", { iScale: o, vScale: l, _stacked: a, _dataset: c } = this._cachedMeta, { sharedOptions: h, includeOptions: d } = this._getSharedOptions(n, i), u = o.axis, f = l.axis, { spanGaps: m, segment: p } = this.options, b = gs(m) ? m : Number.POSITIVE_INFINITY, v = this.chart._animationsDisabled || r || i === "none", x = n + s, M = t.length;
+    const r = i === "reset", { iScale: o, vScale: l, _stacked: a, _dataset: c } = this._cachedMeta, { sharedOptions: h, includeOptions: d } = this._getSharedOptions(n, i), u = o.axis, f = l.axis, { spanGaps: g, segment: p } = this.options, b = gs(g) ? g : Number.POSITIVE_INFINITY, v = this.chart._animationsDisabled || r || i === "none", x = n + s, M = t.length;
     let S = n > 0 && this.getParsed(n - 1);
     for (let w = 0; w < M; ++w) {
       const E = t[w], _ = v ? E : {};
@@ -9336,10 +9336,10 @@ class Bo extends nn {
     !this.datasetElementType && t && (this.datasetElementType = this.chart.registry.getElement("line")), super.addElements();
   }
   updateElements(t, n, s, i) {
-    const r = i === "reset", { iScale: o, vScale: l, _stacked: a, _dataset: c } = this._cachedMeta, h = this.resolveDataElementOptions(n, i), d = this.getSharedOptions(h), u = this.includeOptions(i, d), f = o.axis, m = l.axis, { spanGaps: p, segment: b } = this.options, v = gs(p) ? p : Number.POSITIVE_INFINITY, x = this.chart._animationsDisabled || r || i === "none";
+    const r = i === "reset", { iScale: o, vScale: l, _stacked: a, _dataset: c } = this._cachedMeta, h = this.resolveDataElementOptions(n, i), d = this.getSharedOptions(h), u = this.includeOptions(i, d), f = o.axis, g = l.axis, { spanGaps: p, segment: b } = this.options, v = gs(p) ? p : Number.POSITIVE_INFINITY, x = this.chart._animationsDisabled || r || i === "none";
     let M = n > 0 && this.getParsed(n - 1);
     for (let S = n; S < n + s; ++S) {
-      const w = t[S], E = this.getParsed(S), _ = x ? w : {}, D = bt(E[m]), N = _[f] = o.getPixelForValue(E[f], S), F = _[m] = r || D ? l.getBasePixel() : l.getPixelForValue(a ? this.applyStack(l, E, a) : E[m], S);
+      const w = t[S], E = this.getParsed(S), _ = x ? w : {}, D = bt(E[g]), N = _[f] = o.getPixelForValue(E[f], S), F = _[g] = r || D ? l.getBasePixel() : l.getPixelForValue(a ? this.applyStack(l, E, a) : E[g], S);
       _.skip = isNaN(N) || isNaN(F) || D, _.stop = S > 0 && Math.abs(E[f] - M[f]) > v, b && (_.parsed = E, _.raw = c.data[S]), u && (_.options = d || this.resolveDataElementOptions(S, w.active ? "active" : i)), x || this.updateElement(w, S, _, i), M = E;
     }
     this.updateSharedOptions(d, i, h);
@@ -9446,8 +9446,8 @@ function av(e, t, n, s) {
       if (a) {
         const { vScale: d } = i._cachedMeta, { _parsed: u } = e, f = u.slice(0, h.lo + 1).reverse().findIndex((p) => !bt(p[d.axis]));
         h.lo -= Math.max(0, f);
-        const m = u.slice(h.hi).findIndex((p) => !bt(p[d.axis]));
-        h.hi += Math.max(0, m);
+        const g = u.slice(h.hi).findIndex((p) => !bt(p[d.axis]));
+        h.hi += Math.max(0, g);
       }
       return h;
     }
@@ -9462,8 +9462,8 @@ function qr(e, t, n, s, i) {
   for (let l = 0, a = r.length; l < a; ++l) {
     const { index: c, data: h } = r[l], { lo: d, hi: u } = av(r[l], t, o, i);
     for (let f = d; f <= u; ++f) {
-      const m = h[f];
-      m.skip || s(m, c, f);
+      const g = h[f];
+      g.skip || s(g, c, f);
     }
   }
 }
@@ -9510,10 +9510,10 @@ function dv(e, t, n, s, i, r) {
     const f = h.inRange(t.x, t.y, i);
     if (s && !f)
       return;
-    const m = h.getCenterPoint(i);
-    if (!(!!r || e.isPointInArea(m)) && !f)
+    const g = h.getCenterPoint(i);
+    if (!(!!r || e.isPointInArea(g)) && !f)
       return;
-    const b = l(t, m);
+    const b = l(t, g);
     b < a ? (o = [
       {
         element: h,
@@ -9787,8 +9787,8 @@ var go = {
       h: o,
       x: i.left,
       y: i.top
-    }, i), m = gv(a.concat(c), d);
-    di(l.fullSize, f, d, m), di(a, f, d, m), di(c, f, d, m) && di(a, f, d, m), vv(f), dd(l.leftAndTop, f, d, m), f.x += f.w, f.y += f.h, dd(l.rightAndBottom, f, d, m), e.chartArea = {
+    }, i), g = gv(a.concat(c), d);
+    di(l.fullSize, f, d, g), di(a, f, d, g), di(c, f, d, g) && di(a, f, d, g), vv(f), dd(l.leftAndTop, f, d, g), f.x += f.w, f.y += f.h, dd(l.rightAndBottom, f, d, g), e.chartArea = {
       left: f.left,
       top: f.top,
       right: f.left + f.w,
@@ -10159,24 +10159,24 @@ function qv(e, t, n) {
 }
 function Yv(e, t, n, s) {
   const { top: i, left: r, bottom: o, right: l, chart: a } = e, { chartArea: c, scales: h } = a;
-  let d = 0, u, f, m;
+  let d = 0, u, f, g;
   const p = o - i, b = l - r;
   if (e.isHorizontal()) {
     if (f = $h(s, r, l), ut(n)) {
       const v = Object.keys(n)[0], x = n[v];
-      m = h[v].getPixelForValue(x) + p - t;
-    } else n === "center" ? m = (c.bottom + c.top) / 2 + p - t : m = pd(e, n, t);
+      g = h[v].getPixelForValue(x) + p - t;
+    } else n === "center" ? g = (c.bottom + c.top) / 2 + p - t : g = pd(e, n, t);
     u = l - r;
   } else {
     if (ut(n)) {
       const v = Object.keys(n)[0], x = n[v];
       f = h[v].getPixelForValue(x) - b + t;
     } else n === "center" ? f = (c.left + c.right) / 2 - b + t : f = pd(e, n, t);
-    m = $h(s, o, i), d = n === "left" ? -Lt : Lt;
+    g = $h(s, o, i), d = n === "left" ? -Lt : Lt;
   }
   return {
     titleX: f,
-    titleY: m,
+    titleY: g,
     maxWidth: u,
     rotation: d
   };
@@ -10356,7 +10356,7 @@ class Ys extends $n {
     if (o) {
       const a = bd(i, n.options.font);
       if (l ? (t.width = this.maxWidth, t.height = ri(r) + a) : (t.height = this.maxHeight, t.width = ri(r) + a), s.display && this.ticks.length) {
-        const { first: c, last: h, widest: d, highest: u } = this._getLabelSizes(), f = s.padding * 2, m = Qe(this.labelRotation), p = Math.cos(m), b = Math.sin(m);
+        const { first: c, last: h, widest: d, highest: u } = this._getLabelSizes(), f = s.padding * 2, g = Qe(this.labelRotation), p = Math.cos(g), b = Math.sin(g);
         if (l) {
           const v = s.mirror ? 0 : b * d.width + p * u.height;
           t.height = Math.min(this.maxHeight, t.height + v + f);
@@ -10413,16 +10413,16 @@ class Ys extends $n {
   }
   _computeLabelSizes(t, n, s) {
     const { ctx: i, _longestTextCache: r } = this, o = [], l = [], a = Math.floor(n / gd(n, s));
-    let c = 0, h = 0, d, u, f, m, p, b, v, x, M, S, w;
+    let c = 0, h = 0, d, u, f, g, p, b, v, x, M, S, w;
     for (d = 0; d < n; d += a) {
-      if (m = t[d].label, p = this._resolveTickFontOptions(d), i.font = b = p.string, v = r[b] = r[b] || {
+      if (g = t[d].label, p = this._resolveTickFontOptions(d), i.font = b = p.string, v = r[b] = r[b] || {
         data: {},
         gc: []
-      }, x = p.lineHeight, M = S = 0, !bt(m) && !Dt(m))
-        M = cr(i, v.data, v.gc, M, m), S = x;
-      else if (Dt(m))
-        for (u = 0, f = m.length; u < f; ++u)
-          w = m[u], !bt(w) && !Dt(w) && (M = cr(i, v.data, v.gc, M, w), S += x);
+      }, x = p.lineHeight, M = S = 0, !bt(g) && !Dt(g))
+        M = cr(i, v.data, v.gc, M, g), S = x;
+      else if (Dt(g))
+        for (u = 0, f = g.length; u < f; ++u)
+          w = g[u], !bt(w) && !Dt(w) && (M = cr(i, v.data, v.gc, M, w), S += x);
       o.push(M), l.push(S), c = Math.max(M, c), h = Math.max(S, h);
     }
     zv(r, n);
@@ -10484,7 +10484,7 @@ class Ys extends $n {
     return t !== "auto" ? !!t : this.getMatchingVisibleMetas().length > 0;
   }
   _computeGridLineItems(t) {
-    const n = this.axis, s = this.chart, i = this.options, { grid: r, position: o, border: l } = i, a = r.offset, c = this.isHorizontal(), d = this.ticks.length + (a ? 1 : 0), u = ri(r), f = [], m = l.setContext(this.getContext()), p = m.display ? m.width : 0, b = p / 2, v = function(nt) {
+    const n = this.axis, s = this.chart, i = this.options, { grid: r, position: o, border: l } = i, a = r.offset, c = this.isHorizontal(), d = this.ticks.length + (a ? 1 : 0), u = ri(r), f = [], g = l.setContext(this.getContext()), p = g.display ? g.width : 0, b = p / 2, v = function(nt) {
       return Gn(s, nt, p);
     };
     let x, M, S, w, E, _, D, N, F, R, W, K;
@@ -10538,12 +10538,12 @@ class Ys extends $n {
     return this._ticksLength = d, this._borderValue = x, f;
   }
   _computeLabelItems(t) {
-    const n = this.axis, s = this.options, { position: i, ticks: r } = s, o = this.isHorizontal(), l = this.ticks, { align: a, crossAlign: c, padding: h, mirror: d } = r, u = ri(s.grid), f = u + h, m = d ? -h : f, p = -Qe(this.labelRotation), b = [];
+    const n = this.axis, s = this.options, { position: i, ticks: r } = s, o = this.isHorizontal(), l = this.ticks, { align: a, crossAlign: c, padding: h, mirror: d } = r, u = ri(s.grid), f = u + h, g = d ? -h : f, p = -Qe(this.labelRotation), b = [];
     let v, x, M, S, w, E, _, D, N, F, R, W, K = "middle";
     if (i === "top")
-      E = this.bottom - m, _ = this._getXAxisLabelAlignment();
+      E = this.bottom - g, _ = this._getXAxisLabelAlignment();
     else if (i === "bottom")
-      E = this.top + m, _ = this._getXAxisLabelAlignment();
+      E = this.top + g, _ = this._getXAxisLabelAlignment();
     else if (i === "left") {
       const it = this._getYAxisLabelAlignment(u);
       _ = it.textAlign, w = it.x;
@@ -11784,8 +11784,8 @@ function m4(e, t, n) {
     if (h === "round")
       e.arc(i, r, u, n - Pt / 2, s + Pt / 2, !0);
     else if (h === "bevel") {
-      const f = 2 * u * u, m = -f * Math.cos(n + Pt / 2) + i, p = -f * Math.sin(n + Pt / 2) + r, b = f * Math.cos(s + Pt / 2) + i, v = f * Math.sin(s + Pt / 2) + r;
-      e.lineTo(m, p), e.lineTo(b, v);
+      const f = 2 * u * u, g = -f * Math.cos(n + Pt / 2) + i, p = -f * Math.sin(n + Pt / 2) + r, b = f * Math.cos(s + Pt / 2) + i, v = f * Math.sin(s + Pt / 2) + r;
+      e.lineTo(g, p), e.lineTo(b, v);
     }
   }
   e.closePath(), e.moveTo(0, 0), e.rect(0, 0, e.canvas.width, e.canvas.height), e.clip("evenodd");
@@ -11824,12 +11824,12 @@ function Cs(e, t, n, s) {
 function fr(e, t, n, s, i, r) {
   const { x: o, y: l, startAngle: a, pixelMargin: c, innerRadius: h } = t, d = Math.max(t.outerRadius + s + n - c, 0), u = h > 0 ? h + s + n + c : 0;
   let f = 0;
-  const m = i - a;
+  const g = i - a;
   if (s) {
-    const it = h > 0 ? h - s : 0, nt = d > 0 ? d - s : 0, G = (it + nt) / 2, Q = G !== 0 ? m * G / (G + s) : m;
-    f = (m - Q) / 2;
+    const it = h > 0 ? h - s : 0, nt = d > 0 ? d - s : 0, G = (it + nt) / 2, Q = G !== 0 ? g * G / (G + s) : g;
+    f = (g - Q) / 2;
   }
-  const p = Math.max(1e-3, m * d - n / Pt) / d, b = (m - p) / 2, v = a + b + f, x = i - b - f, { outerStart: M, outerEnd: S, innerStart: w, innerEnd: E } = y4(t, u, d, x - v), _ = d - M, D = d - S, N = v + M / _, F = x - S / D, R = u + w, W = u + E, K = v + w / R, kt = x - E / W;
+  const p = Math.max(1e-3, g * d - n / Pt) / d, b = (g - p) / 2, v = a + b + f, x = i - b - f, { outerStart: M, outerEnd: S, innerStart: w, innerEnd: E } = y4(t, u, d, x - v), _ = d - M, D = d - S, N = v + M / _, F = x - S / D, R = u + w, W = u + E, K = v + w / R, kt = x - E / W;
   if (e.beginPath(), r) {
     const it = (N + F) / 2;
     if (e.arc(o, l, d, N, it), e.arc(o, l, d, it, F), S > 0) {
@@ -11872,10 +11872,10 @@ function x4(e, t, n, s, i) {
   return fr(e, t, n, s, a, i), e.fill(), a;
 }
 function w4(e, t, n, s, i) {
-  const { fullCircles: r, startAngle: o, circumference: l, options: a } = t, { borderWidth: c, borderJoinStyle: h, borderDash: d, borderDashOffset: u, borderRadius: f } = a, m = a.borderAlign === "inner";
+  const { fullCircles: r, startAngle: o, circumference: l, options: a } = t, { borderWidth: c, borderJoinStyle: h, borderDash: d, borderDashOffset: u, borderRadius: f } = a, g = a.borderAlign === "inner";
   if (!c)
     return;
-  e.setLineDash(d || []), e.lineDashOffset = u, m ? (e.lineWidth = c * 2, e.lineJoin = h || "round") : (e.lineWidth = c, e.lineJoin = h || "bevel");
+  e.setLineDash(d || []), e.lineDashOffset = u, g ? (e.lineWidth = c * 2, e.lineJoin = h || "round") : (e.lineWidth = c, e.lineJoin = h || "bevel");
   let p = t.endAngle;
   if (r) {
     fr(e, t, n, s, p, i);
@@ -11883,7 +11883,7 @@ function w4(e, t, n, s, i) {
       e.stroke();
     isNaN(l) || (p = o + (l % Nt || Nt));
   }
-  m && b4(e, t, p), a.selfJoin && p - o >= Pt && f === 0 && h !== "miter" && m4(e, t, p), r || (fr(e, t, n, s, p, i), e.stroke());
+  g && b4(e, t, p), a.selfJoin && p - o >= Pt && f === 0 && h !== "miter" && m4(e, t, p), r || (fr(e, t, n, s, p, i), e.stroke());
 }
 class ui extends $n {
   constructor(n) {
@@ -11910,7 +11910,7 @@ class ui extends $n {
       "innerRadius",
       "outerRadius",
       "circumference"
-    ], i), f = (this.options.spacing + this.options.borderWidth) / 2, m = pt(u, c - a), p = Ti(o, a, c) && a !== c, b = m >= Nt || p, v = Li(l, h + f, d + f);
+    ], i), f = (this.options.spacing + this.options.borderWidth) / 2, g = pt(u, c - a), p = Ti(o, a, c) && a !== c, b = g >= Nt || p, v = Li(l, h + f, d + f);
     return b && v;
   }
   getCenterPoint(n) {
@@ -11980,14 +11980,14 @@ function I1(e, t, n = {}) {
 }
 function M4(e, t, n, s) {
   const { points: i, options: r } = t, { count: o, start: l, loop: a, ilen: c } = I1(i, n, s), h = _4(r);
-  let { move: d = !0, reverse: u } = s || {}, f, m, p;
+  let { move: d = !0, reverse: u } = s || {}, f, g, p;
   for (f = 0; f <= c; ++f)
-    m = i[(l + (u ? c - f : f)) % o], !m.skip && (d ? (e.moveTo(m.x, m.y), d = !1) : h(e, p, m, u, r.stepped), p = m);
-  return a && (m = i[(l + (u ? c : 0)) % o], h(e, p, m, u, r.stepped)), !!a;
+    g = i[(l + (u ? c - f : f)) % o], !g.skip && (d ? (e.moveTo(g.x, g.y), d = !1) : h(e, p, g, u, r.stepped), p = g);
+  return a && (g = i[(l + (u ? c : 0)) % o], h(e, p, g, u, r.stepped)), !!a;
 }
 function C4(e, t, n, s) {
   const i = t.points, { count: r, start: o, ilen: l } = I1(i, n, s), { move: a = !0, reverse: c } = s || {};
-  let h = 0, d = 0, u, f, m, p, b, v;
+  let h = 0, d = 0, u, f, g, p, b, v;
   const x = (S) => (o + (c ? l - S : S)) % r, M = () => {
     p !== b && (e.lineTo(h, b), e.lineTo(h, p), e.lineTo(h, v));
   };
@@ -11995,7 +11995,7 @@ function C4(e, t, n, s) {
     if (f = i[x(u)], f.skip)
       continue;
     const S = f.x, w = f.y, E = S | 0;
-    E === m ? (w < p ? p = w : w > b && (b = w), h = (d * h + S) / ++d) : (M(), e.lineTo(S, w), m = E, d = 0, p = b = w), v = w;
+    E === g ? (w < p ? p = w : w > b && (b = w), h = (d * h + S) / ++d) : (M(), e.lineTo(S, w), g = E, d = 0, p = b = w), v = w;
   }
   M();
 }
@@ -12061,12 +12061,12 @@ class tn extends $n {
     const l = [], a = P4(s);
     let c, h;
     for (c = 0, h = o.length; c < h; ++c) {
-      const { start: d, end: u } = o[c], f = r[d], m = r[u];
-      if (f === m) {
+      const { start: d, end: u } = o[c], f = r[d], g = r[u];
+      if (f === g) {
         l.push(f);
         continue;
       }
-      const p = Math.abs((i - f[n]) / (m[n] - f[n])), b = a(f, m, p, s.stepped);
+      const p = Math.abs((i - f[n]) / (g[n] - f[n])), b = a(f, g, p, s.stepped);
       b[n] = t[n], l.push(b);
     }
     return l.length === 1 ? l[0] : l;
@@ -12323,8 +12323,8 @@ function F4(e, t, n) {
     }
     const d = k1(t, h);
     for (const u of d) {
-      const f = da(n, r[u.start], r[u.end], u.loop), m = w1(l, i, f);
-      for (const p of m)
+      const f = da(n, r[u.start], r[u.end], u.loop), g = w1(l, i, f);
+      for (const p of g)
         o.push({
           source: p,
           target: u,
@@ -12564,7 +12564,7 @@ function Z4(e) {
   return l;
 }
 function _l(e, t, n) {
-  const s = G4(t), { chart: i, index: r, line: o, scale: l, axis: a } = t, c = o.options, h = c.fill, d = c.backgroundColor, { above: u = d, below: f = d } = h || {}, m = i.getDatasetMeta(r), p = _1(i, m);
+  const s = G4(t), { chart: i, index: r, line: o, scale: l, axis: a } = t, c = o.options, h = c.fill, d = c.backgroundColor, { above: u = d, below: f = d } = h || {}, g = i.getDatasetMeta(r), p = _1(i, g);
   s && o.points.length && (zr(e, n), Q4(e, {
     line: o,
     target: s,
@@ -12630,11 +12630,11 @@ function Nd(e, t, n) {
 function Ml(e, t) {
   const { line: n, target: s, property: i, color: r, scale: o, clip: l } = t, a = F4(n, s, i);
   for (const { source: c, target: h, start: d, end: u } of a) {
-    const { style: { backgroundColor: f = r } = {} } = c, m = s !== !0;
-    e.save(), e.fillStyle = f, ty(e, o, l, m && da(i, d, u)), e.beginPath();
+    const { style: { backgroundColor: f = r } = {} } = c, g = s !== !0;
+    e.save(), e.fillStyle = f, ty(e, o, l, g && da(i, d, u)), e.beginPath();
     const p = !!n.pathSegment(e, c);
     let b;
-    if (m) {
+    if (g) {
       p ? e.closePath() : Od(e, s, u, i);
       const v = !!s.pathSegment(e, h, {
         move: p,
@@ -12762,8 +12762,8 @@ function ey(e, t) {
   };
 }
 function Rd(e, t) {
-  const n = e.chart.ctx, { body: s, footer: i, title: r } = e, { boxWidth: o, boxHeight: l } = t, a = jt(t.bodyFont), c = jt(t.titleFont), h = jt(t.footerFont), d = r.length, u = i.length, f = s.length, m = Ee(t.padding);
-  let p = m.height, b = 0, v = s.reduce((S, w) => S + w.before.length + w.lines.length + w.after.length, 0);
+  const n = e.chart.ctx, { body: s, footer: i, title: r } = e, { boxWidth: o, boxHeight: l } = t, a = jt(t.bodyFont), c = jt(t.titleFont), h = jt(t.footerFont), d = r.length, u = i.length, f = s.length, g = Ee(t.padding);
+  let p = g.height, b = 0, v = s.reduce((S, w) => S + w.before.length + w.lines.length + w.after.length, 0);
   if (v += e.beforeBody.length + e.afterBody.length, d && (p += d * c.lineHeight + (d - 1) * t.titleSpacing + t.titleMarginBottom), v) {
     const S = t.displayColors ? Math.max(l, a.lineHeight) : a.lineHeight;
     p += f * S + (v - f) * a.lineHeight + (v - 1) * t.bodySpacing;
@@ -12775,7 +12775,7 @@ function Rd(e, t) {
   };
   return n.save(), n.font = c.string, Mt(e.title, M), n.font = a.string, Mt(e.beforeBody.concat(e.afterBody), M), x = t.displayColors ? o + 2 + t.boxPadding : 0, Mt(s, (S) => {
     Mt(S.before, M), Mt(S.lines, M), Mt(S.after, M);
-  }), x = 0, n.font = h.string, Mt(e.footer, M), n.restore(), b += m.width, {
+  }), x = 0, n.font = h.string, Mt(e.footer, M), n.restore(), b += g.width, {
     width: b,
     height: p
   };
@@ -12811,10 +12811,10 @@ function ry(e, t, n) {
 }
 function Ld(e, t, n, s) {
   const { caretSize: i, caretPadding: r, cornerRadius: o } = e, { xAlign: l, yAlign: a } = n, c = i + r, { topLeft: h, topRight: d, bottomLeft: u, bottomRight: f } = cs(o);
-  let m = oy(t, l);
+  let g = oy(t, l);
   const p = ry(t, a, c);
-  return a === "center" ? l === "left" ? m += c : l === "right" && (m -= c) : l === "left" ? m -= Math.max(h, u) + i : l === "right" && (m += Math.max(d, f) + i), {
-    x: te(m, 0, s.width - t.width),
+  return a === "center" ? l === "left" ? g += c : l === "right" && (g -= c) : l === "left" ? g -= Math.max(h, u) + i : l === "right" && (g += Math.max(d, f) + i), {
+    x: te(g, 0, s.width - t.width),
     y: te(p, 0, s.height - t.height)
   };
 }
@@ -12978,9 +12978,9 @@ class ua extends $n {
     n.lineTo(r.x1, r.y1), n.lineTo(r.x2, r.y2), n.lineTo(r.x3, r.y3);
   }
   getCaretPosition(t, n, s) {
-    const { xAlign: i, yAlign: r } = this, { caretSize: o, cornerRadius: l } = s, { topLeft: a, topRight: c, bottomLeft: h, bottomRight: d } = cs(l), { x: u, y: f } = t, { width: m, height: p } = n;
+    const { xAlign: i, yAlign: r } = this, { caretSize: o, cornerRadius: l } = s, { topLeft: a, topRight: c, bottomLeft: h, bottomRight: d } = cs(l), { x: u, y: f } = t, { width: g, height: p } = n;
     let b, v, x, M, S, w;
-    return r === "center" ? (S = f + p / 2, i === "left" ? (b = u, v = b - o, M = S + o, w = S - o) : (b = u + m, v = b + o, M = S - o, w = S + o), x = b) : (i === "left" ? v = u + Math.max(a, h) + o : i === "right" ? v = u + m - Math.max(c, d) - o : v = this.caretX, r === "top" ? (M = f, S = M - o, b = v - o, x = v + o) : (M = f + p, S = M + o, b = v + o, x = v - o), w = M), {
+    return r === "center" ? (S = f + p / 2, i === "left" ? (b = u, v = b - o, M = S + o, w = S - o) : (b = u + g, v = b + o, M = S - o, w = S + o), x = b) : (i === "left" ? v = u + Math.max(a, h) + o : i === "right" ? v = u + g - Math.max(c, d) - o : v = this.caretX, r === "top" ? (M = f, S = M - o, b = v - o, x = v + o) : (M = f + p, S = M + o, b = v + o, x = v - o), w = M), {
       x1: b,
       x2: v,
       x3: x,
@@ -12999,43 +12999,43 @@ class ua extends $n {
     }
   }
   _drawColorBox(t, n, s, i, r) {
-    const o = this.labelColors[s], l = this.labelPointStyles[s], { boxHeight: a, boxWidth: c } = r, h = jt(r.bodyFont), d = yo(this, "left", r), u = i.x(d), f = a < h.lineHeight ? (h.lineHeight - a) / 2 : 0, m = n.y + f;
+    const o = this.labelColors[s], l = this.labelPointStyles[s], { boxHeight: a, boxWidth: c } = r, h = jt(r.bodyFont), d = yo(this, "left", r), u = i.x(d), f = a < h.lineHeight ? (h.lineHeight - a) / 2 : 0, g = n.y + f;
     if (r.usePointStyle) {
       const p = {
         radius: Math.min(c, a) / 2,
         pointStyle: l.pointStyle,
         rotation: l.rotation,
         borderWidth: 1
-      }, b = i.leftForLtr(u, c) + c / 2, v = m + a / 2;
+      }, b = i.leftForLtr(u, c) + c / 2, v = g + a / 2;
       t.strokeStyle = r.multiKeyBackground, t.fillStyle = r.multiKeyBackground, ra(t, p, b, v), t.strokeStyle = o.borderColor, t.fillStyle = o.backgroundColor, ra(t, p, b, v);
     } else {
       t.lineWidth = ut(o.borderWidth) ? Math.max(...Object.values(o.borderWidth)) : o.borderWidth || 1, t.strokeStyle = o.borderColor, t.setLineDash(o.borderDash || []), t.lineDashOffset = o.borderDashOffset || 0;
       const p = i.leftForLtr(u, c), b = i.leftForLtr(i.xPlus(u, 1), c - 2), v = cs(o.borderRadius);
       Object.values(v).some((x) => x !== 0) ? (t.beginPath(), t.fillStyle = r.multiKeyBackground, Fi(t, {
         x: p,
-        y: m,
+        y: g,
         w: c,
         h: a,
         radius: v
       }), t.fill(), t.stroke(), t.fillStyle = o.backgroundColor, t.beginPath(), Fi(t, {
         x: b,
-        y: m + 1,
+        y: g + 1,
         w: c - 2,
         h: a - 2,
         radius: v
-      }), t.fill()) : (t.fillStyle = r.multiKeyBackground, t.fillRect(p, m, c, a), t.strokeRect(p, m, c, a), t.fillStyle = o.backgroundColor, t.fillRect(b, m + 1, c - 2, a - 2));
+      }), t.fill()) : (t.fillStyle = r.multiKeyBackground, t.fillRect(p, g, c, a), t.strokeRect(p, g, c, a), t.fillStyle = o.backgroundColor, t.fillRect(b, g + 1, c - 2, a - 2));
     }
     t.fillStyle = this.labelTextColors[s];
   }
   drawBody(t, n, s) {
     const { body: i } = this, { bodySpacing: r, bodyAlign: o, displayColors: l, boxHeight: a, boxWidth: c, boxPadding: h } = s, d = jt(s.bodyFont);
     let u = d.lineHeight, f = 0;
-    const m = fl(s.rtl, this.x, this.width), p = function(D) {
-      n.fillText(D, m.x(t.x + f), t.y + u / 2), t.y += u + r;
-    }, b = m.textAlign(o);
+    const g = fl(s.rtl, this.x, this.width), p = function(D) {
+      n.fillText(D, g.x(t.x + f), t.y + u / 2), t.y += u + r;
+    }, b = g.textAlign(o);
     let v, x, M, S, w, E, _;
     for (n.textAlign = o, n.textBaseline = "middle", n.font = d.string, t.x = yo(this, b, s), n.fillStyle = s.bodyColor, Mt(this.beforeBody, p), f = l && b !== "right" ? o === "center" ? c / 2 + h : c + 2 + h : 0, S = 0, E = i.length; S < E; ++S) {
-      for (v = i[S], x = this.labelTextColors[S], n.fillStyle = x, Mt(v.before, p), M = v.lines, l && M.length && (this._drawColorBox(n, t, S, m, s), u = Math.max(d.lineHeight, a)), w = 0, _ = M.length; w < _; ++w)
+      for (v = i[S], x = this.labelTextColors[S], n.fillStyle = x, Mt(v.before, p), M = v.lines, l && M.length && (this._drawColorBox(n, t, S, g, s), u = Math.max(d.lineHeight, a)), w = 0, _ = M.length; w < _; ++w)
         p(M[w]), u = d.lineHeight;
       Mt(v.after, p);
     }
@@ -13051,8 +13051,8 @@ class ua extends $n {
     }
   }
   drawBackground(t, n, s, i) {
-    const { xAlign: r, yAlign: o } = this, { x: l, y: a } = t, { width: c, height: h } = s, { topLeft: d, topRight: u, bottomLeft: f, bottomRight: m } = cs(i.cornerRadius);
-    n.fillStyle = i.backgroundColor, n.strokeStyle = i.borderColor, n.lineWidth = i.borderWidth, n.beginPath(), n.moveTo(l + d, a), o === "top" && this.drawCaret(t, n, s, i), n.lineTo(l + c - u, a), n.quadraticCurveTo(l + c, a, l + c, a + u), o === "center" && r === "right" && this.drawCaret(t, n, s, i), n.lineTo(l + c, a + h - m), n.quadraticCurveTo(l + c, a + h, l + c - m, a + h), o === "bottom" && this.drawCaret(t, n, s, i), n.lineTo(l + f, a + h), n.quadraticCurveTo(l, a + h, l, a + h - f), o === "center" && r === "left" && this.drawCaret(t, n, s, i), n.lineTo(l, a + d), n.quadraticCurveTo(l, a, l + d, a), n.closePath(), n.fill(), i.borderWidth > 0 && n.stroke();
+    const { xAlign: r, yAlign: o } = this, { x: l, y: a } = t, { width: c, height: h } = s, { topLeft: d, topRight: u, bottomLeft: f, bottomRight: g } = cs(i.cornerRadius);
+    n.fillStyle = i.backgroundColor, n.strokeStyle = i.borderColor, n.lineWidth = i.borderWidth, n.beginPath(), n.moveTo(l + d, a), o === "top" && this.drawCaret(t, n, s, i), n.lineTo(l + c - u, a), n.quadraticCurveTo(l + c, a, l + c, a + u), o === "center" && r === "right" && this.drawCaret(t, n, s, i), n.lineTo(l + c, a + h - g), n.quadraticCurveTo(l + c, a + h, l + c - g, a + h), o === "bottom" && this.drawCaret(t, n, s, i), n.lineTo(l + f, a + h), n.quadraticCurveTo(l, a + h, l, a + h - f), o === "center" && r === "left" && this.drawCaret(t, n, s, i), n.lineTo(l, a + d), n.quadraticCurveTo(l, a, l + d, a), n.closePath(), n.fill(), i.borderWidth > 0 && n.stroke();
   }
   _updateAnimationTarget(t) {
     const n = this.chart, s = this.$animations, i = s && s.x, r = s && s.y;
@@ -13318,8 +13318,8 @@ U(pr, "id", "category"), U(pr, "defaults", {
   }
 });
 function uy(e, t) {
-  const n = [], { bounds: i, step: r, min: o, max: l, precision: a, count: c, maxTicks: h, maxDigits: d, includeBounds: u } = e, f = r || 1, m = h - 1, { min: p, max: b } = t, v = !bt(o), x = !bt(l), M = !bt(c), S = (b - p) / (d + 1);
-  let w = Ih((b - p) / m / f) * f, E, _, D, N;
+  const n = [], { bounds: i, step: r, min: o, max: l, precision: a, count: c, maxTicks: h, maxDigits: d, includeBounds: u } = e, f = r || 1, g = h - 1, { min: p, max: b } = t, v = !bt(o), x = !bt(l), M = !bt(c), S = (b - p) / (d + 1);
+  let w = Ih((b - p) / g / f) * f, E, _, D, N;
   if (w < 1e-14 && !v && !x)
     return [
       {
@@ -13329,7 +13329,7 @@ function uy(e, t) {
         value: b
       }
     ];
-  N = Math.ceil(b / w) - Math.floor(p / w), N > m && (w = Ih(N * w / m / f) * f), bt(a) || (E = Math.pow(10, a), w = Math.ceil(w * E) / E), i === "ticks" ? (_ = Math.floor(p / w) * w, D = Math.ceil(b / w) * w) : (_ = p, D = b), v && x && r && k0((l - o) / r, w / 1e3) ? (N = Math.round(Math.min((l - o) / w, h)), w = (l - o) / N, _ = o, D = l) : M ? (_ = v ? o : _, D = x ? l : D, N = c - 1, w = (D - _) / N) : (N = (D - _) / w, Mi(N, Math.round(N), w / 1e3) ? N = Math.round(N) : N = Math.ceil(N));
+  N = Math.ceil(b / w) - Math.floor(p / w), N > g && (w = Ih(N * w / g / f) * f), bt(a) || (E = Math.pow(10, a), w = Math.ceil(w * E) / E), i === "ticks" ? (_ = Math.floor(p / w) * w, D = Math.ceil(b / w) * w) : (_ = p, D = b), v && x && r && k0((l - o) / r, w / 1e3) ? (N = Math.round(Math.min((l - o) / w, h)), w = (l - o) / N, _ = o, D = l) : M ? (_ = v ? o : _, D = x ? l : D, N = c - 1, w = (D - _) / N) : (N = (D - _) / w, Mi(N, Math.round(N), w / 1e3) ? N = Math.round(N) : N = Math.ceil(N));
   const F = Math.max(Vh(w), Vh(_));
   E = Math.pow(10, bt(a) ? F : a), _ = Math.round(_ * E) / E, D = Math.round(D * E) / E;
   let R = 0;
@@ -13475,7 +13475,7 @@ function py(e) {
     i[a] = c.padding;
     const h = e.getPointPosition(a, e.drawingArea + i[a], l), d = jt(c.font), u = fy(e.ctx, d, e._pointLabels[a]);
     s[a] = u;
-    const f = Zt(e.getIndexAngle(a) + l), m = Math.round(Ja(f)), p = $d(m, h.x, u.w, 0, 180), b = $d(m, h.y, u.h, 90, 270);
+    const f = Zt(e.getIndexAngle(a) + l), g = Math.round(Ja(f)), p = $d(g, h.x, u.w, 0, 180), b = $d(g, h.y, u.h, 90, 270);
     gy(n, t, f, p, b);
   }
   e.setCenterPoint(t.l - n.l, n.r - t.r, t.t - n.t, n.b - t.b), e._pointLabelItems = vy(e, s, i);
@@ -13544,7 +13544,7 @@ function ky(e, t, n) {
     const a = cs(t.borderRadius), c = Ee(t.backdropPadding);
     e.fillStyle = l;
     const h = s - c.left, d = i - c.top, u = r - s + c.width, f = o - i + c.height;
-    Object.values(a).some((m) => m !== 0) ? (e.beginPath(), Fi(e, {
+    Object.values(a).some((g) => g !== 0) ? (e.beginPath(), Fi(e, {
       x: h,
       y: d,
       w: u,
@@ -13681,8 +13681,8 @@ class pi extends fa {
     if (n.pointLabels.display && _y(this, o), i.display && this.ticks.forEach((h, d) => {
       if (d !== 0 || d === 0 && this.min < 0) {
         a = this.getDistanceFromCenterForValue(h.value);
-        const u = this.getContext(d), f = i.setContext(u), m = r.setContext(u);
-        My(this, f, a, o, m);
+        const u = this.getContext(d), f = i.setContext(u), g = r.setContext(u);
+        My(this, f, a, o, g);
       }
     }), s.display) {
       for (t.save(), l = o - 1; l >= 0; l--) {
@@ -13928,10 +13928,10 @@ class mr extends Ys {
     let d = n, u, f;
     if (c && (d = +t.startOf(d, "isoWeek", a)), d = +t.startOf(d, c ? "day" : o), t.diff(s, n, o) > 1e5 * l)
       throw new Error(n + " and " + s + " are too far apart with stepSize of " + l + " " + o);
-    const m = i.ticks.source === "data" && this.getDataTimestamps();
+    const g = i.ticks.source === "data" && this.getDataTimestamps();
     for (u = d, f = 0; u < s; u = +t.add(u, l, o), f++)
-      Wd(h, u, m);
-    return (u === s || i.bounds === "ticks" || f === 1) && Wd(h, u, m), Object.keys(h).sort(Hd).map((p) => +p);
+      Wd(h, u, g);
+    return (u === s || i.bounds === "ticks" || f === 1) && Wd(h, u, g), Object.keys(h).sort(Hd).map((p) => +p);
   }
   getLabelForValue(t) {
     const n = this._adapter, s = this.options.time;
@@ -14742,26 +14742,26 @@ const Dy = (e) => e.charAt(0).toUpperCase() + e.slice(1), Ay = (e) => e.normaliz
       role: "dialog",
       class: "fr-modal"
     }, [
-      g("div", Iy, [
-        g("div", Vy, [
-          g("div", By, [
-            g("div", $y, [
-              g("div", Hy, [
-                g("button", {
+      m("div", Iy, [
+        m("div", Vy, [
+          m("div", By, [
+            m("div", $y, [
+              m("div", Hy, [
+                m("button", {
                   class: "fr-btn--close fr-btn",
                   title: "Fermer la fenêtre modale",
                   "aria-controls": "modal-" + e.id
                 }, " Fermer ", 8, zy)
               ]),
-              g("div", jy, [
-                g("h1", {
+              m("div", jy, [
+                m("h1", {
                   id: "fr-modal-title-modal-" + e.id,
                   class: "fr-modal__title"
                 }, [
-                  n[0] || (n[0] = g("span", { class: "fr-icon-arrow-right-line fr-icon--lg" }, null, -1)),
+                  n[0] || (n[0] = m("span", { class: "fr-icon-arrow-right-line fr-icon--lg" }, null, -1)),
                   Ns(" " + X(e.modalTitle), 1)
                 ], 8, Wy),
-                g("div", { innerHTML: e.modalContent }, null, 8, qy)
+                m("div", { innerHTML: e.modalContent }, null, 8, qy)
               ])
             ])
           ])
@@ -14883,7 +14883,7 @@ const Dy = (e) => e.charAt(0).toUpperCase() + e.slice(1), Ay = (e) => e.normaliz
       });
       const D = new Blob(E, { type: "text/csv" }), N = window.URL.createObjectURL(D), F = document.createElement("a");
       F.href = N, F.download = "data.csv", F.click(), window.URL.revokeObjectURL(N);
-    }, m = () => {
+    }, g = () => {
       const b = document.getElementById(`container-${t.id}`), v = b.querySelectorAll(".screenshot-hide-" + t.id);
       v.forEach((w) => w.style.display = "none");
       const x = b.querySelector(".databox__data"), M = b.querySelector(`#select-${t.id}`), S = b.querySelector(".databox__tendency");
@@ -14914,12 +14914,12 @@ const Dy = (e) => e.charAt(0).toUpperCase() + e.slice(1), Ay = (e) => e.normaliz
       id: "container-" + e.id,
       class: "fr-card fr-card--shadow databox"
     }, [
-      g("div", Gy, [
-        g("h3", Xy, X(e.title), 1),
-        g("div", {
+      m("div", Gy, [
+        m("h3", Xy, X(e.title), 1),
+        m("div", {
           class: Jt("flex screenshot-hide-" + e.id)
         }, [
-          g("button", {
+          m("button", {
             class: "fr-btn--tooltip fr-btn",
             type: "button",
             "aria-describedby": "tooltip-" + e.id,
@@ -14954,34 +14954,34 @@ const Dy = (e) => e.charAt(0).toUpperCase() + e.slice(1), Ay = (e) => e.normaliz
             }, null, 8, ["id", "modal-title", "modal-content"])
           ])) : xt("", !0),
           a.value || c.value || h.value.length ? (O(), I("nav", e5, [
-            g("div", n5, [
-              g("button", {
+            m("div", n5, [
+              m("button", {
                 class: "fr-btn fr-btn--sm fr-icon-more-line fr-btn--tertiary-no-outline fr-ratio-1x1",
                 "aria-controls": "translate-" + e.id,
                 "aria-expanded": "false",
                 title: "Plus d'actions"
               }, null, 8, s5),
-              g("div", {
+              m("div", {
                 id: "translate-" + e.id,
                 class: "fr-collapse fr-translate__menu fr-menu"
               }, [
-                g("ul", o5, [
+                m("ul", o5, [
                   a.value ? (O(), I("li", r5, [
-                    g("button", {
+                    m("button", {
                       class: "fr-translate__language fr-nav__link",
                       title: "Prendre une capture d'écran",
-                      onClick: v[0] || (v[0] = (x) => m())
+                      onClick: v[0] || (v[0] = (x) => g())
                     }, " Capture d'écran ")
                   ])) : xt("", !0),
                   c.value ? (O(), I("li", l5, [
-                    g("button", {
+                    m("button", {
                       class: "fr-translate__language fr-nav__link",
                       title: "Télécharger les données en CSV",
                       onClick: v[1] || (v[1] = (x) => f(d.value))
                     }, " Télécharger en CSV ")
                   ])) : xt("", !0),
                   (O(!0), I(dt, null, Ct(h.value, (x, M) => (O(), I("li", { key: M }, [
-                    g("button", {
+                    m("button", {
                       id: ts(Ay)(x),
                       class: "fr-translate__language fr-nav__link",
                       title: x
@@ -14993,14 +14993,14 @@ const Dy = (e) => e.charAt(0).toUpperCase() + e.slice(1), Ay = (e) => e.normaliz
           ])) : xt("", !0)
         ], 2)
       ]),
-      g("div", c5, [
+      m("div", c5, [
         n.value.length > 1 && e.disposition === "default" ? (O(), I("div", h5, [
-          g("div", d5, [
-            g("label", {
+          m("div", d5, [
+            m("label", {
               class: "fr-label fr-text--xs fr-mb-0",
               for: "select-" + e.id
             }, " Choisir une source de données ", 8, u5),
-            J2(g("select", {
+            J2(m("select", {
               id: "select-" + e.id,
               "onUpdate:modelValue": v[2] || (v[2] = (x) => i.value = x),
               name: "select",
@@ -15018,11 +15018,11 @@ const Dy = (e) => e.charAt(0).toUpperCase() + e.slice(1), Ay = (e) => e.normaliz
         e.trend ? (O(), I("div", g5, [
           e.trend.includes("-") ? (O(), I("p", m5, [
             v[5] || (v[5] = Ns(" En baisse ", -1)),
-            g("span", {
+            m("span", {
               class: "fr-badge fr-badge--error fr-badge--no-icon fr-badge--sm fr-ml-1v",
               "aria-label": "Baisse de " + e.trend.replace("-", "").trim()
             }, [
-              g("span", {
+              m("span", {
                 class: Jt("fr-pr-1v screenshot-hide-" + e.id),
                 "aria-hidden": "true"
               }, "↘ ", 2),
@@ -15030,11 +15030,11 @@ const Dy = (e) => e.charAt(0).toUpperCase() + e.slice(1), Ay = (e) => e.normaliz
             ], 8, b5)
           ])) : (O(), I("p", v5, [
             v[6] || (v[6] = Ns(" En hausse ", -1)),
-            g("span", {
+            m("span", {
               class: "fr-badge fr-badge--success fr-badge--no-icon fr-badge--sm fr-ml-1v",
               "aria-label": "Hausse de " + e.trend.trim()
             }, [
-              g("span", {
+              m("span", {
                 class: Jt("fr-pr-1v screenshot-hide-" + e.id),
                 "aria-hidden": "true"
               }, "↗ ", 2),
@@ -15043,8 +15043,8 @@ const Dy = (e) => e.charAt(0).toUpperCase() + e.slice(1), Ay = (e) => e.normaliz
           ]))
         ])) : xt("", !0)
       ]),
-      g("div", x5, [
-        g("div", {
+      m("div", x5, [
+        m("div", {
           class: Jt([
             d.value === "table" ? "fr-hidden" : e.disposition !== "default" ? p.value : "w-full"
           ]),
@@ -15056,7 +15056,7 @@ const Dy = (e) => e.charAt(0).toUpperCase() + e.slice(1), Ay = (e) => e.normaliz
             class: Jt(e.disposition === "default" && i.value !== x ? "fr-hidden" : "")
           }, null, 10, k5))), 128))
         ], 10, w5),
-        g("div", {
+        m("div", {
           class: Jt([
             d.value === "chart" ? "fr-hidden" : "w-full"
           ]),
@@ -15074,16 +15074,16 @@ const Dy = (e) => e.charAt(0).toUpperCase() + e.slice(1), Ay = (e) => e.normaliz
           }, null, 10, C5)) : xt("", !0)
         ], 10, _5)
       ]),
-      g("div", P5, [
-        g("p", S5, X(e.source) + ", " + X(e.date), 1),
+      m("div", P5, [
+        m("p", S5, X(e.source) + ", " + X(e.date), 1),
         o.value && n.value.length > 0 ? (O(), I("fieldset", {
           key: 0,
           class: Jt("fr-segmented fr-segmented--no-legend fr-segmented--sm screenshot-hide-" + e.id)
         }, [
-          v[9] || (v[9] = g("legend", { class: "fr-segmented__legend" }, " Choisir votre vue ", -1)),
-          g("div", E5, [
-            g("div", D5, [
-              g("input", {
+          v[9] || (v[9] = m("legend", { class: "fr-segmented__legend" }, " Choisir votre vue ", -1)),
+          m("div", E5, [
+            m("div", D5, [
+              m("input", {
                 id: "segmented-chart-" + e.id,
                 value: "1",
                 type: "radio",
@@ -15091,34 +15091,34 @@ const Dy = (e) => e.charAt(0).toUpperCase() + e.slice(1), Ay = (e) => e.normaliz
                 name: "segmented-" + e.id,
                 onChange: v[3] || (v[3] = (x) => u("chart"))
               }, null, 40, A5),
-              g("label", {
+              m("label", {
                 class: "fr-label",
                 for: "segmented-chart-" + e.id
               }, [...v[7] || (v[7] = [
-                g("span", {
+                m("span", {
                   class: "fr-icon-pie-chart-2-fill fr-icon--sm",
                   "aria-hidden": "true"
                 }, null, -1),
-                g("span", { class: "fr-sr-only" }, "Vue graphique", -1)
+                m("span", { class: "fr-sr-only" }, "Vue graphique", -1)
               ])], 8, N5)
             ]),
-            g("div", O5, [
-              g("input", {
+            m("div", O5, [
+              m("input", {
                 id: "segmented-table-" + e.id,
                 value: "2",
                 type: "radio",
                 name: "segmented-" + e.id,
                 onChange: v[4] || (v[4] = (x) => u("table"))
               }, null, 40, R5),
-              g("label", {
+              m("label", {
                 class: "fr-label",
                 for: "segmented-table-" + e.id
               }, [...v[8] || (v[8] = [
-                g("span", {
+                m("span", {
                   class: "fr-icon-table-2 fr-icon fr-icon--sm",
                   "aria-hidden": "true"
                 }, null, -1),
-                g("span", { class: "fr-sr-only" }, "Vue tableau", -1)
+                m("span", { class: "fr-sr-only" }, "Vue tableau", -1)
               ])], 8, T5)
             ])
           ])
@@ -15493,13 +15493,13 @@ const dc = (...e) => {
   const [t, n, s] = e, [i, r, o] = q5(t, n, s), [l, a, c] = J1(i, r, o);
   return [l, a, c, e.length > 3 ? e[3] : 1];
 }, q5 = (e, t, n) => {
-  const { kE: s, kK: i, kKE: r, Xn: o, Yn: l, Zn: a } = sn, c = (e + 16) / 116, h = 2e-3 * t + c, d = c - 5e-3 * n, u = h * h * h, f = d * d * d, m = u > s ? u : (116 * h - 16) / i, p = e > r ? Math.pow((e + 16) / 116, 3) : e / i, b = f > s ? f : (116 * d - 16) / i, v = m * o, x = p * l, M = b * a;
+  const { kE: s, kK: i, kKE: r, Xn: o, Yn: l, Zn: a } = sn, c = (e + 16) / 116, h = 2e-3 * t + c, d = c - 5e-3 * n, u = h * h * h, f = d * d * d, g = u > s ? u : (116 * h - 16) / i, p = e > r ? Math.pow((e + 16) / 116, 3) : e / i, b = f > s ? f : (116 * d - 16) / i, v = g * o, x = p * l, M = b * a;
   return [v, x, M];
 }, Pl = (e) => {
   const t = Math.sign(e);
   return e = Math.abs(e), (e <= 31308e-7 ? e * 12.92 : 1.055 * Math.pow(e, 1 / 2.4) - 0.055) * t;
 }, J1 = (e, t, n) => {
-  const { MtxAdaptMa: s, MtxAdaptMaI: i, MtxXYZ2RGB: r, RefWhiteRGB: o, Xn: l, Yn: a, Zn: c } = sn, h = l * s.m00 + a * s.m10 + c * s.m20, d = l * s.m01 + a * s.m11 + c * s.m21, u = l * s.m02 + a * s.m12 + c * s.m22, f = o.X * s.m00 + o.Y * s.m10 + o.Z * s.m20, m = o.X * s.m01 + o.Y * s.m11 + o.Z * s.m21, p = o.X * s.m02 + o.Y * s.m12 + o.Z * s.m22, b = (e * s.m00 + t * s.m10 + n * s.m20) * (f / h), v = (e * s.m01 + t * s.m11 + n * s.m21) * (m / d), x = (e * s.m02 + t * s.m12 + n * s.m22) * (p / u), M = b * i.m00 + v * i.m10 + x * i.m20, S = b * i.m01 + v * i.m11 + x * i.m21, w = b * i.m02 + v * i.m12 + x * i.m22, E = Pl(
+  const { MtxAdaptMa: s, MtxAdaptMaI: i, MtxXYZ2RGB: r, RefWhiteRGB: o, Xn: l, Yn: a, Zn: c } = sn, h = l * s.m00 + a * s.m10 + c * s.m20, d = l * s.m01 + a * s.m11 + c * s.m21, u = l * s.m02 + a * s.m12 + c * s.m22, f = o.X * s.m00 + o.Y * s.m10 + o.Z * s.m20, g = o.X * s.m01 + o.Y * s.m11 + o.Z * s.m21, p = o.X * s.m02 + o.Y * s.m12 + o.Z * s.m22, b = (e * s.m00 + t * s.m10 + n * s.m20) * (f / h), v = (e * s.m01 + t * s.m11 + n * s.m21) * (g / d), x = (e * s.m02 + t * s.m12 + n * s.m22) * (p / u), M = b * i.m00 + v * i.m10 + x * i.m20, S = b * i.m01 + v * i.m11 + x * i.m21, w = b * i.m02 + v * i.m12 + x * i.m22, E = Pl(
     M * r.m00 + S * r.m10 + w * r.m20
   ), _ = Pl(
     M * r.m01 + S * r.m11 + w * r.m21
@@ -15522,10 +15522,10 @@ function Sl(e) {
 const Z1 = (e, t, n) => {
   e = Sl(e / 255), t = Sl(t / 255), n = Sl(n / 255);
   const { MtxRGB2XYZ: s, MtxAdaptMa: i, MtxAdaptMaI: r, Xn: o, Yn: l, Zn: a, As: c, Bs: h, Cs: d } = sn;
-  let u = e * s.m00 + t * s.m10 + n * s.m20, f = e * s.m01 + t * s.m11 + n * s.m21, m = e * s.m02 + t * s.m12 + n * s.m22;
+  let u = e * s.m00 + t * s.m10 + n * s.m20, f = e * s.m01 + t * s.m11 + n * s.m21, g = e * s.m02 + t * s.m12 + n * s.m22;
   const p = o * i.m00 + l * i.m10 + a * i.m20, b = o * i.m01 + l * i.m11 + a * i.m21, v = o * i.m02 + l * i.m12 + a * i.m22;
-  let x = u * i.m00 + f * i.m10 + m * i.m20, M = u * i.m01 + f * i.m11 + m * i.m21, S = u * i.m02 + f * i.m12 + m * i.m22;
-  return x *= p / c, M *= b / h, S *= v / d, u = x * r.m00 + M * r.m10 + S * r.m20, f = x * r.m01 + M * r.m11 + S * r.m21, m = x * r.m02 + M * r.m12 + S * r.m22, [u, f, m];
+  let x = u * i.m00 + f * i.m10 + g * i.m20, M = u * i.m01 + f * i.m11 + g * i.m21, S = u * i.m02 + f * i.m12 + g * i.m22;
+  return x *= p / c, M *= b / h, S *= v / d, u = x * r.m00 + M * r.m10 + S * r.m20, f = x * r.m01 + M * r.m11 + S * r.m21, g = x * r.m02 + M * r.m12 + S * r.m22, [u, f, g];
 };
 $.prototype.lab = function() {
   return uc(this._rgb);
@@ -15707,8 +15707,8 @@ const Gs = (e, t, n, s) => {
   s === "hsl" ? (i = e.hsl(), r = t.hsl()) : s === "hsv" ? (i = e.hsv(), r = t.hsv()) : s === "hcg" ? (i = e.hcg(), r = t.hcg()) : s === "hsi" ? (i = e.hsi(), r = t.hsi()) : s === "lch" || s === "hcl" ? (s = "hcl", i = e.hcl(), r = t.hcl()) : s === "oklch" && (i = e.oklch().reverse(), r = t.oklch().reverse());
   let o, l, a, c, h, d;
   (s.substr(0, 1) === "h" || s === "oklch") && ([o, a, h] = i, [l, c, d] = r);
-  let u, f, m, p;
-  return !isNaN(o) && !isNaN(l) ? (l > o && l - o > 180 ? p = l - (o + 360) : l < o && o - l > 180 ? p = l + 360 - o : p = l - o, f = o + n * p) : isNaN(o) ? isNaN(l) ? f = Number.NaN : (f = l, (h == 1 || h == 0) && s != "hsv" && (u = c)) : (f = o, (d == 1 || d == 0) && s != "hsv" && (u = a)), u === void 0 && (u = a + n * (c - a)), m = h + n * (d - h), s === "oklch" ? new $([m, u, f], s) : new $([f, u, m], s);
+  let u, f, g, p;
+  return !isNaN(o) && !isNaN(l) ? (l > o && l - o > 180 ? p = l - (o + 360) : l < o && o - l > 180 ? p = l + 360 - o : p = l - o, f = o + n * p) : isNaN(o) ? isNaN(l) ? f = Number.NaN : (f = l, (h == 1 || h == 0) && s != "hsv" && (u = c)) : (f = o, (d == 1 || d == 0) && s != "hsv" && (u = a)), u === void 0 && (u = a + n * (c - a)), g = h + n * (d - h), s === "oklch" ? new $([g, u, f], s) : new $([f, u, g], s);
 }, ep = (e, t, n) => Gs(e, t, n, "lch");
 ee.lch = ep;
 ee.hcl = ep;
@@ -16000,13 +16000,13 @@ const { pow: Al, sqrt: Nl, PI: Ol, cos: Ud, sin: Gd, atan2: B6 } = Math, $6 = (e
   e.forEach((d, u) => {
     const f = d.get(t);
     h += d.alpha() * n[u + 1];
-    for (let m = 0; m < o.length; m++)
-      if (!isNaN(f[m]))
-        if (l[m] += n[u + 1], t.charAt(m) === "h") {
-          const p = f[m] / 180 * Ol;
+    for (let g = 0; g < o.length; g++)
+      if (!isNaN(f[g]))
+        if (l[g] += n[u + 1], t.charAt(g) === "h") {
+          const p = f[g] / 180 * Ol;
           a += Ud(p) * n[u + 1], c += Gd(p) * n[u + 1];
         } else
-          o[m] += f[m] * n[u + 1];
+          o[g] += f[g] * n[u + 1];
   });
   for (let d = 0; d < o.length; d++)
     if (t.charAt(d) === "h") {
@@ -16026,7 +16026,7 @@ const { pow: Al, sqrt: Nl, PI: Ol, cos: Ud, sin: Gd, atan2: B6 } = Math, $6 = (e
   return s[0] = Nl(s[0]), s[1] = Nl(s[1]), s[2] = Nl(s[2]), s[3] > 0.9999999 && (s[3] = 1), new $(hc(s));
 }, { pow: z6 } = Math;
 function yr(e) {
-  let t = "rgb", n = J("#ccc"), s = 0, i = [0, 1], r = [], o = [0, 0], l = !1, a = [], c = !1, h = 0, d = 1, u = !1, f = {}, m = !0, p = 1;
+  let t = "rgb", n = J("#ccc"), s = 0, i = [0, 1], r = [], o = [0, 0], l = !1, a = [], c = !1, h = 0, d = 1, u = !1, f = {}, g = !0, p = 1;
   const b = function(_) {
     if (_ = _ || ["#fff", "#000"], _ && ft(_) === "string" && J.brewer && J.brewer[_.toLowerCase()] && (_ = J.brewer[_.toLowerCase()]), ft(_) === "array") {
       _.length === 1 && (_ = [_[0], _[0]]), _ = _.slice(0);
@@ -16054,7 +16054,7 @@ function yr(e) {
       return n;
     D ? F = _ : l && l.length > 2 ? F = v(_) / (l.length - 2) : d !== h ? F = (_ - h) / (d - h) : F = 1, F = M(F), D || (F = x(F)), p !== 1 && (F = z6(F, p)), F = o[0] + F * (1 - o[0] - o[1]), F = ds(F, 0, 1);
     const R = Math.floor(F * 1e4);
-    if (m && f[R])
+    if (g && f[R])
       N = f[R];
     else {
       if (ft(a) === "array")
@@ -16079,7 +16079,7 @@ function yr(e) {
           }
         }
       else ft(a) === "function" && (N = a(F));
-      m && (f[R] = N);
+      g && (f[R] = N);
     }
     return N;
   };
@@ -16169,7 +16169,7 @@ function yr(e) {
     }
     return J[D] && (N = N.map((F) => F[D]())), N;
   }, E.cache = function(_) {
-    return _ != null ? (m = _, E) : m;
+    return _ != null ? (g = _, E) : g;
   }, E.gamma = function(_) {
     return _ != null ? (p = _, E) : p;
   }, E.nodata = function(_) {
@@ -16218,7 +16218,7 @@ const W6 = function(e) {
     r = e.map((a) => a.lab()), l = e.length - 1, o = W6(l), t = function(a) {
       const c = 1 - a, h = [0, 1, 2].map(
         (d) => r.reduce(
-          (u, f, m) => u + o[m] * c ** (l - m) * a ** m * f[d],
+          (u, f, g) => u + o[g] * c ** (l - g) * a ** g * f[d],
           0
         )
       );
@@ -16274,7 +16274,7 @@ function ox(e = 300, t = -1.5, n = 1, s = 1, i = [0, 1]) {
   let r = 0, o;
   ft(i) === "array" ? o = i[1] - i[0] : (o = 0, i = [i, i]);
   const l = function(a) {
-    const c = yn * ((e + 120) / 360 + t * a), h = nx(i[0] + o * a, s), u = (r !== 0 ? n[0] + a * r : n) * h * (1 - h) / 2, f = ix(c), m = sx(c), p = h + u * (-0.14861 * f + 1.78277 * m), b = h + u * (-0.29227 * f - 0.90649 * m), v = h + u * (1.97294 * f);
+    const c = yn * ((e + 120) / 360 + t * a), h = nx(i[0] + o * a, s), u = (r !== 0 ? n[0] + a * r : n) * h * (1 - h) / 2, f = ix(c), g = sx(c), p = h + u * (-0.14861 * f + 1.78277 * g), b = h + u * (-0.29227 * f - 0.90649 * g), v = h + u * (1.97294 * f);
     return J(hc([p * 255, b * 255, v * 255, 1]));
   };
   return l.start = function(a) {
@@ -16373,14 +16373,14 @@ function op(e, t = "equal", n = 7) {
         }
       f = b, u++, u > 200 && (d = !1);
     }
-    const m = {};
+    const g = {};
     for (let b = 0; b < n; b++)
-      m[b] = [];
+      g[b] = [];
     for (let b = 0; b < a; b++)
-      l = c[b], m[l].push(r[b]);
+      l = c[b], g[l].push(r[b]);
     let p = [];
     for (let b = 0; b < n; b++)
-      p.push(m[b][0]), p.push(m[b][m[b].length - 1]);
+      p.push(g[b][0]), p.push(g[b][g[b].length - 1]);
     p = p.sort((b, v) => b - v), o.push(p[0]);
     for (let b = 1; b < p.length; b += 2) {
       const v = p[b];
@@ -16423,7 +16423,7 @@ function xx(e, t, n = 1, s = 1, i = 1) {
     return 2 * su * Wt / 360;
   };
   e = new $(e), t = new $(t);
-  const [l, a, c] = Array.from(e.lab()), [h, d, u] = Array.from(t.lab()), f = (l + h) / 2, m = fn(Vt(a, 2) + Vt(c, 2)), p = fn(Vt(d, 2) + Vt(u, 2)), b = (m + p) / 2, v = 0.5 * (1 - fn(Vt(b, 7) / (Vt(b, 7) + Vt(25, 7)))), x = a * (1 + v), M = d * (1 + v), S = fn(Vt(x, 2) + Vt(c, 2)), w = fn(Vt(M, 2) + Vt(u, 2)), E = (S + w) / 2, _ = r(tu(c, x)), D = r(tu(u, M)), N = _ >= 0 ? _ : _ + 360, F = D >= 0 ? D : D + 360, R = eu(N - F) > 180 ? (N + F + 360) / 2 : (N + F) / 2, W = 1 - 0.17 * _o(o(R - 30)) + 0.24 * _o(o(2 * R)) + 0.32 * _o(o(3 * R + 6)) - 0.2 * _o(o(4 * R - 63));
+  const [l, a, c] = Array.from(e.lab()), [h, d, u] = Array.from(t.lab()), f = (l + h) / 2, g = fn(Vt(a, 2) + Vt(c, 2)), p = fn(Vt(d, 2) + Vt(u, 2)), b = (g + p) / 2, v = 0.5 * (1 - fn(Vt(b, 7) / (Vt(b, 7) + Vt(25, 7)))), x = a * (1 + v), M = d * (1 + v), S = fn(Vt(x, 2) + Vt(c, 2)), w = fn(Vt(M, 2) + Vt(u, 2)), E = (S + w) / 2, _ = r(tu(c, x)), D = r(tu(u, M)), N = _ >= 0 ? _ : _ + 360, F = D >= 0 ? D : D + 360, R = eu(N - F) > 180 ? (N + F + 360) / 2 : (N + F) / 2, W = 1 - 0.17 * _o(o(R - 30)) + 0.24 * _o(o(2 * R)) + 0.32 * _o(o(3 * R + 6)) - 0.2 * _o(o(4 * R - 63));
   let K = F - N;
   K = eu(K) <= 180 ? K : F <= N ? K + 360 : K - 360, K = 2 * fn(S * w) * nu(o(K) / 2);
   const kt = h - l, it = w - S, nt = 1 + 0.015 * Vt(f - 50, 2) / fn(20 + Vt(f - 50, 2)), G = 1 + 0.045 * E, Q = 1 + 0.015 * E * W, ht = 30 * yx(-Vt((R - 275) / 25, 2)), Me = -(2 * fn(Vt(E, 7) / (Vt(E, 7) + Vt(25, 7)))) * nu(2 * o(ht)), ne = fn(
@@ -16780,27 +16780,27 @@ function yc({
   const o = [], l = [], a = Kt(s, r), c = i ? [...e].reverse() : e;
   for (let d = 0; d < c.length; d++) {
     const u = c[d];
-    let f = [], m = [];
+    let f = [], g = [];
     if (t[d]) {
       const p = t[d], b = u && u.length ? u.length : 1;
-      f = Array(b).fill(p), m = f.map((v) => J(v).darken(0.8).hex());
+      f = Array(b).fill(p), g = f.map((v) => J(v).darken(0.8).hex());
     } else if (s === "neutral" && n.length > 0 && Array.isArray(u)) {
       const p = u && u.length ? u.length : 1;
       for (let b = 0; b < p; b++) {
         const v = n.includes(b) ? a[b % a.length] || wp() : Ie();
-        f.push(v), m.push(J(v).darken(0.8).hex());
+        f.push(v), g.push(J(v).darken(0.8).hex());
       }
     } else if (s.startsWith("divergent")) {
       const p = u && u.length ? u.length : 1;
-      f = Array(p).fill(a[d % a.length]), m = f.map((b) => J(b).darken(0.8).hex());
+      f = Array(p).fill(a[d % a.length]), g = f.map((b) => J(b).darken(0.8).hex());
     } else if (s === "categorical" || !s) {
       const p = xc(d, a), b = u && u.length ? u.length : 1;
-      f = Array(b).fill(p), m = f.map((v) => J(v).darken(0.8).hex());
+      f = Array(b).fill(p), g = f.map((v) => J(v).darken(0.8).hex());
     } else {
       const p = e.flat(), b = Math.min(...p), v = Math.max(...p), x = J.scale(a).domain([v, b]);
-      f = (u || [b]).map((S) => J(x(S)).hex()), m = f.map((S) => J(S).darken(0.8).hex());
+      f = (u || [b]).map((S) => J(x(S)).hex()), g = f.map((S) => J(S).darken(0.8).hex());
     }
-    o.push(f), l.push(m);
+    o.push(f), l.push(g);
   }
   const h = i ? o.map((d) => d[0]).reverse() : o.map((d) => d[0]);
   return {
@@ -16818,14 +16818,14 @@ function zx({
   barsColors: r,
   linesColors: o
 }) {
-  const l = Kt(i, r), a = Kt(i, o), c = [...l], h = c.map((p) => J(p).darken(0.8).hex()), d = [...a], u = d.map((p) => J(p).darken(0.8).hex()), f = e.map((p, b) => n[b] || Ie()), m = t.map((p, b) => s[b] || Ie());
+  const l = Kt(i, r), a = Kt(i, o), c = [...l], h = c.map((p) => J(p).darken(0.8).hex()), d = [...a], u = d.map((p) => J(p).darken(0.8).hex()), f = e.map((p, b) => n[b] || Ie()), g = t.map((p, b) => s[b] || Ie());
   return {
     colorBarParse: c,
     colorBarHover: h,
     colorParse: d,
     colorHover: u,
     vlineColorParse: f,
-    hlineColorParse: m
+    hlineColorParse: g
   };
 }
 function jx({
@@ -16837,14 +16837,14 @@ function jx({
   areasColors: r,
   linesColors: o
 }) {
-  const l = Kt(i, r), a = Kt(i, o), c = [...l].map((b) => J(b).alpha(0.3).css()), h = [...l], d = c.map((b) => J(b).darken(0.8).hex()), u = [...a], f = u.map((b) => J(b).darken(0.8).hex()), m = e.map((b, v) => n[v] || Ie()), p = t.map((b, v) => s[v] || Ie());
+  const l = Kt(i, r), a = Kt(i, o), c = [...l].map((b) => J(b).alpha(0.3).css()), h = [...l], d = c.map((b) => J(b).darken(0.8).hex()), u = [...a], f = u.map((b) => J(b).darken(0.8).hex()), g = e.map((b, v) => n[v] || Ie()), p = t.map((b, v) => s[v] || Ie());
   return {
     colorAreaParse: c,
     colorAreaLineParse: h,
     colorAreaHover: d,
     colorParse: u,
     colorHover: f,
-    vlineColorParse: m,
+    vlineColorParse: g,
     hlineColorParse: p
   };
 }
@@ -16860,11 +16860,11 @@ function Wx({
   colors: a
 }) {
   const c = Kt(n, a), h = [], d = [];
-  for (let m = 0; m < e.length; m++) {
+  for (let g = 0; g < e.length; g++) {
     let p;
-    t[m] ? p = t[m] : m === s ? p = Ie() : p = xc(m, c), h.push(p), d.push(J(p).darken(0.8).hex());
+    t[g] ? p = t[g] : g === s ? p = Ie() : p = xc(g, c), h.push(p), d.push(J(p).darken(0.8).hex());
   }
-  const u = i.map((m, p) => r[p] || Ie()), f = o.map((m, p) => l[p] || Ie());
+  const u = i.map((g, p) => r[p] || Ie()), f = o.map((g, p) => l[p] || Ie());
   return {
     colorParse: h,
     colorHover: d,
@@ -17280,13 +17280,13 @@ const Kx = {
                 if (s.classList.remove("above", "below", "no-transform"), i.yAlign ? s.classList.add(i.yAlign) : s.classList.add("no-transform"), i.body) {
                   const d = i.title || [], u = i.body.map((b) => b.lines), f = s.querySelector(".tooltip_header.fr-text--sm.fr-mb-0");
                   f.innerHTML = d[0];
-                  const m = s.querySelector(".tooltip_value");
-                  m.innerHTML = "";
+                  const g = s.querySelector(".tooltip_value");
+                  g.innerHTML = "";
                   const p = [...this.colorAreaParse, ...this.colorParse];
                   u[0].forEach((b, v) => {
                     if (b) {
                       const x = p[Math.min(v, p.length - 1)], M = v === 0 ? `${b}${this.unitTooltipArea ? " " + this.unitTooltipArea : ""}` : `${b}${this.unitTooltipLine ? " " + this.unitTooltipLine : ""}`;
-                      m.innerHTML += `
+                      g.innerHTML += `
                         <div class="tooltip_value-content">
                           <span class="tooltip_dot" style="background-color:${x};"></span>
                           <p class="tooltip_place fr-mb-0">${M}</p>
@@ -17322,27 +17322,27 @@ function dw(e, t, n, s, i, r) {
     disabled: !((o = e.$el) != null && o.ownerDocument.getElementById(n.databoxId)) || !n.databoxId && !n.databoxType && n.databoxSource === "default",
     to: "#" + n.databoxId + "-" + n.databoxType + "-" + n.databoxSource
   }, [
-    g("div", {
+    m("div", {
       ref: i.widgetId,
       class: "widget_container fr-grid-row"
     }, [
-      g("div", Jx, [
-        g("div", Zx, [
-          g("div", Qx, [
-            t[0] || (t[0] = g("div", { class: "tooltip_header fr-text--sm fr-mb-0" }, null, -1)),
-            g("div", tw, [
-              g("div", ew, [
+      m("div", Jx, [
+        m("div", Zx, [
+          m("div", Qx, [
+            t[0] || (t[0] = m("div", { class: "tooltip_header fr-text--sm fr-mb-0" }, null, -1)),
+            m("div", tw, [
+              m("div", ew, [
                 (O(!0), I(dt, null, Ct(i.colorAreaParse, (l, a) => (O(), I("div", {
                   key: a,
                   class: "flex fr-mt-3v fr-mb-1v",
                   style: { "border-bottom": "1px solid #e0e0e0" }
                 }, [
-                  g("div", nw, [
-                    g("span", {
+                  m("div", nw, [
+                    m("span", {
                       class: "tooltip_dot",
                       style: P({ "background-color": i.colorAreaParse[Math.min(a, i.colorAreaParse.length - 1)] })
                     }, null, 4),
-                    g("p", sw, X(e.capitalize(i.nameAreasParse[a] || "Area " + (a + 1))), 1)
+                    m("p", sw, X(e.capitalize(i.nameAreasParse[a] || "Area " + (a + 1))), 1)
                   ])
                 ]))), 128)),
                 (O(!0), I(dt, null, Ct(i.colorParse, (l, a) => (O(), I("div", {
@@ -17350,42 +17350,42 @@ function dw(e, t, n, s, i, r) {
                   class: "flex fr-mt-3v fr-mb-1v",
                   style: { "border-bottom": "1px solid #e0e0e0" }
                 }, [
-                  g("div", iw, [
-                    g("span", {
+                  m("div", iw, [
+                    m("span", {
                       class: "tooltip_dot",
                       style: P({ "background-color": i.colorParse[Math.min(a, i.colorParse.length - 1)] })
                     }, null, 4),
-                    g("p", ow, X(e.capitalize(i.nameLinesParse[a] || "Line " + (a + 1))), 1)
+                    m("p", ow, X(e.capitalize(i.nameLinesParse[a] || "Line " + (a + 1))), 1)
                   ])
                 ]))), 128))
               ])
             ])
           ]),
-          g("canvas", { ref: i.chartId }, null, 512),
-          g("div", rw, [
+          m("canvas", { ref: i.chartId }, null, 512),
+          m("div", rw, [
             (O(!0), I(dt, null, Ct(i.nameAreasParse, (l, a) => (O(), I("div", {
               key: a,
               class: "flex fr-mt-3v fr-mb-1v"
             }, [
-              g("span", {
+              m("span", {
                 class: "legende_dot",
                 style: P({ "background-color": i.colorAreaParse[Math.min(a, i.colorAreaParse.length - 1)] })
               }, null, 4),
-              g("p", lw, X(e.capitalize(l || "Area " + (a + 1))), 1)
+              m("p", lw, X(e.capitalize(l || "Area " + (a + 1))), 1)
             ]))), 128)),
             (O(!0), I(dt, null, Ct(i.nameLinesParse, (l, a) => (O(), I("div", {
               key: a,
               class: "flex fr-mt-3v fr-mb-1v"
             }, [
-              g("span", {
+              m("span", {
                 class: "legende_dot",
                 style: P({ "background-color": i.colorParse[Math.min(a, i.colorParse.length - 1)] })
               }, null, 4),
-              g("p", aw, X(e.capitalize(l || "Line " + (a + 1))), 1)
+              m("p", aw, X(e.capitalize(l || "Line " + (a + 1))), 1)
             ]))), 128))
           ]),
           n.date ? (O(), I("div", cw, [
-            g("p", hw, " Mise à jour : " + X(n.date), 1)
+            m("p", hw, " Mise à jour : " + X(n.date), 1)
           ])) : xt("", !0)
         ])
       ])
@@ -17477,6 +17477,18 @@ const fw = {
     unitTooltip: {
       type: String,
       default: ""
+    },
+    pointValues: {
+      type: Array,
+      default: () => []
+    },
+    pointColor: {
+      type: String,
+      default: "#000"
+    },
+    pointRadius: {
+      type: Number,
+      default: 5
     }
   },
   data() {
@@ -17632,8 +17644,8 @@ const fw = {
                   const d = i.title || [], u = s.querySelector(".tooltip_header.fr-text--sm.fr-mb-0");
                   u.innerHTML = d[0];
                   const f = s.querySelector(".tooltip_value");
-                  f.innerHTML = "", i.dataPoints.forEach((m) => {
-                    const p = m.datasetIndex, b = m.dataIndex, v = this.colorParse[p] ? this.colorParse[p][b] : "#000", M = `${this.formatNumber(this.datasets[p].data[b])}${this.unitTooltip ? " " + this.unitTooltip : ""}`;
+                  f.innerHTML = "", i.dataPoints.forEach((g) => {
+                    const p = g.datasetIndex, b = g.dataIndex, v = this.colorParse[p] ? this.colorParse[p][b] : "#000", M = `${this.formatNumber(this.datasets[p].data[b])}${this.unitTooltip ? " " + this.unitTooltip : ""}`;
                     f.innerHTML += `
                     <div class="tooltip_value-content">
                       <span class="tooltip_dot" style="background-color:${v};"></span>
@@ -17648,7 +17660,26 @@ const fw = {
               }
             }
           }
-        }
+        },
+        plugins: [
+          {
+            id: "barPoints",
+            afterDatasetsDraw: (t) => {
+              const { ctx: n, scales: s } = t, i = t.config.options.indexAxis === "y", r = t.data.datasets, o = this.pointValues;
+              n.save(), r.forEach((l, a) => {
+                const c = t.getDatasetMeta(a);
+                l.data.forEach((d, u) => {
+                  if (o[a] && o[a][u] != null) {
+                    const f = o[a][u], g = c.data[u];
+                    if (!g) return;
+                    const p = i ? s.x.getPixelForValue(f) : g.x, b = i ? g.y : s.y.getPixelForValue(f);
+                    n.beginPath(), n.arc(p, b, this.pointRadius, 0, 2 * Math.PI), n.fillStyle = this.pointColor, n.fill(), n.closePath();
+                  }
+                });
+              }), n.restore();
+            }
+          }
+        ]
       });
     },
     changeColors(e) {
@@ -17667,33 +17698,33 @@ function xw(e, t, n, s, i, r) {
     disabled: !((o = e.$el) != null && o.ownerDocument.getElementById(n.databoxId)) || !n.databoxId && !n.databoxType && n.databoxSource === "default",
     to: "#" + n.databoxId + "-" + n.databoxType + "-" + n.databoxSource
   }, [
-    g("div", {
+    m("div", {
       ref: i.widgetId,
       class: "widget_container fr-grid-row"
     }, [
-      g("div", pw, [
-        g("div", gw, [
-          t[0] || (t[0] = g("div", { class: "tooltip" }, [
-            g("div", { class: "tooltip_header fr-text--sm fr-mb-0" }),
-            g("div", { class: "tooltip_body" }, [
-              g("div", { class: "tooltip_value" })
+      m("div", pw, [
+        m("div", gw, [
+          t[0] || (t[0] = m("div", { class: "tooltip" }, [
+            m("div", { class: "tooltip_header fr-text--sm fr-mb-0" }),
+            m("div", { class: "tooltip_body" }, [
+              m("div", { class: "tooltip_value" })
             ])
           ], -1)),
-          g("canvas", { ref: i.chartId }, null, 512),
-          g("div", mw, [
+          m("canvas", { ref: i.chartId }, null, 512),
+          m("div", mw, [
             (O(!0), I(dt, null, Ct(i.nameParse, (l, a) => (O(), I("div", {
               key: a,
               class: "flex fr-mt-3v fr-mb-1v"
             }, [
-              g("span", {
+              m("span", {
                 class: "legende_dot",
                 style: P({ "background-color": i.legendColors[a] })
               }, null, 4),
-              g("p", bw, X(e.capitalize(l)), 1)
+              m("p", bw, X(e.capitalize(l)), 1)
             ]))), 128))
           ]),
           n.date ? (O(), I("div", vw, [
-            g("p", yw, " Mise à jour : " + X(n.date), 1)
+            m("p", yw, " Mise à jour : " + X(n.date), 1)
           ])) : xt("", !0)
         ])
       ])
@@ -18054,13 +18085,13 @@ const kw = {
                 if (s.classList.remove("above", "below", "no-transform"), i.yAlign ? s.classList.add(i.yAlign) : s.classList.add("no-transform"), i.body) {
                   const d = i.title || [], u = i.body.map((b) => b.lines), f = s.querySelector(".tooltip_header.fr-text--sm.fr-mb-0");
                   f.innerHTML = d[0];
-                  const m = s.querySelector(".tooltip_value");
-                  m.innerHTML = "";
+                  const g = s.querySelector(".tooltip_value");
+                  g.innerHTML = "";
                   const p = [...this.colorBarParse, ...this.colorParse];
                   u[0].forEach((b, v) => {
                     if (b) {
                       const x = p[Math.min(v, p.length - 1)], M = v === 0 ? `${b}${this.unitTooltipBar ? " " + this.unitTooltipBar : ""}` : `${b}${this.unitTooltipLine ? " " + this.unitTooltipLine : ""}`;
-                      m.innerHTML += `
+                      g.innerHTML += `
                         <div class="tooltip_value-content">
                           <span class="tooltip_dot" style="background-color:${x};"></span>
                           <p class="tooltip_place fr-mb-0">${M}</p>
@@ -18080,7 +18111,7 @@ const kw = {
     },
     changeColors(e) {
       this.loadColors(), this.chart.data.datasets.forEach((t, n) => {
-        t.type === "bar" ? (t.borderColor = this.colorBarParse[n] || this.colorBarParse[0], t.backgroundColor = this.colorBarParse[n] || this.colorBarParse[0], t.hoverBorderColor = this.colorBarHover[n] || this.colorBarHover[0], t.hoverBackgroundColor = this.colorBarHover[n] || this.colorBarHover[0]) : t.type === "line" && (t.borderColor = this.colorParse[n] || this.colorParse[0], t.pointBorderColor = this.colorParse[n] || this.colorParse[0], t.pointBackgroundColor = this.colorParse[n] || this.colorParse[0], t.pointHoverBorderColor = this.colorHover[n] || this.colorHover[0], t.pointHoverBackgroundColor = this.colorHover[n] || this.colorHover[0]);
+        t.type === "bar" ? (t.borderColor = this.colorBarParse[n % this.colorBarParse.length], t.backgroundColor = this.colorBarParse[n % this.colorBarParse.length], t.hoverBorderColor = this.colorBarHover[n % this.colorBarHover.length], t.hoverBackgroundColor = this.colorBarHover[n % this.colorBarHover.length]) : t.type === "line" && (t.borderColor = this.hideLines ? "transparent" : this.colorParse[n % this.colorParse.length], t.pointBorderColor = this.colorParse[n % this.colorParse.length], t.pointBackgroundColor = this.colorParse[n % this.colorParse.length], t.pointHoverBorderColor = this.colorHover[n % this.colorHover.length], t.pointHoverBackgroundColor = this.colorHover[n % this.colorHover.length]);
       }), this.chart.options.scales.x.ticks.color = e === "dark" ? "#cecece" : lt.defaults.color, this.chart.options.scales.y.ticks.color = e === "dark" ? "#cecece" : lt.defaults.color, this.chart.options.scales.yLine.ticks.color = e === "dark" ? "#cecece" : lt.defaults.color, this.chart.update("none");
     }
   }
@@ -18094,27 +18125,27 @@ function Bw(e, t, n, s, i, r) {
     disabled: !((o = e.$el) != null && o.ownerDocument.getElementById(n.databoxId)) || !n.databoxId && !n.databoxType && n.databoxSource === "default",
     to: "#" + n.databoxId + "-" + n.databoxType + "-" + n.databoxSource
   }, [
-    g("div", {
+    m("div", {
       ref: i.widgetId,
       class: "widget_container fr-grid-row"
     }, [
-      g("div", _w, [
-        g("div", Mw, [
-          g("div", Cw, [
-            t[0] || (t[0] = g("div", { class: "tooltip_header fr-text--sm fr-mb-0" }, null, -1)),
-            g("div", Pw, [
-              g("div", Sw, [
+      m("div", _w, [
+        m("div", Mw, [
+          m("div", Cw, [
+            t[0] || (t[0] = m("div", { class: "tooltip_header fr-text--sm fr-mb-0" }, null, -1)),
+            m("div", Pw, [
+              m("div", Sw, [
                 (O(!0), I(dt, null, Ct(e.nameBarsParse, (l, a) => (O(), I("div", {
                   key: a,
                   class: "flex fr-mt-3v fr-mb-1v",
                   style: { "border-bottom": "1px solid #e0e0e0" }
                 }, [
-                  g("div", Ew, [
-                    g("span", {
+                  m("div", Ew, [
+                    m("span", {
                       class: "tooltip_dot",
                       style: P({ "background-color": e.nameBarsParse[Math.min(a, e.nameBarsParse.length - 1)] })
                     }, null, 4),
-                    g("p", Dw, X(e.capitalize(e.nameBarsParse[a] || "Bar " + (a + 1))), 1)
+                    m("p", Dw, X(e.capitalize(e.nameBarsParse[a] || "Bar " + (a + 1))), 1)
                   ])
                 ]))), 128)),
                 (O(!0), I(dt, null, Ct(i.colorParse, (l, a) => (O(), I("div", {
@@ -18122,70 +18153,70 @@ function Bw(e, t, n, s, i, r) {
                   class: "flex fr-mt-3v fr-mb-1v",
                   style: { "border-bottom": "1px solid #e0e0e0" }
                 }, [
-                  g("div", Aw, [
-                    g("span", {
+                  m("div", Aw, [
+                    m("span", {
                       class: "tooltip_dot",
                       style: P({ "background-color": i.colorParse[Math.min(a, i.colorParse.length - 1)] })
                     }, null, 4),
-                    g("p", Nw, X(e.capitalize(e.nameLinesParse[a] || "Line " + (a + 1))), 1)
+                    m("p", Nw, X(e.capitalize(e.nameLinesParse[a] || "Line " + (a + 1))), 1)
                   ])
                 ]))), 128))
               ])
             ])
           ]),
-          g("canvas", { ref: i.chartId }, null, 512),
-          g("div", Ow, [
+          m("canvas", { ref: i.chartId }, null, 512),
+          m("div", Ow, [
             (O(!0), I(dt, null, Ct(e.nameBarsParse, (l, a) => (O(), I("div", {
               key: a,
               class: "flex fr-mt-3v fr-mb-1v"
             }, [
-              g("span", {
+              m("span", {
                 class: "legende_dot",
                 style: P({ "background-color": i.colorBarParse[Math.min(a, i.colorBarParse.length - 1)] })
               }, null, 4),
-              g("p", Rw, X(e.capitalize(l || "Bar " + (a + 1))), 1)
+              m("p", Rw, X(e.capitalize(l || "Bar " + (a + 1))), 1)
             ]))), 128)),
             (O(!0), I(dt, null, Ct(e.nameLinesParse, (l, a) => (O(), I("div", {
               key: a,
               class: "flex fr-mt-3v fr-mb-1v"
             }, [
-              g("span", {
+              m("span", {
                 class: "legende_dot",
                 style: P({ "background-color": i.colorParse[Math.min(a, i.colorParse.length - 1)] })
               }, null, 4),
-              g("p", Tw, X(e.capitalize(l || "Line " + (a + 1))), 1)
+              m("p", Tw, X(e.capitalize(l || "Line " + (a + 1))), 1)
             ]))), 128)),
             (O(!0), I(dt, null, Ct(i.hlineNameParse, (l, a) => (O(), I("div", {
               key: a,
               class: "flex"
             }, [
-              g("span", {
+              m("span", {
                 class: "legende_dash_line",
                 style: P({ "background-color": i.hlineColorParse[a] })
               }, null, 4),
-              g("span", {
+              m("span", {
                 class: "legende_dash_line legende_dash_line_end",
                 style: P({ "background-color": i.hlineColorParse[a] })
               }, null, 4),
-              g("p", Lw, X(e.capitalize(l)), 1)
+              m("p", Lw, X(e.capitalize(l)), 1)
             ]))), 128)),
             (O(!0), I(dt, null, Ct(i.vlineNameParse, (l, a) => (O(), I("div", {
               key: a,
               class: "flex"
             }, [
-              g("span", {
+              m("span", {
                 class: "legende_dash_line",
                 style: P({ "background-color": i.vlineColorParse[a] })
               }, null, 4),
-              g("span", {
+              m("span", {
                 class: "legende_dash_line legende_dash_line_end",
                 style: P({ "background-color": i.vlineColorParse[a] })
               }, null, 4),
-              g("p", Fw, X(e.capitalize(l)), 1)
+              m("p", Fw, X(e.capitalize(l)), 1)
             ]))), 128))
           ]),
           n.date ? (O(), I("div", Iw, [
-            g("p", Vw, " Mise à jour : " + X(n.date), 1)
+            m("p", Vw, " Mise à jour : " + X(n.date), 1)
           ])) : xt("", !0)
         ])
       ])
@@ -18297,43 +18328,43 @@ function nk(e, t, n, s, i, r) {
     disabled: !((o = e.$el) != null && o.ownerDocument.getElementById(n.databoxId)) || !n.databoxId && !n.databoxType && n.databoxSource === "default",
     to: "#" + n.databoxId + "-" + n.databoxType + "-" + n.databoxSource
   }, [
-    g("div", {
+    m("div", {
       ref: i.widgetId,
       class: "widget_container fr-grid-row"
     }, [
-      g("div", zw, [
-        g("div", jw, [
-          g("div", Ww, [
-            g("div", {
+      m("div", zw, [
+        m("div", jw, [
+          m("div", Ww, [
+            m("div", {
               class: "jauge",
               style: P({ height: n.height })
             }, [
-              g("div", {
+              m("div", {
                 class: "jauge-fill",
                 style: P({ width: i.width + "%" })
               }, [
-                g("span", qw, X(i.percentage) + "%", 1)
+                m("span", qw, X(i.percentage) + "%", 1)
               ], 4)
             ], 4)
           ]),
-          g("div", Yw, [
-            g("p", Uw, X(e.formatNumber(n.init)), 1),
-            g("p", Gw, X(e.formatNumber(n.target)), 1)
+          m("div", Yw, [
+            m("p", Uw, X(e.formatNumber(n.init)), 1),
+            m("p", Gw, X(e.formatNumber(n.target)), 1)
           ]),
           n.initDate && n.targetDate ? (O(), I("div", Xw, [
-            g("p", Kw, X(n.initDate), 1),
-            g("p", Jw, X(n.targetDate), 1)
+            m("p", Kw, X(n.initDate), 1),
+            m("p", Jw, X(n.targetDate), 1)
           ])) : xt("", !0),
           n.legend ? (O(), I("div", Zw, [...t[0] || (t[0] = [
-            g("span", { class: "legende_dot target_legend" }, null, -1),
-            g("p", { class: "fr-text--sm fr-text--bold fr-ml-2v fr-mb-0" }, " Valeur cible ", -1)
+            m("span", { class: "legende_dot target_legend" }, null, -1),
+            m("p", { class: "fr-text--sm fr-text--bold fr-ml-2v fr-mb-0" }, " Valeur cible ", -1)
           ])])) : xt("", !0),
           n.legend ? (O(), I("div", Qw, [...t[1] || (t[1] = [
-            g("span", { class: "legende_dot actual_legend" }, null, -1),
-            g("p", { class: "fr-text--sm fr-text--bold fr-ml-2v fr-mb-0" }, " Valeur actuelle ", -1)
+            m("span", { class: "legende_dot actual_legend" }, null, -1),
+            m("p", { class: "fr-text--sm fr-text--bold fr-ml-2v fr-mb-0" }, " Valeur actuelle ", -1)
           ])])) : xt("", !0),
           n.date ? (O(), I("div", tk, [
-            g("p", ek, " Mise à jour : " + X(n.date), 1)
+            m("p", ek, " Mise à jour : " + X(n.date), 1)
           ])) : xt("", !0)
         ])
       ])
@@ -18724,10 +18755,10 @@ const ik = {
                   return;
                 }
                 if (r.classList.remove("above", "below", "no-transform"), o.yAlign ? r.classList.add(o.yAlign) : r.classList.add("no-transform"), o.body) {
-                  const f = o.title || [], m = o.body.map((v) => v.lines), p = r.querySelector(".tooltip_header.fr-text--sm.fr-mb-0");
+                  const f = o.title || [], g = o.body.map((v) => v.lines), p = r.querySelector(".tooltip_header.fr-text--sm.fr-mb-0");
                   p.innerHTML = f[0];
                   const b = r.querySelector(".tooltip_value");
-                  b.innerHTML = "", m[0].forEach((v, x) => {
+                  b.innerHTML = "", g[0].forEach((v, x) => {
                     const M = `${v}${this.unitTooltip ? " " + this.unitTooltip : ""}`;
                     v && (b.innerHTML += `
                         <div class="tooltip_value-content">
@@ -18762,75 +18793,75 @@ function vk(e, t, n, s, i, r) {
     disabled: !((o = e.$el) != null && o.ownerDocument.getElementById(n.databoxId)) || !n.databoxId && !n.databoxType && n.databoxSource === "default",
     to: "#" + n.databoxId + "-" + n.databoxType + "-" + n.databoxSource
   }, [
-    g("div", {
+    m("div", {
       ref: i.widgetId,
       class: "widget_container fr-grid-row"
     }, [
-      g("div", ok, [
-        g("div", rk, [
-          g("div", lk, [
-            t[0] || (t[0] = g("div", { class: "tooltip_header fr-text--sm fr-mb-0" }, null, -1)),
-            g("div", ak, [
-              g("div", ck, [
+      m("div", ok, [
+        m("div", rk, [
+          m("div", lk, [
+            t[0] || (t[0] = m("div", { class: "tooltip_header fr-text--sm fr-mb-0" }, null, -1)),
+            m("div", ak, [
+              m("div", ck, [
                 (O(!0), I(dt, null, Ct(i.nameParse, (l, a) => (O(), I("div", {
                   key: a,
                   class: "flex fr-mt-3v fr-mb-1v",
                   style: { "border-bottom": "1px solid #e0e0e0" }
                 }, [
-                  g("div", hk, [
-                    g("span", {
+                  m("div", hk, [
+                    m("span", {
                       class: "tooltip_dot",
                       style: P({ "background-color": i.colorParse[a] })
                     }, null, 4),
-                    g("p", dk, X(e.capitalize(l)), 1)
+                    m("p", dk, X(e.capitalize(l)), 1)
                   ])
                 ]))), 128))
               ])
             ])
           ]),
-          g("canvas", { ref: i.chartId }, null, 512),
-          g("div", uk, [
+          m("canvas", { ref: i.chartId }, null, 512),
+          m("div", uk, [
             (O(!0), I(dt, null, Ct(i.nameParse, (l, a) => (O(), I("div", {
               key: a,
               class: "flex fr-mt-3v fr-mb-1v"
             }, [
-              g("span", {
+              m("span", {
                 class: "legende_dot",
                 style: P({ "background-color": i.colorParse[Math.min(a, i.colorParse.length - 1)] })
               }, null, 4),
-              g("p", fk, X(e.capitalize(l)), 1)
+              m("p", fk, X(e.capitalize(l)), 1)
             ]))), 128))
           ]),
           (O(!0), I(dt, null, Ct(i.hlineNameParse, (l, a) => (O(), I("div", {
             key: a,
             class: "flex fr-mt-3v"
           }, [
-            g("span", {
+            m("span", {
               class: "legende_dash_line",
               style: P({ "background-color": i.hlineColorParse[a] })
             }, null, 4),
-            g("span", {
+            m("span", {
               class: "legende_dash_line legende_dash_line_end",
               style: P({ "background-color": i.hlineColorParse[a] })
             }, null, 4),
-            g("p", pk, X(e.capitalize(l)), 1)
+            m("p", pk, X(e.capitalize(l)), 1)
           ]))), 128)),
           (O(!0), I(dt, null, Ct(i.vlineNameParse, (l, a) => (O(), I("div", {
             key: a,
             class: "flex fr-mt-3v fr-mb-1v"
           }, [
-            g("span", {
+            m("span", {
               class: "legende_dash_line",
               style: P({ "background-color": i.vlineColorParse[a] })
             }, null, 4),
-            g("span", {
+            m("span", {
               class: "legende_dash_line legende_dash_line_end",
               style: P({ "background-color": i.vlineColorParse[a] })
             }, null, 4),
-            g("p", gk, X(e.capitalize(l)), 1)
+            m("p", gk, X(e.capitalize(l)), 1)
           ]))), 128)),
           n.date ? (O(), I("div", mk, [
-            g("p", bk, " Mise à jour : " + X(n.date), 1)
+            m("p", bk, " Mise à jour : " + X(n.date), 1)
           ])) : xt("", !0)
         ])
       ])
@@ -19497,7 +19528,7 @@ function g7(e) {
   var t = e.grouping === void 0 || e.thousands === void 0 ? yu : h7(xu.call(e.grouping, Number), e.thousands + ""), n = e.currency === void 0 ? "" : e.currency[0] + "", s = e.currency === void 0 ? "" : e.currency[1] + "", i = e.decimal === void 0 ? "." : e.decimal + "", r = e.numerals === void 0 ? yu : d7(xu.call(e.numerals, String)), o = e.percent === void 0 ? "%" : e.percent + "", l = e.minus === void 0 ? "−" : e.minus + "", a = e.nan === void 0 ? "NaN" : e.nan + "";
   function c(d) {
     d = Pr(d);
-    var u = d.fill, f = d.align, m = d.sign, p = d.symbol, b = d.zero, v = d.width, x = d.comma, M = d.precision, S = d.trim, w = d.type;
+    var u = d.fill, f = d.align, g = d.sign, p = d.symbol, b = d.zero, v = d.width, x = d.comma, M = d.precision, S = d.trim, w = d.type;
     w === "n" ? (x = !0, w = "g") : vu[w] || (M === void 0 && (M = 12), S = !0, w = "g"), (b || u === "0" && f === "=") && (b = !0, u = "0", f = "=");
     var E = p === "$" ? n : p === "#" && /[boxX]/.test(w) ? "0" + w.toLowerCase() : "", _ = p === "$" ? s : /[%p]/.test(w) ? o : "", D = vu[w], N = /[defgprs%]/.test(w);
     M = M === void 0 ? 6 : /[gprs]/.test(w) ? Math.max(1, Math.min(21, M)) : Math.max(0, Math.min(20, M));
@@ -19508,7 +19539,7 @@ function g7(e) {
       else {
         R = +R;
         var G = R < 0 || 1 / R < 0;
-        if (R = isNaN(R) ? a : D(Math.abs(R), M), S && (R = f7(R)), G && +R == 0 && m !== "+" && (G = !1), W = (G ? m === "(" ? m : l : m === "-" || m === "(" ? "" : m) + W, K = (w === "s" ? wu[8 + Pp / 3] : "") + K + (G && m === "(" ? ")" : ""), N) {
+        if (R = isNaN(R) ? a : D(Math.abs(R), M), S && (R = f7(R)), G && +R == 0 && g !== "+" && (G = !1), W = (G ? g === "(" ? g : l : g === "-" || g === "(" ? "" : g) + W, K = (w === "s" ? wu[8 + Pp / 3] : "") + K + (G && g === "(" ? ")" : ""), N) {
           for (kt = -1, it = R.length; ++kt < it; )
             if (nt = R.charCodeAt(kt), 48 > nt || nt > 57) {
               K = (nt === 46 ? i + R.slice(kt + 1) : R.slice(kt)) + K, R = R.slice(0, kt);
@@ -19539,7 +19570,7 @@ function g7(e) {
     }, F;
   }
   function h(d, u) {
-    var f = c((d = Pr(d), d.type = "f", d)), m = Math.max(-8, Math.min(8, Math.floor(Ws(u) / 3))) * 3, p = Math.pow(10, -m), b = wu[8 + m / 3];
+    var f = c((d = Pr(d), d.type = "f", d)), g = Math.max(-8, Math.min(8, Math.floor(Ws(u) / 3))) * 3, p = Math.pow(10, -g), b = wu[8 + g / 3];
     return function(v) {
       return f(p * v) + b;
     };
@@ -19633,48 +19664,48 @@ const k7 = { class: "map_info fr-col-12 fr-col-lg-3" }, _7 = { key: 0 }, M7 = { 
     const t = e, n = An(() => "linear-gradient(90deg," + t.data.colorMin + " 0%," + t.data.colorMax + " 100%)");
     return (s, i) => (O(), I("div", k7, [
       e.data.valueNat || e.data.valueReg ? (O(), I("div", _7, [
-        g("p", {
+        m("p", {
           class: "fr-text--xs fr-mb-1v",
           style: P({ color: e.data.textMention })
         }, " Mise à jour : " + X(e.data.date), 5),
-        g("p", {
+        m("p", {
           class: "fr-text--xs fr-text--bold fr-mb-1v",
           style: P({ color: e.data.textMention })
         }, X(e.data.names) + ", en France ", 5),
-        i[0] || (i[0] = g("div", { class: "sep fr-mb-2w" }, null, -1)),
-        g("p", {
+        i[0] || (i[0] = m("div", { class: "sep fr-mb-2w" }, null, -1)),
+        m("p", {
           class: "fr-text--xs fr-text--bold fr-mb-2w",
           style: P({ color: e.data.textMention })
         }, X(ts(gi)(e.data.value)), 5)
       ])) : xt("", !0),
-      g("div", null, [
-        g("p", {
+      m("div", null, [
+        m("p", {
           class: "fr-text--xs fr-mb-1v",
           style: P({ color: e.data.textMention })
         }, " Localisation ", 4),
-        g("p", M7, [
-          g("span", null, X(e.data.localisation), 1)
+        m("p", M7, [
+          m("span", null, X(e.data.localisation), 1)
         ]),
-        g("p", {
+        m("p", {
           class: "fr-text--xs fr-mb-1v",
           style: P({ color: e.data.textMention })
         }, " Mise à jour : " + X(e.data.date), 5),
-        g("p", C7, X(e.data.names), 1),
-        g("p", P7, X(ts(gi)(e.data.valueNat || e.data.valueReg || e.data.value)), 1)
+        m("p", C7, X(e.data.names), 1),
+        m("p", P7, X(ts(gi)(e.data.valueNat || e.data.valueReg || e.data.value)), 1)
       ]),
-      g("div", S7, [
-        i[1] || (i[1] = g("div", { class: "sep fr-my-2w" }, null, -1)),
-        g("p", {
+      m("div", S7, [
+        i[1] || (i[1] = m("div", { class: "sep fr-my-2w" }, null, -1)),
+        m("p", {
           class: "fr-text--xs fr-mb-1w",
           style: P({ color: e.data.textMention })
         }, " Légende ", 4),
-        g("div", {
+        m("div", {
           class: "scale_container",
           style: P({ background: n.value })
         }, null, 4),
-        g("div", E7, [
-          g("span", D7, X(ts(gi)(e.data.min)), 1),
-          g("span", A7, X(ts(gi)(e.data.max)), 1)
+        m("div", E7, [
+          m("span", D7, X(ts(gi)(e.data.min)), 1),
+          m("span", A7, X(ts(gi)(e.data.max)), 1)
         ])
       ])
     ]));
@@ -19693,12 +19724,12 @@ function L7(e, t, n, s, i, r) {
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: n.config.viewBox
   }, [
-    g("g", {
+    m("g", {
       fill: "#5C68E5",
       stroke: n.config.colorStroke,
       "stroke-width": ".2%"
     }, [
-      g("path", {
+      m("path", {
         class: "FR-2A",
         style: P({ display: n.config.displayDep["FR-2A"] }),
         d: "M930 907v3l3 3 6 4 1 3-4 1-5 1v2l2 2v8l8 2 3 1 2 4-2 2-2 1-3 4-2 3 1 6h6l1 1 5-2 2 1-3 6 3 2-5 3-2 7 8 2 11 1-5 5s-2-1-3-1v1c0 2-3 6-3 7l4 3 6 4 12 4 4 1 3 2-2 3h6l1 3h5l2-7-4-1 5-5-1-2v-3l7-4v-4h-4l-3 2v-4h5l2-4 2-13-1-5v-5l-7 4h-7l-1-5 1-1-2-2-1-9-1-2h-4l-2-1v-6l-2-2-2-1-4-5v-3h-5l-2-5h-6l-4-4 1-2-2-1h-5l-2-1h-8v-2z",
@@ -19707,7 +19738,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[2] || (t[2] = (o) => e.onenter(o)),
         onMouseleave: t[3] || (t[3] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-2B",
         style: P({ display: n.config.displayDep["FR-2B"] }),
         d: "m990 834-5 4v4l3 3-3 3 1 3-2 2v3l4 4v5l-2 4-3 1-3-3h-5l-1-1h-4l-4 4-2 6-9 2-7 6-2 4-3-1-2-2-1 6-3 1v6l1 3-4 3-1 3h4v2h7l2 1h6l2 1-1 2 4 4h6l2 5h5v3l3 5 3 1 2 2v6l2 2h4l1 1 1 9 2 2-1 1 1 5h7l7-4-1-11 9-12v-20l-4-7-1-22-2-4-5-4-1-13 2-6-2-10-2-8-2-2z",
@@ -19716,7 +19747,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[6] || (t[6] = (o) => e.onenter(o)),
         onMouseleave: t[7] || (t[7] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-13",
         style: P({ display: n.config.displayDep["FR-13"] }),
         d: "m686 750-10 5-3 20-11-2-3 8 3 4-12 7-3 8h11l15 1 3 3h-5l-4 6 16 3 12-2-7-6 5-4 7 3 3 7 20 1 6-3 1 4-6 5h8l-1 4-2 2h17l9 3 1 1v-7l3-3 3-2v-2l-3-2h-3l-2-2 3-3v-1l-3-1v-3h7l2-1-6-6v-7l-4-3 3-7 8-5-6-4-4 3-10 3-7-1-15-6h-8l-7-3-3-4-5-6-13-5h-1z",
@@ -19725,7 +19756,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[10] || (t[10] = (o) => e.onenter(o)),
         onMouseleave: t[11] || (t[11] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-84",
         style: P({ display: n.config.displayDep["FR-84"] }),
         d: "M699 697h-5l-4 6 1 7 6 1-1 2-5 1-5 5-1-2 1-7-2-2-10 1-2 4 1 1 6 10v8l11 11v4l-4 3 13 5 5 6 3 4 7 3h9l14 6 8 1 9-3 4-3 1-2-7-9h-9v-3l3-3v-4l-6-3-1-5 4-2v-4l-4-1-1-5h-3l-6-5-1-4-10-1-7-1-1-4 2-5-4 4-8-1-1-3 5-6z",
@@ -19734,7 +19765,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[14] || (t[14] = (o) => e.onenter(o)),
         onMouseleave: t[15] || (t[15] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-83",
         style: P({ display: n.config.displayDep["FR-83"] }),
         d: "M830 756h-6l-2 2h-10l-9 6-6-4-9 3-1 4-7 5-12-8-9 3-1 2 7 4-8 6-4 6 4 3v7l6 6-2 1h-7v3l4 1v1l-3 3 1 2h3l3 2v2l-3 2-3 3v7l1 2 6 2 2 8 4 1 4-3 6-4 11 1v3l-4 2h9l-2-2-1-5 5-3 5 2h2l2 3 3-2v-5l3-2h8l2-4 5 2 6-3v-9h-8l6-3 3-4 1-6 10-1 6-7-4-4v-2l-2-2 2-2v-4l-5-2h-2l-4-3v-8l-5-1-4-1-1-4z",
@@ -19743,7 +19774,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[18] || (t[18] = (o) => e.onenter(o)),
         onMouseleave: t[19] || (t[19] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-04",
         style: P({ display: n.config.displayDep["FR-04"] }),
         d: "m841 665-4 6-5 4-2 3-5 1v3l-2 2-2 5h-11l-6-3-4 3-6-1-2 3h2v6h-1l-6-3v-3l-4-3h-2v4h-3l-6 4-4 6-1 4h2l1 5h-2l-4-3-2 1 1 2 5 7-3 1-3-2h-6l-6 6v2l-2-3-3-2-2 5-3 3h-2l1 5 4 1v4l-4 2 1 5 6 3v4l-3 3v3h8l8 9 9-3 12 8 7-5 1-4 10-3 5 4 9-6h10l2-2h6l-2-4 2-2v-2h5l1-2 5-3 4 3 2-2-6-5-6-6-3-1v-5l-4-6 2-8 1-5 4-3v-4l5-3h1v-7l5-1-3-3-3-1-2-4 1-4 7-7-1-5h1z",
@@ -19752,7 +19783,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[22] || (t[22] = (o) => e.onenter(o)),
         onMouseleave: t[23] || (t[23] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-06",
         style: P({ display: n.config.displayDep["FR-06"] }),
         d: "M841 698h-1l-5 3v4l-4 3-1 5-2 8 4 6v5l3 1 6 6 6 5-2 2-4-3-5 3-1 2h-5v2l-2 2 2 4-4 2 1 4h4l5 2v7l4 4h2l5 2v3l-2 3 2 1v3l4 4 1-9 7 2 2-3h4v-11l9-1 7-6h6l1-4 6-4-4-8 6-5-1-5 8-3 2-8-1-5-2-3-2-5h-5l-17 6h-5l-10-7-9-3h-5v-6z",
@@ -19761,7 +19792,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[26] || (t[26] = (o) => e.onenter(o)),
         onMouseleave: t[27] || (t[27] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-05",
         style: P({ display: n.config.displayDep["FR-05"] }),
         d: "m810 619-3 1-1 6-6 1-1-6-2-2-7 1-2 2-2 8 1 2h8l1 5 3 1v8h-7l-2 3-9-1-4 4-4-2-4 4 1 3-2 3h-10v4l3 2-1 2-6 3-7 1-3 6v5l4 3-4 5-5-3h-6v3l3 3-4 3 1 6 13 3 2 5h3l-1 11 6-5h6l3 2 3-1-5-7-1-2 2-1 4 3h2l-1-5h-2l1-4 4-6 6-4h3v-4h2l4 3v3l6 3h2l-1-6h-2l2-3 6 1 4-3 6 3h11l2-5 2-2v-3l5-1 1-3 6-4 4-6 5 1 3-4h4v-3l-5-3-1-10-4-1h-5l-10-4-1-11-6-2-1-4-3-5z",
@@ -19770,7 +19801,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[30] || (t[30] = (o) => e.onenter(o)),
         onMouseleave: t[31] || (t[31] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-48",
         style: P({ display: n.config.displayDep["FR-48"] }),
         d: "m577 643-10 4-3 6-7-4-5 16-5 12 7 9v7l5 4v8l2 13 6 2-1 4 9-1 3 1-2 2 11 7 10-2 1-2-1-3 4-1 6 5 9 1 4-7v-5l3-3-2-1v-7l-6-6h5l2-2 2-4-2-1 1-7-6-7-3-13-9-12-7 2-1-6h-4v5l-10 3z",
@@ -19779,7 +19810,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[34] || (t[34] = (o) => e.onenter(o)),
         onMouseleave: t[35] || (t[35] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-03",
         style: P({ display: n.config.displayDep["FR-03"] }),
         d: "m541 451-5 6h-3l-3 4-3-4-10 9v6l2 2v2l-5 4-5-1-9 2-4 5-2 4 4 6v4l3 4 2-4 3 5 4 2 4 9v3l6 4 3-1 2-6h2v-3l4-1 1 2 5-5h5l1 2-2 3 3 5 1 2 9 5 12 2h3l5 1 4-3 3 2 1 4 4 1h6l1 4 5 2v-2h9l-1-21-2-5 1-4 6-1 8-6v-14l-3-4h-5l-2-3h-7l-1-2v-5l-8-14-3-2-7 9-3 1-1-5-3-2-2 3h-5l-1-3-4 2-3 2-5-4-6-3v-5z",
@@ -19788,7 +19819,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[38] || (t[38] = (o) => e.onenter(o)),
         onMouseleave: t[39] || (t[39] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-30",
         style: P({ display: n.config.displayDep["FR-30"] }),
         d: "m624 696-2 4-2 2h-5l6 6v7l2 1-3 3v5l-4 7-9-1-6-5-4 1 1 3-1 3-10 1-11-7-2 2v5l-4 1 1 4 5 1h6l1 7-6 3v4l5 2v2l2 2 2-2h3l1 3h4l2-7h3l5-6h6l1 9 2 3 4-2 6 3 2 4 11 6 4 10v4l-7 4-5 4 6 1v7h13l3-8 12-7-3-4 3-8 11 2 2-20 15-8v-4l-11-11v-8l-6-10-13-7-1 5-5 1-2-6-5 1-1 7-4-1-8-6-4 2v-10z",
@@ -19797,7 +19828,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[42] || (t[42] = (o) => e.onenter(o)),
         onMouseleave: t[43] || (t[43] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-11",
         style: P({ display: n.config.displayDep["FR-11"] }),
         d: "m491 802-1 7-6-2h-7v-3l-4 1-7 2-3-4-5 4 2 4-6 2-1 6-5 2 5 5-1 3 17 8 2 13v6l1 9h-9l-3 4 12 9 7-3 8 9-1 1h1l15-7-4-5v-6h34l-1-5 8-4 10 7 4 2v-22l-4 1-4-6 3-5 6 6 6-4 3-4 1-4h-5l-1-5h-5l-4-7-4 1-3-2-1-6-2 1 1 4h-5v6l-7 3-3-7-5 3-4-3-1-5 3-4-2-4h-11l-11-2z",
@@ -19806,7 +19837,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[46] || (t[46] = (o) => e.onenter(o)),
         onMouseleave: t[47] || (t[47] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-34",
         style: P({ display: n.config.displayDep["FR-34"] }),
         d: "m604 747-5 6h-3l-2 7h-4l-1-3h-3l-2 2-2-2v-3l-5-2v2l-7 1-3 3 1 6h-5l-6-3h-3v4l1 10h-10l-2 4-13 5-5-4-3 5-2 5 6 5-2 7-8 2 2 4-3 4 1 5 4 3 5-3 3 7 7-3v-6h5l-1-4 2-1 1 6 3 2 4-1 4 7h5l1 5h5v-2l13-3 1-4h11l3-4 19-16 12-8h5l5-4 7-4v-5l-4-9-11-6-2-5-6-3-4 2-2-2-1-9z",
@@ -19815,7 +19846,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[50] || (t[50] = (o) => e.onenter(o)),
         onMouseleave: t[51] || (t[51] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-66",
         style: P({ display: n.config.displayDep["FR-66"] }),
         d: "m539 858-8 4 1 5h-34v6l4 5-15 7h-14l-1 3-6 2-4 4-12 2 1 4 6 5 10 3v6l6 5h5l6-8 7-1 12 4 10 8 3-3h3l2 2 2-2 1-5 11-2 3-5 6-2h7l5 5 6 1v-6l-3-4-5-2-1-32-5-2z",
@@ -19824,7 +19855,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[54] || (t[54] = (o) => e.onenter(o)),
         onMouseleave: t[55] || (t[55] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-15",
         style: P({ display: n.config.displayDep["FR-15"] }),
         d: "m512 590-1 4 2 5-2 2h-4l-4-4-3-2v10l-7 5-4 6 1 6-2 3-2 6h-2l-3 4 2 2 1 4-4 3 1 12 7 5-5 10 5 2-2 6 4 1 3-5h5l1 1h11l2-4 3-1 1-8h2v-9l11-9 1 1 1 7 7-1 1 10h4l1 11 3 3 5-11 5-16 7 4 3-7 9-3v-3l-2-3-4-2 2-3-2-2h2l3-2-4-1-2-2-1-7-2-2-2-6h-8l-2-5h-2l-2 3-5-1-5-7-2-1-4-2-2 3h-6l-3-7z",
@@ -19833,7 +19864,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[58] || (t[58] = (o) => e.onenter(o)),
         onMouseleave: t[59] || (t[59] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-43",
         style: P({ display: n.config.displayDep["FR-43"] }),
         d: "m571 595-2 2v2h-4l-4 3-6 1-2 2h1l2 5h8l2 6 2 2 1 7 1 2 5 1-3 2h-2l2 2-2 3 4 2 2 3v3h1l6 17 9-3 1-5h4l1 6 7-2 8 10 6-8 9-7h9l3-9h5l1-7h5l-1-2-1-5 2-4 5-2 2-8-5-6h-6l1-6-11-5h-4l-8 6-8-2-1 2-5-2-3-3-2 4-5-1-3-2-2 5-4-2-2-4h-3l-2-2-4 1h-5l-2-1-2 1z",
@@ -19842,7 +19873,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[62] || (t[62] = (o) => e.onenter(o)),
         onMouseleave: t[63] || (t[63] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-63",
         style: P({ display: n.config.displayDep["FR-63"] }),
         d: "m537 509-5 5v-2l-5 1v3h-2l-2 6-3 1-5-4v8l3 4 1 7-4 3-1 5-4 2-7 4 1 3 8 9 1 5-3 5v5l2 3 1 6-1 2 11 4 3 6h6l2-2 4 1 2 1 5 7 5 1 2-3h1l2-2 6-1 4-3h4v-3l2-1 1 2 2-1 2 1h5l4-2 2 3h3l2 4 4 1 2-4 3 2 5 1 2-4 3 3 5 1 1-1-2-1-1-4 6-7-3-12-9-6-4-9-5-6 2-8 3-3-6-5v-1l-5-2-2-4h-5l-4-1-1-4-3-2-4 2-5-1-4 1-11-2-9-5-1-3-3-4 2-4-1-1z",
@@ -19851,7 +19882,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[66] || (t[66] = (o) => e.onenter(o)),
         onMouseleave: t[67] || (t[67] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-65",
         style: P({ display: n.config.displayDep["FR-65"] }),
         d: "m315 784-3 2 6 10-3 4 2 4 5 6-4 5-5 13-10 8 2 5-2 2-5-1-2 12-3 2v7h1l6 3 7 6 1 4 5 5h5l12-5 5 6 7 1 2-4 4 1 7 1-1-19h4l3 1 2-2v-4l5-2-2-7-2-2-4 2 2-4-1-4-6-4 1-3 3-6 4-1v-3l3-3 1-3-6-3h-9l-1-3h-5l-1-3h-5l-1 1h-5v-3l-4-2 1-1 1-4-1-1-2-5-4-1-4-2v-6z",
@@ -19860,7 +19891,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[70] || (t[70] = (o) => e.onenter(o)),
         onMouseleave: t[71] || (t[71] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-64",
         style: P({ display: n.config.displayDep["FR-64"] }),
         d: "m302 785-5 3-10-1-1-1-7 2-5 1-4-3-5 2-1-2h-5l-3 2h-9l-4 3h-9l-1 2-2-1 2-3-4-3-6 5h-9l-11-5-1 3-8 10-7 3h-4v4l4 4h6l1 5 5 1 1-4 7 3 4 1 1 5-2 2v7l-5 2v3l3 4 6 2 1-6 3-3-1 5 3 3h6l3 4 9 2 8 5h14l1 7 9 7 4 5 4-2 3-1 2 2 3-2 7-4v-7l3-2 2-12 5 1 2-2-2-5 9-8 6-13 4-5-5-6-2-4 3-4-6-10-9-1z",
@@ -19869,7 +19900,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[74] || (t[74] = (o) => e.onenter(o)),
         onMouseleave: t[75] || (t[75] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-40",
         style: P({ display: n.config.displayDep["FR-40"] }),
         d: "m243 684-12 6h-3l-6 34-8 32-3 12-2 9-6 9 11 5h9l6-5 4 4-2 2 2 1 1-2h9l4-4 9 1 3-2h5l1 2 5-2 3 3 6-1 7-2 1 1 10 1 5-3-2-5 2-7 4-4-1-7 3-3-5-7 4-4 4-1 4 2 5-5 1 6 2 2 4-1v-4l1-3-1-2 1-7 4-4-2-3h-4l-5-2-7 1-2-8-4-6h-2l1 6v2l-7 1-6-3-2-8-4-5h-3l-1-3-3-2-6-2 2-2v-2l-2-2-3-1h-6l-4 4h-3l-4-3-6 3-3-2 2-3 1-5z",
@@ -19878,7 +19909,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[78] || (t[78] = (o) => e.onenter(o)),
         onMouseleave: t[79] || (t[79] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-33",
         style: P({ display: n.config.displayDep["FR-33"] }),
         d: "m245 575-6 9-2 30-4 30-4 24v6l3-8 5-6 7 6 1 2 2 3-9 1-2-3-3 2-1 5-4 6v8h3l11-6 7 2-1 4-2 4 3 1 6-2 4 3h3l3-4 7-1 2 2 2 2v2l-1 2 6 2 3 2v3h4l4 5 2 8 6 2h6v-8h2l3 5 6-1 3-3-1-3-2-2 1-4h3l4-2-2-4-1-4 3-5 5-8 4-4 3-1v-4h-3l-2-4 1-3 5-1 3-1 4-1-1-7 4-2-5-3-4 5h-11l-1-2-4-2 3-3v-4l-1-2v-1l3-3 1-5 2-6-2-3h-4l-2-2-1 4-4-2-5 2-4-1-9-8h-5l-1-12-10-1v-5l-2 1h-10v3l3 10v11l-1 2-2-8-5-20-19-17 1-7-4-1z",
@@ -19887,7 +19918,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[82] || (t[82] = (o) => e.onenter(o)),
         onMouseleave: t[83] || (t[83] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-24",
         style: P({ display: n.config.displayDep["FR-24"] }),
         d: "m372 566-3 6h-6v9l-17 12v12l-7 7-3 3-7-1-4 7-1 2 1 3h4l2 3-2 5-1 6-3 2v2l1 1v4l-2 3 3 2 1 3 11-1 4-5 5 3-4 2 1 7 5 4 1 7 5 2 3-3h8l3-3h3v3h8l1-2h3l3 3v3l-3 1 1 2 4 1 4-4h4l3 3 5 2 1-1 3-3 1-6h7l6-8h-3v-4l6-1v-4l3-1 4-6-4-4v-4l3-2-3-5v-8h-8l-3-2 3-3-4-4 3-3-3-2v-5l7-6-4-3-2-6-8-1-2-2 5-2-2-3-8-1-2-7-11-1-3 3-2 1-3-4 1-4-2-4z",
@@ -19896,7 +19927,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[86] || (t[86] = (o) => e.onenter(o)),
         onMouseleave: t[87] || (t[87] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-47",
         style: P({ display: n.config.displayDep["FR-47"] }),
         d: "M345 664h-4l-3 1-5 1-1 4 2 3 3 1v3l-3 1-3 4-6 8-2 5 1 5 1 3-4 2h-3l-1 4 3 2v3l-3 3-5 1v1l2 8 7-1 5 2h4l2 3-4 4-1 7 1 2 1-3 5 4 5-6 3 4 6-1 7-1 2-5 11-1 6 5 2-2 3-1-1-5 5-1 7-2-2-4 3-3 1-6-4-5 3-8 6 3 7-1-3-8-3-11h7l2-4-6-2-3-3h-4l-4 4-4-1-1-2 3-1v-3l-3-3-3-1-2 2h-7v-2h-2l-4 3h-8l-3 3-5-2-1-7-5-4z",
@@ -19905,7 +19936,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[90] || (t[90] = (o) => e.onenter(o)),
         onMouseleave: t[91] || (t[91] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-46",
         style: P({ display: n.config.displayDep["FR-46"] }),
         d: "m441 634-7 4h-1l-3 2v4l4 4-4 6-3 1v4l-6 1v3l3 1-6 8h-8v6l-3 3-2 5h-7l3 11 3 7 4-1 1 2-3 3 2 4h3l3 4h3l2-3 1 1v3l1 4h7l5-5 3-1 1 2 2 4h3l1-7 5 1 3-4 6 1 8-4v1l2-2-3-5-1-7 4-3h2l6-6h3l1-2h7l2-2 1-2-3-1 2-6-5-2 5-10-6-5-2-13-6-2-4 4-2-3-6 6h-4l-8-10z",
@@ -19914,7 +19945,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[94] || (t[94] = (o) => e.onenter(o)),
         onMouseleave: t[95] || (t[95] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-09",
         style: P({ display: n.config.displayDep["FR-09"] }),
         d: "m422 817-2 2-1 1 5 4 1 2-1 2-8 1-2 3v1l3 1 2 2-2 3h-2l-4-3-4-2-5 1-7 4v7l2 1-1 5-8 2-4 4v7l2 1-3 3 1 1 11 3h5l7 7h15l6 9 6-2 15 2 1 7 12-2 4-4 6-2 1-3 14-1-8-9-7 3-12-9 3-4h9l-1-9v-6l-2-13-17-8v-3l-3-4-3 1-4 1-7-4h-2l3 4-1 2h-6l-1-4-3-5z",
@@ -19923,7 +19954,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[98] || (t[98] = (o) => e.onenter(o)),
         onMouseleave: t[99] || (t[99] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-32",
         style: P({ display: n.config.displayDep["FR-32"] }),
         d: "m368 735-11 1-2 5-7 1-6 1-3-4-5 6-5-4-2 6v4l-4 1-2-2-1-6-5 5-4-2-4 1-4 4 5 8-3 2 1 7-4 4-2 7 3 5 9 1 3-2h6v6l4 2 4 1 2 5 1 1-1 4-1 1 4 2v3h5l1-1h5l1 3h5l1 3h9l6 3 1-1 4-2 6-8 12 1 5 3 2-2 3-8 3-7 7-3 3-2-1-2-3-1-2-3h-2l-4-4v-3l-6-6-1-3-3 1-1-2 2-3-3-3v-4l-2-3h-7v-4l4-3v-4l4-1-2-2-3 2h-5l-2-2h-1l-1 2z",
@@ -19932,7 +19963,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[102] || (t[102] = (o) => e.onenter(o)),
         onMouseleave: t[103] || (t[103] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-31",
         style: P({ display: n.config.displayDep["FR-31"] }),
         d: "m437 754-5 2-2 3-2-2-4-1v3l-3 1 4 2-3 4-8 2-3-4h-4l-2 1h-10l-1 1 1 3 6 6v3l4 4h2l2 3 3 1 1 2-3 2-7 3-3 7-3 8-2 2-5-3-12-1-7 8-3 2-2 4-3 3v3l-4 1-3 6-1 3 6 4 1 4-2 4 4-2 2 2 2 7-5 2v4l-2 2-3-2h-4l1 20 14 1 1-18 5 1 8 4 3-3-2-1v-7l4-4 8-2 1-5-2-1v-7l7-4 5-1 4 2 4 3h2l2-3-2-2-3-1v-1l2-3 8-1 1-2-1-2-5-4 1-1 2-2h3l3 5 1 4h6l1-3-3-3h2l7 4 4-1 3-1-1-1 5-2 1-5 6-3-2-4 5-4 3 4 7-2h2v-7h-4l-5-1-4-5-2-3-8-3-2-3 2-1v-4l-2-2-4-6v-4l-1-1-4-4-2-5z",
@@ -19941,7 +19972,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[106] || (t[106] = (o) => e.onenter(o)),
         onMouseleave: t[107] || (t[107] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-82",
         style: P({ display: n.config.displayDep["FR-82"] }),
         d: "m391 703-3 8 4 5-1 6-3 3 2 4-7 2-5 1 1 5-3 1 2 2h5l3-2 2 2-4 1v4l-4 3v4h7l2 3v4l3 3-2 3 1 2 4-2h10l2-1h4l3 4 8-2 3-4-4-2 3-1v-3l4 1 2 2 2-3 5-2 2 1 2-3-3-3h6l2-4 4-4h-4l2-5 11-2 4-2 5-2 2-2-2-5 3-6h-6v-8l-8 3-5-1-4 4-5-1-1 7h-3l-1-4-1-2-3 1-6 5h-7l-1-4v-4l-3 3h-3l-3-4h-3l-2-4 3-3v-2h-5v2l-7 1z",
@@ -19950,7 +19981,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[110] || (t[110] = (o) => e.onenter(o)),
         onMouseleave: t[111] || (t[111] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-12",
         style: P({ display: n.config.displayDep["FR-12"] }),
         d: "m529 645-11 9v9h-2l-1 8-3 1-2 4h-11l-1-1h-5l-3 5h-1l-1 2-2 2h-7l-1 2h-3l-6 6h-2l-4 3 1 7 3 5-2 2v8h5l-3 6 3 6 3-2 1 3 4-4h6l7 4 10 2 4 7 6 2 3 8-1 3 4 7v3l7 9 6 3 4-1 2-3 3 1 6 4h10l-1-11v-3h3l6 3h5l-1-6 3-3 7-1v-5l6-3-1-7h-6l-5-1-1-4 4-1v-5l4-4-3-1-9 1 1-4-6-2-2-13v-8l-5-4 1-7-11-13-1-10h-4l-1-11-8 1v-6z",
@@ -19959,7 +19990,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[114] || (t[114] = (o) => e.onenter(o)),
         onMouseleave: t[115] || (t[115] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-81",
         style: P({ display: n.config.displayDep["FR-81"] }),
         d: "M484 726h-6l-4 4-1-3-3 2-1-1-1 2-5 2-5 2-11 2-1 5h4l-4 4-2 4h-6l3 3-2 3 1 1 1 4 4 5 1 1 1 4 3 5 3 3v4l-3 1 2 3 8 4 2 2 4 5 5 1h4v7l2-1v3h7l6 2 1-7h3l11 2h11l8-2 2-7-6-5 2-5 3-5 5 4 13-5 2-4-6-4-3-1-2 3-4 1-6-3-7-9v-4l-4-6 1-3-3-7-6-3-4-7-10-2z",
@@ -19968,7 +19999,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[118] || (t[118] = (o) => e.onenter(o)),
         onMouseleave: t[119] || (t[119] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-01",
         style: P({ display: n.config.displayDep["FR-01"] }),
         d: "M692 478h-4l-2 5-7 26-1 3-1 8-2 3v12l-1 3 7 4h3l4 4 1 6 5-1 7 2v-1h4l5 4 4-2 3-7 2-3 3 1 3 2 2 5 14 18 5-3v-7h5v-12l3-2v-11l1 1v-4l-2-4 1-10 4 2 2-3 3-1 4-3h-4v-7l4-3h7v-4l-2-1 5-7-1-2-6-4-15 17h-10v-5l-6-2-7 7-5 1v-5l-5-2-7-10-7-3-2-5h-3l-4 2-3 1z",
@@ -19977,7 +20008,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[122] || (t[122] = (o) => e.onenter(o)),
         onMouseleave: t[123] || (t[123] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-38",
         style: P({ display: n.config.displayDep["FR-38"] }),
         d: "m719 544-2 3-3 7-4 2-5-4h-4v5l5 4-8 10-10 3-8 2 5 5 1 3-8 4v11h-1l2 5 7 2 4-2 5-3 7 5h6l3 6-1 3v6l-1 6v1h3l6 2 9 2 3-2 2-3h1v29l2 2h5l5 3 4 3h3l2 2 7 1v-1l-3-2v-4h10l2-3-1-3 4-4 4 2 4-4 9 1 2-3h7v-8l-3-1-1-5h-8l-1-2 2-8 2-2-2-3-4-2-2 2 1-3v-3l-3-3 1-8 4-2-1-5-7-7h-3l-2 3-5-7-2 1-3 5 2 3-1 1-3-2-10-2-4-8v-3l-4-5-1-2-14-18-2-5-3-2z",
@@ -19986,7 +20017,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[126] || (t[126] = (o) => e.onenter(o)),
         onMouseleave: t[127] || (t[127] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-74",
         style: P({ display: n.config.displayDep["FR-74"] }),
         d: "m808 484-8 2-8 6-2-3h-4l-4 8 1 3 4 4-8 4-4 5h-8l-4 3-4 1-1 3-4-2-1 10 2 4v4l3 2v10l7 2 3 5h6l2-2h3l5 6 2 2 6-1 2-3 2-7 3-2 3-8 4-3 2 1 1 2-2 3 4 4h5l4 6-1 2 4-3 3-3 2 1v-7l12-5 2-3-1-8-8-8-3 1v-9l-6-3-1-3 4-4v-5l-6-7v-5z",
@@ -19995,7 +20026,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[130] || (t[130] = (o) => e.onenter(o)),
         onMouseleave: t[131] || (t[131] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-42",
         style: P({ display: n.config.displayDep["FR-42"] }),
         d: "m611 506-6 1-1 4 2 5 1 21h-9v3l6 5-3 3-2 8 5 6 4 9 9 6 3 12-6 7 1 4 10 3 8-6h3l12 5-1 6h6l5 5h3l6-2 2-7 9-5v-11h1l-5-1-3 2-4-2 4-5-1-4-12-2-10-9v-3l2-2v-3l-3-2 3-3v-5l-5-4v-5l-3-3v-4l-2-5 3-3v-7h7l2-2-2-4v-4l-2-1-1 7h-4l-3 3-2-2-12-2-4 3h-3l-1-3-5-1-1-5z",
@@ -20004,7 +20035,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[134] || (t[134] = (o) => e.onenter(o)),
         onMouseleave: t[135] || (t[135] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-69",
         style: P({ display: n.config.displayDep["FR-69"] }),
         d: "M671 501h-4l-3 4-2-3-4 3-4-3h-4l-1 1-1 4 2 2v3l2 4-1 2h-8v7l-3 3 2 6v3l3 3v5l5 4v5l-3 4 3 1v3l-2 2v3l10 9 12 2 1 4-4 4 4 2 3-1 5 1 7-4-1-3-5-5 8-2 10-3 8-10-5-4v-4l-7-2-5 1-1-6-4-4h-3l-7-4 1-3v-12l2-3 1-8-1 2h-3l-1-7z",
@@ -20013,7 +20044,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[138] || (t[138] = (o) => e.onenter(o)),
         onMouseleave: t[139] || (t[139] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-73",
         style: P({ display: n.config.displayDep["FR-73"] }),
         d: "M754 535v11l-3 2v12h-5v7l-5 3 1 2 4 5v3l5 8 9 2 3 2 1-1-2-3 3-5 2-1 5 7 2-3h3l7 7 1 5-4 2-1 8 3 3v3l-1 3 2-2 4 2 2 3 7-1 2 2 1 6 6-1 1-6 3-1h7l11-4 4 2h4v-4l5-3 2-2 9-3 1-7-1-2 5-9-5-2-2-5-9-6s1-11-1-13c-2 0-7 1-7 1l-5-7v-5l-2-1-3 3-4 3 1-2-4-6h-5l-4-4 2-3-1-2-3-1-3 3-3 8-3 2-2 7-2 3-6 1-2-2-5-6h-3l-2 2h-6l-3-5-7-2v-10z",
@@ -20022,7 +20053,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[142] || (t[142] = (o) => e.onenter(o)),
         onMouseleave: t[143] || (t[143] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-07",
         style: P({ display: n.config.displayDep["FR-07"] }),
         d: "m677 599-8 5-2 7-6 2h-3l-2 9-5 2-2 4 1 5 1 2h-6v7h-5l-3 9h-9l-9 7-6 8 1 2 3 13 6 6-1 8 8 5v10l4-2 8 6 4 1 1-7 5-1 2 5h5l1-5 12 6 2-4 5-1v-7l-1-2h-2v-3l2-3-2-3 1-7 4-5v-8l-1-9 3-1 1-4 3-7 2-5-3-8-2-6-3-11v-15h-1z",
@@ -20031,7 +20062,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[146] || (t[146] = (o) => e.onenter(o)),
         onMouseleave: t[147] || (t[147] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-26",
         style: P({ display: n.config.displayDep["FR-26"] }),
         d: "m695 601-5 3-4 2-5-2v15l3 11 2 6 3 8-2 5-3 7-1 4-4 1 2 9v8l-4 5-1 7 1 3-1 3v3h2l1 2v7h5l2 2-1 7 1 2 5-5 5-1 1-2-6-1-1-7 4-6h5l5 5-5 6 1 3 8 1 4-4-2 5v4l8 1 10 1 2 4 5 5h5l3-3 2-6 3 3 2 3 1-14h-3l-2-5-13-3-1-6 4-3-4-3 1-3h6l5 3 4-5-4-3v-5l3-6 7-1 6-3 1-1-7-1-2-2h-3l-4-3-5-3h-5l-2-2v-29h-1l-2 3-3 2-9-2-6-2-3 1v-2l1-6v-5l1-4-4-6h-5z",
@@ -20040,7 +20071,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[150] || (t[150] = (o) => e.onenter(o)),
         onMouseleave: t[151] || (t[151] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-17",
         style: P({ display: n.config.displayDep["FR-17"] }),
         d: "m260 492-5 1-11 6 3 3-6 5-1 3-5 1-3-3-7-1-1-4-4-3-6 3 3 5h5l6 4 3 3 8-1 2 4 4 1 2 5 4 1-1 4-4-1-1 3 3 4-2 8h-4v5l1 2h-5l-1-3 4-4-2-3-1-1-1-9-6-1-5-6-1 13 8 6 1 7 2 8v8l5-1 7 6 5 3 1 4 4 1 11 11 3 13h10l2-2 1 5 9 1 1 12h6l8 9h4l5-2 4 2 3-6 2-5-7-5-2-3-4-4-7 1-3-1v-2l4-1v-1l-3-1-2-1 5-4v-3l-2-2 1-2 1-4-3-3-2-3-4-5-3-1 2-4h-1l-1-8-3-2 4-2h6l2-2h4l1 2h4l3-1 1-7 3-11-3-3-1-4-5-3-7-4-8 1-5-7h-7l-6-5v-2l-4-5-1-5-5-4-7 3z",
@@ -20049,7 +20080,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[154] || (t[154] = (o) => e.onenter(o)),
         onMouseleave: t[155] || (t[155] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-19",
         style: P({ display: n.config.displayDep["FR-19"] }),
         d: "m475 561-1 3-6 2-3 4h-2l-4-1-3 4-4 1-3 5h-4l-2 2h-7l-3 4-2-1-5 6-5-2-2 5 2 4 4 3-7 6v5l3 2-3 3 4 4-3 3 3 2h8v8l3 5h1l7-4 10 4 7 10h4l6-6 2 3 4-4 5 2 1 1 4-3-1-4-2-2 3-4h2l2-6 2-3-1-6 4-6 7-5v-9l3 1 4 4h4l2-2-2-5 2-6-1-6-2-3v-5l3-5-1-5-1-1-3 3h-7l-3 3h-4l-4-3-1-3h-9l-2-2z",
@@ -20058,7 +20089,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[158] || (t[158] = (o) => e.onenter(o)),
         onMouseleave: t[159] || (t[159] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-23",
         style: P({ display: n.config.displayDep["FR-23"] }),
         d: "m457 487-2 6h-6l-2-1h-4l-3-2-7 7v6l-4 8 1 5 5 1 3 8 3 3-1 15 7-2 2 3-4 4v3l4 1 6-1 2-3h1l-1 5 6 2 4 4v2h-2v4l2 2 1-1 6-1 1-4h3l2 2h9l2 3 3 3h4l3-3h7l3-3-7-8-1-3 7-4 4-2 1-5 4-3-1-7-3-4-1-11-4-9-4-2-3-5-2 4-3-4v-4l-4-6-12 1-7-2z",
@@ -20067,7 +20098,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[162] || (t[162] = (o) => e.onenter(o)),
         onMouseleave: t[163] || (t[163] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-87",
         style: P({ display: n.config.displayDep["FR-87"] }),
         d: "m427 493-3 3-10-1h-1l-6 1-5 4v4h-7l-5 6-3 2 3 3-1 9-2 4 3 3h5l1 5 1 4-7 1-3 1 1 9-5 3-3 1-2 5h-3l-1 6h8l2 4-1 4 3 4 2-1 3-3 11 1 2 7 8 1 2 3-5 2 2 2 8 1v2l2-4 5 1 5-6 2 1 3-4h7l2-2h4l3-5 4-1 3-4 4 1h2l2-3-2-2v-4h2v-2l-4-4-6-2 1-5h-1l-2 3-7 1-3-1v-3l4-4-2-4-7 3 1-15-3-3-3-8-5-1-1-5 4-8v-6 1z",
@@ -20076,7 +20107,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[166] || (t[166] = (o) => e.onenter(o)),
         onMouseleave: t[167] || (t[167] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-86",
         style: P({ display: n.config.displayDep["FR-86"] }),
         d: "m333 409-7 8-2 3 1 8h3v4l2 6 2 5-3 2 1 2-1 3v1l3 3v2l-2 3-4 6 4 2 2 3-2 4v2l-3 4v3h2v8l3 2-2 3 1 2 3 4 2-3v-1l3-2 2 2v5l-2 3-2 5 2 4 6 2-1 3-5 1 4 6 7-1 5-1 6 3 2-2-1-5 3-2 3 4 2 3 7-3 3-3h6l3 2 1-7-3-3 3-2 5-6h7v-5l5-3 9-2 1-5-4-2-2-8h-6l-3-4-7-5 1-5v-7l-6-6-1-5-6-7-3-8-2-1-3-4-3 2 1 3-9 3h-11v-12l-9-2v-4l-6-2-2-5h-3z",
@@ -20085,7 +20116,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[170] || (t[170] = (o) => e.onenter(o)),
         onMouseleave: t[171] || (t[171] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-16",
         style: P({ display: n.config.displayDep["FR-16"] }),
         d: "m365 519-3 2 1 5-2 2-6-3-5 1-7 1-4-6h-2l-6 4-5 1v2l-3 4 1 1-4 3-2 11-1 7-3 1h-4l-1-2h-4l-2 2h-6l-4 2 3 2 1 8h1l-2 3 3 2 4 4 2 4 3 3-1 4-1 2 2 2v3l-5 3 2 2 3 1v1l-4 1v2l3 1 7-1 4 4 2 3 7 5 2-2 7 1 3-3 7-7v-12l17-12v-9h6l3-6h2l1-6h3l2-5 3-1 5-3-1-9 3-1 7-1-1-4-1-5h-5l-3-3 2-4v-3l-3-1h-6l-3 3-7 3-2-3z",
@@ -20094,7 +20125,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[174] || (t[174] = (o) => e.onenter(o)),
         onMouseleave: t[175] || (t[175] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-79",
         style: P({ display: n.config.displayDep["FR-79"] }),
         d: "m320 416-10 1-9 1-10 1v5l-5 3-11-2-7 3 3 5v4l9 8-2 4 6 7-3 3 4 6 1 10-2 3 2 4-2 5v3l3-3 3 4-5 3-1 2-5 1-4 2h-1l1 6 4 4v2l5 5h8l5 7 8-1 7 4 5 3 1 4 3 3 3-2-1-2 3-4v-2l5-1 6-4 7-1 1-3-6-2-2-4 2-5 2-3v-6l-2-1-3 1v2l-2 3-3-4-1-2 2-3-3-2v-8h-2v-3l3-4v-2l2-4-2-3-4-2 4-6 2-3v-2l-3-3v-1l1-3-1-2 3-2-2-5-2-6v-4h-3l-1-8v1l-3-2z",
@@ -20103,7 +20134,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[178] || (t[178] = (o) => e.onenter(o)),
         onMouseleave: t[179] || (t[179] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-22",
         style: P({ display: n.config.displayDep["FR-22"] }),
         d: "m113 220-3 3-8 1-2 2-6-4-7 5 2 4-5 7-2 9 5 1-1 4 3 2-2 3-3 1 1 4 4 1-4 1v5l3 3v11l-1 2 1 5 6 1v3l4 1 3-2 2 2 7 2 5-3 2-3h4l6 5 5-1 4 4h2l2 3h5l1-2 2 4 4 1 6-3v-4l4-1h3l3 5 7 1 4-4 4-9 5-2 2-3 3 2 6-1 2-16 1-7-1-4-3-1-2-11-3 3-7-1v4l-5 1v-5l-4-1-2 2v-7l-4 4-7-2-2 5-13 7v4h-3v-7l-8-4 1-6-7-5v-6l-5-1v-6l-4-1 1-4h-8l-1 4z",
@@ -20112,7 +20143,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[182] || (t[182] = (o) => e.onenter(o)),
         onMouseleave: t[183] || (t[183] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-85",
         style: P({ display: n.config.displayDep["FR-85"] }),
         d: "m240 417-2 3h-6l3 3-2 6-6 2-2-2 1-6-1-3h-4l-2 2 1 9 3 4-3 3-5-1-7-2-2-6h-5l-6-3-2-4-7-4-10 14-1 9 11 10v4h3l7 20 7 4 8 7h8l3 7h8l4 6 8 4v-6l2 2 11-6 5-1 2 6 7-3 6 4 4-2 5-1 1-2 5-3-3-4-3 3v-3l2-5-2-4 2-3-1-10-4-6 3-3-6-7 2-4-9-8v-4l-3-5-5-4h-9l-3-2-4-1-5-4z",
@@ -20121,7 +20152,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[186] || (t[186] = (o) => e.onenter(o)),
         onMouseleave: t[187] || (t[187] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-50",
         style: P({ display: n.config.displayDep["FR-50"] }),
         d: "m205 136-1 3 7 7v7l-3 4 2 2h1v7l2 6 8 9 2 9 2 2v13l4 9v10l-4 9 5 13 8 2v4l-3 2h-7l1 4 2 7 6 5 3 1 3-4h3l4-5 4 3h4l3 1v1l6 1 4-3 5 2 6-5 2-7v-3l1-3-4-4-9-6h-7l-7-9 6-2 2-5-3-2 3-3 2 2 5-3 3-4 1-5-2-4 2-2-3-4 3-4-3-3-2 4-5-3-7-6v-3l2-3v-3h-4v-8l-10-11 3-8h4l-3-9-16-1-8 6-9-6z",
@@ -20130,7 +20161,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[190] || (t[190] = (o) => e.onenter(o)),
         onMouseleave: t[191] || (t[191] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-56",
         style: P({ display: n.config.displayDep["FR-56"] }),
         d: "m88 289-6 3h-4l-5 3v3l3 7 1 5 10 2 4 4 2-3 3 4-2 2v5h-3l-2 4h-4l-2 7 4 6 6 2 2-4-1 4 5 2 7 7 2 4-1 5-1 4 5 4 2-3-2-3v-6l4 1 2-5 1 3 4 4 3-4-3-5 4 6 5-1-1-3 5 2 4 4-2 3-5-2-5-2-3 3 4 2 3 5 20-2 5 1-2 2v4h2l3-3 2 2h6l7-4 10-3 1-11 2-1-4-7 3-3-1-1-1-2 3-1 3-4-1-3h-3l-1-4 2-3-3-6-4-2h-5l-2-1v-2l3-2 1-6-1-4-1 1h-7l-3-6h-3l-4 1v4l-6 4-4-2-2-4-2 2h-4l-2-3h-2l-4-4-5 1-6-5-5 1-1 3-6 3-7-3-1-2-3 2h-4v-3l-6-2z",
@@ -20139,7 +20170,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[194] || (t[194] = (o) => e.onenter(o)),
         onMouseleave: t[195] || (t[195] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-29",
         style: P({ display: n.config.displayDep["FR-29"] }),
         d: "m60 231-5 4-4-2-8 1-1 4-5 1-1-4-8 1v3h-6l-2-2-3 2-1 4H7l-6 6 5 4-6 4 2 4-2 7 6 1 2-2 1 1 14-1 9-7-8 8 1 3 7-3-1 5h7v3l-8-1-7-2-9-3-5 5 7 3-1 9 2-1 4-6 8 4 3 1 2 5-2 4h-9l-8 1-12 1-2 3 3 2h4l4 3 4-1 8 9 2 9-3 5 8 2h8l2-4-4-4 4 1h3l6 3h3v-7l2 7 5 7 10 1v-2l2 3 7 1h4l1 1 1-7h4l3-4h2l1-5 1-2-3-3-2 2-4-4-9-1-2-6-3-7v-2l5-4h4l6-3-1-4 1-2v-11l-3-3v-5l4-1-4-1-1-4 3-1 2-3-3-2 1-4-5-1 2-9-6-4-10 1v7h-3v-3h-5z",
@@ -20148,7 +20179,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[198] || (t[198] = (o) => e.onenter(o)),
         onMouseleave: t[199] || (t[199] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-35",
         style: P({ display: n.config.displayDep["FR-35"] }),
         d: "m199 244-4 3 3 12 3 1 1 3-1 7-2 16-6 1-3-2-2 3-5 2-4 9-3 3 1 3-1 6-3 3v2l2 1h5l5 2 3 6-3 3 1 4h4v4l-3 3-3 2 2 1v2l-3 2 4 7 7-3 22-2 2-4 3-3 8-1 1-4h5l3 5 8 2 1-3 2-7 5-11 2-2 6 1v-10l-2-2v-11l-1-3v-6l3-4v-7l-2-1 1-11-3-1h-4l-4-3-4 5h-3l-3 4h-3l-6-6-2-7-1-4h-18l-7-4 5-6z",
@@ -20157,7 +20188,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[202] || (t[202] = (o) => e.onenter(o)),
         onMouseleave: t[203] || (t[203] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-44",
         style: P({ display: n.config.displayDep["FR-44"] }),
         d: "m230 336-1 4-8 1-3 4-1 3-23 2-9 5-1 10-10 4-7 3h-5l-3-2-3 3h-1l1 1-6 7 1 1 2 3-4 5 4 2 7 2v-3l4 5h7l5-5h6l-7 3 1 4 1 3-4 4h-4l1 5 7-1 10 9h-1l7 4 2 4 6 3h5l2 6 7 2 5 1 3-3-3-4-1-9 2-2h4l1 3-1 6 2 2 6-2 2-6-3-3h6l2-3h2l5 4 3 1v-4l-2-4h-6l2-2v-3l3-1 1-4-1-1v-5h-4l-4-5v-3l4-3 8-1h11l4-2-1-7-6-5h-6l-2-1v-6l4-4-3-4-3-6-3-3v-4l-1-1-7-2-3-4z",
@@ -20166,7 +20197,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[206] || (t[206] = (o) => e.onenter(o)),
         onMouseleave: t[207] || (t[207] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-49",
         style: P({ display: n.config.displayDep["FR-49"] }),
         d: "m247 341-1 2h-1v5l4 2 3 7 3 4-4 4v6l2 1 6-1 6 5 1 8-4 2h-11l-8 1-4 2v4l4 5h4v5l2 1-2 4-3 1v3l-2 2h6l3 4v4l3 2h9l5 4 7-3 11 2 5-3v-5l10-1 9-1 10-1 1 3 3 2 2-4 7-8h3l4-15 5-6v-8l4-5v-2l-2-2 1-3-5-1-15-10-14-4h-5v-4l-4-2h-3l-6-3-5 5h-9l-4-2-11-4-2 3-6-3h-6z",
@@ -20175,7 +20206,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[210] || (t[210] = (o) => e.onenter(o)),
         onMouseleave: t[211] || (t[211] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-72",
         style: P({ display: n.config.displayDep["FR-72"] }),
         d: "M358 273h-9l-10 9h-5l-7 2-2 4-1 7 1 5-6 5-1 3 1 3-2 3 1 2h-6l-1 3 3 6-1 2-2 2-5 1-1 1 2 2v11l-1 3 3 2v4h5l14 4 15 10 5 1 3-4 7 5h4l-2-8 4 3 2-3 11-3-2-5 3-3 5-2 5-6v-7h4l1-5 1-8-4-3 3-5 4-6-5-3-5-1-5-7h-1l-1 3v-2h-7l-4-6-6-2-2-13z",
@@ -20184,7 +20215,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[214] || (t[214] = (o) => e.onenter(o)),
         onMouseleave: t[215] || (t[215] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-53",
         style: P({ display: n.config.displayDep["FR-53"] }),
         d: "M321 263h-3l-2 4-5 2-10-1-10 5-3-2-6 4-4-3-2-5-6-2-3 3-6-1-1 10 2 1v7l-3 4v6l1 3v11l2 2v10l-6-1-2 2-5 11-2 7-1 1 7 1h5l6 4 3-3 10 4 5 2h9l4-5 7 3h4l1-3v-11l-2-2 1-2h5l2-2 1-2-3-6 1-3h6l-1-2 2-4-1-2 1-3 6-5-1-4 1-8 2-4 7-2h-1l-2-6-5-2-1-8z",
@@ -20193,7 +20224,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[218] || (t[218] = (o) => e.onenter(o)),
         onMouseleave: t[219] || (t[219] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-14",
         style: P({ display: n.config.displayDep["FR-14"] }),
         d: "m359 173-9 2-13 8-16 6-12-7-30-4-7-4-10 3v4l-2 2v3l7 7 5 2 2-4 3 3-3 4 3 4-2 2 2 4-1 5-3 5-5 2-2-1-3 2 3 3-2 4-6 2 7 9h7l5 4 7-3 6-6 7 2 7-4 4-2 4 5 7-2 6 4 7-3 7-5 4-5h3l1 3h2l1-3 7-1 2 1 7-1 2-4-1-3-4-1v-3l3-2 1-4-2-8-5-7 4-2v-1l-4-1z",
@@ -20202,7 +20233,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[222] || (t[222] = (o) => e.onenter(o)),
         onMouseleave: t[223] || (t[223] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-61",
         style: P({ display: n.config.displayDep["FR-61"] }),
         d: "m366 223-7 1-2-1-7 1-1 3h-2l-1-3h-3l-4 5-7 5-7 3-6-4-7 2-4-5-4 2-7 4-7-2-6 6-7 3 4 2 4 4-1 3v3l-2 7-6 6 2 4 4 3 6-4 3 2 10-5 10 1 5-2 2-4h3l4 3 1 8 5 2 2 6h6l10-9h9l3 4 2 13 6 2 4 6h7v2l1-4h1l6 8 3 1v-9l-2-3-1-3 6-3 5-1 4-5-1-13-8-7v-6l-6-4 2-4-2-5-5-2-3-3-2-5-10-1-3-4z",
@@ -20211,7 +20242,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[226] || (t[226] = (o) => e.onenter(o)),
         onMouseleave: t[227] || (t[227] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-28",
         style: P({ display: n.config.displayDep["FR-28"] }),
         d: "m441 225-2 2v6l-8 4v5l-2 2h-9l-4-1-13 7h-5l-5 4 1 1v6l8 7v13l-3 5-6 1-5 3 1 3 2 3v9h1l5 3-2 3 4 2 5-1h4v1l-4 2 3 1h5l2 5 3 1 2 5 8 3 5-1 4-4 4 1 1-2v-3l2-1 3 2 3-2v-2l2-2 3 1 2 2 4-2h5l3-3 2-7h3l-1-7 3-3-1-2 1-1h-1l-1-9-1-2-1-4-7-2-3-4-1-7-5-1v-4l-6-4-2-6 2-4-2-3v-4l1-4-3-3-1-4z",
@@ -20220,7 +20251,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[230] || (t[230] = (o) => e.onenter(o)),
         onMouseleave: t[231] || (t[231] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-89",
         style: P({ display: n.config.displayDep["FR-89"] }),
         d: "m572 283-3 3-14-1-6 3-3 6 3 3-4 5-4 4 7 6 2 6 4 5v6l-9 8 3 4v5l-6 4h-7l1 4 5 6 1 6 1 4-2 1 5 1h3l2-3h2l3 2-1 3 3 2h3l5 3 2-1 2 2 2-1 3-2 4 1 2-1v-6h1l1 3 4 3v4h6l8 7 5 1v-3l2-3 1 3-1 2 1 2 3-1h3v5l3 2 2-1 6-4v-1l-4-2v-4l4-1 1-2-1-2v-4l3-4 4-9 1-4 3-1v-1l-2-1v-3l5-3 1-5-2-3h-3l-1-1v-4l4-3v-3l-1-2-2 4-2-1-2-4-8 4-14-1-2-4-4-5v-7l-6-7-4 3-6-5 1-10-9-10h-5l-2-2z",
@@ -20229,7 +20260,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[234] || (t[234] = (o) => e.onenter(o)),
         onMouseleave: t[235] || (t[235] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-70",
         style: P({ display: n.config.displayDep["FR-70"] }),
         d: "m766 317-6 1-2 3-3 3-3-3-1 1 1 2-4 2 1 3-3 2v5h-6v2l-5 1v5h4l-2 2-1 8h-3l-6 1-6-1-5 1v4l4 1 3 6 1 3-5 5-2 1-2 2 4 1 1 6h3l1 8 1 1v1l3 1 3 3h5l2-2h6l7-6h2l3-2 7 1 6-5 4-1 2-4 3-1 3-5 5-4 5-1 3 3 7-1v-4l3-1 2-3h4l3-3v-9l-1-6v-4l3-2 3-2-12-7-3-3-3-2-3 1-1 2-2 2h-2l-6-6h-7l-4 2-2 1-5-4v-4z",
@@ -20238,7 +20269,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[238] || (t[238] = (o) => e.onenter(o)),
         onMouseleave: t[239] || (t[239] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-76",
         style: P({ display: n.config.displayDep["FR-76"] }),
         d: "m431 106-2 3-16 12-27 7-18 6-15 8-9 13-1 10 7 6 10 2h-1l8-1 4-4 3-1 4 6h5l2 4 8-1 9 6-5 2 4 3h2l3 5h4l1-3-3-2 9-3 9-1 2-6 5-4 8-1 10 5 5 1 1-3 3-5 1-2h-3v-6l-2-4 1-7 1-4h-2l1-4 4-4-4-6-1-7-16-15-2-4h-4z",
@@ -20247,7 +20278,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[242] || (t[242] = (o) => e.onenter(o)),
         onMouseleave: t[243] || (t[243] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-27",
         style: P({ display: n.config.displayDep["FR-27"] }),
         d: "m374 167-3 1-4 4-8 1 1 14 4 1v1l-4 2 5 7 2 8-1 4-3 2v3l4 1 1 3-3 9 3 3 10 1 2 5 3 3 5 2 2 5-2 4 5 3 5-4h5l13-7 4 2h9l2-3v-5l8-4v-6l1-2v-1l2-2-3-1v-2l-2-3 2-2 10-3 2-4 2-8 3-4 1-4 3 2 2-1-1-3-1-8-4-3-5-1-10-5-8 1-5 3-2 7-9 1-9 3 3 2-1 3h-4l-3-5h-2l-4-3 5-2-9-6-8 1-2-4h-5z",
@@ -20256,7 +20287,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[246] || (t[246] = (o) => e.onenter(o)),
         onMouseleave: t[247] || (t[247] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-37",
         style: P({ display: n.config.displayDep["FR-37"] }),
         d: "m376 356 1 2-11 3-2 3-4-3 2 8h-4l-7-5-4 7 2 2v2l-4 5 1 8-6 7-4 14 2 6 6 2v4l9 2v12h10l10-3-1-4 3-1 3 4 2 1 3 8 6 7 1 5 5 6 3-1 4-3 3-15 2-5 1-7 6-2 4 1 2 2 3-4 3-3v-3h3l1-3-3-4 1-2-2-2-6-8h-7l-2-3v-12l-3-8v-9l-4-1-4-3h-1l-4 3-2-2-1-3 3-2v-1l-1-1z",
@@ -20265,7 +20296,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[250] || (t[250] = (o) => e.onenter(o)),
         onMouseleave: t[251] || (t[251] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-45",
         style: P({ display: n.config.displayDep["FR-45"] }),
         d: "m490 289-5 4-10 1-1 1 1 2-3 3 1 7h-3l-2 7-3 3h-5l-4 2-2-2-3-1-2 2v3l-3 1-3-2-2 1v3l-1 2h4v2l-2 4v2h2l2 2v2l-4 4 2 5v2l4 3h4l3 3 1 4 3 4 4-1 2-3h5l2 2h3l2-2h13l3 5 4 1 3 3h4l1-2h2l3 4h6l2 2 4 6 2 1h2v-5h3l2 3 2 1 4-1-1-1v-4l7-2-1-4-1-6-5-6-1-4h8l5-4v-5l-3-4 9-8v-6l-4-5-2-6-7-6-9 5v-3h-4l-1 3h-14l-4 2-3-2 6-4-1-7-4-2-4-5-9-1z",
@@ -20274,7 +20305,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[254] || (t[254] = (o) => e.onenter(o)),
         onMouseleave: t[255] || (t[255] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-36",
         style: P({ display: n.config.displayDep["FR-36"] }),
         d: "m455 401-3 1h-4l-6 2-1 3-1-1h-6l-3 2-3 1-1 2 3 4-1 3h-3v3l-3 3-3 4-2-2-4-1-6 2-1 7-2 5-3 15-4 3-3 1h1v7l-1 5 7 5 3 4h6l2 8 4 2-1 6h-3 1l10 1 3-3 6 5 7-8 3 2h4l2 1h6l2-6 18 3 7 1h3l1-3 3-4v-3l-3-4 1-1v-5l2-2v-1l-3-2-1-4-5-3v-3l4-2v-2l-4-3-1-2 3-1-1-2 5-4-1-1h-3l-2-2v-2l2-3v-2l-4-6v-5l-2-1h-5l-4 1h-5l-2-2-1-2 4-3v-4l-5-4z",
@@ -20283,7 +20314,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[258] || (t[258] = (o) => e.onenter(o)),
         onMouseleave: t[259] || (t[259] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-41",
         style: P({ display: n.config.displayDep["FR-41"] }),
         d: "m395 311-2 3-3 5 4 3-1 8-1 5h-4v7l-5 6-5 2-3 3 1 3 18 1 1 1v1l-3 2 1 3 2 2 4-3h1l4 3 4 1v9l3 7v13l2 3h7l6 9 1 1h1l3-1 3-2h6l1 1 1-3 6-2h4l3-1 3 3 5 4 5-1v-4l2-3h2l2 2 7-1 5-2-1-2-1-2v-3l3-6 5-2v-4l1-2-3-1-2-4-4-1-1-2 5-4 5-3-3-4h-13l-2 2h-3l-2-2h-5l-2 3-4 1-3-4-1-4-3-3h-4l-4-3v-2l-2-5 4-4v-2l-2-2h-2v-2l2-3v-3h-3l-5-1-4 4-5 1-8-2-2-6-3-1-2-4h-5l-3-2 4-2v-1h-4l-5 1z",
@@ -20292,7 +20323,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[262] || (t[262] = (o) => e.onenter(o)),
         onMouseleave: t[263] || (t[263] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-18",
         style: P({ display: n.config.displayDep["FR-18"] }),
         d: "m493 363-5 3-5 4v2l5 1 2 4 3 1-1 2v4l-5 2-3 6v3l1 2 1 2-5 2-7 1-2-2h-2l-2 3v4l-5 1v4l-4 3 1 2 2 2h5l4-1h5l2 2v4l4 6v2l-2 3v2l2 2h3l1 1-5 4 1 2-3 1 1 2 4 3v2l-4 2v3l5 3 1 4 3 2v1l-2 2v5l-1 1 3 4v3l-3 4v3l8-1 2-4 4-5 9-2 5 1 5-4v-2l-2-2v-6l10-9 3 4 3-4h3l5-6h9v2l3-9-2-3v-5l1-9-4-4 1-9-4-7v-5l-6-5-2-5 4-4v-7l-4-4-4 1-1-1-3-3h-3v5h-2l-2-1-4-6-2-2h-6l-3-4h-2l-1 2h-4l-3-3-4-1z",
@@ -20301,7 +20332,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[266] || (t[266] = (o) => e.onenter(o)),
         onMouseleave: t[267] || (t[267] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-21",
         style: P({ display: n.config.displayDep["FR-21"] }),
         d: "M655 320v5l-5 2h-12l1 3v3l-4 2v5l1 1h3l2 2-1 6-5 3v3l2 1v1l-3 1-1 4-4 8-3 5v4l1 2-1 2-4 1v4l4 2 1 3-1 4v3l2 3 5 1 2 4v1l-2 1v3h1l7 8 7-1 6 5 5 4v4l5 1 4 3 11-3 8-3h3l1-2h4l3 2 4-1 4-3 3 1v-1l3-1-1-2-1-2 2-3 6-3v-3l3-3 2-2-1-3 1-4 1-6h1v-2l-1-1-1-8h-3l-1-5-4-2 2-2 2-1 5-5-1-3-3-6-4-1-1 4-8 2-1-2-6-8-3 2h-4l-2-3-6 1v-7l-3-2 4-5-8-11-6-7-6-3z",
@@ -20310,7 +20341,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[270] || (t[270] = (o) => e.onenter(o)),
         onMouseleave: t[271] || (t[271] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-58",
         style: P({ display: n.config.displayDep["FR-58"] }),
         d: "m551 369-2 3h-3l-5-1-5 1v4l5 5v7l-4 4 2 5 6 5v5l4 7-1 9 4 4-1 9v5l2 3-3 9v3l6 3 5 4 3-2 4-2 1 3h5l2-3 3 2 1 5 3-1 7-9 3 2 1 1 5-3h3l2 4h3l3-3h3l3-3 2-1 1-2 5 1 1-2-3-2v-2l4-2v-2l-4-2v-8l-2-1 2-3 1-1 2-3-2-1-2-3 3-4 4-2h5v-4l2-1v-1l-2-4-6-1-1-3v-3l1-4-1-2-6 4-2 1-3-2v-5h-3l-3 1-1-2 2-2-2-3-2 3v3h-5l-8-8h-6v-4l-4-3-1-3h-1v6l-2 1-4-1-3 2h-2l-2-1-2 1-5-3h-3l-3-2 1-3-3-2z",
@@ -20319,7 +20350,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[274] || (t[274] = (o) => e.onenter(o)),
         onMouseleave: t[275] || (t[275] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-71",
         style: P({ display: n.config.displayDep["FR-71"] }),
         d: "M633 413v1h-5l-4 2-3 4 2 3 2 1-1 3-2 1-2 3 2 2v7l4 2v2l-4 2v2l3 2-1 2-5-1-1 2-2 1-3 3h-3l-3 3h-3l-2-4h-3l-5 3 7 13v5l1 2h7l2 3h5l3 4v14l-8 6h1l1 6 5 1 1 3h3l4-3 12 2 2 2 3-3h4l2-11 1-1h4l4 3 4-3 2 3 3-4h4l2 6 1 7h3l2-5 7-26 2-5h4l4 3 3-1 4-2h3l2 5 2 1 10-1 4-3-2-2-4-2-1-5 4-3 1-6-3-5-2-3 1-1v-4l-3-2v-3l8-1 1-3h-3l-2-2h-4l-3-6h-3v-4l-3-1-4 3-4 1-3-1-4-1-1 2h-3l-8 3-11 3-4-3-5-1v-4l-5-4-6-5-7 1-7-8z",
@@ -20328,7 +20359,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[278] || (t[278] = (o) => e.onenter(o)),
         onMouseleave: t[279] || (t[279] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-39",
         style: P({ display: n.config.displayDep["FR-39"] }),
         d: "M725 394v1h-1l-1 6-1 4 1 3-2 2-3 3v3l-6 3-2 3 1 2 1 2-3 1v5h3l3 6h4l2 2h3l-1 3-8 1v3l3 2v4l-1 1 2 3 3 5-1 6-4 3 1 5 4 2 2 2-4 3-10 1 5 2 7 10 5 2v5l5-1 7-7 6 2v5h10l15-17v-8l6-6-4-2 1-2h-5v-3l3-3-1-2-2-4 7-2 2-4 1-4-5-5-4-1-8-2v-8l-1-5-6 1-10-4 1-3 3-6v-3l-2-4-5-3v-6h-4l-1 2h-5l-3-3z",
@@ -20337,7 +20368,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[282] || (t[282] = (o) => e.onenter(o)),
         onMouseleave: t[283] || (t[283] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-51",
         style: P({ display: n.config.displayDep["FR-51"] }),
         d: "m607 176-4 2 1 4h-8l-7 5v9l5 3 2 4h-9v4l3 2-2 2-3 2 1 2h4l2 3-3 2-3 7-5 3-2 4-2 2 1 2-3 2-1 5 3 2 1 5-2 3 2 3h5v1h1l7 7 8-2 11-7h6l6-4 7-4h6l1 7 6 10h8l10-2 7 3 8-6 1-9 8-1v-6l-7-5v-3l2-5-2-2 2-5 4-2 3-9-6 1 4-4-3-8-2-5 3-3-2-1-1-2-3-3-4 4h-1l-2-2h-8l-2 2h-2l-3-5h-4l-2 1h-4l-6-5-4-1-2-2-7-5h-9v3l-2 1z",
@@ -20346,7 +20377,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[286] || (t[286] = (o) => e.onenter(o)),
         onMouseleave: t[287] || (t[287] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-60",
         style: P({ display: n.config.displayDep["FR-60"] }),
         d: "m459 141-2 2-1 4h2l-1 4-1 7 2 4v6h3l-1 2-3 5-1 3 4 3 1 8 1 3-2 1-3-2-1 4 2 3 2 4 10 1 7-1 4-4 6 4 3 2 4-1 4-2 8 4 8 5 2 3 4-3 4 2 2 2 4-1 2-3 5 3 6-2 3 1 4-3 2-1h1l1-5-3-3-4-3-2 3-1 1-1-6 4-1-1-5h-4l2-4 6-1 2-9 4-2-5-3 2-3v-11l-1-9-8 1-5-1-9 3-9 8-6-3h-7l-5-5-9-3-13 1-3-2h-6l-5 1-2-1v-4l-1-1z",
@@ -20355,7 +20386,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[290] || (t[290] = (o) => e.onenter(o)),
         onMouseleave: t[291] || (t[291] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-62",
         style: P({ display: n.config.displayDep["FR-62"] }),
         d: "m482 9-20 3-16 13v50l5 1 2 4 4-1 3-3 3 1 7 5 2-1 2 4 7 3v4l5 2 4-2 9-1 2 2 5-2 2 4-6 3v5l2 2h2l1-3 3-2 3 2 8 3h3v-4l5 3v3l-2 3 4-2 3-1 2 2v3l5-3h9l2-4-1-2h-7l-2-1 4-2h6l1-6 2-2v-3l-4-3h-5l-1-1 3-2 1-2-3-2-3-4v-2l5-3 1-2-4-2-2-4-6-1-7-2v-7l4-3-2-4h-3l-3 4-11-1-9-2-5-5v-5l4-1-4-3h-8l-4-12-8-12z",
@@ -20364,7 +20395,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[294] || (t[294] = (o) => e.onenter(o)),
         onMouseleave: t[295] || (t[295] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-59",
         style: P({ display: n.config.displayDep["FR-59"] }),
         d: "m512 0-11 6-18 2h-2l8 12 4 12h8l4 3-4 1v5l5 5 9 2 11 1 3-4h3l2 4-4 3v7l7 2h6l2 5 4 2-1 2-5 2v3l3 4 3 2-1 2-3 2 1 1h5l4 3v3l-2 2-1 6h-6l-4 2h6l3 1 1 2-2 4 3 3 3 1 3-2h4l1 2h1l5-3 4 3 6-4h2l3 2 6-4 2 1 2 2h9v3l4-3h2l2 4 7 2 2-1h-1v-4l7-4-1-7-7-2 2-1v-5l5-4-1-3-12-9-20 1-2 4h-3l1-13-6-7-5 1-2-3-7 3-3-3h-5l-1-5-1-14-3-2v-2h-2l-1-4h-5l-9 3-4 5h-5l-2-3-1-4-4-4h-5l-2-4v-6l2-4-1-6z",
@@ -20373,7 +20404,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[298] || (t[298] = (o) => e.onenter(o)),
         onMouseleave: t[299] || (t[299] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-02",
         style: P({ display: n.config.displayDep["FR-02"] }),
         d: "m591 107-6 5-3-3h-2l-6 4-4-3-5 3h-1l-1-2h-4l-3 2v5l-4 5v5l-3 3v5l2 7 2 13v11l-2 3 5 3-4 2-2 9-6 1-2 4h4l1 5-4 1 1 6 1-1 2-3 4 3 3 3-1 5 3 3 1 8 10 9 3 1 2 4 6 2 1-1 2-4 5-3 3-7 3-2-2-3h-4l-1-2 3-2 2-2-3-2v-4h9l-2-4-5-3v-9l7-6h8l-1-3 4-2 7 4 2-1v-12l1-4 1-5-4-3 1-3 6-1v-5l6-3 1-4-2-3 1-6 3-2-3-7 1-6h-7l-2 1-7-2-2-4h-2l-4 4-1-4h-8l-2-2z",
@@ -20382,7 +20413,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[302] || (t[302] = (o) => e.onenter(o)),
         onMouseleave: t[303] || (t[303] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-80",
         style: P({ display: n.config.displayDep["FR-80"] }),
         d: "m446 75-1 12 8 7v4l-10-6-12 14 3 1h4l2 4 16 15 1 7 4 6-2 2h5l1 1v4l2 1 5-1h6l3 2 13-1 9 3 5 5h7l6 3 9-8 9-3 5 1 8-1-1-4-2-7v-4l3-4v-5l4-5v-5l-3-1-4-3h-8l-6 3v-3l-1-2-3 1-4 2 2-3v-3l-5-3v4h-3l-8-3-3-2-3 2-1 3h-2l-2-2v-5l6-4-2-3-5 2-2-2-9 1-4 2-5-2v-4l-7-3-2-4-2 1-7-5-3-1-3 3-4 1-2-4z",
@@ -20391,7 +20422,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[306] || (t[306] = (o) => e.onenter(o)),
         onMouseleave: t[307] || (t[307] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-08",
         style: P({ display: n.config.displayDep["FR-08"] }),
         d: "m663 96-3 5-4 3v8l-4 3-8 2-4 2-5-4h-7l-1 7 3 6-3 3v5l1 3-1 4-6 3v5l-6 1-1 3 4 3-1 4-1 5v9h9l7 5 2 2 4 1 6 5h4l2-1h4l3 5h2l2-3 8 1 2 2h1l4-4 3 3v-2l5-2 2-2-2-4v-2l4-3 1-8-4-5 1-3 4-6 1 1h6l2 2 3-2 3-4h-3l-1-7-3-3-10-1-2-4-3-3-12-1-1-8 2-2v-3l-6-4 1-4 2-3-3-2 4-4v-6l-1-2h-6z",
@@ -20400,7 +20431,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[310] || (t[310] = (o) => e.onenter(o)),
         onMouseleave: t[311] || (t[311] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-10",
         style: P({ display: n.config.displayDep["FR-10"] }),
         d: "m629 249-7 4-6 4h-6l-11 7-8 2-7-7h-1v1l-5 3v4l-3 3-2 8v5l2 2h4l10 10-2 10 7 5 4-3 5 7 1 7 4 5 2 4 14 1 8-4 2 4h2l2-4h12l5-2v-5h11l1 1-1-5-3-2 4-3 6-1 3-3-1-13-1-8-7-2-6-9v-6l2-4-3-1-10 2h-8l-6-10-1-7z",
@@ -20409,7 +20440,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[314] || (t[314] = (o) => e.onenter(o)),
         onMouseleave: t[315] || (t[315] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-52",
         style: P({ display: n.config.displayDep["FR-52"] }),
         d: "m684 251-8 1-1 9-8 6-4-2-2 4v6l6 9 7 2 1 8 1 13-3 3-6 1-4 3 3 2 1 5 5 2 6 7 8 11-4 5 3 2v7l6-1 2 3h4l3-1 6 7 1 2 8-2 1-4v-4l5-1 6 1 6-1h3l1-8 2-2h-4v-5l5-1v-2h6v-5l3-2-1-3h1l-3-3-4 1v-7l-10-5 2-10 4-2-1-3-5-1-1-5h-5l-5-6-5-1-3-4 3-3-7-8-4-1-8-4-5-5-7-1z",
@@ -20418,7 +20449,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[318] || (t[318] = (o) => e.onenter(o)),
         onMouseleave: t[319] || (t[319] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-67",
         style: P({ display: n.config.displayDep["FR-67"] }),
         d: "m872 200-7 2-3 5v6l-3 2h-2l-5-3-4 3h-4l-4-4-7-1-3-2-2-5-3 3-2 9-5 1v5l5 2 4 2-2 4 3 2 6-4 10 5-4 8v3l3 3-2 7-7 8-4-1 3 3-2 6 2 10 6 2v1h5l3 3 3 4h7l3 9 6 2v-1l9-18-1-11 5-14 1-12 9-7v-4l4-5h2l4-3-1-6 3-9 5-1-5-4-9-1-8-4-5 3-3-3z",
@@ -20427,7 +20458,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[322] || (t[322] = (o) => e.onenter(o)),
         onMouseleave: t[323] || (t[323] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-54",
         style: P({ display: n.config.displayDep["FR-54"] }),
         d: "m726 156-4 4h-7l-2 2v5l2 3-1 2-1 3 1 1 2-1 1-3 4-1 6-1 3 2 1 3 1 3v3l2 2v2l-2 2v5l2 2v7l2 2 3 2-1 2 4 4-3 4v2l4 2v2h-4l-2 2v2l3 3-3 7-2 6 1 4v6l1 3h2l2 2h-4l-2 2v2l3 3v5l4-1h5v6h2l-2 2v2l3 1 3 3 12-1 2-4h6l2-2 3 2 3-1h5l4-1 4-3 2 2v-5l3-1 1 5h5l4 1h2l6-2 3-3 3-3 5-2 4-1-2-2h5l-5-2-6-4-5-4h-6l-7-4h-5v-2l-8-4-10-4h-4l-2-5-7-9h-7l-3-4h-6l1-6-8-4 1-5h4v-4l1-3-3-3 3-5-2-5-2-2-5-10 2-3v-5h-5l-7-7z",
@@ -20436,7 +20467,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[326] || (t[326] = (o) => e.onenter(o)),
         onMouseleave: t[327] || (t[327] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-77",
         style: P({ display: n.config.displayDep["FR-77"] }),
         d: "m552 208-2 1-4 3-3-1-6 2-5-3-2 3h-4l-2-1-4-2-4 3v-1l-2 10 3 13v8l-3 8v4l-3 3 2 10-1 2-2 9 3 3-8 6v7l2 3 4 2 1 7-6 4 3 3 4-3h14l1-3h4v3l9-5 4-4 4-5-3-3 3-6 6-3 14 1 3-3h1v-6l2-7 3-3v-4l5-3v-2h-6l-1-3 2-3-1-5-3-2 1-5 3-2-1-2 1-1-6-2-2-4-3-1-10-9-1-8z",
@@ -20445,7 +20476,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[330] || (t[330] = (o) => e.onenter(o)),
         onMouseleave: t[331] || (t[331] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-68",
         style: P({ display: n.config.displayDep["FR-68"] }),
         d: "M844 282h-5l-4 8-4 8 1 6-4 8-6 5v14l-4 4v1l1 2 6 1 6 5 2 2-1 4-2 4 1 4 5-1 1 4 2 8 4-1-1 4 3 2h13l7-5 1-8 3-5-5-5-2-6 3-4v-9l2-4v-8l3-4-4-5v-11l-5-2-4-9h-7l-3-4z",
@@ -20454,7 +20485,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[334] || (t[334] = (o) => e.onenter(o)),
         onMouseleave: t[335] || (t[335] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-55",
         style: P({ display: n.config.displayDep["FR-55"] }),
         d: "m705 152-3 5-3 2-3-3h-5l-1-1-4 7-1 2 4 6-1 7-4 3v2l2 4-2 2-5 2 1 4 2 1-3 3 2 5 3 8-4 4 6-1-3 9-4 2-2 6 2 1-2 5v3l7 5 1 13 7 1 5 5 8 4 4 1 7 8-1 1 7-1v-3l7-1v-3h2v2l5-1 3-3h-1v-5l-4-3v-2l3-2h4l-2-2h-1l-2-3v-6l-1-4 2-6 3-7-3-3v-2l2-2h4v-2l-4-2v-2l3-4-4-4 1-2-3-2-2-2v-7l-2-2v-5l2-2v-2l-2-1v-4l-1-3-1-3-3-2-6 2h-4l-2 3-1 2-1-2 1-2 1-3-2-3v-4h-2l-1-7-3-3h-2z",
@@ -20463,7 +20494,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[338] || (t[338] = (o) => e.onenter(o)),
         onMouseleave: t[339] || (t[339] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-57",
         style: P({ display: n.config.displayDep["FR-57"] }),
         d: "M765 160h-5l-4 4-1 1h-6l-2-2h-1v6l-2 2 5 10 2 2 2 5-3 5 3 3-1 3v4h-4v5l7 4v6h5l3 4h7l7 9 2 5h5l9 4 8 4v2h5l7 4h6l6 4 5 4 5 2 6-7 2-7-2-3-1-3 5-8-10-5-6 4-4-2 2-4-4-2-5-2v-5l5-1 2-9 3-3 2 5 4 2 7 1 3 4h4l4-3 5 3h2l3-2v-6l3-5-3-3-7-5-3-4-8 1-5 5h-13l-3-2c-.9-2-2.3-3.7-4-5h-1c-2 0-5-2-5-2l-5 2v4l-6 1-4-7-2-1v-5l-5-2-1-9-3-3-8-4h-3l-1 1h-4l-5-4z",
@@ -20472,7 +20503,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[342] || (t[342] = (o) => e.onenter(o)),
         onMouseleave: t[343] || (t[343] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-88",
         style: P({ display: n.config.displayDep["FR-88"] }),
         d: "m832 262-4 1-5 2-3 4-3 2-6 2h-2l-4-1h-5l-1-5-3 1v5l-2-2-4 3-4 1h-5l-3 1-3-2-2 2h-6l-2 4-12 1-2-3-4-1v-2l2-2h-2v-6h-6l-2 1-3 3-5 2v-3h-2v3l-7 1v3l-7 1-2 3 3 3 5 1 5 6h5l1 5 5 1 1 3-4 2-2 10 10 5v7l4-1 3 3 3-2-1-2 1-1 3 3 4-3 1-3 6-1 2 1v4l5 4 2-1 4-2h7l6 6h2l2-2 1-2 3-1 3 2 3 3 12 6 4-4v-14l6-5 4-8-1-6 4-8 4-9-7-2-1-10 2-6z",
@@ -20481,7 +20512,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[346] || (t[346] = (o) => e.onenter(o)),
         onMouseleave: t[347] || (t[347] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-91",
         style: P({ display: n.config.displayDep["FR-91"] }),
         d: "m491 244-3 2-4 1-1 4-5 3-1 4 3 4-4 5h-5l2 3-2 3-1 5 2 1v4l1 2 1 9 11-1 5-4 4 3 9 1 2 2v-7l8-6-3-3 2-9 1-2-2-10 3-3v-4l-4-2h-7l-3-2-3 1-6-3z",
@@ -20490,7 +20521,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[350] || (t[350] = (o) => e.onenter(o)),
         onMouseleave: t[351] || (t[351] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-78",
         style: P({ display: n.config.displayDep["FR-78"] }),
         d: "m449 211-10 3-2 2 2 3v2l3 1-2 2v2l1-1 3 4 1 4 3 3-1 4v4l2 3-2 4 2 6 6 4v4h5l1 8 3 4 6 1 1-5 2-3-2-3h5l4-5-3-4 1-4 5-3 1-4 4-1 3-2v1-1l-3-3-2-6 3-7-1-5-7-4h-8l-9-6-6 2z",
@@ -20499,7 +20530,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[354] || (t[354] = (o) => e.onenter(o)),
         onMouseleave: t[355] || (t[355] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-95",
         style: P({ display: n.config.displayDep["FR-95"] }),
         d: "m456 195-3 4-2 8-2 4 9 4 6-2 9 6h8l7 4 1 5h1l6-3 10-1 5-2 4-3 1-7-2-2-8-5-8-4-4 2-4 1-3-2-6-4-4 4-7 1-10-1-2-4z",
@@ -20508,7 +20539,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[358] || (t[358] = (o) => e.onenter(o)),
         onMouseleave: t[359] || (t[359] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-93",
         style: P({ display: n.config.displayDep["FR-93"] }),
         d: "m515 219-4 3-5 2-10 1 1 1h1v3h-1v2h5l1 2 1 4 1-1 2-1h2l3 2 2 2 1 1h2v-5l-3-13z",
@@ -20517,7 +20548,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[362] || (t[362] = (o) => e.onenter(o)),
         onMouseleave: t[363] || (t[363] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-75",
         style: P({ display: n.config.displayDep["FR-75"] }),
         d: "M502 231h-5l-2 1-1 1h-1l-2 2v2l3 1 4 2h3l2-1 4 1v-3h-2v1h-2l1-1-1-4z",
@@ -20526,7 +20557,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[366] || (t[366] = (o) => e.onenter(o)),
         onMouseleave: t[367] || (t[367] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-92",
         style: P({ display: n.config.displayDep["FR-92"] }),
         d: "m496 225-6 3h-1l-3 7 2 6 3 4 5 4 2-1-1-2 1-3-1-1 1-2-4-2-3-1v-2l2-2h1l1-1 2-1v-2h1v-3h-1z",
@@ -20535,7 +20566,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[370] || (t[370] = (o) => e.onenter(o)),
         onMouseleave: t[371] || (t[371] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-94",
         style: P({ display: n.config.displayDep["FR-94"] }),
         d: "m507 235-2 1-1 1-1 1h2v-1h2v3l-4-1-2 1h-3l-1 2 1 1-1 3 1 2 1-1 4 2h7l4 2 3-8v-3h-2l-1-1-2-2-3-2z",
@@ -20544,7 +20575,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[374] || (t[374] = (o) => e.onenter(o)),
         onMouseleave: t[375] || (t[375] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-25",
         style: P({ display: n.config.displayDep["FR-25"] }),
         d: "m811 361-1 1h-4l-2 3-3 1v4l-7 1-3-3-5 1-5 4-3 5-3 1-2 4-4 1-6 5h-7l-3 1h-2l-7 6h-3v6l5 3 2 3v4l-3 6-1 3 10 4 6-1 1 6v7l8 2 4 1 5 5-1 4-2 4-7 2 2 4 1 2-3 3v3h5l22-21-1-17 8-4 6-3 5-4v-8l5-2 12-13-2-5 4-1 4-6-2-3-9 2v-1l8-10z",
@@ -20553,7 +20584,7 @@ function L7(e, t, n, s, i, r) {
         onMouseenter: t[378] || (t[378] = (o) => e.onenter(o)),
         onMouseleave: t[379] || (t[379] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-90",
         style: P({ display: n.config.displayDep["FR-90"] }),
         d: "m818 336-3 2-3 2v5l1 5v9l-2 2 22 11 1-2 5-1-2-8-1-4-5 1-1-4 2-4v-4l-1-2-6-5-6-1z",
@@ -20579,12 +20610,12 @@ function $7(e, t, n, s, i, r) {
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: n.config.viewBox
   }, [
-    g("g", {
+    m("g", {
       fill: "#5C68E5",
       stroke: n.config.colorStroke,
       "stroke-width": ".2%"
     }, [
-      g("path", {
+      m("path", {
         class: "FR-20R",
         style: P({ display: n.config.displayDep["FR-20R"] }),
         d: "m1010 932-9 12 1 11v5l1 5-2 13-2 4h-5v4l3-2h4v4l-7 4v3l1 2-5 5 4 1-2 7h-5l-1-3h-6l2-3-3-2-4-1-12-4-6-4-4-3c0-1 3-5 3-7v-1c1 0 3 1 3 1l5-5-11-1-8-2 2-7 5-3-3-2 3-6-2-1-5 2-1-1h-6l-1-6 2-3 3-4 2-1 2-2-2-4-3-1-8-2v-8l-2-2v-2l5-1 4-1-1-3-6-4-3-3v-3h3l1-3 4-3-1-3v-6l3-1 1-6 2 2 3 1 2-4 7-6 9-2 2-6 4-4h4l1 1h5l3 3 3-1 2-4v-5l-4-4v-3l2-2-1-3 3-3-3-3v-4l5-4 3 2 2 2 2 8 2 10-2 6 1 13 5 4 2 4 1 22 4 7z",
@@ -20593,7 +20624,7 @@ function $7(e, t, n, s, i, r) {
         onMouseenter: t[2] || (t[2] = (o) => e.onenter(o)),
         onMouseleave: t[3] || (t[3] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-PAC",
         style: P({ display: n.config.displayDep["FR-PAC"] }),
         d: "m903 734-8 3 1 5-6 5 4 8-6 4-1 4h-6l-7 6-9 1v11h-4l-2 3-7-2-1 9-6 7-10 1-1 6-3 4-6 3h8v9l-6 3-5-2-2 4h-8l-3 2v5l-3 2-2-3h-2l-5-2-5 3 1 5 2 2h-9l4-2v-3l-11-1-6 4-4 3-4-1-2-8-6-2-1-2-1-1-9-3h-17l2-2 1-4h-8l6-5-1-4-6 3-20-1-3-7-7-3-5 4 7 6-12 2-16-3 4-6h5l-3-3-15-1h-11l3-8 12-7-3-4 3-8 11 2 3-20 10-5 4-3v-4l-11-11v-8l-6-10-1-1 2-4 10-1 2 2-1 7 1 2 5-5 5-1 1-2-6-1-1-7 4-6h5l5 5-5 6 1 3 8 1 4-4-2 5 1 4 7 1 10 1 1 4 6 5h5l3-3 2-5 3 2 2 3 1-14h-3l-2-5-13-3-1-6 4-3-3-3v-3h6l5 3 4-5-4-3v-5l3-6 7-1 6-3 1-2-3-2v-4h10l2-3-1-3 4-4 4 2 4-4 9 1 2-3h7v-8l-3-1-1-5h-8l-1-2 2-8 2-2 7-1 2 2 1 6 6-1 1-6 3-1h7l3 5 1 4 6 2 1 11 10 4h5l4 1 1 10 5 3v3h-4l-3 4h-1l1 5-7 7-1 4 2 4 3 1 3 3-5 1v7l8 5v6h5l9 3 10 7h5l17-6h5l2 5 2 3 1 5z",
@@ -20602,7 +20633,7 @@ function $7(e, t, n, s, i, r) {
         onMouseenter: t[6] || (t[6] = (o) => e.onenter(o)),
         onMouseleave: t[7] || (t[7] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-OCC",
         style: P({ display: n.config.displayDep["FR-OCC"] }),
         d: "M690 743v4l-15 8-2 20-11-2-3 8 3 4-12 7-3 8h-13v-7l-6-1h-5l-12 8-19 16-3 4h-11l-1 4-13 3v2l-1 4-3 4-6 4-6-6-3 5 4 6 4-1v22l1 32 5 2 3 4v6l-6-1-5-5h-7l-6 2-3 5-11 2-1 5-2 2-2-2h-3l-3 3-10-8-12-4-7 1-6 8h-5l-6-5v-6l-10-3-6-5-1-4-1-7-15-2-6 2-6-9h-15l-7-7h-5l-11-3-1-1-8-4-5-1-1 18-14-1-7-1-4-1-2 4-7-1-5-6-12 5h-5l-5-5-1-4-7-6-6-3h-1v-7l3-2 2-12 5 1 2-2-2-5 10-8 5-13 4-5-5-6-2-4 3-4-6-10-9-1-3-5 2-7 4-4-1-7 3-2-5-8 4-4 4-1 4 2 5-5 1 6 2 2 4-1v-4l2-6 5 4 5-6 3 4 6-1 7-1 2-5 11-1 6 5 1-2h1l3-1-1-5 5-1 7-2-2-4 3-3 1-6-4-5 3-8 6 3 7-1v-1l-3-7-3-11h7l2-5 3-3v-6h8l6-8-3-1v-3l6-1v-4l3-1 4-6-4-4v-4l3-2h1l7-4 9 4 8 10h4l6-6 2 3 4-4 6 2 2 13 6 5-5 10 5 2-2 6 3 1h1l3-5h5l1 1h11l2-4 3-1 1-8h2v-9l11-9 1 2v6l8-1 1 11h4l1 10 3.1 3.7L552 665l5-16 7 4 3-6 10-4 6 17 10-3v-5h4l1 6 7-2 9 12 3 13 6 7-1 7 2 1 6 4v10l4-2 8 6 4 1 1-7 5-1 2 6 5-1 1-5 13 7 6 10v8z",
@@ -20611,7 +20642,7 @@ function $7(e, t, n, s, i, r) {
         onMouseenter: t[10] || (t[10] = (o) => e.onenter(o)),
         onMouseleave: t[11] || (t[11] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-ARA",
         style: P({ display: n.config.displayDep["FR-ARA"] }),
         d: "m852 596 1 2-1 7-9 3-2 2-5 3v4h-4l-4-2-11 4h-7l-3 1-1 6-6 1-1-6-2-2-7 1-2 2-2 8 1 2h8l1 5 3 1v8h-7l-2 3-9-1-4 4-4-2-4 4 1 3-2 3h-10v4l3 2v1l-1 1-6 3-7 1-3 6v5l4 3-4 5-5-3h-6l-1 3 4 3-4 3 1 6 13 3 2 5h3l-1 14-2-3-3-3-2 6-3 3h-5l-5-5-2-4-10-1-8-1v-4l2-5-4 4-8-1-1-3 5-6-5-5h-5l-4 6 1 7 6 1-1 2-5 1-5 5-1-2 1-7-2-2h-5l-5 1-2 4-12-6-1 5h-5l-2-5-5 1-1 7-4-1-8-6-4 2v-10l-8-5 1-8-6-6-3-13-1-2-8-10-7 2-1-6h-4l-1 5-9 3-6-17h-1l-9 3-3 7-7-4-5 16-5 11-3-3-1-11h-4l-1-10-7 1-1-7-1-1-11 9v9h-2l-1 8-3 1-2 4h-11l-1-1h-5l-3 5-4-1 2-6-5-2 5-10-7-5-1-12 4-3-1-4-2-2 3-4h2l2-6 2-3-1-6 4-6 7-5v-10l3 2 4 4h4l2-2-2-5 1-4 1-2-1-6-2-3v-5l3-5-1-5-8-9-1-3 7-4 4-2 1-5 4-3-1-7-3-4v-7.3l-1-.7v-3l-4-9-4-2-3-5-2 4-3-4v-4l-4-6 2-4 4-5 9-2 5 1 5-4v-2l-2-2v-6l10-9 3 4 3-4h3l5-6h9v5l6 3 5 4 3-2 4-2 1 3h5l2-3 3 2 1 5 3-1 7-9 3 2 8 14v5l1 2h7l2 3h5l3 4v14l-8 6 1 1 1 5 5 1 1 3h3l4-3 12 2 2 2 3-3h4l1-7 1-4 1-1h4l4 3 4-3 2 3 3-4h4l2 6 1 7h3l1-2 1-3 7-26 2-5h4l4 3 3-1 4-2h3l2 5 7 3 7 10 5 2v5l5-1 7-7 6 2v5h10l15-17 6 4 1 2-5 7 2 1v4h-7l-4 3v7h12l4-5 8-4-4-4-1-3 4-8h4l2 3 8-6 8-2h13v5l6 7v5l-4 4 1 3 6 3v9l3-1 8 8 1 8-2 3-12 5v12l5 7s5-1 7-1c2 2 1 13 1 13l9 6 2 5 5 2z",
@@ -20620,7 +20651,7 @@ function $7(e, t, n, s, i, r) {
         onMouseenter: t[14] || (t[14] = (o) => e.onenter(o)),
         onMouseleave: t[15] || (t[15] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-NAQ",
         style: P({ display: n.config.displayDep["FR-NAQ"] }),
         d: "m519 538-4 3-1 5-4 2-7 4 1 3 7 8 1 1 1 5-3 5v5l2 3 1 6-2 6 2 5-2 2h-4l-4-4-3-1v9l-7 5-4 6 1 6-2 3-2 6h-2l-3 4 2 2 1 4-4 3-1-1-5-2-4 4-2-3-6 6h-4l-7-10-10-4-7 4h-1l-3 2v4l4 4-4 6-3 1v4l-6 1v4h3l-6 8h-7l-1 6-3.8 3.8.8.2-2 4h-7l3 11 3 8-7 1-6-3-3 8 4 5-1 6-3 3 2 4-7 2-5 1 1 5-3 1-2 2-6-5-11 1-2 5-7 1-6 1-3-4-5 6-5-4-2 6v4l-4 1-2-2-1-6-5 5-4-2-4 1-4 4 5 7-3 3 1 7-4 4-2 7 2 5h1l9 1 6 10-3 4 2 4 5 6-4 5-6 13-9 8 2 5-2 2-5-1-2 12-3 2v7l-7 4-3 2-2-2-3 1-4 2-4-5-9-7-1-7h-14l-8-5-9-2-3-4h-6l-3-3 1-5-3 3-1 6-6-2-3-4v-3l5-2v-7l2-2-1-5-4-1-7-3-1 4-5-1-1-5h-6l-4-4v-4h4l7-3 8-10 1-3 6-9 2-9 11-44 6-34v-8l4-6 1-5 3-2 2 3 9-1-2-3-1-2-7-6-5 6-3 8v-6l4-24 4-30 2-30 6-9v-1l4 1-1 7 19 17 7 28 1-2v-11l-3-10v-2l-3-13-11-11-4-1-1-4-5-3-7-6-5 1v-8l-2-8-1-7-8-6 1-13 5 6 6 1 1 9 1 1 2 3-4 4 1 3h5l-1-2v-5h4l2-8-3-4 1-3 4 1 1-4-4-1-2-5-4-1-2-4-8 1-3-3-6-4h-5l-3-5 6-3 4 3 1 4 7 1 3 3 5-1 1-3 6-5-3-3 11-6 5-1 2 6 7-3 5 4h1l4-2 5-1 1-2 5-3-3-4-3 3v-3l2-5-2-4 2-3-1-10-4-6 3-3-6-7 2-4-9-8v-4l-3-5 7-3 11 2 5-3v-5l10-1 9-1 10-1 1 3 3 2v-1l2-3 7-8v1h3l2 5 6 2v4l9 2v12h11l9-3-1-3 3-2 3 4 2 1 3 8 6 7 1 5 6 6v7l-1 5 7 5 3 4h6l2 8 4 2-1 5-2 1 10 1 3-3 6 5v-1l7-7 3 2h4l2 1h6l2-6 18 2 7 2 12-1 4 6v4l3 4 2-4 3 5 4 2 4 9 1 11 3 4z",
@@ -20629,7 +20660,7 @@ function $7(e, t, n, s, i, r) {
         onMouseenter: t[18] || (t[18] = (o) => e.onenter(o)),
         onMouseleave: t[19] || (t[19] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-BRE",
         style: P({ display: n.config.displayDep["FR-BRE"] }),
         d: "M259 289v6l1 3v11l2 2v10l-6-1-2 2-5 11-2 7-1 3-8-2-3-5h-5l-1 4-8 1-3 3-2 4-22 2-7 3-2 1-1 11-10 3-7 4h-6l-2-2-3 3h-2v-4l2-2-5-1-20 2-3-5-4-2 3-3 10 4 2-3-4-4-5-2 1 3-5 1-4-6 3 5-3 4-4-4-1-3-2 5-4-1v6l2 3-2 3-5-4 1-4 1-5-2-4-7-7-5-2 1-4-2 4-6-2-4-6 .2-.8-.2-.2h-4l-7-1-2-3v2l-10-1-5-7-2-7v7h-3l-6-3h-3l-4-1 4 4-2 4h-8l-8-2 3-5-2-9-8-9-4 1-4-3H4l-3-2 2-3 12-1 8-1h9l2-4-2-5-3-1-8-4-4 6-2 1 1-9-7-3 5-5 9 3 7 2 8 1v-3h-7l1-5-7 3-1-3 8-8-9 7-14 1-1-1-2 2-6-1 2-7-2-4 6-4-5-4 6-6h9l1-4 3-2 2 2h6v-3l8-1 1 4 5-1 1-4 8-1 4 2 5-4v8h5v3h3v-7l10-1 6 4 5-7-2-4 7-5 6 4 2-2 8-1 3-3 2 5 1-4h8l-1 4 4 1v6l5 1v6l7 5-1 6 8 4v7h3v-4l13-7 2-5 7 2 4-4v7l2-2 4 1v5l5-1v-4l7 1 2.2-2.2-.2-.8 4-3h9l-5 6 7 4h18l1 4 2 7 6 6h3l3-4h3l4-5 4 3h4l3 1-1 11 2 1v7z",
@@ -20638,7 +20669,7 @@ function $7(e, t, n, s, i, r) {
         onMouseenter: t[22] || (t[22] = (o) => e.onenter(o)),
         onMouseleave: t[23] || (t[23] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-PDL",
         style: P({ display: n.config.displayDep["FR-PDL"] }),
         d: "m390 319 4 3-1 8-1 5h-4v7l-5 6-5 2-3 3 2 5-11 3-2 3-4-3 2 8h-4l-7-5-3 4-1 3 2 2v2l-4 5v8l-5 6-4 15h-3l-7 8-2 4-3-2-1-3-10 1-9 1-10 1v5l-5 3-11-2-7 3 3 5v4l9 8-2 4 6 7-3 3 4 6 1 10-2 3 2 4-2 5v3l3-3 3 4-5 3-1 2-5 1-4 2-6-4-7 3-2-6-5 1-11 6-2-2v6l-8-4-4-6h-8l-3-7h-8l-8-7-7-4-7-20h-3v-4l-11-10 1-9 10-14h1l-10-9-7 1-1-5h4l4-4-1-3-1-4 7-3h-6l-5 5h-7l-4-5v3l-7-2-4-2 4-5-2-3-1-1 6-7-1-1h1l3-3 3 2h5l7-3 10-4 1-10 9-5 23-2 1-3 3-4 8-1 1-4 5 1 3 4 7 2h1l.9-1.9-.9-.1 1-1 2-7 5-11 2-2 6 1v-10l-2-2v-11l-1-3v-6l3-4v-7l-2-1 1-10 6 1 3-3 6 2 2 5 4 3 6-4 3 2 10-5 10 1 5-2 2-4h3l4 3 1 8 5 2 2 6h6l10-9h9l3 4 2 13 6 2 4 6h7v2l1-3h1l5 7 5 1 5 3-4 6z",
@@ -20647,7 +20678,7 @@ function $7(e, t, n, s, i, r) {
         onMouseenter: t[26] || (t[26] = (o) => e.onenter(o)),
         onMouseleave: t[27] || (t[27] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-CVL",
         style: P({ display: n.config.displayDep["FR-CVL"] }),
         d: "m554 329-9 8 3 4v5l-5 4h-8l1 4 5 6 1 6 1 4-7 2v4l5 5v7l-4 4 2 5 6 5v5l4 7-1 9 4 4-1 9v5l2 3-3 9v-2h-9l-5 6h-3l-3 4-3-4-10 9v6l2 2v2l-5 4-5-1-9 2-4 5-2 4-8 1h-4l-7-1-18-3-2 6h-6l-2-1h-4l-3-2-7 8-6-5-3 3-10-1h2l1-6-4-2-2-8h-6l-3-4-7-5 1-5v-7h-1l-5-6-1-5-6-7-3-8-2-1-3-4-3 1 1 4-10 3h-10v-12l-9-2v-4l-6-2-2-6 4-14 6-7-1-8 4-5v-2l-2-2 4-7 7 5h4l-2-8 4 3 2-3 11-3-1-2-1-3 3-3 5-2 5-6v-7h4l1-5 1-8-4-3 3-5 4-6-5-3h-1v-9l-2-3-1-3 5-3 6-1 3-5v-13l-8-7v-6l-1-1 5-4h5l13-7 4 1h9l2-2v-5l8-4v-6l2-2 3 4 1 4 3 3-1 4v4l2 3-2 4 2 6 6 4v4l5 1 1 7 3 4 7 2 1 4 1 2 1 9h1l10-1 5-4 4 3 9 1 4 5 4 2 1 7-6 4 3 2 4-2h14l1-3h4v3l9-5 7 6 2 6 4 5z",
@@ -20656,7 +20687,7 @@ function $7(e, t, n, s, i, r) {
         onMouseenter: t[30] || (t[30] = (o) => e.onenter(o)),
         onMouseleave: t[31] || (t[31] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-NOR",
         style: P({ display: n.config.displayDep["FR-NOR"] }),
         d: "m462 192-2 1-3-2-1 4-3 4-2 8-2 4-10 3-2 2 2 3v2l3 1-2 2v1l-1 2v6l-8 4v5l-2 3h-9l-4-2-13 7h-5l-5 4-5-3 6 4v6l8 7 1 13-4 5-5 1-6 3 1 3 2 3v9l-3-1-6-8h-1l-1 4v-2h-7l-4-6-6-2-2-13-3-4h-9l-10 9h-6l-2-6-5-2-1-8-4-3h-3l-2 4-5 2-10-1-10 5-3-2-6 4-4-3-2-4v-1l-5-2-4 3-6-1v-1l-3-1h-4l-4-3-4 5h-3l-3 4-3-1-6-5-2-7-1-4h7l3-2v-4l-8-2-5-13 4-9v-10l-4-9v-13l-2-2-2-9-8-9-2-6v-7h-1l-2-2 3-4v-7l-7-7 1-3 14 4 9 6 8-6 16 1 3 9h-4l-3 8 10 11v8h4l10-3 7 4 30 4 12 7 16-6 13-8 9-2h1l-.4-.1-9.6-1.9-7-6 1-10 9-13 15-8 18-6 27-7 16-12 2-3 3 1h4l2 4 16 15 1 7 4 6-4 4-1 4h2l-1 4-1 7 2 4v6h3l-1 2-3 5-1 3 4 3 1 8z",
@@ -20665,7 +20696,7 @@ function $7(e, t, n, s, i, r) {
         onMouseenter: t[34] || (t[34] = (o) => e.onenter(o)),
         onMouseleave: t[35] || (t[35] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-HDF",
         style: P({ display: n.config.displayDep["FR-HDF"] }),
         d: "m626 136 2 3-1 4-6 3v5l-6 1-1 3 4 3-1 5-1 4v12l-2 1-7-4-4 2 1 3h-8l-7 6v9l5 3 2 4h-9v4l3 2-2 2-3 2 1 2h4l2 3-3 2-3 7-5 3-2 4-1 1-6-2-2-4-3-1-10-9-1-8-3-3h-1l-2 1-4 3-3-1-6 2-5-3-2 3-4 1-2-2-4-2-4 3-2-3-8-5-8-4-4 2-4 1-9-6-4 4-7 1-10-1-2-4-2-3 1-4 3 2 2-1-1-3-1-8-4-3 1-3 3-5 1-2h-3v-6l-2-4 1-7 1-4h-2l1-4 4-4-4-6-1-7-16-15-2-4h-4l-3-1 12-14 10 6v-4l-8-7 1-12V25l16-13 19.7-2.9.3-.1-1-1h2l18-2 11-6 5 9 1 6-2 4v6l2 4h5l4 4 1 4 2 3h5l4-5 9-3h5l1 4h2v2l3 2 1 14 1 5h5l3 3 7-3 2 3 5-1 6 7-1 13h3l2-4 20-1 12 9 1 3-5 4v5l-2 1 7 2 1 7-7 4v4h8l-1 6 3 7-3 2z",
@@ -20674,7 +20705,7 @@ function $7(e, t, n, s, i, r) {
         onMouseenter: t[38] || (t[38] = (o) => e.onenter(o)),
         onMouseleave: t[39] || (t[39] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-IDF",
         style: P({ display: n.config.displayDep["FR-IDF"] }),
         d: "M583 258v2l-5 3v4l-3 3-2 7v6h-1l-3 3-14-1-6 3-3 6 3 3-4 5-4 4-9 5v-3h-4l-1 3h-14l-4 3-3-3 6-4-1-7-4-2-2-3-2-2-9-1-4-3-5 4-11 1-1-9-1-2v-4l-2-1-6-1-3-4-1-8h-5v-4l-6-4-2-6 2-4-2-3v-4l1-4-3-3-1-4-3-4-1 1v-2l2-2-3-1v-2l-2-3 2-2 10-3 2-4 2-8 3-4 2 3 2 4 10 1 7-1 4-4 9 6 4-1 4-2 8 4 8 5 2 2v1l4-3 6 3h4l2-3 5 3 6-2 3 1 4-3 2-1 4 3 1 8 10 9 3 1 2 4 6 2-1 1 1 2-3 2-1 5 3 2 1 5-2 3 1 3z",
@@ -20683,7 +20714,7 @@ function $7(e, t, n, s, i, r) {
         onMouseenter: t[42] || (t[42] = (o) => e.onenter(o)),
         onMouseleave: t[43] || (t[43] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-GES",
         style: P({ display: n.config.displayDep["FR-GES"] }),
         d: "m901 210-3 9 1 6-4 3h-2l-4 5v4l-9 7-1 12-5 14 1 11-9 18v12l4 5-3 4v8l-2 4v9l-3 4 2 6 5 5-3 5-1 8-7 5h-13l-3-2 1-4-4 1-3-12-5 1-1-4 2-4-1-6-6-5-6-1-1-2-12-7-3-3-3-2-3 1-1 2-2 2h-2l-6-6h-7l-6 3-5-4v-4l-2-1-6 1-1 3-4 3-3-3-1 1 1 2-3 2h-1l1 3-3 2v5h-6v2l-5 1v5h4l-2 2-1 8h-3l-6 1-6-1-5 1v4l-1 4-8 2-1-2-6-7-3 1h-4l-2-3-6 1v-7l-3-2 4-5-8-11-6-7-5-2-1-1h-11v5l-5 2h-12l-2 4h-2l-2-4-8 4-14-1-2-4-4-5-1-7-5-7-4 3-7-5 2-10-10-10h-4l-2-2v-5l2-8 3-3v-4l5-3v-2h-5l-2-3 2-3-1-5-3-2 1-5 3-2-1-2 2-2 2-4 5-3 3-7 3-2-2-3h-4l-1-2 3-2 2-2-3-2v-4h9l-2-4-5-3v-9l7-5h8l-1-4 4-2 7 4 2-1v-12l1-5 1-4-4-3 1-3 6-1v-5l6-3 1-4-1-3v-5l3-3-3-6 1-7h7l5 4 4-2 8-2 4-3v-8l4-3 3-5v-1h6l1 2v6l-4 4 3 2-2 3-1 4 6 4v3l-2 2 1 8 12 1 3 3 2 4 10 1 3 3 1 7h3v1h2l3 3 1 7h2v-1l2-2h7l4-4h8l7 7h6l2 2h6l5-5h6l5 4h4l1-1h3l8 4 3 3 1 9 5 2v5l2 1 4 7 6-1v-4l5-2s3 2 5 2h1a13 13 0 0 1 4 5l3 2h13l5-5 8-1 3 4 7 5 3 3 7-2h4l3 3 5-3 8 4 9 1 5 4z",
@@ -20692,7 +20723,7 @@ function $7(e, t, n, s, i, r) {
         onMouseenter: t[46] || (t[46] = (o) => e.onenter(o)),
         onMouseleave: t[47] || (t[47] = (o) => e.onleave(o))
       }, null, 36),
-      g("path", {
+      m("path", {
         class: "FR-BFC",
         style: P({ display: n.config.displayDep["FR-BFC"] }),
         d: "m834 380 2 3-4 6-4 1 2 5-12 13-5 2v8l-5 4-14 7 1 17-22 21-1 2 4 2-6 6v8l-15 17h-10v-5l-6-2-7 7-5 1v-5l-5-2-7-10-5-2-2-1-2-5h-3l-4 2-3 1-4-3h-4l-2 5-7 26-2 5h-3l-1-7-2-6h-4l-3 4-2-3-4 3-4-3h-4l-1 1-2 11h-4l-3 3-2-2-12-2-4 3h-3l-1-3-5-1-1-6h-1l8-6v-14l-3-4h-5l-2-3h-7l-1-2v-5l-7-13-1-1-3-2-7 9-3 1-1-5-3-2-2 3h-5l-1-3-4 2-3 2-5-4-6-3v-3l3-9-2-3v-5l1-9-4-4 1-9-4-7v-5l-6-5-2-5 4-4v-7l-5-5v-4l5-1 2-1-1-4-1-6-5-6-1-4h7l6-4v-5l-3-4 9-8v-6l-4-5-2-6-7-6 4-4 4-5-3-3 3-6 6-3 14 1 3-3h1l2 2h5l9 10-1 10 6 5 4-3 6 7v7l4 5 2 4 14 1 8-4 2 4 2 1 2-4 1 2-1-3h12l5-2v-5h11l6 3 6 7 8 11-4 5 3 2v7l6-1 2 3h4l3-2 6 8 1 2 8-2 1-4v-4l5-1 6 1 6-1h3l1-8 2-2h-4v-5l5-1v-2h6v-5l3-2-1-3 4-2-1-2 1-1 3 3 3-3 2-3 6-1 2 1v4l5 4 6-3h7l6 6h2l2-2 1-2 3-1 3 2 3 3 12 7 1 2 6 1 6 5 1 2v4l-2 4 1 4 5-1 3 12-5 1-1 2-.6-.3-7.4 9.3v1z",
@@ -20718,12 +20749,12 @@ const H7 = /* @__PURE__ */ It(I7, [["render", $7]]), z7 = {
 }, W7 = ["stroke"];
 function q7(e, t, n, s, i, r) {
   return O(), I("svg", j7, [
-    g("g", {
+    m("g", {
       fill: "#5C68E5",
       stroke: n.config.colorStroke,
       "stroke-width": "0.2%"
     }, [
-      g("path", {
+      m("path", {
         class: "FR-971",
         d: "m22.8 0-.2.2-2 1.2-.7.5-.3.4-1 1.3-.7 1v.6l.4.7.4 2.5.5.1.6.3.4.3.3.3V11l-.2.3-1.3.3-.6.7-1.1 3.8-.3 1v1l.3.8.7.9.9.7 1.1.7 1.4.5 1.4.3 1.2-.2 2.3-1 12-2.8 1 .3.6.2 2 .5h.5l.7-.6-.3-.4-1.3-.4-3.7-2.6-.7-.3-.4-.3-1.5-1.3-.7-.4-.8-.1h-1.3l-.7-.4-.5.5-1-.5-.8-.6-.7-.8-.7-1-.5-1.1-.1-.7.1-1.9-.3-1.8-.8-1.5-1.2-1.2L23 .1zm-6 16.2-.5-.5-.8.2-.7.5-.3.8-.7-.8-.3-.2-.2.2H13l-.5-.2 1-.5-1.2-1.4L10 13l-2.5-1-1.7-.3-.6-.3-.5-.6-.6-.4-1.3.3-1 .9-1.1 2-.7.6.3.9-.3 2.2v1.2l.4.8.5.8.4.8-.4 1 1 2.6v5.6l1 2.5.5.4.3.7.2.8.5.8.8.7.7.5.6.5.5 1-.5.5.4 1 .1.4 3.5-1.5 3.1-1.9 2.2-2.6.5-3.7-.4-3.9L15 24l-.1-3.3.4-.7 1.2-.3.5-.1-.5-1.4.4-1.6zm-2.4-4.6.6-.2-.2-.2-.3-.1h-.3l-.3.5.2.3zm40.6.2-1.7-.5-1.7.7-2.7 2.3-.9.5 1.6.2 2-.9zm-8 11.8v.2l.2-.2zm-.7.7h.5l.2-.4h-1.4l.5.4zm-5.2 17-.3-1-.5-.6-.5-.4-.8-2-1.3-1.2-1.7-.3-1.5.8-1.2 1.4-.5.8-.2 1-.6 1-.3.4.2.3.3.2.2.4.2.6v.5l1 1.8 2 .4 2.3-.6 1.7-.9.8-.6.4-.5.2-.7zM15.7 45v-.2l-.5-.1-.4.2-.3.7-.4.2-.3.3.2.3.7-.2.8-.5.3-.4zm-1.6-.1h-.4l.2.2h.3zm-2.3.6-.7.4-.3 1 .8.4.6-.4.2-.6-.4-.5zm2.6 2.5v-.3l-.3-.2v.2zm-1.5-.3.2.1h.1v-.1z",
         onClick: t[0] || (t[0] = (o) => e.onclick(o)),
@@ -20748,12 +20779,12 @@ const Y7 = /* @__PURE__ */ It(z7, [["render", q7]]), U7 = {
 }, X7 = ["stroke"];
 function K7(e, t, n, s, i, r) {
   return O(), I("svg", G7, [
-    g("g", {
+    m("g", {
       fill: "#5C68E5",
       stroke: n.config.colorStroke,
       "stroke-width": "0.2%"
     }, [
-      g("path", {
+      m("path", {
         class: "FR-972",
         d: "m35.1 48 1.4-.1 1.1-.5 1-1.4 1.2-3 1.2-.5v-.7l-.6-1.2-.3-1.7-.6-1.4-1.2-.6.3-.5.1-.3.3-.3.6-.3-.8-1.1-.3-1.2v-1.3l.4-1.3-1.3.7.1-.8-.1-1-.3-.7-.7-.3-1-.3-.3-.6-.2-.7-.2-.5-2-1.2-.8-.8-.6-1.5.6-.3.3-.2.4-.2h.7l-3.3-1.5-.8 1.2-.9-.3-.1-.9 1.2-.6-.8-.8 2.7-1.5-.5-.6-.6-.3-.7-.1-.9.4-.2-2.3.3-1.9.8-.6 1.1 2 2.1-2.2-.2-.6.3-.4.6-.4.6-.6h-2.3l-2.3.6-2 1-1.4 1.2-1.7-3.6-1.2-.3-.5-.7-.2-.9-.4-.8-1.6-1-3.8-1.8-4.4-2.8L9.1 0 5.7.1 1.8 2.3l-.9.8-.6 1.1L0 5.6l.3 1.5.7 1.2 2.8 3 .7 1 .6 1.2.2 1.3-.2.6-.3.7-.2.7.4.7.4.5.3.5.3.5v.7l.8 1.8 1.7 1.7 3.5 2.5.4.4.6 1.2.4.5.6.1 2.1-.1h2.1l1.1-.2 1.5-.5.2 1.7.7 1.4.8 1.1.3.6-.7 1.5-1.4.6-1.5-.5-1.1-1.6-.8.9-2.6 1.2-2.7 2.9.9.5.5.4.1.4-.1.7 2.2 3.1.8.5 1.5-.2 2.4-1 1.5-.3 5.8.8 2.7-.5.6.2-.1 1 1.6.1 1.6-1 1.3-.5 1 1.4-.1 1.5-1 .6-1.1.3-.6 1.1.4 1.5z",
         onClick: t[0] || (t[0] = (o) => e.onclick(o)),
@@ -20778,12 +20809,12 @@ const J7 = /* @__PURE__ */ It(U7, [["render", K7]]), Z7 = {
 }, t_ = ["stroke"];
 function e_(e, t, n, s, i, r) {
   return O(), I("svg", Q7, [
-    g("g", {
+    m("g", {
       fill: "#5C68E5",
       stroke: n.config.colorStroke,
       "stroke-width": "0.2%"
     }, [
-      g("path", {
+      m("path", {
         class: "FR-973",
         d: "m7.8 0 .3.1.3.1h1l.2.1.3.2h.1l.2.1.1.1.2.1.2.1.2.1.2.2.3.1h.1l.1.1h.1l.5.3h.1l.2.1h.1l.1.1h.1l.1.1h.1v.1h.1l.1.1.2.1h.1l.4.2v.2l.1-.1v-.1h1l.2.1h.1l.4.1.1.1h.3l.2-.1-.1-.1h.1v-.1h.2v-.1l.3.1.2.1v.1l.3.1h.1l.2.1.2.1h.1l.1.1h.2v.1h.1v.1h.1v.1h.1l.1.1.1.1h.1l.1.1h.1l.3.2.3-.1h.1l.3.2h.2l.3.2.4.2.1.1h.1v.1l.2.1h.1l.1.1h.1l.1.2v-.1l.1-.1v.1h.1l.1.1v.1l.1.1.1.1h.1l-.1.1h-.1.1l.1.1v-.1l.1.1h.1l.2.2v-.1l.1.1.1.1.1.1v.2h.1l.1.1.1.1v.2h.1v.1l.2.2.1.1h.1l.1.1.1.1.1.1h.2l.1.2.2.3h.1l.1.1h-.1v.1l.1.1.1.1h.1l.2.1.2.3h.1v.1l.1.1.1.1.2.1h.2V9l.1.1.1.1.1.1h.1l.1.1.1.1h.1v.1h.1l.1.1.1.1.1.1h.1v.1h.1v.1h.1l.1.1v.1h.1v.1l.1.1.1.2.1.1.2.2h.3l.1-.1v-.1h-.1v-.1h.2v-.1.1-.1l.1.1.1-.1h.1l.1.1h.1v.1l.2.1.1.1.1.1h-.1v.2l.1.1h.1l.1.1.2.3h.2l.1.1.1.1.1.1v.2h.1v-.1l.1.1h.1v.1h.1l.1.1v.2h.1l.1.1v-.1l-.1-.1.1.1h.1v.2h.1v-.1l.1.1v.1h.1v.1h.1l-.1-.1.2.2h.1l.1.1h.1l.1.1h.1l.1.1h.1v.1h.1v.1h-.1.1l.1.1.1.1v-.1.2h.1v.2h.1-.1l.2.1.2.2h.4l.4-.2v-.1h.3l.1.1h.1v.1h.1l.1.1h.1l.1.1.1.1.1.1h.1l-.1.1h.2v.1l.1.2h.1l-.1-.1h.1v.3-.1.1h.1v.3l.1.1v.4l.1.1v.6l.1.2h.1v.1h.1v.2h-.1v.2h.1v.1l.1.1h.1l.1.2h.3v-.1h.1v.2h-.1l-.1.1v.1l-.1.1-.1.1.1.2v.2l.1.2.1.1v.1l.1.1.1.2h.1v.2l.1.1h.1v.1l.1.1.6-.1-.1.6v.3l-.1.2-.2.3v.2l-.1.5-.2.4-.1.1-.1.1-.3.1-.2.1-.2.1-.3.2-.2.4-.1.1-.1.1v.6l-.2.2-.2.3-.1.2-.2.1-.5.5-.2.1-.2.2-.2.1v.1l.1.3v.2l-.2.1h-.3l-.1.1-.1.1-.2.5v.4l-.1.3-.3.3-.2.1-.3.8v.1h-.1l-.1.1v.1l-.2.4v.1l-.2.2-.2.3-.5.9-.1.2-.3.3v.2l-.1.2-.1.1-.4.5h-.1l-.1-.1-.1.1-.3.2-.2.4v.3h-.2l-.1.1h-.1l-.1.3-.1.1.1.1h-.2v.1l.1.1v.3l.2.1v.2l-.1.2-.2.3v.1l-.1.1v.2l-.2.2-.1.5-.2.1v.4h.1l.1.1h-.1l-.1.2h-.3l-.1.1-.3.5-.4.9v.2l-.1.1.1.1-.2.2-.1.2-.1.2-.1.3-.2.4h-.2l-.1.1v.1l.1.1v.3h.1l.1.1v.3l-.1.1v.1h-.1l-.1.1v.2l.1.1-.1.1-.3.3-.1.2-.1.1-.1.1H25l-.2.1h.1v.2h-.2v.1h-.1l-.1.1v.1l-.1.2v.2l-.1.1-.1.2H24l-.2.1-.1.1h-.1v.1l-.1.1h-.1l-.4.2h-.1v.1h-.1l-.1.1-.1.1h-.1l-.2.1h-.2l-.1.1v.1h-.2l.1.1-.1.1-.2.1v.2l-.1.1-.1.2-.1.2-.1.2h-.3l-.1-.1v.2l-.1.1h-.2l-.4.1-.2-.1h-.1l-.1-.1h-.3l-.1-.1-.1-.1-.2-.3h-.3l-.1-.1-.2.1-.1-.1-.1.1h-.7l-.1-.1-.1-.1-.2-.4-.1-.1-.1-.1h-.2l-.3-.1-.2-.1-.2.1-.4.1-.3.1h-.6l-.2-.1-.3-.5-.2-.1-.1-.1-.2.1h-.2l-.3.2-.3.1h-.3l-.1.1-.3.1h-.5l-.5.1-.2-.1h-.1l-.3-.1-.3-.3-.1-.1-.1-.3v-.1l-.2-.1h-.1l-.1.1-.2.2-.1.2v.1l-.2.1h-.6l-.4.4h-.1l-.1-.2h-.2v.1l-.1.1v.4l-.2.2-.2.1h-.1l-.3.1-.1.2-.2.1h-.1l-.2-.1h-.2L6 47l-.1.1-.1.3v.2l-.1.2-.1.1h-.1l-.1-.1H5l-.1-.2-.1-.3h-.4l-.9.3h-.2l-.3-.1h-.3l-.1-.1-.1-.2-.1-.1-.1-.2-.1-.1h-.5l-.2-.1h-.4l-.2-.1-.3-.4H.5l-.1-.1H.1L0 46v-.1l.1-.1h.2v-.1l-.1-.1.5-.1h.1l.1-.1.1-.1h.2l.2-.2V45l-.1-.2-.1-.3.1-.5v-.2l.2.1.1-.1.3-.3.1-.1v-.1l.1-.1h.1l.1-.2.1-.1.2-.5-.1-.2h.1l.1-.1V42l.1-.3.1-.1.1-.1-.1-.1v-.1l.2-.3.2-.2h.1l.1-.2.1-.4v-.1h.1V40h.2l.1-.2v-.1h.1l.1-.1h-.1l.1-.1.1-.1v-.2h.1v-.6h.2l.1-.1v-.3h-.2V38l.1-.3v-.2l.1-.1.1-.1v-.4H5l-.1-.1h-.1l-.1-.1-.1-.2h.1l.1-.1v-.3l-.1-.2-.1-.2v-.1l.2-.2-.1-.2.1-.1-.1-.2v-.1l-.1-.1h-.1l-.1.1h-.1v-.1l.1-.1v-.1h-.1v-.1h.1l.1-.3.1-.2-.1-.1.1-.1h.2l.1-.1v-.1l.1-.1.1-.1v-.2l.2-.2.2-.2.2-.2H6l.1-.2.1-.1.1-.5.1-.3v-.1l.2-.2.1-.1.1-.2.1-.1-.1-.3.2-.4v-.9l.1-.3v-.1l.1-.1.1-.1v-.1l-.1-.2-.1-.2-.1-.2h-.1l-.2.2h-.2l-.1-.1v-.2l-.2-.1-.2-.3V27l-.1-.3-.2-.4-.3-.5h-.7l-.2-.1v-.2l.1-.2v-.1l-.1-.1-.4-.1-.2-.2-.1-.2-.1-.1v-.1l-.2-.1-.1-.2-.1-.1-.1-.3-.1-.3-.2-.4-.1-.1-.2-.1h-.1l-.1-.1-.1-.1v-.2l.2-.2.1-.2v-.3l.2-.3.1-.1-.1-.1-.1-.1-.2-.1-.2-.1-.3-.1v-.3l.1-.3v-.5l-.1-.3v-.6l-.2-.4-.1-.1-.1-.1V18l-.1-.3-.1-.1V17l-.2-.7.1-.2.3-.2v-.1l.1-.3v-.4l-.1-.1-.2-.3.1-.2v-.8l-.2-.2h-.2l-.1-.1.1-.4v-.2l-.1-.3v-.8l-.1-.4v-.1l.1-.1.1-.2.1-.2.1-.1V10l.1-.3.1-.3.1-.4.2-.2.2-.2.2-.2v-.2l.1-.1.1-.1.1-.2.3-.5.3-.6.4-.3L4 6l.2-.1.2-.1.3-.4.3-.1.2-.1.1-.1v-.4l.1-.2.4-.4.2-.4.5-.5.2-.2.1-.3.1-.4v-.6l.1-.1v-.3l.1-.2.1-.1.1-.2h.1V.4l.1-.1.1-.2V0z",
         onClick: t[0] || (t[0] = (o) => e.onclick(o)),
@@ -20808,12 +20839,12 @@ const n_ = /* @__PURE__ */ It(Z7, [["render", e_]]), s_ = {
 }, o_ = ["stroke"];
 function r_(e, t, n, s, i, r) {
   return O(), I("svg", i_, [
-    g("g", {
+    m("g", {
       fill: "#5C68E5",
       stroke: n.config.colorStroke,
       "stroke-width": "0.2%"
     }, [
-      g("path", {
+      m("path", {
         class: "FR-974",
         d: "m20.4 0-1 .5-1.6-.3-1.7.5-.6.2-3.7 2.8-.6.9-1.3.6-.6.1-.2-.3.1.3h.2v.6l-1-.2.5-.2v-.4l-1 .2-1.6-.5-.5.2-.1.9H6v-.3l.3.1-.2.7-.3-.2-.1.6.1-.6.1-.1h-.3l-.1 1.1-.3.5.5 1.9-.4 2.2-2 1.6-.7.3-1-.2L0 15.2v.6l.6 1-.2 2.4.8 1.2 2 1.6-.1.4 1.6 1.7.1 1.7.8.3.5.7v2l-.6 1.9.5.4.6 2.1 1.6.9.8.8v.4l.9.6.3.9-.2.4.7.7 2.2.3 2.1.7.8.5 1.9 2.3.8.4 1.7.2.5.3.2.7.9.5 1 .1-.4-.1h.4l.1-.3-.1.6h.2l.3.4 1.5-.1 1.9.9 1.3.3 1.1 1 .3-.3 1.5.5 1.3-.5.3.4.8.3.9.8 2.4-.5.8.7 1.2-.7 1 .2.8-.9 2.5.2 1.6-.7 2-.1.5-.5 1.7.2 1.9-1.4.9-1.2.1-.6-.5-2 .4-2-.4-.8-.2-1.8.7-3 .5-1.2.9-1 .1-1.6.9-.2-.3-1.7.2-.5-.7-.7-.1-.8-1.4-.6-1.2-1.1-1.3-.2-.9-1.5-.8-.7-.5-1-1.6-1.8-.6-1 .1-.8-1.3-1.7-.8-.4-.5-.9-.2-3.6-.3-1.3-1.2-1.9L39.1 5l-1.2-.8-1-.4-1.7-.2-2.5-1.4-.9.2-2-.6-.7.4-.8-.1L25.1 1l-1.4.3h-1.4z",
         onClick: t[0] || (t[0] = (o) => e.onclick(o)),
@@ -20838,12 +20869,12 @@ const l_ = /* @__PURE__ */ It(s_, [["render", r_]]), a_ = {
 }, h_ = ["stroke"];
 function d_(e, t, n, s, i, r) {
   return O(), I("svg", c_, [
-    g("g", {
+    m("g", {
       fill: "#5C68E5",
       stroke: n.config.colorStroke,
       "stroke-width": "0.2%"
     }, [
-      g("path", {
+      m("path", {
         class: "FR-976",
         d: "M30.8 19.5V19l-.3-.2h-.2v.4l.1.1h.3zl.2.1v.3h.4v.1l.2.1h.2l.2.2h-.1.1l.2.2.2.1v.1l.1.1.2.6.4.4.2.4v.8h.1v.2l.2.1h.1l.2.1h.2l.2.5h.2v-.1L34 23v-1l.1-.1v-.1l.2-.2v-.1h.1v-.1h.9v-.2h.1l.1-.2.2-.2v-.2h-.2v-.4l-.2-.1v-.3l.2-.1v-.3l.2-.1h.1v.2h.1l.1-.1v-.3h-.5V19l.3-.3-.2-.2h-.2v-.1h-.1v-1H35l-.1-.1v-.1l-.1-.1-.1-.1h-.1v-.2h-.1l-.1-.1h-.1v-.3h-.1v-.1l-.2-.1v.1h-.1v.2h-.1v.1l-.2.1v.2l-.3.3-.2.2-.1.1-.2.2-.3.2-.7.7-.4.6.1.1h.2v-.1h.2l.2-.1v-.3H32v-.2h.1v.3h.1v-.1h.1v-.3h.4v.4l-.3.2v.2l-.2.2-.3.3v.3h-.3v-.2h-.2l-.2-.1.1-.1h.3v-.2.1H31h.2l.1-.3h-.1zM16.6 48l.2-.1.2-.1.1-.2h.1l.1-.3.2-.3v-.2h.2v-.2l.2-.2V46h-.1v-.3l-.2-.1v-.3h.1v-.1h.1l.2-.1v-.2h.1l.1-.1h1.1v.1h.1v.1l.2.1v.4h.1l.2.3v.8l.1.2v.1l.1.1v.3h.5V47h-.1l-.1-.1v-.4l.1-.1v-.2h.1l.1-.2h.3l.3-.1h.1l.2.1h.2l.2.2h.2v.1h.2V46l.1-.1.2-.1h.1v-.2l.1-.1h.1v-.1h.3V45h.1l.1-.2h.1l.2-.2-.1-.1h-.8v.2h-.2l-.4-.2-.1-.1-.1-.1-.2-.3h-.6l-.2-.2-.2-.1-.2-.2h-.1l-.2-.1-.1-.2-.1-.4v-.4l-.1-.1v-.2l-.2-.1-.1-.2h-.2l-.1-.1v-.2h-.1l-.2-.3V41l.2-.3v-.2h.1l.1-.2h.4l.2.1h.2l.2.1V40l-.3-.5-.1-.1v-.5l.2-.2.1-.3.1-.1v-.1l.1-.1h.3l.1-.1h.2v-.3h-.1v-.4l.2-.1.1-.2h1.1v.1h.1v.1l.2.1.3.1h.7l.4.2v-.1l-.4-.1h-.2v-.2h-.1V37h-.2v-.2l-.2-.1H23l-.1-1.4.2-.8-.1-.3h.1l.2-.1.3-.2h.1l.1-.1h.3v-.1h.3v-.1h.3v-.3h.1l.2-.2.2-.2h.3v-.3h-.2V32h.2v-.3h.1l.2-.2.2-.2V31h-.4l-.4.1-.2.1-.2-.2-.2-.3v-.1l.1-.5h.1v-.2l-.1-.1h-.2l-.2.1-.3-.2-.1-.1h-.1l-.3-.2V29l-.1-.2v-.1l-.1-.1H23v.1h-.2l-.1-.1v-.4l-.1-.1h-.1v-.6l.1-.1h-.1v-.1h-.1v-.2l-.2-.1v-.2h-.1v-.3l.1-.2h.1v-.1l.1-.1V26h.1l.2-.2v-.2h.3v-.1h-.6v-.4l.1-.4h.2v-.2h.1v-.1l.3-.2h.4l.1-.1v-.4h.1v-.3l.2-.2v-.4h.1l.1-.1.2-.2h.1v-.2l.1-.1.2-.1.3-.3h.2v-.2h.1v-.8h.1l.2-.1v-.1l.2-.1.2-.2.3-.3.3-.2.1-.1h.4v-.2h.2l.1-.1h.1v.1l.1.1h.3v-.1h.1V19h-.5l-.1-.1v-.2h-.1v-.2h.1v-.2h-.3v-.1l-.3-.1v.1l-.2-.1v-.4h.1v-.1h.1l.1-.1v-.2h.1v-.1l.1-.2v-.3h.3v.7h-.1v.2H27v.3h.5l.1-.3.1-.5h.1v-.4l.5-.1v-.1l-.1-.3H28l-.2-.4v-.2l.1-.1v-.3l-.1-.1h-.5V15H27v-.1l-.2-.1h.1v-.3l-.3-.1V14h-.2l-.5.1-.2-.1v-.3H25v-.2h-.1v-.2h-.1v-.2l.2-.1.1-.5H25v.3h-.2v.1h-.1v-.1h-.4v-.3H24v-.2h-.4l-.1-.1v-.1l-.2.1v.1h-.9l-.1-.1v-.1H22V12h-.7v-.1H21l-.1.1v.1h-.5l-.6-.2-.1-.2h-.1l-.2-.1v-.1l-.1-.3-.2-.2-.2-.3-.2.1v.1h-.1v.2h.1l.3.1v.4h-.2v-.2h-.3v.1l.1.2h.1l-.4.3v.2l-.4.5-.5.2-.5-.1v-.6h-.1V12h-2.1l.2-.3-.2-.2-.2-.2-.2-.3v-.6l-.2-.1-.1-.2h-.1l-.1-.2h-.2l-.1-.2v-.8l.4-.2h.2V9h.2v-.5l-.2.1h-.3l-.2-.1-.2-.1h-.2L13 8l-.2-.1-.2-.2h-.3l-.1-.1v-.1H12v-.3l-.1-.1v-.3h.3v-.1l-.1-.1-.1-.2h-.4v-.1l-.1-.2V6h-.8v-.2h-.1v-.2h.1l.1-.1.1-.2.1-.1h-.3v-.1h-.4l-.1-.1H10v-.2h-.5v-.1h-.4L9 4.5v-.4h.1V4h.2l.1-.1h.1v-.2h.3l.1-.1h.2v-.1h.3v-.1h.2l.1-.1h.4l.1-.1h-.3v-.1h-.2v-.3l.1-.1v-.4h.2l.1-.1v-.1h.2V2h-.1v-.1H11v.3h-.1l-.1.1v.1h-.1v.1h-.1v.1h-.2l-.1.1v.1H10V3h-.4l-.1-.1h-.1V3h.1v.6h-.2v.1h-.1v.1H9V4h-.4v.5h-.1v.1h-.2l-.1.1v.8l.1.1v.1l-.1.1-.1.1-.2.1h-.1l-.2.1-.2.1h-.6L6.6 6h-.3v-.1h-.1v.2h.1l.2.1h.2l.1.1.1.1H7v.9h-.1v.1h-.1l-.1.2v.1h-.2v-.1h-.2v.1h.1v.1h.1V8h-.1l-.1.1v.1h-.1v.1H6l-.1.1h-.2v.1h-.1l-.1.1-.3-.1h-.6v-.1h-.4v.2H4v.2l-.2.1h.3v.7H4v.3l-.2.1v.2l-.1.1-.2.3-.2.1v.1l-.1.1v.1l-.2.2h-.3v.2h1.4l.3.1h.2l.1.1v.1l.1.1v.1l.2.2-.1.1-.2.1v.3l-.1.3-.1.1h-.1l-.2.2-.2.2-.4.1-.2.1v.2l-.3.2-.1.2v.5l.1.1.1.1h.1l.1.1.1.2H4v.2l.1.1v.2h.3l.1-.1.1-.2v-.1l.2-.1h.7l.1.1.1.1h.1v.3H6v.3h.2v.1l.4.2h.1v.1h.1v.1l.2.2v.1h.1v.1h.1v.1h.2v.1l.3.1.3-.3.7.2.2.1.1.1h.1v.1l.2.2.1.2h.2l.1-.1h.1v-.2h.2v-.2l.1-.1V17l.2-.2h.2v.2h.2v.1l-.1.1v.2h.1v.2l.1.2v.2h-.2v.9h-.2v.1h-.1l-.1.1v.1H10l-.1.1h-.2v.3h.1l.1.1.1.2v.3h.1v.2l1.2.1v-.1l.2.1v.3l-.7.2-.2.1v.4h-.1v.7l.4.4v.5h.1v.2h.1v.8h-.2v.7l-.1.3-.1.3-.2.5v.1l.3.2h.7l.1.1h.4l.1.1h.1l.2.2h.2v.4l-.1.2h-1l-.3.2-.3-.2h-.2v.2l-.3.4-.2.2-.2.2h-.5v.2l.1.1h.2v.1l.1.1h.1v.1h.1v.1l.1.1.1.1v.2h.1v.1h.2v.1h.2v.1l.1.1v.1h.7v.1h.2l.2.1v.1l.2.2v.3h.2v.3l.1.1v.1h.1v.1l.1.1v.1l.1.2h.2v.1l.2.2v.1l.2.1v.2h.4l.2.1v.1h.2l.3.7h.4l.1.1h.2v.4l.2.5v.6h.3l.1.1v.4l.1.2h.2l.1.2.1.1.1.1v.2l.1.1v.3l.1.2.1.2v.1l.1.2v.6l-.3.9-.4.4-1 .3h-.6l-.6-.4-.3-.2v-.2l-.2-.1h-.3l-.4-.2-.2-.1-.1-.1H12V38h-.4l-.2-.1h-.1v-.2H11l-.1-.2h-.1l-.2-.4v-1.3l.1-.1v-.5l-.3-.3-.1-.1v-.2h-.6l-.1-.1H7.4l-.2.1h-.5v.4H7l.1.1h.1l.3.5.2.5v.3l.2.1v.5l.2.1v.3l.2.2.1.1h.3l.2.3v.1l.1.1v.2l-.2.1v.2h.4l.2-.2.2-.1h.2v-.2h.6l.2.2.1.2.2.2v.6l-.1.1h-.1v.6l-.1.1v.4l-.1.2-.1.2-.2.2-.2.2-.1.2-.2.2-.1.2h-.3l-.2.1-.2.1-.3.2h-.1l-.1.1-.1.1H8v.4h-.1v.1H8l.2-.1h.3l.4.3.6.4.5-.3h.4l.2-.3.2-.2.1-.2v-.1l.7.3v1.4l-.1.1-.2.1v.8l.2.4-.2.4-.2.2v.4h.2l.1.2.1.2v.1h.1V47l.3-.8V46l.4-.4.2-.1h.2l.2-.1.3.1.3.1h.1v.3l.2.4-.2.5.1.2v.4l.3-.1h.2l.1-.1h.2V47l.1-.2h.4l.4.1v.3l.2.3v.3l.2.1h.3zM1 0 .9.3v.1L.8.5H.7L.5.8H.3v.1H0V1l.1.2v.2h.4l.1-.1h.2l.2.1.2.2.2.1.1.2v.4l-.1.1h-.2v.1l-.1.2v.2l.1-.2v-.2h.6l.2-.2V2l.2-.1v-.1h.2l.3-.2H3v-.3l-.1-.1h-.1L2.4 1V.7H2V.5L1.7.3h-.2V.2h-.2z",
         onClick: t[0] || (t[0] = (o) => e.onclick(o)),
@@ -21014,7 +21045,7 @@ const u_ = /* @__PURE__ */ It(a_, [["render", d_]]), Ap = {
       if (this.zoomDep) {
         if (this.isDep) {
           this.InfoProps.localisation = this.getDep(this.zoomDep).department;
-          const c = Math.min(...r), h = Math.min(...l), d = Math.max(...o), u = Math.max(...a), f = d - c, m = u - h, p = Math.max(f, m);
+          const c = Math.min(...r), h = Math.min(...l), d = Math.max(...o), u = Math.max(...a), f = d - c, g = u - h, p = Math.max(f, g);
           this.FranceProps.viewBox = `${c} ${h} ${p} ${p}`;
         } else this.isReg ? this.InfoProps.localisation = this.getReg(this.zoomDep).region : this.isAcad && (this.InfoProps.localisation = this.getAcad(this.zoomDep).academy);
         this.InfoProps.value = this.value, this.InfoProps.valueNat = this.dataParse[this.zoomDep], this.isDep && (this.displayFrance = "none", this.displayGuadeloupe = "none", this.displayMartinique = "none", this.displayMayotte = "none", this.displayReunion = "none", this.displayGuyane = "none", this.zoomDep === "971" && this.level === "dep" || this.zoomDep === "01" && this.level === "reg" ? this.displayGuadeloupe = "" : this.zoomDep === "972" && this.level === "dep" || this.zoomDep === "02" && this.level === "reg" ? this.displayMartinique = "" : this.zoomDep === "973" && this.level === "dep" || this.zoomDep === "03" && this.level === "reg" ? this.displayGuyane = "" : this.zoomDep === "974" && this.level === "dep" || this.zoomDep === "04" && this.level === "reg" ? this.displayReunion = "" : this.zoomDep === "976" && this.level === "dep" || this.zoomDep === "06" && this.level === "reg" ? this.displayMayotte = "" : this.displayFrance = "");
@@ -21052,32 +21083,32 @@ const u_ = /* @__PURE__ */ It(a_, [["render", d_]]), Ap = {
   }
 }, p_ = { class: "fr-col-12 fr-col-lg-9 align-stretch" }, g_ = { class: "map" }, m_ = { class: "tooltip_header fr-text--sm fr-mb-0" }, b_ = { class: "tooltip_body" }, v_ = { class: "tooltip_value-content" }, y_ = { class: "tooltip_value" }, x_ = { class: "om_container fr-grid-row no_select" };
 function w_(e, t, n, s, i, r) {
-  var m;
+  var g;
   const o = Xe("MapInfo"), l = Xe("france"), a = Xe("france-reg"), c = Xe("guadeloupe"), h = Xe("martinique"), d = Xe("guyane"), u = Xe("reunion"), f = Xe("mayotte");
   return O(), me(ke, {
-    disabled: !((m = e.$el) != null && m.ownerDocument.getElementById(n.databoxId)) || !n.databoxId && !n.databoxType && n.databoxSource === "default",
+    disabled: !((g = e.$el) != null && g.ownerDocument.getElementById(n.databoxId)) || !n.databoxId && !n.databoxType && n.databoxSource === "default",
     to: "#" + n.databoxId + "-" + n.databoxType + "-" + n.databoxSource
   }, [
-    g("div", {
+    m("div", {
       ref: i.widgetId,
       class: "widget_container fr-grid-row"
     }, [
       Tt(o, { data: i.InfoProps }, null, 8, ["data"]),
-      g("div", p_, [
+      m("div", p_, [
         i.zoomDep ? (O(), I("button", {
           key: 0,
           class: "fr-btn fr-btn--sm fr-icon-arrow-go-back-fill fr-btn--icon-left fr-btn--tertiary-no-outline fr-ml-4w",
           onClick: t[0] || (t[0] = (...p) => r.resetGeoFilters && r.resetGeoFilters(...p))
         }, " Retour ")) : xt("", !0),
-        g("div", g_, [
-          g("div", {
+        m("div", g_, [
+          m("div", {
             class: "map_tooltip",
             style: P({ top: i.tooltip.top, left: i.tooltip.left, visibility: i.tooltip.visibility })
           }, [
-            g("div", m_, X(i.tooltip.place), 1),
-            g("div", b_, [
-              g("div", v_, [
-                g("div", y_, X(i.tooltip.value), 1)
+            m("div", m_, X(i.tooltip.place), 1),
+            m("div", b_, [
+              m("div", v_, [
+                m("div", y_, X(i.tooltip.value), 1)
               ])
             ])
           ], 4),
@@ -21107,12 +21138,12 @@ function w_(e, t, n, s, i, r) {
               onleave: r.hideTooltip
             }, null, 8, ["config", "onclick", "ondblclick", "onenter", "onleave"])
           ], 4)) : xt("", !0),
-          g("div", x_, [
-            g("div", {
+          m("div", x_, [
+            m("div", {
               class: "om fr-col-sm",
               style: P({ display: i.displayGuadeloupe })
             }, [
-              g("span", {
+              m("span", {
                 class: "om_title fr-text--xs fr-my-1w",
                 style: P({ color: i.dromColor })
               }, " Guadeloupe ", 4),
@@ -21125,11 +21156,11 @@ function w_(e, t, n, s, i, r) {
                 onleave: r.hideTooltip
               }, null, 8, ["config", "onclick", "ondblclick", "onenter", "onleave"])
             ], 4),
-            g("div", {
+            m("div", {
               class: "om fr-col-sm",
               style: P({ display: i.displayMartinique })
             }, [
-              g("span", {
+              m("span", {
                 class: "fr-text--xs fr-my-1w",
                 style: P({ color: i.dromColor })
               }, " Martinique ", 4),
@@ -21142,11 +21173,11 @@ function w_(e, t, n, s, i, r) {
                 onleave: r.hideTooltip
               }, null, 8, ["config", "onclick", "ondblclick", "onenter", "onleave"])
             ], 4),
-            g("div", {
+            m("div", {
               class: "om fr-col-sm",
               style: P({ display: i.displayGuyane })
             }, [
-              g("span", {
+              m("span", {
                 class: "fr-text--xs fr-my-1w",
                 style: P({ color: i.dromColor })
               }, " Guyane ", 4),
@@ -21159,11 +21190,11 @@ function w_(e, t, n, s, i, r) {
                 onleave: r.hideTooltip
               }, null, 8, ["config", "onclick", "ondblclick", "onenter", "onleave"])
             ], 4),
-            g("div", {
+            m("div", {
               class: "om fr-col-sm",
               style: P({ display: i.displayReunion })
             }, [
-              g("span", {
+              m("span", {
                 class: "fr-text--xs fr-my-1w",
                 style: P({ color: i.dromColor })
               }, " La Réunion ", 4),
@@ -21176,11 +21207,11 @@ function w_(e, t, n, s, i, r) {
                 onleave: r.hideTooltip
               }, null, 8, ["config", "onclick", "ondblclick", "onenter", "onleave"])
             ], 4),
-            g("div", {
+            m("div", {
               class: "om fr-col-sm",
               style: P({ display: i.displayMayotte })
             }, [
-              g("span", {
+              m("span", {
                 class: "fr-text--xs fr-my-1w",
                 style: P({ color: i.dromColor })
               }, " Mayotte ", 4),
@@ -21342,7 +21373,7 @@ const k_ = /* @__PURE__ */ It(f_, [["render", w_], ["__scopeId", "data-v-9889e72
           d.length !== 0 && d[0].setAttribute("fill", i(this.dataParse[c])), this.FranceProps.displayDep[h] = "", r.push(u.x), l.push(u.y), o.push(u.x + u.width), a.push(u.y + u.height);
         }
       }), r.length && l.length && o.length && a.length) {
-        const c = Math.min(...r), h = Math.min(...l), d = Math.max(...o), u = Math.max(...a), f = d - c, m = u - h, p = Math.max(f, m);
+        const c = Math.min(...r), h = Math.min(...l), d = Math.max(...o), u = Math.max(...a), f = d - c, g = u - h, p = Math.max(f, g);
         this.FranceProps.viewBox = `${c} ${h} ${p} ${p}`;
       }
       this.InfoProps.localisation = this.getReg(this.region).department, this.InfoProps.value = this.value, this.InfoProps.valueReg = this.dataParse[this.zoomDep], this.InfoProps.min = this.scaleMin, this.InfoProps.max = this.scaleMax;
@@ -21383,30 +21414,30 @@ function A_(e, t, n, s, i, r) {
     disabled: !((a = e.$el) != null && a.ownerDocument.getElementById(n.databoxId)) || !n.databoxId && !n.databoxType && n.databoxSource === "default",
     to: "#" + n.databoxId + "-" + n.databoxType + "-" + n.databoxSource
   }, [
-    g("div", {
+    m("div", {
       ref: i.widgetId,
       class: "widget_container fr-grid-row"
     }, [
       Tt(o, { data: i.InfoProps }, null, 8, ["data"]),
-      g("div", M_, [
+      m("div", M_, [
         i.zoomDep ? (O(), I("button", {
           key: 0,
           class: "fr-btn fr-btn--sm fr-icon-arrow-go-back-fill fr-btn--icon-left fr-btn--tertiary-no-outline fr-ml-4w",
           onClick: t[0] || (t[0] = (...c) => r.resetGeoFilters && r.resetGeoFilters(...c))
         }, " Retour ")) : xt("", !0),
-        g("div", C_, [
-          g("div", {
+        m("div", C_, [
+          m("div", {
             class: "map_tooltip",
             style: P({ top: i.tooltip.top, left: i.tooltip.left, visibility: i.tooltip.visibility })
           }, [
-            g("div", P_, X(i.tooltip.place), 1),
-            g("div", S_, [
-              g("div", E_, [
-                g("div", D_, X(i.tooltip.value), 1)
+            m("div", P_, X(i.tooltip.place), 1),
+            m("div", S_, [
+              m("div", E_, [
+                m("div", D_, X(i.tooltip.value), 1)
               ])
             ])
           ], 4),
-          g("div", {
+          m("div", {
             class: "france_container no_select",
             style: P({ display: i.displayFrance })
           }, [
@@ -21583,12 +21614,12 @@ const O_ = {
                 if (s.classList.remove("above", "below", "no-transform"), i.yAlign ? s.classList.add(i.yAlign) : s.classList.add("no-transform"), i.body) {
                   const d = i.title || [], u = i.body.map((x) => x.lines), f = s.querySelector(".tooltip_header.fr-text--sm.fr-mb-0");
                   f.innerHTML = d;
-                  const m = i.labelTextColors[0], p = s.querySelector(".tooltip_value");
+                  const g = i.labelTextColors[0], p = s.querySelector(".tooltip_value");
                   p.innerHTML = "";
                   const v = `${u[0][0]}${this.unitTooltip ? " " + this.unitTooltip : ""}`;
                   p.innerHTML += `
                     <div class="tooltip_value-content">
-                      <span class="tooltip_dot" style="background-color:${m};"></span>
+                      <span class="tooltip_dot" style="background-color:${g};"></span>
                       <p class="tooltip_place fr-mb-0">${v}</p>
                     </div>
                   `;
@@ -21633,34 +21664,34 @@ function B_(e, t, n, s, i, r) {
     disabled: !((o = e.$el) != null && o.ownerDocument.getElementById(n.databoxId)) || !n.databoxId && !n.databoxType && n.databoxSource === "default",
     to: "#" + n.databoxId + "-" + n.databoxType + "-" + n.databoxSource
   }, [
-    g("div", {
+    m("div", {
       ref: i.widgetId,
       class: "widget_container fr-grid-row"
     }, [
-      g("div", R_, [
-        g("div", T_, [
-          t[0] || (t[0] = g("div", { class: "tooltip" }, [
-            g("div", { class: "tooltip_header fr-text--sm fr-mb-0" }),
-            g("div", { class: "tooltip_body" }, [
-              g("div", { class: "tooltip_value" }, [
-                g("span", { class: "tooltip_dot" })
+      m("div", R_, [
+        m("div", T_, [
+          t[0] || (t[0] = m("div", { class: "tooltip" }, [
+            m("div", { class: "tooltip_header fr-text--sm fr-mb-0" }),
+            m("div", { class: "tooltip_body" }, [
+              m("div", { class: "tooltip_value" }, [
+                m("span", { class: "tooltip_dot" })
               ])
             ])
           ], -1)),
-          g("canvas", { ref: i.chartId }, null, 512),
-          g("div", L_, [
+          m("canvas", { ref: i.chartId }, null, 512),
+          m("div", L_, [
             (O(!0), I(dt, null, Ct(i.nameParse, (l, a) => (O(), I("div", {
               key: a,
               class: "flex fr-mt-3v fr-mb-1v"
             }, [
-              g("span", {
+              m("span", {
                 class: "legende_dot",
                 style: P({ "background-color": i.colorParse[0][a] })
               }, null, 4),
-              g("p", F_, X(e.capitalize(l)), 1)
+              m("p", F_, X(e.capitalize(l)), 1)
             ]))), 128)),
             n.date ? (O(), I("div", I_, [
-              g("p", V_, " Mise à jour : " + X(n.date), 1)
+              m("p", V_, " Mise à jour : " + X(n.date), 1)
             ])) : xt("", !0)
           ])
         ])
@@ -21855,11 +21886,11 @@ const H_ = {
                 if (s.classList.remove("above", "below", "no-transform"), i.yAlign ? s.classList.add(i.yAlign) : s.classList.add("no-transform"), i.body) {
                   const d = [this.xparse[0][i.dataPoints[0].dataIndex]], u = i.body.map((p) => p.lines), f = s.querySelector(".tooltip_header.fr-text--sm.fr-mb-0");
                   f.innerHTML = d[0];
-                  const m = s.querySelector(".tooltip_value");
-                  m.innerHTML = "", u[0].forEach((p, b) => {
+                  const g = s.querySelector(".tooltip_value");
+                  g.innerHTML = "", u[0].forEach((p, b) => {
                     if (p && i.dataPoints[b]) {
                       const x = i.dataPoints[b].datasetIndex, M = this.colorParse[x] ? this.colorParse[x] : "#000", S = `${p}${this.unitTooltip ? " " + this.unitTooltip : ""}`;
-                      m.innerHTML += `
+                      g.innerHTML += `
                         <div class="tooltip_value-content">
                           <span class="tooltip_dot" style="background-color:${M};"></span>
                           <p class="tooltip_place fr-mb-0">${S}</p>
@@ -21888,35 +21919,35 @@ function G_(e, t, n, s, i, r) {
     disabled: !((o = e.$el) != null && o.ownerDocument.getElementById(n.databoxId)) || !n.databoxId && !n.databoxType && n.databoxSource === "default",
     to: "#" + n.databoxId + "-" + n.databoxType + "-" + n.databoxSource
   }, [
-    g("div", {
+    m("div", {
       ref: i.widgetId,
       class: "widget_container fr-grid-row"
     }, [
-      g("div", z_, [
-        g("div", j_, [
-          t[0] || (t[0] = g("div", { class: "tooltip" }, [
-            g("div", { class: "tooltip_header fr-text--sm fr-mb-0" }),
-            g("div", { class: "tooltip_body" }, [
-              g("div", { class: "tooltip_value" }, [
-                g("span", { class: "tooltip_dot" })
+      m("div", z_, [
+        m("div", j_, [
+          t[0] || (t[0] = m("div", { class: "tooltip" }, [
+            m("div", { class: "tooltip_header fr-text--sm fr-mb-0" }),
+            m("div", { class: "tooltip_body" }, [
+              m("div", { class: "tooltip_value" }, [
+                m("span", { class: "tooltip_dot" })
               ])
             ])
           ], -1)),
-          g("canvas", { ref: i.chartId }, null, 512),
-          g("div", W_, [
+          m("canvas", { ref: i.chartId }, null, 512),
+          m("div", W_, [
             (O(!0), I(dt, null, Ct(i.nameParse, (l, a) => (O(), I("div", {
               key: a,
               class: "flex fr-mt-3v fr-mb-1v"
             }, [
-              g("span", {
+              m("span", {
                 class: "legende_dot",
                 style: P({ "background-color": i.colorParse[a] })
               }, null, 4),
-              g("p", q_, X(e.capitalize(l)), 1)
+              m("p", q_, X(e.capitalize(l)), 1)
             ]))), 128))
           ]),
           n.date ? (O(), I("div", Y_, [
-            g("p", U_, " Mise à jour : " + X(n.date), 1)
+            m("p", U_, " Mise à jour : " + X(n.date), 1)
           ])) : xt("", !0)
         ])
       ])
@@ -22207,10 +22238,10 @@ const K_ = {
                 if (s.classList.remove("above", "below", "no-transform"), i.yAlign ? s.classList.add(i.yAlign) : s.classList.add("no-transform"), i.body) {
                   const d = i.title || [], u = i.body.map((p) => p.lines), f = s.querySelector(".tooltip_header.fr-text--sm.fr-mb-0");
                   f.innerHTML = d[0];
-                  const m = s.querySelector(".tooltip_value");
-                  m.innerHTML = "", u[0].forEach((p, b) => {
+                  const g = s.querySelector(".tooltip_value");
+                  g.innerHTML = "", u[0].forEach((p, b) => {
                     const v = `${p}${this.unitTooltip ? " " + this.unitTooltip : ""}`;
-                    p && (m.innerHTML += `
+                    p && (g.innerHTML += `
                         <div class="tooltip_value-content">
                           <span class="tooltip_dot" style="background-color:${this.colorParse[b]};"></span>
                           <p class="tooltip_place fr-mb-0">${v}</p>
@@ -22259,63 +22290,63 @@ function o8(e, t, n, s, i, r) {
     disabled: !((o = e.$el) != null && o.ownerDocument.getElementById(n.databoxId)) || !n.databoxId && !n.databoxType && n.databoxSource === "default",
     to: "#" + n.databoxId + "-" + n.databoxType + "-" + n.databoxSource
   }, [
-    g("div", {
+    m("div", {
       ref: i.widgetId,
       class: "widget_container fr-grid-row"
     }, [
-      g("div", J_, [
-        g("div", Z_, [
-          t[0] || (t[0] = g("div", { class: "tooltip" }, [
-            g("div", { class: "tooltip_header fr-text--sm fr-mb-0" }),
-            g("div", { class: "tooltip_body" }, [
-              g("div", { class: "tooltip_value" }, [
-                g("span", { class: "tooltip_dot" })
+      m("div", J_, [
+        m("div", Z_, [
+          t[0] || (t[0] = m("div", { class: "tooltip" }, [
+            m("div", { class: "tooltip_header fr-text--sm fr-mb-0" }),
+            m("div", { class: "tooltip_body" }, [
+              m("div", { class: "tooltip_value" }, [
+                m("span", { class: "tooltip_dot" })
               ])
             ])
           ], -1)),
-          g("canvas", { ref: i.chartId }, null, 512),
-          g("div", Q_, [
+          m("canvas", { ref: i.chartId }, null, 512),
+          m("div", Q_, [
             (O(!0), I(dt, null, Ct(i.nameParse, (l, a) => (O(), I("div", {
               key: a,
               class: "flex fr-mt-3v fr-mb-1v"
             }, [
-              g("span", {
+              m("span", {
                 class: "legende_dot",
                 style: P({ "background-color": i.colorParse[a] })
               }, null, 4),
-              g("p", t8, X(e.capitalize(l)), 1)
+              m("p", t8, X(e.capitalize(l)), 1)
             ]))), 128))
           ]),
           (O(!0), I(dt, null, Ct(i.hlineNameParse, (l, a) => (O(), I("div", {
             key: a,
             class: "flex fr-mt-3v"
           }, [
-            g("span", {
+            m("span", {
               class: "legende_dash_line",
               style: P({ "background-color": i.hlineColorParse[a] })
             }, null, 4),
-            g("span", {
+            m("span", {
               class: "legende_dash_line legende_dash_line_end",
               style: P({ "background-color": i.hlineColorParse[a] })
             }, null, 4),
-            g("p", e8, X(e.capitalize(l)), 1)
+            m("p", e8, X(e.capitalize(l)), 1)
           ]))), 128)),
           (O(!0), I(dt, null, Ct(i.vlineNameParse, (l, a) => (O(), I("div", {
             key: a,
             class: "flex fr-mt-3v fr-mb-1v"
           }, [
-            g("span", {
+            m("span", {
               class: "legende_dash_line",
               style: P({ "background-color": i.vlineColorParse[a] })
             }, null, 4),
-            g("span", {
+            m("span", {
               class: "legende_dash_line legende_dash_line_end",
               style: P({ "background-color": i.vlineColorParse[a] })
             }, null, 4),
-            g("p", n8, X(e.capitalize(n.name)), 1)
+            m("p", n8, X(e.capitalize(n.name)), 1)
           ]))), 128)),
           n.date ? (O(), I("div", s8, [
-            g("p", i8, " Mise à jour : " + X(n.date), 1)
+            m("p", i8, " Mise à jour : " + X(n.date), 1)
           ])) : xt("", !0)
         ])
       ])
@@ -22430,22 +22461,22 @@ function f8(e, t, n, s, i, r) {
     disabled: !((o = e.$el) != null && o.ownerDocument.getElementById(n.databoxId)) || !n.databoxId && !n.databoxType && n.databoxSource === "global",
     to: "#" + n.databoxId + "-" + n.databoxType + "-" + n.databoxSource
   }, [
-    g("div", {
+    m("div", {
       ref: i.widgetId,
       class: "widget_container"
     }, [
-      g("div", {
+      m("div", {
         ref: i.tableId,
         class: "fr-table",
         style: { maxHeight: "25rem", overflow: "auto" }
       }, [
-        g("div", a8, [
-          g("div", c8, [
-            g("div", h8, [
-              g("table", null, [
-                g("caption", null, X(n.tableName), 1),
-                g("thead", null, [
-                  g("tr", null, [
+        m("div", a8, [
+          m("div", c8, [
+            m("div", h8, [
+              m("table", null, [
+                m("caption", null, X(n.tableName), 1),
+                m("thead", null, [
+                  m("tr", null, [
                     i.xparse.length ? (O(), I("th", d8, X(n.tableName), 1)) : xt("", !0),
                     (O(!0), I(dt, null, Ct(i.nameParse, (l, a) => (O(), I("th", {
                       key: a,
@@ -22454,9 +22485,9 @@ function f8(e, t, n, s, i, r) {
                     }, X(l), 3))), 128))
                   ])
                 ]),
-                g("tbody", null, [
+                m("tbody", null, [
                   (O(!0), I(dt, null, Ct(i.xparse, (l, a) => (O(), I("tr", { key: a }, [
-                    g("td", {
+                    m("td", {
                       class: Jt(r.getClass(l))
                     }, X(l), 3),
                     (O(!0), I(dt, null, Ct(i.yparse, (c, h) => (O(), I("td", {
@@ -22543,8 +22574,8 @@ function v8(e, t, n) {
 }
 function y8(e, t, n, s, i, r, o = []) {
   const l = n[0], a = n.slice(1), c = /* @__PURE__ */ Object.create(null), h = /* @__PURE__ */ Object.create(null), d = [];
-  let u, f, m;
-  for (f = 0, m = e.length; f < m; ++f) {
+  let u, f, g;
+  for (f = 0, g = e.length; f < g; ++f) {
     const p = e[f];
     if (i && p[i] !== r)
       continue;
@@ -22675,8 +22706,8 @@ function E8(e, t, n, s, i) {
   l && o.display ? T8(e, t, n) : !l && Tp(t, r) && D8(e, t, n, s), e.restore();
 }
 function D8(e, t, n, s) {
-  const { captions: i, spacing: r, rtl: o } = n, { color: l, hoverColor: a, font: c, hoverFont: h, padding: d, align: u, formatter: f } = i, m = (t.active ? a : l) || l, p = u || (o ? "right" : "left"), b = (t.active ? h : c) || c, v = jt(b), x = v.lineHeight / 2, M = Lp(t, p, d);
-  e.fillStyle = m, e.font = v.string, e.textAlign = p, e.textBaseline = "middle", e.fillText(f || s.g, M, t.y + d + r + x);
+  const { captions: i, spacing: r, rtl: o } = n, { color: l, hoverColor: a, font: c, hoverFont: h, padding: d, align: u, formatter: f } = i, g = (t.active ? a : l) || l, p = u || (o ? "right" : "left"), b = (t.active ? h : c) || c, v = jt(b), x = v.lineHeight / 2, M = Lp(t, p, d);
+  e.fillStyle = g, e.font = v.string, e.textAlign = p, e.textBaseline = "middle", e.fillText(f || s.g, M, t.y + d + r + x);
 }
 function A8(e, t, n) {
   const s = n.reduce(function(r, o) {
@@ -22726,12 +22757,12 @@ function T8(e, t, n) {
   if (!a)
     return;
   gs(a) && (l = { width: l.width * a, height: l.height * a }, o = N8(o, a));
-  const { color: c, hoverColor: h, align: d } = s, u = (t.active ? h : c) || c, f = Dt(u) ? u : [u], m = F8(t, s, l);
+  const { color: c, hoverColor: h, align: d } = s, u = (t.active ? h : c) || c, f = Dt(u) ? u : [u], g = F8(t, s, l);
   e.textAlign = d, e.textBaseline = "middle";
   let p = 0;
   r.forEach(function(b, v) {
     const x = f[Math.min(v, f.length - 1)], M = o[Math.min(v, o.length - 1)], S = M.lineHeight;
-    e.font = M.string, e.fillStyle = x, e.fillText(b, m.x, m.y + S / 2 + p), p += S;
+    e.font = M.string, e.fillStyle = x, e.fillText(b, g.x, g.y + S / 2 + p), p += S;
   });
 }
 function L8(e, t, n, s) {
@@ -22740,11 +22771,11 @@ function L8(e, t, n, s) {
     return;
   const { x: r, y: o, w: l, h: a } = t, { lineColor: c, lineCapStyle: h, lineDash: d, lineDashOffset: u, lineWidth: f } = i;
   if (e.save(), e.strokeStyle = c, e.lineCap = h, e.setLineDash(d), e.lineDashOffset = u, e.lineWidth = f, e.beginPath(), l > a) {
-    const m = l / 2;
-    e.moveTo(r + m, o), e.lineTo(r + m, o + a);
+    const g = l / 2;
+    e.moveTo(r + g, o), e.lineTo(r + g, o + a);
   } else {
-    const m = a / 2;
-    e.moveTo(r, o + m), e.lineTo(r + l, o + m);
+    const g = a / 2;
+    e.moveTo(r, o + g), e.lineTo(r + l, o + g);
   }
   e.stroke(), e.restore();
 }
@@ -22960,9 +22991,9 @@ function Pu(e, t, n = [], s, i, r) {
   if (!h)
     return o;
   const f = e.slice();
-  let m = x8(f, n[0]);
-  t != null && t.unsorted || w8(f, m);
-  const p = (v) => m ? +f[v][m] : +f[v], b = (v) => s && f[v][s];
+  let g = x8(f, n[0]);
+  t != null && t.unsorted || w8(f, g);
+  const p = (v) => g ? +f[v][g] : +f[v], b = (v) => s && f[v][s];
   for (d = 0; d < h; ++d) {
     if (u = { value: p(d), groupSum: r, _data: e[f[d]._idx], level: void 0, group: void 0 }, s) {
       u.level = i, u.group = b(d);
@@ -23006,11 +23037,11 @@ function G8(e, t, n, s) {
   const i = t.treeLeafKey || "_leaf";
   ut(e) && (e = m8(n, i, e));
   const r = t.groups || [], o = r.length, l = pt(t.spacing, 0), a = t.captions || {}, c = jt(a.font), h = pt(a.padding, 3);
-  function d(u, f, m, p, b) {
-    const v = Sr(r[f]), x = f > 0 && Sr(r[f - 1]), M = y8(u, v, n, i, x, p, r.filter((E, _) => _ <= f)), S = Pu(M, m, n, v, f, b), w = S.slice();
+  function d(u, f, g, p, b) {
+    const v = Sr(r[f]), x = f > 0 && Sr(r[f - 1]), M = y8(u, v, n, i, x, p, r.filter((E, _) => _ <= f)), S = Pu(M, g, n, v, f, b), w = S.slice();
     return f < o - 1 && S.forEach((E) => {
       const _ = Rp(t.borderWidth, E.w / 2, E.h / 2), D = {
-        ...m,
+        ...g,
         x: E.x + l + _.l,
         y: E.y + l + _.t,
         w: E.w - 2 * l - _.l - _.r,
@@ -23051,8 +23082,8 @@ class Sn extends nn {
   updateElements(t, n, s, i) {
     const r = i === "reset", o = this.getDataset(), l = this._rect.options = this.resolveDataElementOptions(n, i), a = this.getSharedOptions(l), c = this.includeOptions(i, a), { xScale: h, yScale: d } = this.getMeta(this.index);
     for (let u = n; u < n + s; u++) {
-      const f = a || this.resolveDataElementOptions(u, i), m = Y8(o.data[u], h, d, f.spacing);
-      r && (m.width = 0, m.height = 0), c && (m.options = f), this.updateElement(t[u], u, m, i);
+      const f = a || this.resolveDataElementOptions(u, i), g = Y8(o.data[u], h, d, f.spacing);
+      r && (g.width = 0, g.height = 0), c && (g.options = f), this.updateElement(t[u], u, g, i);
     }
     this.updateSharedOptions(a, i, l);
   }
@@ -23133,7 +23164,16 @@ Sn.afterUnregister = function() {
   e && delete e.positioners.treemap;
 };
 lt.register(Sn, Zi);
-const X8 = {
+function X8(e, t, n) {
+  const s = e.split(" "), i = [];
+  let r = "";
+  for (let o = 0; o < s.length; o++) {
+    const l = s[o], a = r + " " + l;
+    n.chart.ctx.measureText(a).width < t ? r = a : (i.push(r), r = l);
+  }
+  return i.push(r), i;
+}
+const K8 = {
   name: "TreemapChart",
   mixins: [cn],
   props: {
@@ -23244,15 +23284,19 @@ const X8 = {
         return;
       }
       this.loadColors(), this.datasets = [{
-        tree: this.dataParse,
+        tree: this.dataParse.map((e, t) => ({ label: this.nameParse[t], value: e })),
+        key: "value",
         labels: {
           display: !0,
           font: {
             size: 14,
-            weight: "bold",
-            formatter(e) {
-              return `Custom Text: ${e.chart.data.datasets[e.datasetIndex].tree[e.dataIndex]}`;
-            }
+            weight: "bold"
+          },
+          formatter(e) {
+            if (e.type !== "data")
+              return;
+            const n = e.chart.data.datasets[e.datasetIndex].tree[e.dataIndex].label;
+            return X8(n, e.raw.w * 0.8, e);
           }
         },
         backgroundColor: (e) => {
@@ -23304,9 +23348,12 @@ const X8 = {
               callbacks: {
                 label: (t) => {
                   const n = this.datasets[t.datasetIndex].data[t.dataIndex];
-                  return this.formatNumber(n);
+                  return this.formatNumber(n.v);
                 },
-                title: (t) => t[0].label,
+                title: (t) => {
+                  const n = t[0];
+                  return this.datasets[n.datasetIndex].tree[n.dataIndex].label;
+                },
                 labelTextColor: (t) => this.colorParse[t.datasetIndex][t.dataIndex]
               },
               external: (t) => {
@@ -23317,15 +23364,15 @@ const X8 = {
                   return;
                 }
                 if (s.classList.remove("above", "below", "no-transform"), i.yAlign ? s.classList.add(i.yAlign) : s.classList.add("no-transform"), i.body) {
-                  const d = s.querySelector(".tooltip_header.fr-text--sm.fr-mb-0");
-                  d.innerHTML = "";
-                  const u = s.querySelector(".tooltip_value");
-                  u.innerHTML = "", i.dataPoints.forEach((f) => {
-                    const m = f.datasetIndex, p = f.dataIndex, b = this.colorParse[p % this.colorParse[m].length], x = `${this.formatNumber(this.datasets[m].data[p]).v}${this.unitTooltip ? " " + this.unitTooltip : ""}`;
-                    u.innerHTML += `
+                  const d = i.title || [], u = s.querySelector(".tooltip_header.fr-text--sm.fr-mb-0");
+                  u.innerHTML = d[0];
+                  const f = s.querySelector(".tooltip_value");
+                  f.innerHTML = "", i.dataPoints.forEach((g) => {
+                    const p = g.datasetIndex, b = g.dataIndex, v = this.colorParse[b % this.colorParse[p].length], M = `${this.formatNumber(this.datasets[p].data[b].v)}${this.unitTooltip ? " " + this.unitTooltip : ""}`;
+                    f.innerHTML += `
                     <div class="tooltip_value-content">
-                      <span class="tooltip_dot" style="background-color:${b};"></span>
-                      <p class="tooltip_place fr-mb-0">${x}</p>
+                      <span class="tooltip_dot" style="background-color:${v};"></span>
+                      <p class="tooltip_place fr-mb-0">${M}</p>
                     </div>
                   `;
                   });
@@ -23349,37 +23396,37 @@ const X8 = {
       }), this.chart.update("none");
     }
   }
-}, K8 = { class: "fr-col-12" }, J8 = { class: "chart" }, Z8 = {
+}, J8 = { class: "fr-col-12" }, Z8 = { class: "chart" }, Q8 = {
   key: 0,
   class: "flex fr-mt-1w"
-}, Q8 = { class: "fr-text--xs" };
-function tM(e, t, n, s, i, r) {
+}, tM = { class: "fr-text--xs" };
+function eM(e, t, n, s, i, r) {
   return O(), me(ke, {
     disabled: !1,
     to: "#" + n.databoxId + "-" + n.databoxType + "-" + n.databoxSource
   }, [
-    g("div", {
+    m("div", {
       ref: i.widgetId,
       class: "widget_container fr-grid-row"
     }, [
-      g("div", K8, [
-        g("div", J8, [
-          t[0] || (t[0] = g("div", { class: "tooltip" }, [
-            g("div", { class: "tooltip_header fr-text--sm fr-mb-0" }),
-            g("div", { class: "tooltip_body" }, [
-              g("div", { class: "tooltip_value" })
+      m("div", J8, [
+        m("div", Z8, [
+          t[0] || (t[0] = m("div", { class: "tooltip" }, [
+            m("div", { class: "tooltip_header fr-text--sm fr-mb-0" }),
+            m("div", { class: "tooltip_body" }, [
+              m("div", { class: "tooltip_value" })
             ])
           ], -1)),
-          g("canvas", { ref: i.chartId }, null, 512),
-          n.date ? (O(), I("div", Z8, [
-            g("p", Q8, " Mise à jour : " + X(n.date), 1)
+          m("canvas", { ref: i.chartId }, null, 512),
+          n.date ? (O(), I("div", Q8, [
+            m("p", tM, " Mise à jour : " + X(n.date), 1)
           ])) : xt("", !0)
         ])
       ])
     ], 512)
   ], 8, ["to"]);
 }
-const eM = /* @__PURE__ */ It(X8, [["render", tM]]);
+const nM = /* @__PURE__ */ It(K8, [["render", eM]]);
 customElements.define("data-box", /* @__PURE__ */ _e(F5, { shadowRoot: !1 }));
 customElements.define("area-line-chart", /* @__PURE__ */ _e(uw, { shadowRoot: !1 }));
 customElements.define("bar-chart", /* @__PURE__ */ _e(ww, { shadowRoot: !1 }));
@@ -23392,4 +23439,4 @@ customElements.define("pie-chart", /* @__PURE__ */ _e($_, { shadowRoot: !1 }));
 customElements.define("radar-chart", /* @__PURE__ */ _e(X_, { shadowRoot: !1 }));
 customElements.define("scatter-chart", /* @__PURE__ */ _e(r8, { shadowRoot: !1 }));
 customElements.define("table-chart", /* @__PURE__ */ _e(p8, { shadowRoot: !1 }));
-customElements.define("treemap-chart", /* @__PURE__ */ _e(eM, { shadowRoot: !1 }));
+customElements.define("treemap-chart", /* @__PURE__ */ _e(nM, { shadowRoot: !1 }));
