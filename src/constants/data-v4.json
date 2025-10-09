@@ -223,8 +223,7 @@
             "yMin": -150,
             "yMax": 20,
             "pointRadius": 0,
-            "aspectRatio": 1,
-            "showLabels": "edges"
+            "aspectRatio": 1
         },
         "linechart-echange-biens-zones-monde-amerique": {
             "x": [["2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"]],

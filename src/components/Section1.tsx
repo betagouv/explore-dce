@@ -57,7 +57,6 @@ const Graph2 = () => {
 }
 
 export const Section1 = () => {
-
     return (
         <Box className="part_container">
             <Box className="fr-my-2w">
