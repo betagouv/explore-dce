@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
-import { throttle } from "lodash";
 import { useLocation, useNavigate } from "react-router";
+import { throttle } from "lodash";
 
 /**
  * Custom hook to track the active section in a scrollable container.
