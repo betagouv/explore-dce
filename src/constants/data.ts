@@ -1,5 +1,5 @@
 import rawData from "./data-v4.json";
-import rawDataBox from "./databox-V1.json";
+import rawDataBox from "./databox-V3.json";
 
 export const chartColors = rawData["colors"];
 

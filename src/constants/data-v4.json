@@ -79,9 +79,9 @@
             "y": [[4.4, 4.3, 3.9, 2.3, 0.9, 0.1, 0.0, -0.7, -1.1]],
             "name": ["Solde en % du PIB (2024)"],
             "horizontal": true,
-            "colors": ["#68a532", "#68a532", "#68a532", "#68a532", "#68a532", "#68a532", "#68a532", "#e4794a", "#e4794a"],
-            "highlightIndex": [7],
-            "unitTooltip": "%"
+            "colors": ["#666666"],
+            "unitTooltip": "%",
+            "stacked":true
         }
     },
     "section2": {
@@ -90,14 +90,18 @@
             "y": [[-15.4, -2.6, -7.7, -17.7, -22.8, -15.8, -40.0, -30.4, -72.5, -48.4, -9.6]],
             "name": ["Solde extérieur"],
             "colors": ["#666666"],
-            "unitTooltip": "milliards d'€"            
+            "yMin": -100,
+            "yMax": 50,
+            "unitTooltip": "milliards d'€"
         },
         "barchart-solde-echanges-exterieurs-dont-energie": {
             "x": [["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"]],
             "y": [[-48.9, -34.8, -28.5, -35.4, -40.4, -41.6, -23.7, -41.5, -99.9, -66.6, -55.0]],
             "name": ["dont énergie"],
             "colors": ["#7996e6"],
-            "unitTooltip": "milliards d'€"
+            "unitTooltip": "milliards d'€",
+            "yMin": -100,
+            "yMax": 50            
             
         },
         "barchart-solde-echanges-exterieurs-dont-biens-hors-energie": {
@@ -105,14 +109,18 @@
             "y": [[10.2, 10.6, 1.3, -4.8, -1.7, 1.9, -26.1, -25.1, -31.8, -12.4, -0.3]],
             "name": ["dont biens hors énergie"],
             "colors": ["#62bfb1"],
-            "unitTooltip": "milliards d'€"            
+            "unitTooltip": "milliards d'€"  ,
+            "yMin": -100,
+            "yMax": 50                      
         },
         "barchart-solde-echanges-exterieurs-dont-services": {
             "x": [["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"]],
             "y": [[10.8, 8.9, 10.6, 11.6, 8.2, 15.4, 8.9, 34.1, 46.8, 16.5, 29.3]],
             "name": ["dont services"],
             "colors": ["#faa184"],
-            "unitTooltip": "milliards d'€"            
+            "unitTooltip": "milliards d'€",
+            "yMin": -100,
+            "yMax": 50                      
         },
         "arealinechart-echange-biens-trimestre": {
             "x": [[
@@ -248,7 +256,7 @@
             "yMin": -150,
             "yMax": 20,
             "pointRadius": 0,
-            "aspectRatio": 1      
+            "aspectRatio": 1    
         },
         "linechart-echange-biens-zones-monde-pays-tiers": {
             "x": [["2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"]],
@@ -310,18 +318,18 @@
     },
     "section3": {
         "treemapchart-exportations": {
-            "tree": [159, 113, 111, 96, 92, 71, 70, 65, 61, 55],
+            "tree": [53, 38, 37, 32, 31, 24, 23, 22, 20, 18],
             "names": [
-                "1-Produits de la construction aéronautique et spatiale",
-                "2-Produits pharmaceutiques",
-                "3-Produits de la construction automobile",
-                "4-Produits chimiques de base, produits azotés, matières plastiques et caoutchouc synthétique",
-                "5-Machines et équipements d'usage général",
-                "6-Matériel électrique",
-                "7-Parfums, cosmétiques et produits d’entretien",
-                "8-Produits chimiques divers",
-                "9-Boissons",
-                "10-Produits de la culture et de l’élevage"
+                "1 - Produits de la construction aéronautique et spatiale: 53Md€",
+                "2 - Produits pharmaceutiques: 38Md€",
+                "3 - Produits de la construction automobile: 37Md€",
+                "4 - Produits chimiques de base, produits azotés, matières plastiques et caoutchouc synthétique: 32Md€",
+                "5 - Machines et équipements d'usage général: 31Md€",
+                "6 - Matériel électrique: 24Md€",
+                "7 - Parfums, cosmétiques et produits d’entretien: 23Md€",
+                "8 - Produits chimiques divers: 22Md€",
+                "9 - Boissons: 20Md€",
+                "10 - Produits de la culture et de l’élevage: 18Md€"
             ],
             "aspectRatio": 2,
             "colors": [
@@ -341,18 +349,18 @@
             "borderColor": "#ffffff"
         },
         "treemapchart-importations": {
-            "tree": [208, 160, 110, 106, 99, 96, 87, 76, 76, 60],
+            "tree": [69, 53, 37, 35, 33, 32, 29, 25, 25, 20],
             "names": [
-                "1-Hydrocarbures naturels",
-                "2-Produits de la construction automobile",
-                "3-Machines et équipements d'usage général",
-                "4-Produits pharmaceutiques",
-                "5-Produits chimiques de base, produits azotés, matières plastiques et caoutchouc synthétique",
-                "6-Produits pétroliers raffinés et coke",
-                "7-Matériel électrique",
-                "8-Produits de la construction aéronautique et spatiale",
-                "9-Articles d'habillement",
-                "10-Équipements pour automobiles"
+                "1 - Hydrocarbures naturels: 69Md€",
+                "2 - Produits de la construction automobile: 53Md€",
+                "3 - Machines et équipements d'usage général: 37Md€",
+                "4 - Produits pharmaceutiques: 35Md€",
+                "5 - Produits chimiques de base, produits azotés, matières plastiques et caoutchouc synthétique: 33Md€",
+                "6 - Produits pétroliers raffinés et coke: 32Md€",
+                "7 - Matériel électrique: 29Md€",
+                "8 - Produits de la construction aéronautique et spatiale: 25Md€",
+                "9 - Articles d'habillement: 25Md€",
+                "10 - Équipements pour automobiles: 20Md€"
             ],
             "aspectRatio": 2,
             "colors": [
@@ -401,13 +409,13 @@
             "unitTooltip": "milliards d'€",
             "pointRadius": 0
         },
-        "linechart-solde-commercial-agriculture-agroalimentaire" : {
+        "linechart-solde-commercial-agriculture-agroalimentaire": {
             "x": [["2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"]],
             "y": [
-                    [0.8, 1.1, 0.5, 4.2, 1.5, 2.7, 3.2, 1.4, 1.8, 3.3, 1.7, 1.7, 0.0, 4.5, 3.7, 2.0, 4.7, 0.7, 1.6, 1.6, 2.3],
-                    [14.6, 15.2, 14.8, 10.7, 11.3, 10.5, 11.4, 12.3, 13.2, 8.8, 7.4, 8.6, 12.3, 9.6, 10.7, 8.9, 16.0, 11.5, 7.5, 7.2, 8.6],
-                    [9.4, 7.5, 5.9, 12.5, 7.4, 10.3, 10.5, 8.0, 9.0, 9.6, 9.0, 10.0, 6.9, 12.7, 12.8, 10.3, 11.1, 7.4, 8.9, 6.1, 9.1],
-                    [-6.0, -8.9, -9.4, -2.5, -5.4, -2.9, -4.0, -5.8, -6.0, -2.4, -0.1, -0.4, -5.3, -1.4, -1.6, -0.7, -9.6, -4.8, -0.2, -2.6, -1.8]
+                [1.7, 1.6, 1.7, 2.0, 3.3, 1.6, 2.3, 4.5, 3.7, 4.2, 2.7, 3.2, 0.7, 0.0, 1.4, 1.8, 1.5, 0.8, 4.7, 1.1, 0.5],
+                [7.4, 7.5, 8.6, 8.9, 8.8, 7.2, 8.6, 9.6, 10.7, 10.7, 10.5, 11.4, 11.5, 12.3, 12.3, 13.2, 11.3, 14.6, 16.0, 15.2, 14.8],
+                [9.0, 8.9, 10.0, 10.3, 9.6, 6.1, 9.1, 12.7, 12.8, 12.5, 10.3, 10.5, 7.4, 6.9, 8.0, 9.0, 7.4, 9.4, 11.1, 7.5, 5.9],
+                [-0.1, -0.2, -0.4, -0.7, -2.4, -2.6, -1.8, -1.4, -1.6, -2.5, -2.9, -4.0, -4.8, -5.3, -5.8, -6.0, -5.4, -6.0, -9.6, -8.9, -9.4]
             ],
             "colors": ["#67B9A1", "#9147B4", "#cecece", "#E29238"],
             "name": ["Agriculture", "Boissons", "Ensemble agri-agro", "IAA hors boissons"],
@@ -500,7 +508,8 @@
             "colors": ["#e4794a"],
             "unitTooltip": "milliards d'€",
             "barSize": "flex",
-            "maxBarSize": 32            
+            "maxBarSize": 32,
+            "horizontal": true            
         }
     },
     "section4": {
