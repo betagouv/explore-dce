@@ -528,7 +528,8 @@
             "pointRadius": 0,
             "unitTooltipArea": "milliards d'€",
             "unitTooltipLine": "milliards d'€",
-            "showAreasLabels": ["minmax", [8]]
+            "showLinesLabels": ["all", "minmax"],
+            "showAreasLabels": ["minmax"]
         },
         "areachart-autres-services": {
             "x": [["2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"]],
