@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { throttle } from "lodash";
+import { useLocation, useNavigate } from "react-router";
 
 /**
  * Custom hook to track the active section in a scrollable container.
@@ -36,15 +37,7 @@ export const useScroll = (items: any[], hashFmt: string = "section-%i") => {
 				}
 			}
 
-			setActiveIndex((prev) => {
-				if (prev !== newActiveIndex) {
-					const newHash = `#section-${newActiveIndex + 1}`;
-					if (window.location.hash !== newHash) {
-						window.history.replaceState(null, "", newHash);
-					}
-				}
-				return newActiveIndex;
-			});
+			setActiveIndex(newActiveIndex);
 		}, 100);
 
 		window.addEventListener("scroll", handleScroll);
@@ -55,6 +48,29 @@ export const useScroll = (items: any[], hashFmt: string = "section-%i") => {
 			handleScroll.cancel?.();
 		};
 	}, [items]);
+
+    const { hash, state } = useLocation();
+	const navigate = useNavigate();
+  
+	useEffect(() => {
+		if (!hash) return; // Si aucun hash n'est présent, on arrête
+		if (/^^#[0-9]|#[^a-z0-9 -]/g.test(hash)) return;
+
+		const targetElement = document.querySelector(hash);
+		const handleScrollEnd = () => {
+			navigate(window.location.pathname, {replace: true, state: state});
+			window.removeEventListener('scrollend', handleScrollEnd);
+		};
+		if (targetElement) {
+			window.addEventListener('scrollend', handleScrollEnd);
+
+			window.scrollTo({
+				top: targetElement.getBoundingClientRect().top + window.scrollY,
+				behavior: 'smooth'
+			});
+		}
+		return () => window.removeEventListener('scrollend', handleScrollEnd);
+	}, [hash, navigate]);
 
 	return useMemo(() => activeIndex, [activeIndex]);
 };
