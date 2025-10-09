@@ -538,7 +538,7 @@
             "areasColors": ["#62bfb1"],
             "linesColors": ["#62bfb1"],
             "unitTooltipArea": "milliards d'€",
-            "showAreasLabels": ["all"]
+            "showAreasLabels": ["edges"]
         },
         "areachart-services-financiers": {
             "x": [["2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"]],
@@ -568,7 +568,7 @@
             "areasColors": ["#e4794a"],
             "linesColors": ["#e4794a"],
             "unitTooltipArea": "milliards d'€",
-            "showAreasLabels": ["all"]
+            "showAreasLabels": ["minmax"]
         }
     }
 }

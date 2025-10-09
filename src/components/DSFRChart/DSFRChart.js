@@ -17079,7 +17079,7 @@ const lu = (e, t) => e.map((n, s) => {
       type: [Array],
       default: () => []
     },
-    showAreaLabels: {
+    showAreasLabels: {
       type: [Array],
       default: () => []
     },
@@ -17164,12 +17164,12 @@ const lu = (e, t) => e.map((n, s) => {
         return;
       }
       try {
-        if (this.showAreaLabelsParse = typeof this.showAreaLabels == "string" ? JSON.parse(this.showAreaLabels) : this.showAreaLabels, this.showLinesLabelsParse = typeof this.showLinesLabels == "string" ? JSON.parse(this.showLinesLabels) : this.showLinesLabels, !Array.isArray(this.showAreaLabelsParse))
-          throw new Error("La prop 'showAreaLabels' doit être une liste.");
+        if (this.showAreaLabelsParse = typeof this.showAreasLabels == "string" ? JSON.parse(this.showAreasLabels) : this.showAreasLabels, this.showLinesLabelsParse = typeof this.showLinesLabels == "string" ? JSON.parse(this.showLinesLabels) : this.showLinesLabels, !Array.isArray(this.showAreaLabelsParse))
+          throw new Error("La prop 'showAreasLabels' doit être une liste.");
         if (!Array.isArray(this.showLinesLabelsParse))
           throw new Error("La prop 'showLinesLabels' doit être une liste.");
       } catch (r) {
-        console.error("Erreur lors du parsing des données 'showLinesLabels' ou 'showAreaLabels':", r);
+        console.error("Erreur lors du parsing des données 'showLinesLabels' ou 'showAreasLabels':", r);
         return;
       }
       this.labels = this.xparse[0];
