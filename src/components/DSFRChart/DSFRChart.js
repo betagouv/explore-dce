@@ -17351,6 +17351,10 @@ const Qx = {
           }
         ],
         options: {
+          interaction: {
+            mode: "index",
+            intersect: !1
+          },
           layout: {
             padding: 0
             // supprime toutes les marges
@@ -17732,6 +17736,10 @@ const mw = {
           datasets: this.datasets
         },
         options: {
+          interaction: {
+            mode: "index",
+            intersect: !1
+          },
           indexAxis: this.horizontal ? "y" : "x",
           aspectRatio: this.aspectRatio,
           scales: {
@@ -18154,6 +18162,10 @@ const Cw = {
           }
         ],
         options: {
+          interaction: {
+            mode: "index",
+            intersect: !1
+          },
           aspectRatio: this.aspectRatio,
           scales: {
             x: {
@@ -18801,6 +18813,10 @@ const l7 = {
           }
         ],
         options: {
+          interaction: {
+            mode: "index",
+            intersect: !1
+          },
           aspectRatio: this.aspectRatio,
           scales: {
             x: {
@@ -21685,6 +21701,10 @@ const T_ = {
           datasets: this.datasets
         },
         options: {
+          interaction: {
+            mode: "index",
+            intersect: !1
+          },
           aspectRatio: this.aspectRatio,
           layout: {
             padding: {
@@ -21948,6 +21968,10 @@ const W_ = {
           datasets: this.datasets
         },
         options: {
+          interaction: {
+            mode: "index",
+            intersect: !1
+          },
           aspectRatio: this.aspectRatio,
           scales: {
             r: {
@@ -22274,6 +22298,10 @@ const Q_ = {
           }
         ],
         options: {
+          interaction: {
+            mode: "index",
+            intersect: !1
+          },
           aspectRatio: this.aspectRatio,
           scales: {
             x: {
@@ -23431,6 +23459,10 @@ const Q8 = {
           datasets: this.datasets
         },
         options: {
+          interaction: {
+            mode: "index",
+            intersect: !1
+          },
           aspectRatio: this.aspectRatio,
           responsive: !0,
           maintainAspectRatio: !0,
