@@ -11,7 +11,7 @@ export const dataBox = {
         segmentedControl: true,
         screenshot: true,
         download: true,
-        fullscreen: true,
+        fullscreen: false,
         actions: [],
     },
     ...rawDataBox,

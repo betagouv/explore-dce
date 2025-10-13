@@ -14,6 +14,7 @@ import { Section1 } from "@src/components/Section1";
 import { Section2 } from "@src/components/Section2";
 import { Section3 } from "@src/components/Section3";
 import { Section4 } from "@src/components/Section4";
+import { Section5 } from "@src/components/Section5";
 import { useScroll } from "@src/hooks/useScroll";
 import { SectionTitle } from "@src/components/generic/SectionTitle";
 import { Stack } from "@mui/system";
@@ -38,6 +39,11 @@ const items = [
         shortText: "Focus sectoriel sur les échanges de services",
         longText: "Focus sectoriel sur les échanges de services",
         component: <Section4 />
+    },
+    {
+        shortText: "Méthodologie",
+        longText: "Méthodologie",
+        component: <Section5 />
     },
 ];
 

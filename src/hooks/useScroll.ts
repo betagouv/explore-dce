@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { useLocation, useNavigate } from "react-router";
+import { useLocation } from "react-router";
 import { throttle } from "lodash";
 
 /**
@@ -49,16 +49,14 @@ export const useScroll = (items: any[], hashFmt: string = "section-%i") => {
 		};
 	}, [items]);
 
-    const { hash, state } = useLocation();
-	const navigate = useNavigate();
-  
+    const { hash } = useLocation();
+
 	useEffect(() => {
 		if (!hash) return; // Si aucun hash n'est présent, on arrête
 		if (/^^#[0-9]|#[^a-z0-9 -]/g.test(hash)) return;
 
 		const targetElement = document.querySelector(hash);
 		const handleScrollEnd = () => {
-			navigate(window.location.pathname, {replace: true, state: state});
 			window.removeEventListener('scrollend', handleScrollEnd);
 		};
 		if (targetElement) {
@@ -70,7 +68,7 @@ export const useScroll = (items: any[], hashFmt: string = "section-%i") => {
 			});
 		}
 		return () => window.removeEventListener('scrollend', handleScrollEnd);
-	}, [hash, navigate]);
+	}, [hash]);
 
 	return useMemo(() => activeIndex, [activeIndex]);
 };
