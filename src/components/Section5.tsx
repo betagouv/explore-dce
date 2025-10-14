@@ -292,27 +292,34 @@ export const Section5 = () => {
             Plusieurs systèmes de classification (<strong>nomenclatures</strong>) permettent d’organiser les biens selon leur nature et leur usage :
             </Typography>
 
-            <Stack spacing={0.5}>
-            <Typography variant="body1">
-                • <strong>HS</strong> : Système harmonisé international, composé de 6 chiffres, utilisé pour comparer les échanges entre pays.
-            </Typography>
-            <Typography variant="body1">
-                • <strong>NC8</strong> : Nomenclature combinée à 8 chiffres, utilisée principalement pour le commerce au sein de l’Union européenne. Les six premiers chiffres correspondent au code HS, tandis que les deux derniers apportent des précisions tarifaires et statistiques supplémentaires sur le bien. Les codes CPF NC8 sont revus annuellement pour correspondre à la réalité du marché. Ce{" "}
-                <Link href="https://lekiosque.finances.gouv.fr/site_fr/telechargement/transfert_file.asp?id=7&f=Table_correspondances.zip" target="_blank" rel="noopener">
-                fichier
-                </Link>{" "}
-                répertorie les années de validité des codes.
-            </Typography>
-            <Typography variant="body1">
-                • <strong>CPF6</strong> : Classification française des produits à 6 chiffres basée sur le code NC8.{" "}
-                <Link href="https://www.insee.fr/fr/information/2579545" target="_blank" rel="noopener">
-                Détails des révisions 1 (avant 2008), 2 (de 2008 à 2015) et 2.1 (à partir de 2015)
-                </Link>
-            </Typography>
-            <Typography variant="body1">
-                • <strong>A129</strong> : Une autre classification française, qui comporte moins de catégories que la CPF6, pour des usages statistiques.
-            </Typography>
+            <Stack spacing={0.5} sx={{ mt: 1 }}>
+                <Typography variant="body1">
+                    • <strong>SH</strong> (Système Harmonisé) : la nomenclature internationale, composée de 6 chiffres, utilisée pour comparer les échanges entre pays.
+                </Typography>
+                <Typography variant="body1">
+                    • <strong>NC8</strong> (Nomenclature Combinée à 8 caractères) : la nomenclature de base - la plus granulaire - utilisée principalement pour le commerce au sein de l’Union européenne. Les six premiers chiffres correspondent au code SH, tandis que les deux derniers apportent des précisions tarifaires et statistiques supplémentaires sur le bien. Les codes NC8 sont revus annuellement pour correspondre à la réalité du marché. Ce{" "}
+                    <Link href="https://lekiosque.finances.gouv.fr/site_fr/telechargement/transfert_file.asp?id=7&f=Table_correspondances.zip" target="_blank" rel="noopener">
+                        fichier
+                    </Link>{" "}
+                    répertorie les années de validité des codes.
+                </Typography>
+                <Typography variant="body1">
+                    • <strong>CPF</strong> (Classification Française des Produits) : la version française de la CPA (Classification de Produits par Activité). La CPF comporte plusieurs niveaux, ceux utilisés étant CPF2, CPF4, et CPF6, respectivement des codes à 2, 4 et 6 caractères. Le CPF6 se base sur le code NC8.{" "}
+                    <Link href="https://www.insee.fr/fr/information/2579545" target="_blank" rel="noopener">
+                        Détails des révisions 1 (avant 2008), 2 (de 2008 à 2015) et 2.1 (à partir de 2015)
+                    </Link>
+                </Typography>
+                <Typography variant="body1">
+                    • <strong>NA</strong> (Nomenclature Agrégée) : une version agrégée de la classification CPF, pour des usages statistiques, à trois niveaux (A17, A38, A129).
+                </Typography>
             </Stack>
+
+            <Typography variant="body1" sx={{ mt: 2 }}>
+                Plus de détails sur ces classifications peuvent être trouvés{" "}
+                    <Link href="https://lekiosque.finances.gouv.fr/site_fr/etudes/methode/nomenclature.asp" target="_blank" rel="noopener">
+                        ici
+                    </Link>.
+            </Typography>
 
             <Typography variant="body1">
             <strong>Pour les services</strong>, la base de données Balance des paiements (Banque de France) répertorie les échanges en grandes catégories selon leur type : Services d’entretien et de réparation n.i.a., Transports, Voyages, Autres services aux entreprises, Services de recherche et développement, etc. La liste exhaustive des catégories des services se trouve à la page 24 du document{" "}
@@ -354,31 +361,32 @@ export const Section5 = () => {
             <TableContainer component={Paper} sx={{ mt: 4, overflowX: 'auto' }}>
                 <Table>
                     <TableHead>
-                    <TableRow>
-                        <TableCell>
-                        <Typography fontWeight="bold">Catégorie</Typography>
-                        </TableCell>
-                        {data.map((d) => (
-                        <TableCell key={d.name}>
-                            <Typography fontWeight="bold">{d.name}</Typography>
-                        </TableCell>
-                        ))}
-                    </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Typography fontWeight="bold">Catégorie</Typography>
+                            </TableCell>
+                            {rows.map((row) => (
+                                <TableCell key={row.label}>
+                                    <Typography fontWeight="bold">{row.label}</Typography>
+                                </TableCell>
+                            ))}
+                        </TableRow>
                     </TableHead>
                     <TableBody>
-                    {rows.map((row) => (
-                        <TableRow key={row.label}>
-                        <TableCell sx={{ fontWeight: 'bold' }}>{row.label}</TableCell>
                         {data.map((d) => (
-                            <TableCell key={`${d.name}-${row.label}`}>
-                            {row.render(d)}
-                            </TableCell>
+                            <TableRow key={d.name}>
+                                <TableCell sx={{ fontWeight: 'bold' }}>{d.name}</TableCell>
+                                {rows.map((row) => (
+                                    <TableCell key={`${d.name}-${row.label}`}>
+                                        {row.render(d)}
+                                    </TableCell>
+                                ))}
+                            </TableRow>
                         ))}
-                        </TableRow>
-                    ))}
                     </TableBody>
                 </Table>
             </TableContainer>
+
 
             <Typography variant="h5" gutterBottom mt={4}>
                 Aide à l'interprétation et limites des données
@@ -394,6 +402,22 @@ export const Section5 = () => {
 
             <Typography variant="body1" sx={{ mb: 2 }}>
                 Un autre facteur à considérer est l’<b>internationalisation de la production</b>. De nombreuses entreprises délocalisent une partie de leur fabrication à l’étranger. Les produits finis peuvent alors être comptabilisés comme des importations ou des exportations, même s’ils proviennent de la même entreprise.
+            </Typography>
+
+            <Typography variant="body1" sx={{ mb: 2 }}>
+                L'<b>inflation</b> est un facteur qui peut influencer l’interprétation des valeurs monétaires. Par exemple, un chiffre d’exportation de 100 millions d’euros aujourd’hui ne correspond pas exactement à 100 millions d’il y a 20 ans, car la valeur de l’argent change avec le temps. Dans notre étude, aucune correction pour l’inflation n’a été effectuée.
+            </Typography>
+
+            <Typography variant="body1" sx={{ mb: 2 }}>
+                La <b>comparabilité des données</b> est un facteur à considérer. Dans notre étude, les valeurs sont exprimées en <b>euros ou en dollars américains</b>. Les fluctuations du <b>taux de change</b> peuvent influencer les résultats, ce qui peut affecter la lecture des comparaisons entre différentes périodes ou entre pays.
+            </Typography>
+
+            <Typography variant="body1" sx={{ mb: 2 }}>
+                Les statistiques commerciales sont généralement exprimées en <b>valeur monétaire</b>, ce qui ne reflète pas toujours les <b>quantités réelles échangées</b>. Ainsi, une hausse de la valeur des échanges peut résulter d’une augmentation des prix plutôt que d’une croissance des volumes physiques.
+            </Typography>
+
+            <Typography variant="body1" sx={{ mb: 2 }}>
+                La <b>classification douanière des produits</b>, notamment avec la nomenclature HS, évolue au fil des années. Cela rend les comparaisons sur le long terme ou entre différents pays plus délicates.
             </Typography>
 
         </Stack>
