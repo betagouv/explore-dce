@@ -2,5 +2,5 @@
 	path = dsfr-chart
 	# Until the PR is merged by the original repository (https://github.com/GouvernementFR/dsfr-chart)
 	# we use our fork
-	url = https://github.com/Maxenceee/dsfr-chart.git
-	branch = chart-refacto
+	url = https://github.com/betagouv/dsfr-chart.git
+	branch = datalma-refacto-charts
