@@ -13,7 +13,7 @@
     "dsfr-chart:build": "npm run build --prefix dsfr-chart && rm -rf src/components/DSFRChart && cp -r dsfr-chart/dist/* src/components/DSFRChart/",
     "pre-commit": "npm run dsfr-chart:build",
     "preview": "vite preview",
-    "prestart": "react-dsfr update-icons",
+    "prestart": "react-dsfr update-icons; npm run dsfr-chart:build",
     "predev": "react-dsfr update-icons; npm run dsfr-chart:build",
     "prebuild": "react-dsfr update-icons"
   },

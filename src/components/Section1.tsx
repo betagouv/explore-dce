@@ -10,22 +10,23 @@ const Graph1 = () => {
             ...dataBox.common,
             ...dataBox.section1["databox-top-echanges-mondiaux"],
             id: 'section1-graph1',
-            title: 'Exports et imports de biens et services : les 10 premiers pays exportateurs en 2024 en Md$',
+            "databox-title": 'Exports et imports de biens et services : les 10 premiers pays exportateurs en 2024 en Md$',
         }))}
 
-        {createElement("bar-chart", {
-            ...toKebabCaseProps(chartData.section1["bar-10-premiers-pays-exportateurs"]),
+        {createElement("table-bar-chart", {
+            ...toKebabCaseProps(chartData.section1["table-bar-10-premiers-pays-exportateurs"]),
+            "table-name": "Pays",
             "databox-id": "section1-graph1",
             "databox-type": "chart",
-            "databox-source": "bar-10-premiers-pays-exportateurs",
+            "databox-source": "table-bar-10-premiers-pays-exportateurs",
         })}
 
         {createElement("table-chart", {
-            ...convertBarlineToTable(chartData.section1["bar-10-premiers-pays-exportateurs"]),
+            ...convertBarlineToTable(chartData.section1["table-bar-10-premiers-pays-exportateurs"]),
             "table-name": "Pays",
             "databox-id": "section1-graph1",
             "databox-type": "table",
-            "databox-source": "bar-10-premiers-pays-exportateurs",
+            "databox-source": "table-bar-10-premiers-pays-exportateurs",
         })}
     </Box>
 }
@@ -36,7 +37,7 @@ const Graph2 = () => {
             ...dataBox.common,
             ...dataBox.section1["databox-solde-biens-services-pib"],
             id: 'section1-graph2',
-            title: 'Exports et imports de biens et services : les 10 premiers pays exportateurs en 2024 en Md$',
+            "databox-title": 'Exports et imports de biens et services : les 10 premiers pays exportateurs en 2024 en Md$',
         }))}
 
         {createElement("bar-chart", {

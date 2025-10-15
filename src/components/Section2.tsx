@@ -11,7 +11,7 @@ const Graph1 = () => {
             ...dataBox.common,
             ...dataBox.section2["databox-solde-echanges-exterieurs"],
             id: 'section2-graph1',
-            title: 'Solde des échanges extérieurs de la France, par année, en Md€',
+            "databox-title": 'Solde des échanges extérieurs de la France, par année, en Md€',
             disposition: 'grid2'
         }))}
 
@@ -64,7 +64,7 @@ const Graph2 = () => {
             ...dataBox.common,
             ...dataBox.section2["databox-echanges-biens-trimestriels"],
             id: 'section2-graph2',
-            title: 'Échanges de biens de la France par trimestre, en Md€',
+            "databox-title": 'Échanges de biens de la France par trimestre, en Md€',
         }))}
 
         {createElement("area-line-chart", {
@@ -90,7 +90,7 @@ const Graph3 = () => {
             ...dataBox.common,
             ...dataBox.section2["databox-echanges-biens-zones-monde"],
             id: 'section2-graph3',
-            title: 'Échange de biens de la France avec divers zones du monde, par année, en Md€',
+            "databox-title": 'Échange de biens de la France avec divers zones du monde, par année, en Md€',
             disposition: 'grid3'
         }))}
 
@@ -167,7 +167,7 @@ const Graph4 = () => {
             ...dataBox.common,
             ...dataBox.section2["databox-part-marche-pays-monde"],
             id: 'section2-graph4',
-            title: 'Part de marché dans les exportations de marchandises des quelques pays du monde',
+            "databox-title": 'Part de marché dans les exportations de marchandises des quelques pays du monde',
         }))}
 
         {createElement("line-chart", {

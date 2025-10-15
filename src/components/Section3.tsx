@@ -11,7 +11,7 @@ const Graph1 = () => {
             ...dataBox.common,
             ...dataBox.section3["databox-top-produits-exportes"],
             id: 'section3-graph1',
-            title: 'Moyenne annuelle 2022-2024 en Md€',
+            "databox-title": 'Moyenne annuelle 2022-2024 en Md€',
         }))}
 
         {createElement("treemap-chart", {
@@ -37,7 +37,7 @@ const Graph2 = () => {
             ...dataBox.common,
             ...dataBox.section3["databox-top-produits-importes"],
             id: 'section3-graph2',
-            title: 'Moyenne annuelle 2022-2024 en Md€',
+            "databox-title": 'Moyenne annuelle 2022-2024 en Md€',
         }))}
 
         {createElement("treemap-chart", {
@@ -63,7 +63,7 @@ const Graph3 = () => {
             ...dataBox.common,
             ...dataBox.section3["databox-top-deficits-commerciaux"],
             id: 'section3-graph3',
-            title: 'Les 10 principaux déficits commerciaux, moyenne 2022-2024, en Md€',
+            "databox-title": 'Les 10 principaux déficits commerciaux, moyenne 2022-2024, en Md€',
         }))}
 
         {createElement("bar-chart", {
@@ -89,7 +89,7 @@ const Graph4 = () => {
             ...dataBox.common,
             ...dataBox.section3["databox-top-excedents-commerciaux"],
             id: 'section3-graph4',
-            title: 'Les 10 principaux excédents commerciaux, moyenne 2022-2024, en Md€',
+            "databox-title": 'Les 10 principaux excédents commerciaux, moyenne 2022-2024, en Md€',
         }))}
 
         {createElement("bar-chart", {
@@ -115,7 +115,7 @@ const Graph5 = () => {
             ...dataBox.common,
             ...dataBox.section3["databox-secteurs-excedentaires"],
             id: 'section3-graph5',
-            title: 'Solde commercial des principaux secteurs excédentaires, par année, en Md€',
+            "databox-title": 'Solde commercial des principaux secteurs excédentaires, par année, en Md€',
         }))}
 
         {createElement("line-chart", {
@@ -141,7 +141,7 @@ const Graph6 = () => {
             ...dataBox.common,
             ...dataBox.section3["databox-solde-agriculture-agroalimentaire"],
             id: 'section3-graph6',
-            title: 'Solde commercial agriculture et agroalimentaire, par année, en Md€',
+            "databox-title": 'Solde commercial agriculture et agroalimentaire, par année, en Md€',
         }))}
 
         {createElement("line-chart", {
@@ -167,7 +167,7 @@ const Graph7 = () => {
             ...dataBox.common,
             ...dataBox.section3["databox-echanges-electricite"],
             id: 'section3-graph7',
-            title: 'Élétricité : échanges de biens de la France, par année, en Md€',
+            "databox-title": 'Élétricité : échanges de biens de la France, par année, en Md€',
         }))}
 
         {createElement("area-line-chart", {
@@ -193,7 +193,7 @@ const Graph8 = () => {
             ...dataBox.common,
             ...dataBox.section3["databox-secteur-automobile"],
             id: 'section3-graph8',
-            title: 'Automobile (construction et équipements) : Échanges de biens de la France, par année, en Md€',
+            "databox-title": 'Automobile (construction et équipements) : Échanges de biens de la France, par année, en Md€',
         }))}
 
         {createElement("area-line-chart", {
@@ -219,7 +219,7 @@ const Graph9 = () => {
             ...dataBox.common,
             ...dataBox.section3["databox-importations-voitures"],
             id: 'section3-graph9',
-            title: 'Importations de voitures de tourisme et autres véhicules automobiles (moins de 10 personnes), par année, en Md€',
+            "databox-title": 'Importations de voitures de tourisme et autres véhicules automobiles (moins de 10 personnes), par année, en Md€',
         }))}
 
         {createElement("area-line-chart", {
@@ -245,7 +245,7 @@ const Graph10 = () => {
             ...dataBox.common,
             ...dataBox.section3["databox-exportations-voitures"],
             id: 'section3-graph10',
-            title: 'Exportations de voitures de tourisme et autres véhicules automobiles (moins de 10 personnes), par année, en Md€',
+            "databox-title": 'Exportations de voitures de tourisme et autres véhicules automobiles (moins de 10 personnes), par année, en Md€',
         }))}
 
         {createElement("area-line-chart", {
@@ -271,7 +271,7 @@ const Graph11 = () => {
             ...dataBox.common,
             ...dataBox.section3["databox-exportations-vehicules-electriques"],
             id: 'section3-graph11',
-            title: '12 premiers pays exportateurs de véhicules 100 % électriques, en 2023, en millions d\'€',
+            "databox-title": '12 premiers pays exportateurs de véhicules 100 % électriques, en 2023, en millions d\'€',
         }))}
 
         {createElement("bar-chart", {
@@ -364,19 +364,18 @@ export const Section3 = () => {
                     Avec la remontée en charge de son parc nucléaire, la France renoue avec ses excédents de production électrique
                 </PTitle>
 
-                <Typography variant="body1" gutterBottom>
-                    La production d’électricité est traditionnellement un secteur excédentaire en France en raison de son grand potentiel de production d’énergie décarbonée (nucléaire et hydraulique en particulier).
-                    <br/>
-                    <br/>
-                    L'année 2022 marque une exception : la production d’électricité a chuté de 522 TWh à 445 TWh. Jamais ce niveau n’était descendu aussi bas depuis 1992.
-                    <br/>
-                    <br/>
-                    Cette anomalie résulte de deux facteurs indépendants :
+                <Box>
+                    <Typography variant="body1" gutterBottom>
+                        La production d’électricité est traditionnellement un secteur excédentaire en France en raison de son grand potentiel de production d’énergie décarbonée (nucléaire et hydraulique en particulier).
+                    </Typography>
+                    <Typography variant="body1" gutterBottom>
+                        L'année 2022 marque une exception : la production d’électricité a chuté de 522 TWh à 445 TWh. Jamais ce niveau n’était descendu aussi bas depuis 1992.
+                    </Typography>
                     <ul>
                         <li>La corrosion de tuyauteries a provoqué l’arrêt de gros réacteurs, faisant chuter la disponibilité du parc à 54 % en 2022, contre 73 % en moyenne entre 2015 et 2019 ;</li>
                         <li>Le manque d’eau a également eu une incidence sur les barrages hydroélectriques.</li>
                     </ul>
-                </Typography>
+                </Box>
 
                 <Graph7 />
 
@@ -407,11 +406,12 @@ export const Section3 = () => {
 
                 <Typography variant="body1" gutterBottom>
                     L'inversion du solde commercial automobile peut s'expliquer, pour les seuls véhicules de moins de 10 personnes, par deux facteurs :
-                    <ul>
-                        <li>L'essor de la propulsion électrique, via des moteurs hybrides ou 100 % sur batterie ; la France est bien présente sur ce marché à l'exportation, mais importe deux fois plus qu'elle n'exporte ;</li>
-                        <li>L'envolée des importations de véhicules thermiques classiques, à essence, entre 2014 et 2019. Elle s'explique en bonne part par les décisions de délocalisation prises par les constructeurs nationaux.</li>
-                    </ul>
-                    <br/>
+                </Typography>
+                <ul>
+                    <li>L'essor de la propulsion électrique, via des moteurs hybrides ou 100 % sur batterie ; la France est bien présente sur ce marché à l'exportation, mais importe deux fois plus qu'elle n'exporte ;</li>
+                    <li>L'envolée des importations de véhicules thermiques classiques, à essence, entre 2014 et 2019. Elle s'explique en bonne part par les décisions de délocalisation prises par les constructeurs nationaux.</li>
+                </ul>
+                <Typography variant="body1" gutterBottom>
                     En revanche, le déclin du diesel a davantage touché les importations que les exportations, et contribue paradoxalement de façon positive au solde des échanges.
                 </Typography>
 

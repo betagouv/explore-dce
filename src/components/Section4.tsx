@@ -10,7 +10,7 @@ const Graph1 = () => {
             ...dataBox.common,
             ...dataBox.section4["databox-balance-services"],
             id: 'section4-graph1',
-            title: 'Balance des services, par année en Md€',
+            "databox-title": 'Balance des services, par année en Md€',
         }))}
 
         {createElement("area-line-chart", {
@@ -36,7 +36,7 @@ const Graph2 = () => {
             ...dataBox.common,
             ...dataBox.section4["databox-solde-echanges-services"],
             id: 'section4-graph2',
-            title: 'Solde des échanges de services pour 4 secteurs excédentaires en 2024, par année en Md€',
+            "databox-title": 'Solde des échanges de services pour 4 secteurs excédentaires en 2024, par année en Md€',
             disposition: "grid2",
         }))}
 
