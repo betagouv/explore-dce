@@ -17740,7 +17740,8 @@ const mw = {
         options: {
           interaction: {
             mode: "index",
-            intersect: !1
+            intersect: !1,
+            axis: this.horizontal ? "y" : "x"
           },
           indexAxis: this.horizontal ? "y" : "x",
           aspectRatio: this.aspectRatio,
@@ -23613,7 +23614,8 @@ const aM = {
         options: {
           interaction: {
             mode: "index",
-            intersect: !1
+            intersect: !1,
+            axis: "xy"
           },
           aspectRatio: this.aspectRatio,
           responsive: !0,
