@@ -19,11 +19,13 @@ export const Section5 = () => {
         href: string;
     }
 
+    type EmbededLinks = (string | SourceLink)[];
+
     interface Source {
         name: string;
         contenu: string;
         couverture: string;
-        liens: SourceLink[];
+        liens: EmbededLinks;
         notes: string[];
     }
 
@@ -33,18 +35,12 @@ export const Section5 = () => {
         contenu: "Échanges de biens entre la France et le reste du monde.",
         couverture: '2004 à 2025',
         liens: [
-            {
-            label: 'Liens',
-            href: 'https://lekiosque.finances.gouv.fr/site_fr/telechargement/telechargement_SGBD.asp',
-            },
-            {
-            label: 'Documentation (nomenclatures)',
-            href: 'https://lekiosque.finances.gouv.fr/site_fr/etudes/methode/nomenclature.asp',
-            },
-            {
-            label: 'Documentation (zones économiques)',
-            href: 'https://lekiosque.finances.gouv.fr/fichiers/guide/Table_accord.pdf',
-            },
+            { label: "Liens", href: "https://lekiosque.finances.gouv.fr/site_fr/telechargement/telechargement_SGBD.asp" },
+            " de téléchargements des données (cf. sections : \"Les fichiers des années antérieures : années 2015 à 2024 - CPF révision 2.1\" + \"Les fichiers des années antérieures : années 2004 à 2014 - CPF révision 2\")\n",
+            { label: "Documentation", href: "https://lekiosque.finances.gouv.fr/site_fr/etudes/methode/nomenclature.asp" },
+            " des nomenclatures utilisées et de leur révision : Produits et Pays, ",
+            { label: "Documentation", href: "https://lekiosque.finances.gouv.fr/fichiers/guide/Table_accord.pdf" },
+            " de la composition des zones économiques utilisées",
         ],
         notes: [
             'Biens référencés avec les nomenclatures NC8, CPF6 et A129.',
@@ -57,10 +53,9 @@ export const Section5 = () => {
         contenu: "Échanges de biens entre la France et le reste du monde.",
         couverture: 'T1 2009 à T2 2025',
         liens: [
-            {
-            label: 'Lien',
-            href: 'https://lekiosque.finances.gouv.fr/site_fr/etudes/bilans_periodiques.asp',
-            },
+            { label: "Lien", href: "https://lekiosque.finances.gouv.fr/site_fr/etudes/bilans_periodiques.asp" },
+            " de téléchargements des données (cf. section : \"Le commerce extérieur de la France au deuxième trimestre 2025\" - \"Données complémentaires\" - Feuille \"GA\" du tableur)",
+
         ],
         notes: [
             'Valeurs exprimées en milliards d’euros (€).',
@@ -73,18 +68,12 @@ export const Section5 = () => {
         contenu: 'Échanges de biens entre les pays du monde.',
         couverture: '2022 à 2023',
         liens: [
-            {
-            label: 'Lien',
-            href: 'https://www.cepii.fr/CEPII/fr/bdd_modele/bdd_modele_item.asp?id=37',
-            },
-            {
-            label: 'Documentation courte',
-            href: 'https://www.cepii.fr/DATA_DOWNLOAD/baci/doc/DescriptionBACI.html',
-            },
-            {
-            label: 'Documentation technique',
-            href: 'https://www.cepii.fr/PDF_PUB/wp/2010/wp2010-23.pdf',
-            },
+            { label: "Lien", href: "https://www.cepii.fr/CEPII/fr/bdd_modele/bdd_modele_item.asp?id=37" },
+            " de téléchargements des données (cf. section : \"Téléchargements\" - \"HS22\"), ",
+            { label: "Documentation", href: "https://www.cepii.fr/DATA_DOWNLOAD/baci/doc/DescriptionBACI.html" },
+            " courte de la base, ",
+            { label: "Documentation", href: "https://www.cepii.fr/PDF_PUB/wp/2010/wp2010-23.pdf" },
+            " technique complète"
         ],
         notes: [
             'Biens référencés avec la nomenclature HS22 (Harmonized System).',
@@ -96,18 +85,23 @@ export const Section5 = () => {
         contenu: 'Échanges de services entre la France et le reste du monde.',
         couverture: '2013 à 2024',
         liens: [
-            {
-            label: 'Dépenses',
-            href: 'https://webstat.banque-france.fr/fr/catalogue/bpm6/BPM6.A.N.FR.W1.S1.S1.T.D.S._Z._Z._Z.EUR._T._X.N.ALL',
-            },
-            {
-            label: 'Recettes',
-            href: 'https://webstat.banque-france.fr/fr/catalogue/bpm6/BPM6.A.N.FR.W1.S1.S1.T.C.S._Z._Z._Z.EUR._T._X.N.ALL',
-            },
-            {
-            label: 'Solde',
-            href: 'https://webstat.banque-france.fr/fr/catalogue/bpm6/BPM6.A.N.FR.W1.S1.S1.T.B.S._Z._Z._Z.EUR._T._X.N.ALL',
-            },
+            "Liens de téléchargements des données: \n",
+            "- Balance des services: ",
+            { label: "Dépenses", href: "https://webstat.banque-france.fr/fr/catalogue/bpm6/BPM6.A.N.FR.W1.S1.S1.T.D.S._Z._Z._Z.EUR._T._X.N.ALL" },
+            ", ",
+            { label: "Recettes", href: "https://webstat.banque-france.fr/fr/catalogue/bpm6/BPM6.A.N.FR.W1.S1.S1.T.C.S._Z._Z._Z.EUR._T._X.N.ALL" },
+            ", ",
+            { label: "Solde", href: "https://webstat.banque-france.fr/fr/catalogue/bpm6/BPM6.A.N.FR.W1.S1.S1.T.B.S._Z._Z._Z.EUR._T._X.N.ALL" },
+            "\n- Solde sectoriel: ",
+            { label: "Autres services aux entreprises", href: "https://webstat.banque-france.fr/fr/catalogue/bpm6/BPM6.A.N.FR.W1.S1.S1.T.B.SJ._Z._Z._Z.EUR._T._X.N.ALL" },
+            ", ",
+            { label: "Services financiers", href: "https://webstat.banque-france.fr/fr/catalogue/bpm6/BPM6.A.N.FR.W1.S1.S1.T.B.SG._Z._Z._Z.EUR._T._X.N.ALL" },
+            ", ",
+            { label: "Transport", href: "https://webstat.banque-france.fr/fr/catalogue/bpm6/BPM6.A.N.FR.W1.S1.S1.T.B.SC._Z._Z._Z.EUR._T._X.N.ALL" },
+            ", ",
+            { label: "Voyages", href: "https://webstat.banque-france.fr/fr/catalogue/bpm6/BPM6.A.N.FR.W1.S1.S1.T.B.SD._Z._Z._Z.EUR._T._X.N.ALL" },
+            "\n\n",
+            { label: "Documentation", href: "https://webstat.banque-france.fr/fr/comprendre-le-format-sdmx/" },
         ],
         notes: [
             'Services catégorisés en ~40 catégories.',
@@ -119,18 +113,12 @@ export const Section5 = () => {
         contenu: 'Échanges de biens et services et PIB par pays.',
         couverture: '1960 à 2024',
         liens: [
-            {
-            label: 'PIB',
-            href: 'https://data.worldbank.org/indicator/NY.GDP.MKTP.CD?most_recent_value_desc=true',
-            },
-            {
-            label: 'Exports',
-            href: 'https://data.worldbank.org/indicator/NE.EXP.GNFS.CD?most_recent_value_desc=true',
-            },
-            {
-            label: 'Imports',
-            href: 'https://data.worldbank.org/indicator/NE.IMP.GNFS.CD?most_recent_value_desc=true',
-            },
+            "Liens de téléchargements des données: ",
+            { label: "PIB", href: "https://data.worldbank.org/indicator/NY.GDP.MKTP.CD?most_recent_value_desc=true" },
+            ", ",
+            { label: "Exports", href: "https://data.worldbank.org/indicator/NE.EXP.GNFS.CD?most_recent_value_desc=true" },
+            ", ",
+            { label: "Imports", href: "https://data.worldbank.org/indicator/NE.IMP.GNFS.CD?most_recent_value_desc=true" },
         ],
         notes: [
             'Valeurs exprimées en dollars ($).',
@@ -142,14 +130,10 @@ export const Section5 = () => {
         contenu: 'Parts de marché des pays dans les exportations de marchandises.',
         couverture: '2000 à 2024',
         liens: [
-            {
-            label: 'Lien',
-            href: 'https://www.insee.fr/fr/statistiques/2413545#tableau-figure1',
-            },
-            {
-            label: 'Documentation technique',
-            href: 'https://stats.wto.org/assets/UserGuide/TechnicalNotes_en.pdf',
-            },
+            { label: "Lien", href: "https://www.insee.fr/fr/statistiques/2413545#tableau-figure1" },
+            " vers le tableau des données compilées par l'INSEE, ",
+            { label: "Documentation", href: "https://stats.wto.org/assets/UserGuide/TechnicalNotes_en.pdf" },
+            " technique de l'OMC",
         ],
         notes: [
             'Pourcentage de parts de marché.',
@@ -161,10 +145,8 @@ export const Section5 = () => {
         contenu: 'Soldes des échanges extérieurs de la France (biens dont énergie et services).',
         couverture: '2014 à 2024',
         liens: [
-            {
-            label: 'Lien',
-            href: 'https://www.insee.fr/fr/statistiques/8574058#tableau-figure3',
-            },
+            { label: "Lien", href: "https://www.insee.fr/fr/statistiques/8574058#tableau-figure3" },
+            " (cf. Figure 3)",
         ],
         notes: [
             'Valeurs exprimées en milliards d’euros (€).',
@@ -173,20 +155,27 @@ export const Section5 = () => {
         },
     ];
 
+    const renderLinks = (liens: EmbededLinks) => {
+        return (
+            <Typography variant="body2" style={{ whiteSpace: 'pre-line' }}>
+            {liens.map((item, i) =>
+                typeof item === 'string' ? (
+                item
+                ) : (
+                <Link key={i} href={item.href} target="_blank" rel="noopener">
+                    {item.label}
+                </Link>
+                )
+            )}
+            </Typography>
+        );
+    };
+
+
     const rows: { label: string; render: (d: Source) => React.ReactNode }[] = [
         { label: 'Contenu', render: (d) => d.contenu },
         { label: 'Couverture temporelle', render: (d) => d.couverture },
-        {
-        label: 'Liens',
-        render: (d) =>
-            d.liens.map((l, i) => (
-            <Typography variant="body2" key={i}>
-                <Link href={l.href} target="_blank" rel="noopener">
-                {l.label}
-                </Link>
-            </Typography>
-            )),
-        },
+        { label: 'Liens', render: (d: Source) => renderLinks(d.liens) },
         {
         label: 'Notes',
         render: (d) => (
