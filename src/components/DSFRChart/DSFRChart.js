@@ -22739,7 +22739,7 @@ function C8(e, t, n, s, i, r) {
       g("div", {
         ref: i.tableId,
         class: "fr-table",
-        style: { maxHeight: "25rem", overflow: "auto" }
+        style: { maxHeight: "30rem", overflow: "auto" }
       }, [
         g("div", y8, [
           g("div", x8, [
@@ -22790,7 +22790,7 @@ function C8(e, t, n, s, i, r) {
     ], 512)
   ], 8, ["disabled", "to"]);
 }
-const P8 = /* @__PURE__ */ Lt(v8, [["render", C8], ["__scopeId", "data-v-202f621c"]]);
+const P8 = /* @__PURE__ */ Lt(v8, [["render", C8], ["__scopeId", "data-v-ad81d7da"]]);
 /*!
  * chartjs-chart-treemap v3.1.0
  * https://chartjs-chart-treemap.pages.dev/
