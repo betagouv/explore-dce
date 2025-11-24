@@ -1,0 +1,10 @@
+services:
+
+  front:
+    build: .
+    container_name: dce_front
+    restart: always
+    ports:
+      - 6920:6920
+    networks:
+      - default
